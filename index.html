@@ -1199,58 +1199,59 @@
             newsFeed.innerHTML = '<div style="text-align: center; color: #999; padding: 20px;"><p>⏳ Loading latest headlines...</p></div>';
 
             try {
-                const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://blog.arduino.cc/feed/&count=2');
-                const arduinoData = await response.json();
-                
-                const response2 = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://blog.adafruit.com/feed/&count=2');
-                const adafruitData = await response2.json();
-                
-                const response3 = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.hackster.io/blog.rss&count=2');
-                const hacksterData = await response3.json();
+                // Use AllOrigins as a CORS proxy - more reliable for GitHub Pages
+                const feeds = [
+                    { url: 'https://blog.arduino.cc/feed/', name: 'Arduino Blog', emoji: '📟' },
+                    { url: 'https://blog.adafruit.com/feed/', name: 'Adafruit Blog', emoji: '🎨' },
+                    { url: 'https://www.hackster.io/blog.rss', name: 'Hackster Blog', emoji: '🔨' }
+                ];
 
                 let allArticles = [];
 
-                // Combine all articles
-                if (arduinoData.status === 'ok' && arduinoData.items) {
-                    allArticles = allArticles.concat(arduinoData.items.map(item => ({
-                        title: item.title,
-                        link: item.link,
-                        pubDate: new Date(item.pubDate),
-                        source: 'Arduino Blog'
-                    })));
+                for (const feed of feeds) {
+                    try {
+                        const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(feed.url)}`;
+                        const response = await fetch(proxyUrl);
+                        const data = await response.json();
+                        
+                        if (data.contents) {
+                            const parser = new DOMParser();
+                            const xml = parser.parseFromString(data.contents, 'text/xml');
+                            const items = xml.querySelectorAll('item');
+                            
+                            Array.from(items).slice(0, 2).forEach(item => {
+                                const title = item.querySelector('title')?.textContent;
+                                const link = item.querySelector('link')?.textContent;
+                                const pubDate = item.querySelector('pubDate')?.textContent;
+                                
+                                if (title && link) {
+                                    allArticles.push({
+                                        title: title,
+                                        link: link,
+                                        pubDate: pubDate ? new Date(pubDate) : new Date(),
+                                        source: feed.name,
+                                        emoji: feed.emoji
+                                    });
+                                }
+                            });
+                        }
+                    } catch (error) {
+                        console.error(`Error fetching ${feed.name}:`, error);
+                    }
                 }
 
-                if (adafruitData.status === 'ok' && adafruitData.items) {
-                    allArticles = allArticles.concat(adafruitData.items.map(item => ({
-                        title: item.title,
-                        link: item.link,
-                        pubDate: new Date(item.pubDate),
-                        source: 'Adafruit Blog'
-                    })));
-                }
-
-                if (hacksterData.status === 'ok' && hacksterData.items) {
-                    allArticles = allArticles.concat(hacksterData.items.map(item => ({
-                        title: item.title,
-                        link: item.link,
-                        pubDate: new Date(item.pubDate),
-                        source: 'Hackster Blog'
-                    })));
-                }
-
-                // Sort by date and take top 6
+                // Sort by date
                 allArticles.sort((a, b) => b.pubDate - a.pubDate);
-                const topArticles = allArticles.slice(0, 6);
 
-                if (topArticles.length > 0) {
+                if (allArticles.length > 0) {
                     let html = '<ul style="list-style: none; padding: 0; margin: 0;">';
                     
-                    topArticles.forEach((article, index) => {
+                    allArticles.forEach((article, index) => {
                         const timeAgo = getTimeAgo(article.pubDate);
                         html += `
-                            <li style="padding: 15px 0; border-bottom: ${index < topArticles.length - 1 ? '1px solid #eee' : 'none'};">
+                            <li style="padding: 15px 0; border-bottom: ${index < allArticles.length - 1 ? '1px solid #eee' : 'none'};">
                                 <div style="display: flex; align-items: start; gap: 10px;">
-                                    <span style="font-size: 1.5em; color: #667eea; font-weight: bold; min-width: 30px;">${index + 1}.</span>
+                                    <span style="font-size: 1.3em;">${article.emoji}</span>
                                     <div style="flex: 1;">
                                         <a href="${article.link}" target="_blank" style="color: #333; text-decoration: none; font-weight: 600; font-size: 1.05em; line-height: 1.4; display: block; margin-bottom: 5px; transition: color 0.2s ease;" onmouseover="this.style.color='#667eea'" onmouseout="this.style.color='#333'">
                                             ${article.title}
@@ -1265,6 +1266,7 @@
                     });
                     
                     html += '</ul>';
+                    html += '<div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #eee; text-align: center;"><p style="color: #999; font-size: 0.85em; margin: 0;">✨ Headlines auto-refresh when you reload the page</p></div>';
                     newsFeed.innerHTML = html;
                 } else {
                     showFallbackLinks();
