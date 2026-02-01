@@ -342,23 +342,52 @@
                     </div>
                 </div>
 
-                <!-- Top Tech Headlines -->
+                <!-- Daily Blog Lineup -->
                 <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; margin-bottom: 30px;">
-                    <h3 style="color: #667eea; margin-bottom: 15px;">📰 Latest Maker News</h3>
-                    <p style="color: #666; margin-bottom: 20px;">
-                        Latest posts from Arduino Blog, Adafruit Blog, and Hackster Blog
+                    <h3 style="color: #667eea; margin-bottom: 10px; font-size: 1.6em;">📰 Your Daily Blog Lineup</h3>
+                    <p style="color: #666; margin-bottom: 25px; font-size: 1.05em;">
+                        One-click access to the freshest maker content - updated 24/7
                     </p>
                     
-                    <div id="news-feed" style="background: white; padding: 20px; border-radius: 10px; border: 2px solid #667eea;">
-                        <div style="text-align: center; color: #999;">
-                            <p>⏳ Loading latest headlines...</p>
-                        </div>
+                    <div style="display: grid; gap: 20px;">
+                        <a href="https://blog.arduino.cc/" target="_blank" style="background: linear-gradient(135deg, #00979D 0%, #00B4D8 100%); padding: 25px; border-radius: 15px; text-decoration: none; color: white; transition: all 0.3s ease; display: block; box-shadow: 0 4px 15px rgba(0, 151, 157, 0.2);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(0, 151, 157, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0, 151, 157, 0.2)'">
+                            <div style="display: flex; align-items: center; gap: 20px;">
+                                <div style="font-size: 3em; line-height: 1;">📟</div>
+                                <div style="flex: 1;">
+                                    <h4 style="margin: 0 0 8px 0; font-size: 1.4em; font-weight: 700;">Arduino Blog</h4>
+                                    <p style="margin: 0; opacity: 0.95; font-size: 1em; line-height: 1.5;">Latest Arduino news, product launches, tutorials, and community project showcases</p>
+                                </div>
+                                <div style="font-size: 2em; opacity: 0.8;">→</div>
+                            </div>
+                        </a>
+
+                        <a href="https://blog.adafruit.com/" target="_blank" style="background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%); padding: 25px; border-radius: 15px; text-decoration: none; color: white; transition: all 0.3s ease; display: block; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(139, 92, 246, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(139, 92, 246, 0.2)'">
+                            <div style="display: flex; align-items: center; gap: 20px;">
+                                <div style="font-size: 3em; line-height: 1;">🎨</div>
+                                <div style="flex: 1;">
+                                    <h4 style="margin: 0 0 8px 0; font-size: 1.4em; font-weight: 700;">Adafruit Blog</h4>
+                                    <p style="margin: 0; opacity: 0.95; font-size: 1em; line-height: 1.5;">CircuitPython updates, new products every Thursday, and maker inspiration daily</p>
+                                </div>
+                                <div style="font-size: 2em; opacity: 0.8;">→</div>
+                            </div>
+                        </a>
+
+                        <a href="https://www.hackster.io/blog" target="_blank" style="background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%); padding: 25px; border-radius: 15px; text-decoration: none; color: white; transition: all 0.3s ease; display: block; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(245, 158, 11, 0.3)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(245, 158, 11, 0.2)'">
+                            <div style="display: flex; align-items: center; gap: 20px;">
+                                <div style="font-size: 3em; line-height: 1;">🔨</div>
+                                <div style="flex: 1;">
+                                    <h4 style="margin: 0 0 8px 0; font-size: 1.4em; font-weight: 700;">Hackster Blog</h4>
+                                    <p style="margin: 0; opacity: 0.95; font-size: 1em; line-height: 1.5;">Community-driven projects, hardware innovations, and trending maker builds</p>
+                                </div>
+                                <div style="font-size: 2em; opacity: 0.8;">→</div>
+                            </div>
+                        </a>
                     </div>
 
-                    <div style="margin-top: 15px; text-align: center;">
-                        <button onclick="loadNews()" style="background: #667eea; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: all 0.3s ease;">
-                            🔄 Refresh Headlines
-                        </button>
+                    <div style="margin-top: 20px; padding: 20px; background: white; border-radius: 12px; border-left: 4px solid #667eea;">
+                        <p style="margin: 0; color: #666; font-size: 0.95em;">
+                            <strong style="color: #667eea;">💡 Pro Tip:</strong> Right-click any blog card and select "Open in new tab" to check all three at once!
+                        </p>
                     </div>
                 </div>
 
@@ -1192,130 +1221,6 @@
                 }
             });
         });
-
-        // News Feed Functionality
-        async function loadNews() {
-            const newsFeed = document.getElementById('news-feed');
-            newsFeed.innerHTML = '<div style="text-align: center; color: #999; padding: 20px;"><p>⏳ Loading latest headlines...</p></div>';
-
-            try {
-                // Use AllOrigins as a CORS proxy - more reliable for GitHub Pages
-                const feeds = [
-                    { url: 'https://blog.arduino.cc/feed/', name: 'Arduino Blog', emoji: '📟' },
-                    { url: 'https://blog.adafruit.com/feed/', name: 'Adafruit Blog', emoji: '🎨' },
-                    { url: 'https://www.hackster.io/blog.rss', name: 'Hackster Blog', emoji: '🔨' }
-                ];
-
-                let allArticles = [];
-
-                for (const feed of feeds) {
-                    try {
-                        const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(feed.url)}`;
-                        const response = await fetch(proxyUrl);
-                        const data = await response.json();
-                        
-                        if (data.contents) {
-                            const parser = new DOMParser();
-                            const xml = parser.parseFromString(data.contents, 'text/xml');
-                            const items = xml.querySelectorAll('item');
-                            
-                            Array.from(items).slice(0, 2).forEach(item => {
-                                const title = item.querySelector('title')?.textContent;
-                                const link = item.querySelector('link')?.textContent;
-                                const pubDate = item.querySelector('pubDate')?.textContent;
-                                
-                                if (title && link) {
-                                    allArticles.push({
-                                        title: title,
-                                        link: link,
-                                        pubDate: pubDate ? new Date(pubDate) : new Date(),
-                                        source: feed.name,
-                                        emoji: feed.emoji
-                                    });
-                                }
-                            });
-                        }
-                    } catch (error) {
-                        console.error(`Error fetching ${feed.name}:`, error);
-                    }
-                }
-
-                // Sort by date
-                allArticles.sort((a, b) => b.pubDate - a.pubDate);
-
-                if (allArticles.length > 0) {
-                    let html = '<ul style="list-style: none; padding: 0; margin: 0;">';
-                    
-                    allArticles.forEach((article, index) => {
-                        const timeAgo = getTimeAgo(article.pubDate);
-                        html += `
-                            <li style="padding: 15px 0; border-bottom: ${index < allArticles.length - 1 ? '1px solid #eee' : 'none'};">
-                                <div style="display: flex; align-items: start; gap: 10px;">
-                                    <span style="font-size: 1.3em;">${article.emoji}</span>
-                                    <div style="flex: 1;">
-                                        <a href="${article.link}" target="_blank" style="color: #333; text-decoration: none; font-weight: 600; font-size: 1.05em; line-height: 1.4; display: block; margin-bottom: 5px; transition: color 0.2s ease;" onmouseover="this.style.color='#667eea'" onmouseout="this.style.color='#333'">
-                                            ${article.title}
-                                        </a>
-                                        <div style="font-size: 0.85em; color: #999;">
-                                            <span style="color: #667eea; font-weight: 600;">${article.source}</span> • ${timeAgo}
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        `;
-                    });
-                    
-                    html += '</ul>';
-                    html += '<div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #eee; text-align: center;"><p style="color: #999; font-size: 0.85em; margin: 0;">✨ Headlines auto-refresh when you reload the page</p></div>';
-                    newsFeed.innerHTML = html;
-                } else {
-                    showFallbackLinks();
-                }
-            } catch (error) {
-                console.error('Error loading news:', error);
-                showFallbackLinks();
-            }
-        }
-
-        function showFallbackLinks() {
-            const newsFeed = document.getElementById('news-feed');
-            newsFeed.innerHTML = `
-                <div style="text-align: center; padding: 20px;">
-                    <p style="color: #999; margin-bottom: 15px;">📡 Unable to load headlines automatically</p>
-                    <p style="color: #666; margin-bottom: 15px; font-weight: 600;">Visit the blogs directly:</p>
-                    <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 10px;">
-                        <a href="https://blog.arduino.cc/" target="_blank" style="display: block; padding: 15px 20px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #667eea; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📟 Arduino Blog →</a>
-                        <a href="https://blog.adafruit.com/" target="_blank" style="display: block; padding: 15px 20px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #667eea; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">🎨 Adafruit Blog →</a>
-                        <a href="https://www.hackster.io/blog" target="_blank" style="display: block; padding: 15px 20px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #667eea; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">🔨 Hackster Blog →</a>
-                    </div>
-                </div>
-            `;
-        }
-
-        function getTimeAgo(date) {
-            const seconds = Math.floor((new Date() - date) / 1000);
-            
-            const intervals = {
-                year: 31536000,
-                month: 2592000,
-                week: 604800,
-                day: 86400,
-                hour: 3600,
-                minute: 60
-            };
-            
-            for (const [unit, secondsInUnit] of Object.entries(intervals)) {
-                const interval = Math.floor(seconds / secondsInUnit);
-                if (interval >= 1) {
-                    return `${interval} ${unit}${interval !== 1 ? 's' : ''} ago`;
-                }
-            }
-            
-            return 'Just now';
-        }
-
-        // Load news when page loads
-        window.addEventListener('load', loadNews);
     </script>
 </body>
 </html>
