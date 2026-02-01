@@ -346,48 +346,19 @@
                 <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; margin-bottom: 30px;">
                     <h3 style="color: #667eea; margin-bottom: 15px;">📰 Latest Maker News</h3>
                     <p style="color: #666; margin-bottom: 20px;">
-                        Quick access to the latest posts from top maker blogs
+                        Latest posts from Arduino Blog, Adafruit Blog, and Hackster Blog
                     </p>
                     
-                    <div style="background: white; padding: 20px; border-radius: 10px; border: 2px solid #667eea;">
-                        <div style="display: grid; gap: 15px;">
-                            <a href="https://blog.arduino.cc/" target="_blank" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 20px; border-radius: 10px; text-decoration: none; color: #333; transition: all 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                                <div style="display: flex; align-items: center; gap: 15px;">
-                                    <span style="font-size: 2em;">📟</span>
-                                    <div style="flex: 1;">
-                                        <strong style="color: #667eea; font-size: 1.1em;">Arduino Blog</strong>
-                                        <p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">Latest Arduino news, tutorials, and project showcases</p>
-                                    </div>
-                                    <span style="color: #667eea; font-size: 1.5em;">→</span>
-                                </div>
-                            </a>
-
-                            <a href="https://blog.adafruit.com/" target="_blank" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 20px; border-radius: 10px; text-decoration: none; color: #333; transition: all 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                                <div style="display: flex; align-items: center; gap: 15px;">
-                                    <span style="font-size: 2em;">🎨</span>
-                                    <div style="flex: 1;">
-                                        <strong style="color: #667eea; font-size: 1.1em;">Adafruit Blog</strong>
-                                        <p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">CircuitPython, new products, and maker inspiration</p>
-                                    </div>
-                                    <span style="color: #667eea; font-size: 1.5em;">→</span>
-                                </div>
-                            </a>
-
-                            <a href="https://www.hackster.io/blog" target="_blank" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 20px; border-radius: 10px; text-decoration: none; color: #333; transition: all 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                                <div style="display: flex; align-items: center; gap: 15px;">
-                                    <span style="font-size: 2em;">🔨</span>
-                                    <div style="flex: 1;">
-                                        <strong style="color: #667eea; font-size: 1.1em;">Hackster Blog</strong>
-                                        <p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">Community projects and hardware innovations</p>
-                                    </div>
-                                    <span style="color: #667eea; font-size: 1.5em;">→</span>
-                                </div>
-                            </a>
+                    <div id="news-feed" style="background: white; padding: 20px; border-radius: 10px; border: 2px solid #667eea;">
+                        <div style="text-align: center; color: #999;">
+                            <p>⏳ Loading latest headlines...</p>
                         </div>
                     </div>
 
                     <div style="margin-top: 15px; text-align: center;">
-                        <p style="color: #999; font-size: 0.85em; margin: 0;">💡 Tip: For auto-loading headlines, host this page on GitHub Pages or a web server</p>
+                        <button onclick="loadNews()" style="background: #667eea; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: all 0.3s ease;">
+                            🔄 Refresh Headlines
+                        </button>
                     </div>
                 </div>
 
@@ -1221,6 +1192,128 @@
                 }
             });
         });
+
+        // News Feed Functionality
+        async function loadNews() {
+            const newsFeed = document.getElementById('news-feed');
+            newsFeed.innerHTML = '<div style="text-align: center; color: #999; padding: 20px;"><p>⏳ Loading latest headlines...</p></div>';
+
+            try {
+                const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://blog.arduino.cc/feed/&count=2');
+                const arduinoData = await response.json();
+                
+                const response2 = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://blog.adafruit.com/feed/&count=2');
+                const adafruitData = await response2.json();
+                
+                const response3 = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.hackster.io/blog.rss&count=2');
+                const hacksterData = await response3.json();
+
+                let allArticles = [];
+
+                // Combine all articles
+                if (arduinoData.status === 'ok' && arduinoData.items) {
+                    allArticles = allArticles.concat(arduinoData.items.map(item => ({
+                        title: item.title,
+                        link: item.link,
+                        pubDate: new Date(item.pubDate),
+                        source: 'Arduino Blog'
+                    })));
+                }
+
+                if (adafruitData.status === 'ok' && adafruitData.items) {
+                    allArticles = allArticles.concat(adafruitData.items.map(item => ({
+                        title: item.title,
+                        link: item.link,
+                        pubDate: new Date(item.pubDate),
+                        source: 'Adafruit Blog'
+                    })));
+                }
+
+                if (hacksterData.status === 'ok' && hacksterData.items) {
+                    allArticles = allArticles.concat(hacksterData.items.map(item => ({
+                        title: item.title,
+                        link: item.link,
+                        pubDate: new Date(item.pubDate),
+                        source: 'Hackster Blog'
+                    })));
+                }
+
+                // Sort by date and take top 6
+                allArticles.sort((a, b) => b.pubDate - a.pubDate);
+                const topArticles = allArticles.slice(0, 6);
+
+                if (topArticles.length > 0) {
+                    let html = '<ul style="list-style: none; padding: 0; margin: 0;">';
+                    
+                    topArticles.forEach((article, index) => {
+                        const timeAgo = getTimeAgo(article.pubDate);
+                        html += `
+                            <li style="padding: 15px 0; border-bottom: ${index < topArticles.length - 1 ? '1px solid #eee' : 'none'};">
+                                <div style="display: flex; align-items: start; gap: 10px;">
+                                    <span style="font-size: 1.5em; color: #667eea; font-weight: bold; min-width: 30px;">${index + 1}.</span>
+                                    <div style="flex: 1;">
+                                        <a href="${article.link}" target="_blank" style="color: #333; text-decoration: none; font-weight: 600; font-size: 1.05em; line-height: 1.4; display: block; margin-bottom: 5px; transition: color 0.2s ease;" onmouseover="this.style.color='#667eea'" onmouseout="this.style.color='#333'">
+                                            ${article.title}
+                                        </a>
+                                        <div style="font-size: 0.85em; color: #999;">
+                                            <span style="color: #667eea; font-weight: 600;">${article.source}</span> • ${timeAgo}
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        `;
+                    });
+                    
+                    html += '</ul>';
+                    newsFeed.innerHTML = html;
+                } else {
+                    showFallbackLinks();
+                }
+            } catch (error) {
+                console.error('Error loading news:', error);
+                showFallbackLinks();
+            }
+        }
+
+        function showFallbackLinks() {
+            const newsFeed = document.getElementById('news-feed');
+            newsFeed.innerHTML = `
+                <div style="text-align: center; padding: 20px;">
+                    <p style="color: #999; margin-bottom: 15px;">📡 Unable to load headlines automatically</p>
+                    <p style="color: #666; margin-bottom: 15px; font-weight: 600;">Visit the blogs directly:</p>
+                    <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 10px;">
+                        <a href="https://blog.arduino.cc/" target="_blank" style="display: block; padding: 15px 20px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #667eea; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">📟 Arduino Blog →</a>
+                        <a href="https://blog.adafruit.com/" target="_blank" style="display: block; padding: 15px 20px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #667eea; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">🎨 Adafruit Blog →</a>
+                        <a href="https://www.hackster.io/blog" target="_blank" style="display: block; padding: 15px 20px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); color: #667eea; text-decoration: none; border-radius: 10px; font-weight: 600; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">🔨 Hackster Blog →</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function getTimeAgo(date) {
+            const seconds = Math.floor((new Date() - date) / 1000);
+            
+            const intervals = {
+                year: 31536000,
+                month: 2592000,
+                week: 604800,
+                day: 86400,
+                hour: 3600,
+                minute: 60
+            };
+            
+            for (const [unit, secondsInUnit] of Object.entries(intervals)) {
+                const interval = Math.floor(seconds / secondsInUnit);
+                if (interval >= 1) {
+                    return `${interval} ${unit}${interval !== 1 ? 's' : ''} ago`;
+                }
+            }
+            
+            return 'Just now';
+        }
+
+        // Load news when page loads
+        window.addEventListener('load', loadNews);
     </script>
 </body>
 </html>
