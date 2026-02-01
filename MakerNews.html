@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maker Resources Hub | 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .trend-alert {
+            background: #ff6b6b;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        nav {
+            background: #f8f9fa;
+            padding: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            border-bottom: 3px solid #667eea;
+        }
+
+        nav button {
+            background: white;
+            border: 2px solid #667eea;
+            padding: 12px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #667eea;
+            transition: all 0.3s ease;
+        }
+
+        nav button:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        nav button.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .resource-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .resource-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .resource-card .icon {
+            font-size: 1.5em;
+        }
+
+        .resource-card p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .resource-card a {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .resource-card a:hover {
+            background: #764ba2;
+            transform: scale(1.05);
+        }
+
+        .youtube-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .youtube-card {
+            background: white;
+            border: 2px solid #ff0000;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .youtube-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255,0,0,0.2);
+        }
+
+        .youtube-card h4 {
+            color: #ff0000;
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin: 5px 5px 0 0;
+        }
+
+        .quick-links {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .quick-links h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .quick-links ul {
+            list-style: none;
+        }
+
+        .quick-links li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .quick-links li:last-child {
+            border-bottom: none;
+        }
+
+        .quick-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .quick-links a:hover {
+            color: #764ba2;
+            padding-left: 10px;
+        }
+
+        .trend-section {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .trend-section h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .amazon-link {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #667eea;
+            font-weight: bold;
+            border: 2px solid #667eea;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        .amazon-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            nav {
+                padding: 15px;
+            }
+
+            nav button {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔧 Maker Resources Hub</h1>
+            <p>Your curated guide to Python, Arduino, Robotics & AI Hardware | Updated for 2026</p>
+        </header>
+
+        <div class="trend-alert">
+            🚀 2026 TREND: Agentic AI Hardware - AI that controls physical devices is exploding!
+        </div>
+
+        <nav>
+            <button class="nav-btn active" data-section="weekend">☕ Weekend Routine</button>
+            <button class="nav-btn" data-section="apps">📱 Daily Apps</button>
+            <button class="nav-btn" data-section="youtube">🎥 YouTube</button>
+            <button class="nav-btn" data-section="deep-dive">📚 Deep Dive</button>
+            <button class="nav-btn" data-section="trends">⚡ 2026 Trends</button>
+            <button class="nav-btn" data-section="all">🌐 All Resources</button>
+        </nav>
+
+        <div class="content">
+            <!-- Weekend Morning Routine Section -->
+            <div class="section active" id="weekend">
+                <h2 style="color: #667eea; margin-bottom: 20px;">☕ Weekend Morning Routine</h2>
+                <p style="font-size: 1.1em; margin-bottom: 30px;">
+                    Your curated 15-30 minute Saturday/Sunday morning maker inspiration flow
+                </p>
+
+                <!-- Quick Morning Checklist -->
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 15px; margin-bottom: 30px;">
+                    <h3 style="margin-bottom: 20px; font-size: 1.6em;">🎯 Your 15-Minute Morning Flow</h3>
+                    <div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 10px;">
+                        <ol style="font-size: 1.1em; line-height: 2; padding-left: 25px;">
+                            <li><strong>Coffee + Quick Scan (5 min)</strong> - Check Hackster.io featured projects & Adafruit new products</li>
+                            <li><strong>Video Inspiration (5 min)</strong> - Watch 1 quick YouTube video from your subscriptions</li>
+                            <li><strong>Reddit Dive (5 min)</strong> - Browse r/raspberry_pi and r/arduino top posts from this week</li>
+                            <li><strong>Bonus: Project Queue</strong> - Bookmark 1-2 interesting projects to your "Weekend Build" list</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Top Tech Headlines -->
+                <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; margin-bottom: 30px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">📰 Latest Maker News</h3>
+                    <p style="color: #666; margin-bottom: 20px;">
+                        Quick access to the latest posts from top maker blogs
+                    </p>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; border: 2px solid #667eea;">
+                        <div style="display: grid; gap: 15px;">
+                            <a href="https://blog.arduino.cc/" target="_blank" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 20px; border-radius: 10px; text-decoration: none; color: #333; transition: all 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                <div style="display: flex; align-items: center; gap: 15px;">
+                                    <span style="font-size: 2em;">📟</span>
+                                    <div style="flex: 1;">
+                                        <strong style="color: #667eea; font-size: 1.1em;">Arduino Blog</strong>
+                                        <p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">Latest Arduino news, tutorials, and project showcases</p>
+                                    </div>
+                                    <span style="color: #667eea; font-size: 1.5em;">→</span>
+                                </div>
+                            </a>
+
+                            <a href="https://blog.adafruit.com/" target="_blank" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 20px; border-radius: 10px; text-decoration: none; color: #333; transition: all 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                <div style="display: flex; align-items: center; gap: 15px;">
+                                    <span style="font-size: 2em;">🎨</span>
+                                    <div style="flex: 1;">
+                                        <strong style="color: #667eea; font-size: 1.1em;">Adafruit Blog</strong>
+                                        <p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">CircuitPython, new products, and maker inspiration</p>
+                                    </div>
+                                    <span style="color: #667eea; font-size: 1.5em;">→</span>
+                                </div>
+                            </a>
+
+                            <a href="https://www.hackster.io/blog" target="_blank" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 20px; border-radius: 10px; text-decoration: none; color: #333; transition: all 0.3s ease; display: block;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                <div style="display: flex; align-items: center; gap: 15px;">
+                                    <span style="font-size: 2em;">🔨</span>
+                                    <div style="flex: 1;">
+                                        <strong style="color: #667eea; font-size: 1.1em;">Hackster Blog</strong>
+                                        <p style="margin: 5px 0 0 0; color: #666; font-size: 0.9em;">Community projects and hardware innovations</p>
+                                    </div>
+                                    <span style="color: #667eea; font-size: 1.5em;">→</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 15px; text-align: center;">
+                        <p style="color: #999; font-size: 0.85em; margin: 0;">💡 Tip: For auto-loading headlines, host this page on GitHub Pages or a web server</p>
+                    </div>
+                </div>
+
+                <!-- What's Hot This Week & Local Events -->
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; border-radius: 15px; margin-bottom: 30px;">
+                    <h3 style="margin-bottom: 20px; font-size: 1.6em;">🔥 Hot Topics & Trending This Week</h3>
+                    
+                    <div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                        <h4 style="margin-bottom: 15px;">💡 What's Buzzing in the Maker World</h4>
+                        <p style="margin-bottom: 15px; opacity: 0.95;">Check these communities for the week's hottest discussions and trending projects:</p>
+                        <div style="display: grid; gap: 10px;">
+                            <a href="https://www.reddit.com/r/arduino/top/?t=week" target="_blank" style="background: rgba(255,255,255,0.2); padding: 12px; border-radius: 8px; color: white; text-decoration: none; display: block; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                                <strong>📟 r/arduino Top Posts This Week</strong> - See what's trending
+                            </a>
+                            <a href="https://www.reddit.com/r/raspberry_pi/top/?t=week" target="_blank" style="background: rgba(255,255,255,0.2); padding: 12px; border-radius: 8px; color: white; text-decoration: none; display: block; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                                <strong>🍓 r/raspberry_pi Top Posts This Week</strong> - Latest Pi projects
+                            </a>
+                            <a href="https://www.reddit.com/r/robotics/top/?t=week" target="_blank" style="background: rgba(255,255,255,0.2); padding: 12px; border-radius: 8px; color: white; text-decoration: none; display: block; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                                <strong>🤖 r/robotics Top Posts This Week</strong> - Cutting-edge robotics
+                            </a>
+                            <a href="https://www.hackster.io/projects?sort=trending" target="_blank" style="background: rgba(255,255,255,0.2); padding: 12px; border-radius: 8px; color: white; text-decoration: none; display: block; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                                <strong>🔨 Hackster.io Trending Projects</strong> - Most popular builds
+                            </a>
+                            <a href="https://news.ycombinator.com/show" target="_blank" style="background: rgba(255,255,255,0.2); padding: 12px; border-radius: 8px; color: white; text-decoration: none; display: block; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                                <strong>💻 Hacker News Show HN</strong> - New tech launches & projects
+                            </a>
+                        </div>
+                    </div>
+
+                    <div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 10px;">
+                        <h4 style="margin-bottom: 15px;">📍 Columbus, Ohio Maker Events</h4>
+                        <p style="margin-bottom: 15px; opacity: 0.95;">Check these resources for local meetups, workshops, and maker events in your area:</p>
+                        <div style="display: grid; gap: 10px; margin-bottom: 15px;">
+                            <a href="https://www.meetup.com/find/?keywords=maker&location=Columbus%2C%20OH" target="_blank" style="background: rgba(255,255,255,0.2); padding: 12px; border-radius: 8px; color: white; text-decoration: none; display: block; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                                <strong>🤝 Meetup.com - Columbus Maker Groups</strong>
+                            </a>
+                            <a href="https://www.meetup.com/find/?keywords=arduino&location=Columbus%2C%20OH" target="_blank" style="background: rgba(255,255,255,0.2); padding: 12px; border-radius: 8px; color: white; text-decoration: none; display: block; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                                <strong>📟 Arduino & Electronics Meetups - Columbus</strong>
+                            </a>
+                            <a href="https://www.meetup.com/find/?keywords=raspberry+pi&location=Columbus%2C%20OH" target="_blank" style="background: rgba(255,255,255,0.2); padding: 12px; border-radius: 8px; color: white; text-decoration: none; display: block; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                                <strong>🍓 Raspberry Pi Meetups - Columbus</strong>
+                            </a>
+                            <a href="https://www.eventbrite.com/d/oh--columbus/maker/" target="_blank" style="background: rgba(255,255,255,0.2); padding: 12px; border-radius: 8px; color: white; text-decoration: none; display: block; transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+                                <strong>🎟️ Eventbrite - Columbus Maker Events</strong>
+                            </a>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; border-left: 4px solid #ffd93d;">
+                            <p style="margin: 0; font-size: 0.95em;"><strong>💡 Pro Tip:</strong> Columbus Idea Foundry is a large makerspace in the area - check their events calendar and consider membership for access to tools, workshops, and the local maker community!</p>
+                            <a href="https://columbusideafoundry.com/" target="_blank" style="display: inline-block; background: white; color: #667eea; padding: 8px 15px; border-radius: 15px; text-decoration: none; font-size: 0.9em; margin-top: 10px; font-weight: 600;">Columbus Idea Foundry →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links for Morning -->
+                <h3 style="color: #667eea; margin-bottom: 15px;">🚀 One-Click Morning Links</h3>
+                <div class="resource-grid" style="margin-bottom: 30px;">
+                    <div class="resource-card">
+                        <h3><span class="icon">⭐</span>Hackster Featured</h3>
+                        <p>Start here - the best community projects curated daily</p>
+                        <a href="https://www.hackster.io/" target="_blank">View Featured Projects →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3><span class="icon">🆕</span>Adafruit New</h3>
+                        <p>Weekly new products - often the first to get CircuitPython hardware</p>
+                        <a href="https://www.adafruit.com/category/956" target="_blank">See New Products →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3><span class="icon">🔥</span>Reddit Hot</h3>
+                        <p>This week's top posts from your favorite communities</p>
+                        <a href="https://www.reddit.com/r/raspberry_pi/top/?t=week" target="_blank">r/raspberry_pi →</a>
+                        <a href="https://www.reddit.com/r/arduino/top/?t=week" target="_blank">r/arduino →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3><span class="icon">📺</span>Latest Videos</h3>
+                        <p>Your subscriptions - sorted by newest first</p>
+                        <a href="https://www.youtube.com/feed/subscriptions" target="_blank">YouTube Subscriptions →</a>
+                    </div>
+                </div>
+
+                <!-- Recommended Additions -->
+                <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; margin-bottom: 30px;">
+                    <h3 style="color: #667eea; margin-bottom: 20px;">📌 Recommended Additions to Your Routine</h3>
+                    
+                    <div class="resource-grid">
+                        <div class="resource-card">
+                            <h3><span class="icon">📧</span>Hacker News</h3>
+                            <p><strong>Why:</strong> The "Show HN" section often has cutting-edge maker projects before they hit other platforms. Great for discovering new tools.</p>
+                            <div class="tag">Weekly Check</div>
+                            <div class="tag">Cutting Edge</div>
+                            <a href="https://news.ycombinator.com/show" target="_blank">Show HN →</a>
+                        </div>
+
+                        <div class="resource-card">
+                            <h3><span class="icon">🎨</span>Thingiverse / Printables</h3>
+                            <p><strong>Why:</strong> You have a Bambu P1S! See what's trending in 3D prints - often includes Arduino/Pi enclosures and robotic parts.</p>
+                            <div class="tag">3D Printing</div>
+                            <div class="tag">STL Files</div>
+                            <a href="https://www.thingiverse.com/explore/popular" target="_blank">Thingiverse →</a>
+                            <a href="https://www.printables.com/en" target="_blank">Printables →</a>
+                        </div>
+
+                        <div class="resource-card">
+                            <h3><span class="icon">🔋</span>SparkFun Blog</h3>
+                            <p><strong>Why:</strong> Often overlooked but excellent tutorials on sensor integration and Arduino troubleshooting. Great for your learning projects.</p>
+                            <div class="tag">Tutorials</div>
+                            <div class="tag">Components</div>
+                            <a href="https://www.sparkfun.com/news" target="_blank">SparkFun News →</a>
+                        </div>
+
+                        <div class="resource-card">
+                            <h3><span class="icon">🎓</span>Instructables</h3>
+                            <p><strong>Why:</strong> Step-by-step project guides with parts lists. Perfect for weekend builds. Filter by "Arduino" or "Raspberry Pi".</p>
+                            <div class="tag">Step-by-Step</div>
+                            <div class="tag">Projects</div>
+                            <a href="https://www.instructables.com/circuits/" target="_blank">Electronics Projects →</a>
+                        </div>
+
+                        <div class="resource-card">
+                            <h3><span class="icon">🎙️</span>The Amp Hour Podcast</h3>
+                            <p><strong>Why:</strong> Weekly electronics podcast - great for listening during workshop time or weekend breakfast. Covers Arduino, Pi, and general maker topics.</p>
+                            <div class="tag">Podcast</div>
+                            <div class="tag">Weekly</div>
+                            <a href="https://theamphour.com/" target="_blank">Listen →</a>
+                        </div>
+
+                        <div class="resource-card">
+                            <h3><span class="icon">✂️</span>Cricut Design Space</h3>
+                            <p><strong>Why:</strong> Access to ready-made projects and designs for your Cricut Joy. Great for custom labels, stickers, and decals for your maker projects.</p>
+                            <div class="tag">Design Software</div>
+                            <div class="tag">Projects</div>
+                            <a href="https://design.cricut.com/" target="_blank">Design Space →</a>
+                        </div>
+
+                        <div class="resource-card">
+                            <h3><span class="icon">🎨</span>Cricut Community</h3>
+                            <p><strong>Why:</strong> r/cricut has tons of ideas for combining crafting with tech projects - custom enclosure labels, cable organization, project documentation.</p>
+                            <div class="tag">Community</div>
+                            <div class="tag">Ideas</div>
+                            <a href="https://www.reddit.com/r/cricut/" target="_blank">r/cricut →</a>
+                        </div>
+
+                        <div class="resource-card">
+                            <h3><span class="icon">📺</span>Jennifer Maker</h3>
+                            <p><strong>Why:</strong> Excellent Cricut tutorials and free SVG files. Learn advanced techniques for creating professional labels and organizers for your workshop.</p>
+                            <div class="tag">Tutorials</div>
+                            <div class="tag">Free SVGs</div>
+                            <a href="https://jennifermaker.com/" target="_blank">Jennifer Maker →</a>
+                            <a href="https://www.youtube.com/@JenniferMaker" target="_blank">YouTube →</a>
+                        </div>
+
+                        <div class="resource-card">
+                            <h3><span class="icon">🛒</span>Amazon Maker Search</h3>
+                            <p><strong>Why:</strong> Quick access to Arduino kits, sensors, and components with Prime shipping. Great for "I need this for a weekend build" moments.</p>
+                            <div class="tag">Shopping</div>
+                            <div class="tag">Fast Shipping</div>
+                            <a href="https://www.amazon.com/s?k=arduino+sensor+kit" target="_blank">Arduino Sensors →</a>
+                            <a href="https://www.amazon.com/s?k=raspberry+pi+accessories" target="_blank">Pi Accessories →</a>
+                        </div>
+
+                        <div class="resource-card">
+                            <h3><span class="icon">🏠</span>Home Assistant</h3>
+                            <p><strong>Why:</strong> Perfect bridge between your Pi projects and home automation. Control your Arduino/Pi projects through a unified dashboard.</p>
+                            <div class="tag">Home Automation</div>
+                            <div class="tag">IoT</div>
+                            <a href="https://www.home-assistant.io/" target="_blank">Home Assistant →</a>
+                            <a href="https://community.home-assistant.io/" target="_blank">Community Forum →</a>
+                        </div>
+
+                        <div class="resource-card">
+                            <h3><span class="icon">📡</span>ESPHome</h3>
+                            <p><strong>Why:</strong> If you have ESP32/ESP8266 boards, ESPHome makes it ridiculously easy to create custom IoT devices without code.</p>
+                            <div class="tag">ESP32</div>
+                            <div class="tag">No-Code</div>
+                            <a href="https://esphome.io/" target="_blank">ESPHome Docs →</a>
+                        </div>
+
+                        <div class="resource-card">
+                            <h3><span class="icon">🤖</span>ROS (Robot Operating System)</h3>
+                            <p><strong>Why:</strong> Essential for serious robotics. ROS 2 works great with Pi and is the industry standard for robot control and navigation.</p>
+                            <div class="tag">Robotics</div>
+                            <div class="tag">Advanced</div>
+                            <a href="https://docs.ros.org/en/rolling/" target="_blank">ROS 2 Docs →</a>
+                            <a href="https://roboticsbackend.com/" target="_blank">Robotics Back-End →</a>
+                        </div>
+
+                        <div class="resource-card">
+                            <h3><span class="icon">📐</span>FreeCAD / Fusion 360</h3>
+                            <p><strong>Why:</strong> Design custom enclosures for your projects on the Bambu P1S. FreeCAD is free/open-source, Fusion 360 is free for hobbyists.</p>
+                            <div class="tag">3D Modeling</div>
+                            <div class="tag">CAD</div>
+                            <a href="https://www.freecad.org/" target="_blank">FreeCAD →</a>
+                            <a href="https://www.autodesk.com/products/fusion-360/personal" target="_blank">Fusion 360 →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Idea Generator -->
+                <div style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); color: white; padding: 30px; border-radius: 15px; margin-bottom: 30px;">
+                    <h3 style="margin-bottom: 20px;">💡 Weekend Project Ideas (Based on Your Setup)</h3>
+                    <p style="margin-bottom: 20px; font-size: 1.05em;">
+                        Since you have: Arduino + Raspberry Pi + Bambu P1S + WS2812B LEDs + Cricut Joy + Various sensors
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <h4>🤖 Robot Arm Control</h4>
+                            <p style="font-size: 0.95em; opacity: 0.95;">3D print a simple 2-axis arm, control with Arduino + Python interface on Pi. Search: "MeArm Arduino"</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <h4>🎨 LED Matrix Display</h4>
+                            <p style="font-size: 0.95em; opacity: 0.95;">Your WS2812B strips + Python = scrolling messages, weather display, or game animations</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <h4>📦 Smart Storage System</h4>
+                            <p style="font-size: 0.95em; opacity: 0.95;">3D print labeled boxes + Cricut custom labels with RFID tags, track components inventory with Arduino</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <h4>🎮 Custom Game Controller</h4>
+                            <p style="font-size: 0.95em; opacity: 0.95;">Arduino Leonardo as HID device + 3D printed enclosure + Cricut button labels = custom macro pad</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <h4>✂️ Project Organizer</h4>
+                            <p style="font-size: 0.95em; opacity: 0.95;">Cricut Joy for wire labels, component bins, breadboard organization. Make your workshop Instagram-worthy!</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <h4>🏷️ Smart Project Labels</h4>
+                            <p style="font-size: 0.95em; opacity: 0.95;">Cricut + QR codes = scan to see Arduino code, wiring diagrams, or project notes on your phone</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <h4>🏠 Home Automation Hub</h4>
+                            <p style="font-size: 0.95em; opacity: 0.95;">Raspberry Pi + Home Assistant + ESP32 sensors = control lights, temp, and custom dashboards</p>
+                        </div>
+
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <h4>📐 Custom Enclosures</h4>
+                            <p style="font-size: 0.95em; opacity: 0.95;">Design in Fusion 360 + 3D print on P1S = professional-looking project housings with perfect fits</p>
+                        </div>
+                    </div>
+
+                    <div style="background: rgba(255,255,255,0.15); padding: 20px; border-radius: 10px; margin-top: 20px;">
+                        <h4 style="margin-bottom: 10px;">🎯 Cricut + Tech Crossover Ideas:</h4>
+                        <ul style="list-style: none; padding-left: 0; line-height: 2;">
+                            <li>✂️ <strong>Custom PCB Labels</strong> - Label your Arduino pins, sensor connections, power rails</li>
+                            <li>✂️ <strong>Cable Management</strong> - Color-coded wire labels for complex projects</li>
+                            <li>✂️ <strong>Project Enclosures</strong> - Professional vinyl decals for 3D printed cases</li>
+                            <li>✂️ <strong>Workshop Organization</strong> - Drawer labels, tool outlines, parts bin tags</li>
+                            <li>✂️ <strong>Gift Projects</strong> - Custom tech gifts with personalized labels/decals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Weekly "What's New" Template -->
+                <div style="background: #f8f9fa; padding: 30px; border-radius: 15px; margin-bottom: 30px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">🛒 Quick Amazon Maker Links</h3>
+                    <p style="color: #666; margin-bottom: 20px;">
+                        Pre-saved searches for common maker components - perfect for weekend project planning
+                    </p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px;">
+                        <a href="https://www.amazon.com/s?k=arduino+starter+kit" target="_blank" class="amazon-link">
+                            📦 Arduino Kits
+                        </a>
+                        <a href="https://www.amazon.com/s?k=raspberry+pi+sensors" target="_blank" class="amazon-link">
+                            🔌 Raspberry Pi Sensors
+                        </a>
+                        <a href="https://www.amazon.com/s?k=ws2812b+led+strip" target="_blank" class="amazon-link">
+                            💡 LED Strips
+                        </a>
+                        <a href="https://www.amazon.com/s?k=servo+motor+arduino" target="_blank" class="amazon-link">
+                            ⚙️ Servo Motors
+                        </a>
+                        <a href="https://www.amazon.com/s?k=stepper+motor+driver" target="_blank" class="amazon-link">
+                            🔄 Stepper Motors
+                        </a>
+                        <a href="https://www.amazon.com/s?k=breadboard+jumper+wires" target="_blank" class="amazon-link">
+                            🔗 Breadboards & Wires
+                        </a>
+                        <a href="https://www.amazon.com/s?k=ultrasonic+sensor+arduino" target="_blank" class="amazon-link">
+                            📡 Ultrasonic Sensors
+                        </a>
+                        <a href="https://www.amazon.com/s?k=power+supply+arduino" target="_blank" class="amazon-link">
+                            🔋 Power Supplies
+                        </a>
+                        <a href="https://www.amazon.com/s?k=cricut+joy+smart+vinyl" target="_blank" class="amazon-link">
+                            ✂️ Cricut Smart Vinyl
+                        </a>
+                        <a href="https://www.amazon.com/s?k=cricut+joy+insert+cards" target="_blank" class="amazon-link">
+                            💌 Cricut Cards
+                        </a>
+                        <a href="https://www.amazon.com/s?k=cricut+joy+pen+set" target="_blank" class="amazon-link">
+                            🖊️ Cricut Pens
+                        </a>
+                        <a href="https://www.amazon.com/s?k=vinyl+transfer+tape" target="_blank" class="amazon-link">
+                            📋 Transfer Tape
+                        </a>
+                    </div>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 30px; border-radius: 15px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">📅 This Week in Maker Tech (Manual Bookmark Section)</h3>
+                    <p style="color: #666; margin-bottom: 20px;">
+                        <strong>Pro tip:</strong> Create a browser bookmark folder called "This Week" and drag interesting links here throughout the week. 
+                        Review on weekend mornings, then clear for next week. This prevents endless tab buildup!
+                    </p>
+                    
+                    <div style="border: 2px dashed #667eea; padding: 20px; border-radius: 10px; text-align: center; background: white;">
+                        <p style="color: #999; font-style: italic;">
+                            👆 Bookmark this page and add your weekly finds above this section<br>
+                            Suggested categories: Cool Projects | New Hardware | Tutorials to Try | Shopping Cart
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Daily Apps Section -->
+            <div class="section" id="apps">
+                <h2 style="color: #667eea; margin-bottom: 20px;">📱 Daily Routine Apps</h2>
+                <p>Quick, digestible updates for your phone - check these daily or weekly</p>
+                
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h3><span class="icon">🔨</span>Hackster.io</h3>
+                        <p><strong>The gold standard for maker projects.</strong> Follow tags like Raspberry Pi, Arduino, and Robotics. Amazing community-driven content with latest board releases.</p>
+                        <div class="tag">Project Sharing</div>
+                        <div class="tag">News Feed</div>
+                        <div class="tag">Community</div>
+                        <a href="https://www.hackster.io/" target="_blank">Visit Hackster.io →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3><span class="icon">📰</span>Feedly (RSS)</h3>
+                        <p>Aggregate the "Big Three" maker news sources: MagPi, Make: Magazine, and Arduino Blog. Everything in one clean scroll.</p>
+                        <div class="tag">RSS Aggregator</div>
+                        <div class="tag">Customizable</div>
+                        <a href="https://feedly.com/" target="_blank">Get Feedly →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3><span class="icon">🤖</span>Reddit</h3>
+                        <p>Essential subreddits for makers: r/raspberry_pi, r/arduino, r/robotics, and r/AskRobotics for deep technical troubleshooting.</p>
+                        <div class="tag">Community</div>
+                        <div class="tag">Q&A</div>
+                        <div class="tag">Projects</div>
+                        <a href="https://www.reddit.com/r/raspberry_pi/" target="_blank">r/raspberry_pi →</a>
+                        <a href="https://www.reddit.com/r/arduino/" target="_blank">r/arduino →</a>
+                        <a href="https://www.reddit.com/r/robotics/" target="_blank">r/robotics →</a>
+                    </div>
+                </div>
+
+                <div class="quick-links">
+                    <h3>Quick Subscribe Links</h3>
+                    <ul>
+                        <li><a href="https://magpi.raspberrypi.com/" target="_blank">🍓 MagPi (Raspberry Pi Official Magazine)</a></li>
+                        <li><a href="https://makezine.com/" target="_blank">🛠️ Make: Magazine</a></li>
+                        <li><a href="https://blog.arduino.cc/" target="_blank">📟 Arduino Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- YouTube Section -->
+            <div class="section" id="youtube">
+                <h2 style="color: #667eea; margin-bottom: 20px;">🎥 Entertaining YouTube Creators</h2>
+                <p>High-production builds and expert tutorials to inspire your next project</p>
+                
+                <div class="youtube-grid">
+                    <div class="youtube-card">
+                        <h4>Paul McWhorter (Top Tech Boy)</h4>
+                        <p>The "Bob Ross" of electronics! Amazing Arduino and Python tutorials. Over 32 hours of beginner-friendly Arduino content. Perfect for understanding concepts, not just copying code.</p>
+                        <div class="tag">Arduino</div>
+                        <div class="tag">Python</div>
+                        <div class="tag">Beginner-Friendly</div>
+                        <a href="https://www.youtube.com/@paulmcwhorter" target="_blank">Watch Channel →</a>
+                    </div>
+
+                    <div class="youtube-card">
+                        <h4>Programming Electronics Academy</h4>
+                        <p>Dedicated Arduino tutorials from basics to advanced. Teaches you to understand and write your own code. 220k+ subscribers with comprehensive lessons.</p>
+                        <div class="tag">Arduino</div>
+                        <div class="tag">Structured Learning</div>
+                        <div class="tag">Code Deep-Dives</div>
+                        <a href="https://www.youtube.com/@programmingelectronicsacademy" target="_blank">Watch Channel →</a>
+                    </div>
+
+                    <div class="youtube-card">
+                        <h4>Arduino (Official)</h4>
+                        <p>Official Arduino channel hosted by founders. Product updates, workshops, events, and official tutorials with the Arduino Starter Kit series.</p>
+                        <div class="tag">Official</div>
+                        <div class="tag">Product Updates</div>
+                        <div class="tag">Workshops</div>
+                        <a href="https://www.youtube.com/@Arduino" target="_blank">Watch Channel →</a>
+                    </div>
+
+                    <div class="youtube-card">
+                        <h4>How To Mechatronics</h4>
+                        <p>Arduino projects and tutorials with clear explanations. All source code, schematics, and files available on website. 1.9M+ subscribers!</p>
+                        <div class="tag">Arduino Projects</div>
+                        <div class="tag">Schematics Included</div>
+                        <div class="tag">Popular</div>
+                        <a href="https://www.youtube.com/@HowToMechatronics" target="_blank">Watch Channel →</a>
+                    </div>
+
+                    <div class="youtube-card">
+                        <h4>Jeremy Blum (sciguy14)</h4>
+                        <p>Arduino expert with step-by-step instructional videos. Covers Arduino, robotics, and electronics projects with professional clarity.</p>
+                        <div class="tag">Arduino Expert</div>
+                        <div class="tag">Robotics</div>
+                        <div class="tag">Step-by-Step</div>
+                        <a href="https://www.youtube.com/@sciguy14" target="_blank">Watch Channel →</a>
+                    </div>
+
+                    <div class="youtube-card">
+                        <h4>James Bruton</h4>
+                        <p>Master of robotics - humanoid robots, electric skateboards, complex Arduino/Pi builds with engineering explanations</p>
+                        <div class="tag">Robotics</div>
+                        <div class="tag">Engineering</div>
+                        <div class="tag">Advanced</div>
+                        <a href="https://www.youtube.com/@jamesbruton" target="_blank">Watch Channel →</a>
+                    </div>
+
+                    <div class="youtube-card">
+                        <h4>The MagPi / Raspberry Pi</h4>
+                        <p>Official Raspberry Pi channel. Heavy focus on AI-integrated projects and using local LLMs to control GPIO pins</p>
+                        <div class="tag">Raspberry Pi</div>
+                        <div class="tag">AI Integration</div>
+                        <div class="tag">Official</div>
+                        <a href="https://www.youtube.com/@raspberrypi" target="_blank">Watch Channel →</a>
+                    </div>
+
+                    <div class="youtube-card">
+                        <h4>Real Python</h4>
+                        <p>Best source for Python evolution updates (Python 3.13+ performance boosts in robotics). Essential for staying current</p>
+                        <div class="tag">Python</div>
+                        <div class="tag">Professional</div>
+                        <div class="tag">Advanced</div>
+                        <a href="https://www.youtube.com/@realpython" target="_blank">Watch Channel →</a>
+                    </div>
+
+                    <div class="youtube-card">
+                        <h4>Core Electronics</h4>
+                        <p>Australian makers and educators. Arduino, Raspberry Pi, and 3D printing tutorials designed for beginners with in-depth guides.</p>
+                        <div class="tag">Arduino</div>
+                        <div class="tag">Raspberry Pi</div>
+                        <div class="tag">Beginner-Focused</div>
+                        <a href="https://www.youtube.com/@CoreElectronicsAU" target="_blank">Watch Channel →</a>
+                    </div>
+
+                    <div class="youtube-card">
+                        <h4>Ralph Bacon</h4>
+                        <p>Arduino building blocks and modules. Shows how to attach sensors, components, and provides C++ code for projects. Great for hardware integration.</p>
+                        <div class="tag">Arduino Hardware</div>
+                        <div class="tag">C++ Code</div>
+                        <div class="tag">IoT</div>
+                        <a href="https://www.youtube.com/@RalphBacon" target="_blank">Watch Channel →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deep Dive Section -->
+            <div class="section" id="deep-dive">
+                <h2 style="color: #667eea; margin-bottom: 20px;">📚 Deep-Dive Information Sources</h2>
+                <p>For when you want comprehensive analysis and cutting-edge research</p>
+                
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h3><span class="icon">💻</span>Tom's Hardware</h3>
+                        <p>Thorough benchmarks on new hardware and monthly "Best Project" lists. The Raspberry Pi section is particularly excellent.</p>
+                        <div class="tag">Hardware Reviews</div>
+                        <div class="tag">Benchmarks</div>
+                        <div class="tag">Project Lists</div>
+                        <a href="https://www.tomshardware.com/raspberry-pi" target="_blank">Visit Tom's Hardware →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3><span class="icon">⚙️</span>IEEE Spectrum</h3>
+                        <p>Pro-level robotics coverage. Less DIY, more cutting-edge industrial and humanoid robotics research worldwide.</p>
+                        <div class="tag">Professional</div>
+                        <div class="tag">Research</div>
+                        <div class="tag">Industry News</div>
+                        <a href="https://spectrum.ieee.org/robotics" target="_blank">Visit IEEE Spectrum →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3><span class="icon">🤖</span>The Robotics Back-End</h3>
+                        <p>Dedicated to the intersection of ROS 2 (Robot Operating System), Python, and Raspberry Pi. Perfect for serious robotics projects.</p>
+                        <div class="tag">ROS 2</div>
+                        <div class="tag">Python</div>
+                        <div class="tag">Advanced</div>
+                        <a href="https://roboticsbackend.com/" target="_blank">Visit Robotics Back-End →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3><span class="icon">🔬</span>Real Python (Web)</h3>
+                        <p>Comprehensive Python tutorials and articles. Deep dives into libraries, best practices, and new features.</p>
+                        <div class="tag">Python</div>
+                        <div class="tag">Tutorials</div>
+                        <div class="tag">In-Depth</div>
+                        <a href="https://realpython.com/" target="_blank">Visit Real Python →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2026 Trends Section -->
+            <div class="section" id="trends">
+                <h2 style="color: #667eea; margin-bottom: 20px;">⚡ 2026 Trend Watch: Agentic Hardware</h2>
+                
+                <div class="trend-section">
+                    <h3>🚀 The Biggest Shift: AI-to-Hardware Integration</h3>
+                    <p style="font-size: 1.1em; margin-bottom: 20px;">
+                        We're seeing a massive convergence where AI doesn't just think - it ACTS through physical hardware. 
+                        This is the era of "Agentic AI" controlling robots, sensors, and IoT devices in real-time.
+                    </p>
+                    
+                    <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin-top: 20px;">
+                        <h4 style="margin-bottom: 10px;">Key Technologies to Watch:</h4>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li>✅ <strong>MicroPython</strong> - Now standard on boards like Arduino Uno Q</li>
+                            <li>✅ <strong>CircuitPython</strong> - Adafruit's solution for easy microcontroller programming</li>
+                            <li>✅ <strong>Local LLMs</strong> - Running AI models directly on Raspberry Pi</li>
+                            <li>✅ <strong>ROS 2</strong> - Robot Operating System for complex robotics projects</li>
+                            <li>✅ <strong>Edge AI</strong> - Machine learning inference on embedded devices</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resource-grid" style="margin-top: 30px;">
+                    <div class="resource-card">
+                        <h3><span class="icon">🎨</span>Adafruit</h3>
+                        <p><strong>Leading the CircuitPython revolution!</strong> Check their "New Products" weekly. Making Python on microcontrollers incredibly easy without C++ complexity.</p>
+                        <div class="tag">CircuitPython</div>
+                        <div class="tag">Hardware</div>
+                        <div class="tag">Tutorials</div>
+                        <a href="https://www.adafruit.com/" target="_blank">Visit Adafruit →</a>
+                        <a href="https://www.adafruit.com/category/956" target="_blank">New Products →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3><span class="icon">🧠</span>Edge Impulse</h3>
+                        <p>Platform for developing and deploying machine learning models on edge devices. Perfect for AI-powered Arduino/Pi projects.</p>
+                        <div class="tag">Edge AI</div>
+                        <div class="tag">Machine Learning</div>
+                        <a href="https://www.edgeimpulse.com/" target="_blank">Visit Edge Impulse →</a>
+                    </div>
+
+                    <div class="resource-card">
+                        <h3><span class="icon">📡</span>Arduino Uno Q</h3>
+                        <p>The new standard featuring built-in MicroPython support. Game-changer for Python developers entering Arduino world.</p>
+                        <div class="tag">New Hardware</div>
+                        <div class="tag">MicroPython</div>
+                        <a href="https://blog.arduino.cc/" target="_blank">Arduino Blog →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- All Resources Section -->
+            <div class="section" id="all">
+                <h2 style="color: #667eea; margin-bottom: 20px;">🌐 Complete Resource Directory</h2>
+                
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">📱 Mobile Apps & Daily Checks</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>Hackster.io</strong> - <a href="https://www.hackster.io/" target="_blank">hackster.io</a>
+                            <br><span style="color: #666;">Project sharing platform, latest boards, community hacks</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>Feedly</strong> - <a href="https://feedly.com/" target="_blank">feedly.com</a>
+                            <br><span style="color: #666;">RSS aggregator for MagPi, Make:, Arduino Blog</span>
+                        </li>
+                        <li style="padding: 10px 0;">
+                            <strong>Reddit Communities</strong>
+                            <br><a href="https://www.reddit.com/r/raspberry_pi/" target="_blank">r/raspberry_pi</a> | 
+                            <a href="https://www.reddit.com/r/arduino/" target="_blank">r/arduino</a> | 
+                            <a href="https://www.reddit.com/r/robotics/" target="_blank">r/robotics</a> | 
+                            <a href="https://www.reddit.com/r/AskRobotics/" target="_blank">r/AskRobotics</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">🎥 YouTube Channels</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>James Bruton</strong> - <a href="https://www.youtube.com/@jamesbruton" target="_blank">youtube.com/@jamesbruton</a>
+                            <br><span style="color: #666;">Robotics master, humanoid robots, engineering</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>Paul McWhorter</strong> - <a href="https://www.youtube.com/@paulmcwhorter" target="_blank">youtube.com/@paulmcwhorter</a>
+                            <br><span style="color: #666;">Python on Pi, sensor math, beginner-friendly</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>Raspberry Pi Official</strong> - <a href="https://www.youtube.com/@raspberrypi" target="_blank">youtube.com/@raspberrypi</a>
+                            <br><span style="color: #666;">AI integration, local LLMs, GPIO control</span>
+                        </li>
+                        <li style="padding: 10px 0;">
+                            <strong>Real Python</strong> - <a href="https://www.youtube.com/@realpython" target="_blank">youtube.com/@realpython</a>
+                            <br><span style="color: #666;">Python evolution, 3.13+ updates, performance</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin-bottom: 25px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">📚 In-Depth Resources</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>Tom's Hardware</strong> - <a href="https://www.tomshardware.com/raspberry-pi" target="_blank">tomshardware.com/raspberry-pi</a>
+                            <br><span style="color: #666;">Hardware benchmarks, best projects monthly</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>IEEE Spectrum</strong> - <a href="https://spectrum.ieee.org/robotics" target="_blank">spectrum.ieee.org/robotics</a>
+                            <br><span style="color: #666;">Professional robotics, industrial news</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>The Robotics Back-End</strong> - <a href="https://roboticsbackend.com/" target="_blank">roboticsbackend.com</a>
+                            <br><span style="color: #666;">ROS 2, Python, Raspberry Pi integration</span>
+                        </li>
+                        <li style="padding: 10px 0;">
+                            <strong>Real Python (Web)</strong> - <a href="https://realpython.com/" target="_blank">realpython.com</a>
+                            <br><span style="color: #666;">Comprehensive Python tutorials and guides</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%); color: white; padding: 25px; border-radius: 15px;">
+                    <h3 style="margin-bottom: 15px;">⚡ 2026 Trending Resources</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.3);">
+                            <strong>Adafruit</strong> - <a href="https://www.adafruit.com/" target="_blank" style="color: white;">adafruit.com</a>
+                            <br><span style="opacity: 0.9;">CircuitPython leader, check new products weekly</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.3);">
+                            <strong>Edge Impulse</strong> - <a href="https://www.edgeimpulse.com/" target="_blank" style="color: white;">edgeimpulse.com</a>
+                            <br><span style="opacity: 0.9;">Edge AI and machine learning for embedded devices</span>
+                        </li>
+                        <li style="padding: 10px 0;">
+                            <strong>Arduino Blog</strong> - <a href="https://blog.arduino.cc/" target="_blank" style="color: white;">blog.arduino.cc</a>
+                            <br><span style="opacity: 0.9;">Arduino Uno Q updates and MicroPython news</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin-top: 25px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">➕ Recommended Additions</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>Hacker News (Show HN)</strong> - <a href="https://news.ycombinator.com/show" target="_blank">news.ycombinator.com/show</a>
+                            <br><span style="color: #666;">Cutting-edge maker projects, often before other platforms</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>Thingiverse</strong> - <a href="https://www.thingiverse.com/explore/popular" target="_blank">thingiverse.com</a> | 
+                            <strong>Printables</strong> - <a href="https://www.printables.com/en" target="_blank">printables.com</a>
+                            <br><span style="color: #666;">3D print designs, Arduino/Pi enclosures, robotic parts</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>SparkFun Blog</strong> - <a href="https://www.sparkfun.com/news" target="_blank">sparkfun.com/news</a>
+                            <br><span style="color: #666;">Excellent sensor integration and Arduino tutorials</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>Instructables</strong> - <a href="https://www.instructables.com/circuits/" target="_blank">instructables.com/circuits</a>
+                            <br><span style="color: #666;">Step-by-step project guides with parts lists</span>
+                        </li>
+                        <li style="padding: 10px 0;">
+                            <strong>The Amp Hour Podcast</strong> - <a href="https://theamphour.com/" target="_blank">theamphour.com</a>
+                            <br><span style="color: #666;">Weekly electronics podcast for makers</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin-top: 25px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">🏠 Home Automation & IoT</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>Home Assistant</strong> - <a href="https://www.home-assistant.io/" target="_blank">home-assistant.io</a>
+                            <br><span style="color: #666;">Control Arduino/Pi projects through unified dashboard</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>ESPHome</strong> - <a href="https://esphome.io/" target="_blank">esphome.io</a>
+                            <br><span style="color: #666;">Create custom IoT devices with ESP32/ESP8266 without code</span>
+                        </li>
+                        <li style="padding: 10px 0;">
+                            <strong>Home Assistant Community</strong> - <a href="https://community.home-assistant.io/" target="_blank">community.home-assistant.io</a>
+                            <br><span style="color: #666;">Active forum for home automation projects</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin-top: 25px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">🤖 Robotics (ROS)</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>ROS 2 Documentation</strong> - <a href="https://docs.ros.org/en/rolling/" target="_blank">docs.ros.org</a>
+                            <br><span style="color: #666;">Industry standard for robot control and navigation</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>The Robotics Back-End</strong> - <a href="https://roboticsbackend.com/" target="_blank">roboticsbackend.com</a>
+                            <br><span style="color: #666;">ROS 2, Python, and Raspberry Pi tutorials</span>
+                        </li>
+                        <li style="padding: 10px 0;">
+                            <strong>ROS Discourse</strong> - <a href="https://discourse.ros.org/" target="_blank">discourse.ros.org</a>
+                            <br><span style="color: #666;">Official ROS community forum</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin-top: 25px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">📐 CAD & 3D Design</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>FreeCAD</strong> - <a href="https://www.freecad.org/" target="_blank">freecad.org</a>
+                            <br><span style="color: #666;">Free and open-source 3D parametric modeler</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>Fusion 360 (Personal)</strong> - <a href="https://www.autodesk.com/products/fusion-360/personal" target="_blank">autodesk.com/fusion-360/personal</a>
+                            <br><span style="color: #666;">Free for hobbyists, excellent for custom enclosures</span>
+                        </li>
+                        <li style="padding: 10px 0;">
+                            <strong>Onshape</strong> - <a href="https://www.onshape.com/en/products/free" target="_blank">onshape.com</a>
+                            <br><span style="color: #666;">Free cloud-based CAD, no installation required</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin-top: 25px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">📍 Columbus, Ohio Maker Events</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>Columbus Idea Foundry</strong> - <a href="https://columbusideafoundry.com/" target="_blank">columbusideafoundry.com</a>
+                            <br><span style="color: #666;">Major local makerspace with tools, workshops, and community</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>Meetup - Maker Groups</strong> - <a href="https://www.meetup.com/find/?keywords=maker&location=Columbus%2C%20OH" target="_blank">meetup.com</a>
+                            <br><span style="color: #666;">Local maker meetups and events</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>Meetup - Arduino/Electronics</strong> - <a href="https://www.meetup.com/find/?keywords=arduino&location=Columbus%2C%20OH" target="_blank">meetup.com</a>
+                            <br><span style="color: #666;">Electronics and Arduino focused meetups</span>
+                        </li>
+                        <li style="padding: 10px 0;">
+                            <strong>Eventbrite - Columbus</strong> - <a href="https://www.eventbrite.com/d/oh--columbus/maker/" target="_blank">eventbrite.com</a>
+                            <br><span style="color: #666;">Upcoming maker events and workshops</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin-top: 25px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">🔥 Weekly Hot Topics</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>r/arduino Top Posts</strong> - <a href="https://www.reddit.com/r/arduino/top/?t=week" target="_blank">reddit.com/r/arduino</a>
+                            <br><span style="color: #666;">Trending Arduino projects this week</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>r/raspberry_pi Top Posts</strong> - <a href="https://www.reddit.com/r/raspberry_pi/top/?t=week" target="_blank">reddit.com/r/raspberry_pi</a>
+                            <br><span style="color: #666;">Most popular Pi projects this week</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>Hackster Trending</strong> - <a href="https://www.hackster.io/projects?sort=trending" target="_blank">hackster.io</a>
+                            <br><span style="color: #666;">Hottest projects on Hackster right now</span>
+                        </li>
+                        <li style="padding: 10px 0;">
+                            <strong>Hacker News Show HN</strong> - <a href="https://news.ycombinator.com/show" target="_blank">news.ycombinator.com/show</a>
+                            <br><span style="color: #666;">Latest tech launches and maker projects</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; margin-top: 25px;">
+                    <h3 style="color: #667eea; margin-bottom: 15px;">✂️ Cricut Joy Resources</h3>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>Cricut Design Space</strong> - <a href="https://design.cricut.com/" target="_blank">design.cricut.com</a>
+                            <br><span style="color: #666;">Official design software, ready-made projects</span>
+                        </li>
+                        <li style="padding: 10px 0; border-bottom: 1px solid #ddd;">
+                            <strong>r/cricut Community</strong> - <a href="https://www.reddit.com/r/cricut/" target="_blank">reddit.com/r/cricut</a>
+                            <br><span style="color: #666;">Ideas for combining crafting with tech projects</span>
+                        </li>
+                        <li style="padding: 10px 0;">
+                            <strong>Jennifer Maker</strong> - <a href="https://jennifermaker.com/" target="_blank">jennifermaker.com</a> | 
+                            <a href="https://www.youtube.com/@JenniferMaker" target="_blank">YouTube</a>
+                            <br><span style="color: #666;">Tutorials, free SVG files, advanced techniques</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>🔧 Maker Resources Hub | Curated for Python, Arduino & Robotics Enthusiasts</p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">
+                Updated January 2026 | Keep building amazing things! 🚀
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Navigation functionality
+        const navButtons = document.querySelectorAll('.nav-btn');
+        const sections = document.querySelectorAll('.section');
+
+        navButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and sections
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                sections.forEach(section => section.classList.remove('active'));
+
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                // Show corresponding section
+                const sectionId = button.getAttribute('data-section');
+                document.getElementById(sectionId).classList.add('active');
+            });
+        });
+
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
