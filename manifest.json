@@ -1,0 +1,17 @@
+{
+  "name": "Maker Resources Hub",
+  "short_name": "MakerHub",
+  "description": "Curated resources for Python, Arduino, ESP32, Robotics, and Power Suite",
+  "start_url": "/maker-hub/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#00d4ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='24' fill='%230d1117'/><text y='145' x='16' font-size='140'>🔧</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
