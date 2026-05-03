@@ -412,6 +412,7 @@
       background: linear-gradient(135deg, rgba(0,212,255,0.03) 0%, transparent 60%);
       opacity: 0;
       transition: opacity var(--transition);
+      pointer-events: none; /* Fix: prevent this decorative overlay from blocking link clicks */
     }
     .res-card:hover {
       border-color: var(--border2);
@@ -2151,9 +2152,4 @@
       html.setAttribute('data-theme', next === 'dark' ? '' : 'light');
       if (next === 'light') { html.setAttribute('data-theme', 'light'); } else { html.removeAttribute('data-theme'); }
       themeToggle.textContent = next === 'light' ? '☀️' : '🌙';
-      localStorage.setItem('maker-theme', next === 'light' ? 'light' : 'dark');
-    });
-  </script>
-
-</body>
-</html>
+      localStorage.
