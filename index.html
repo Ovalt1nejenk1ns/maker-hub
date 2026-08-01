@@ -347,8 +347,6 @@
 </div>
 
 <!-- TABS -->
-
-<!-- TABS -->
 <div class="tabs-wrapper">
   <div class="tabs-scroll" role="tablist">
     <button class="tab-btn active" data-tab="whats-new" role="tab">📣 What's New <span class="tab-badge purple">v5</span></button>
@@ -360,9 +358,9 @@
     <button class="tab-btn" data-tab="robotics" role="tab">🤖 Robotics</button>
     <button class="tab-btn" data-tab="esp32" role="tab">📡 ESP32 <span class="tab-badge amber">HOT</span></button>
     <button class="tab-btn" data-tab="power" role="tab">📊 Power Suite</button>
-    <button class="tab-btn" data-tab="woodworking" role="tab">🪵 Woodworking <span class="tab-badge">NEW</span></button>
     <button class="tab-btn" data-tab="data-analytics" role="tab">📈 Data Analytics <span class="tab-badge purple">WGU</span></button>
     <button class="tab-btn" data-tab="excel" role="tab">📗 Excel</button>
+    <button class="tab-btn" data-tab="woodworking" role="tab">🪵 Woodworking</button>
     <button class="tab-btn" data-tab="trends" role="tab">⚡ Trends</button>
     <button class="tab-btn" data-tab="all" role="tab">🌐 All Resources</button>
   </div>
@@ -1175,966 +1173,1048 @@
   </div>
 </section>
 
-
 <!-- ════════════════════════════════════
      TAB: ESP32
 ════════════════════════════════════ -->
 <section class="tab-panel" id="tab-esp32" role="tabpanel">
   <div class="featured-card">
     <h3>📡 ESP32 — Your Wireless Workhorse</h3>
-    <p>The ESP32 is the backbone of your home automation and IoT projects. Dual-core, WiFi + BLE, deep sleep modes, and an enormous library ecosystem. Whether you're flashing Arduino, MicroPython, or the native IDF — these are the best resources for squeezing everything out of it.</p>
+    <p>The ESP32-S3 is your 2026 chip of choice: dual-core 240MHz, 8MB flash, built-in USB, AI acceleration. Your CubicleComm project, MQTT potentiometer demo, and wireless sensors all live here. The S3 and new C6 are where the ecosystem is heading.</p>
   </div>
 
-  <div class="section-head"><h2>🔧 Core Frameworks</h2></div>
-  <div class="card-grid">
-    <div class="res-card">
-      <div class="res-card-icon">📟</div>
-      <div class="res-card-title">ESP32 Arduino Core</div>
-      <div class="res-card-desc">Arduino framework ported to ESP32. The easiest entry point — use your existing Arduino skills with WiFi, BLE, and all ESP32 peripherals. Install via Arduino IDE board manager.</div>
-      <div class="res-card-tags"><span class="tag">Arduino</span><span class="tag">ESP32</span><span class="tag">C++</span></div>
-      <div class="res-card-links"><a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/" target="_blank" class="res-link primary">Docs →</a><a href="https://github.com/espressif/arduino-esp32" target="_blank" class="res-link">GitHub →</a></div>
+  <div class="section-head"><h2>⚡ Chip Comparison</h2></div>
+  <div class="chip-grid">
+    <div class="chip-card">
+      <div class="chip-name">ESP32</div>
+      <div class="chip-specs">Dual-core 240MHz<br>BT Classic + BLE<br>WiFi 802.11 b/g/n<br>Your current pick</div>
     </div>
-    <div class="res-card">
-      <div class="res-card-icon">🐍</div>
-      <div class="res-card-title">MicroPython for ESP32</div>
-      <div class="res-card-desc">Run Python directly on ESP32 — no compilation, instant feedback via REPL. Best for rapid prototyping of WiFi and sensor projects. Thonny IDE makes it painless.</div>
-      <div class="res-card-tags"><span class="tag">MicroPython</span><span class="tag">Python</span><span class="tag">REPL</span></div>
-      <div class="res-card-links"><a href="https://docs.micropython.org/en/latest/esp32/quickref.html" target="_blank" class="res-link primary">Docs →</a><a href="https://micropython.org/download/ESP32_GENERIC/" target="_blank" class="res-link">Download →</a></div>
+    <div class="chip-card featured">
+      <div class="chip-name">ESP32-S3</div>
+      <div class="chip-badge">2026 PICK</div>
+      <div class="chip-specs">Dual-core 240MHz<br>BLE 5 only<br>Native USB OTG<br>AI accelerator<br>8MB flash std</div>
     </div>
-    <div class="res-card">
-      <div class="res-card-icon">🔷</div>
-      <div class="res-card-title">ESP-IDF (Official SDK)</div>
-      <div class="res-card-desc">Espressif's official IoT Development Framework. Steeper learning curve but maximum control over WiFi, BLE, power management, and FreeRTOS tasks. Required for production work.</div>
-      <div class="res-card-tags"><span class="tag">IDF</span><span class="tag">C</span><span class="tag">FreeRTOS</span></div>
-      <div class="res-card-links"><a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/" target="_blank" class="res-link primary">Docs →</a></div>
+    <div class="chip-card">
+      <div class="chip-name">ESP32-C3</div>
+      <div class="chip-specs">RISC-V single core<br>160MHz<br>BLE 5 + WiFi<br>Budget pick</div>
     </div>
-    <div class="res-card">
-      <div class="res-card-icon">🏠</div>
-      <div class="res-card-title">ESPHome</div>
-      <div class="res-card-desc">Configure ESP32 projects with YAML — no C++ needed. Native Home Assistant integration. Powers your mmWave presence sensors, temperature nodes, and occupancy detectors.</div>
-      <div class="res-card-tags"><span class="tag">Home Assistant</span><span class="tag">YAML</span><span class="tag">IoT</span></div>
-      <div class="res-card-links"><a href="https://esphome.io/" target="_blank" class="res-link primary">esphome.io →</a><a href="https://esphome.io/components/" target="_blank" class="res-link">Components →</a></div>
+    <div class="chip-card">
+      <div class="chip-name">ESP32-C6</div>
+      <div class="chip-badge" style="background:var(--accent2);color:#fff">NEW</div>
+      <div class="chip-specs">RISC-V 160MHz<br>WiFi 6 (802.11ax)<br>Zigbee + BLE 5<br>Thread/Matter</div>
+    </div>
+    <div class="chip-card">
+      <div class="chip-name">ESP8266</div>
+      <div class="chip-specs">Single core 80MHz<br>WiFi only<br>No BT<br>Legacy — avoid new</div>
     </div>
   </div>
 
-  <hr class="section-divider" />
-  <div class="section-head"><h2>📚 Learning Resources</h2></div>
+  <div class="section-head"><h2>📚 Core Learning Resources</h2></div>
   <div class="card-grid">
     <div class="res-card">
       <div class="res-card-icon">📡</div>
       <div class="res-card-title">Random Nerd Tutorials</div>
-      <div class="res-card-desc">The definitive ESP32 tutorial site — complete code, wiring diagrams, and step-by-step guides. Covers WiFi, MQTT, web servers, deep sleep, OTA updates, and sensors. Updated constantly.</div>
-      <div class="res-card-tags"><span class="tag">Tutorials</span><span class="tag">Free</span><span class="tag">Complete Code</span></div>
-      <div class="res-card-links"><a href="https://randomnerdtutorials.com/esp32-tutorials/" target="_blank" class="res-link primary">ESP32 Tutorials →</a></div>
+      <div class="res-card-desc">The absolute best ESP32 tutorial site. WiFi, web servers, MQTT, deep sleep, sensors, MicroPython — every tutorial has complete code and wiring. Bookmark permanently.</div>
+      <div class="res-card-tags"><span class="tag">ESP32</span><span class="tag">Free</span><span class="tag">Complete Code</span></div>
+      <div class="res-card-links"><a href="https://randomnerdtutorials.com/projects-esp32/" target="_blank" class="res-link primary">ESP32 Projects →</a></div>
     </div>
     <div class="res-card">
-      <div class="res-card-icon">🌐</div>
-      <div class="res-card-title">Last Minute Engineers — ESP32</div>
-      <div class="res-card-desc">Excellent in-depth tutorials with good circuit diagrams. Covers I2C, SPI, UART, interrupts, and common sensor modules in detail. Complements RNT perfectly.</div>
-      <div class="res-card-tags"><span class="tag">Sensors</span><span class="tag">Protocols</span><span class="tag">In-Depth</span></div>
-      <div class="res-card-links"><a href="https://lastminuteengineers.com/category/esp32/" target="_blank" class="res-link primary">Tutorials →</a></div>
+      <div class="res-card-icon">📖</div>
+      <div class="res-card-title">Espressif Official Docs</div>
+      <div class="res-card-desc">The definitive technical reference. ESP-IDF programming guide, chip datasheets, peripheral APIs. Essential when you outgrow the Arduino layer.</div>
+      <div class="res-card-tags"><span class="tag">Official</span><span class="tag">Reference</span><span class="tag">ESP-IDF</span></div>
+      <div class="res-card-links"><a href="https://docs.espressif.com/projects/esp-idf/en/latest/" target="_blank" class="res-link primary">ESP-IDF Docs →</a><a href="https://docs.espressif.com/projects/arduino-esp32/en/latest/" target="_blank" class="res-link">Arduino-ESP32 →</a></div>
     </div>
     <div class="res-card">
       <div class="res-card-icon">🖥️</div>
-      <div class="res-card-title">Wokwi ESP32 Simulator</div>
-      <div class="res-card-desc">Simulate ESP32 projects in the browser — full WiFi simulation, MQTT, and all common sensors supported. Test code before touching hardware. Saves components and time.</div>
-      <div class="res-card-tags"><span class="tag">Simulator</span><span class="tag">Browser</span><span class="tag">Free</span></div>
+      <div class="res-card-title">Wokwi — ESP32 Simulator</div>
+      <div class="res-card-desc">Browser-based ESP32 simulator — no hardware needed. Test WiFi, MQTT, sensors, and serial communication virtually. Supports Arduino and MicroPython.</div>
+      <div class="res-card-tags"><span class="tag">Simulator</span><span class="tag">Free</span><span class="tag">Browser</span></div>
       <div class="res-card-links"><a href="https://wokwi.com/esp32" target="_blank" class="res-link primary">Simulate →</a></div>
     </div>
-  </div>
-
-  <hr class="section-divider" />
-  <div class="section-head amber"><h2>🆕 New ESP32 Chips (2024–2026)</h2><span class="section-tag">upgrade your hardware</span></div>
-  <div class="chip-grid">
-    <div class="chip-card featured">
-      <div class="chip-name">ESP32-S3</div>
-      <div class="chip-badge">2026 PICK</div>
-      <div class="chip-specs">Dual 240MHz · 512KB SRAM · USB-OTG · AI accelerator · PSRAM support</div>
-    </div>
-    <div class="chip-card">
-      <div class="chip-name">ESP32-C6</div>
-      <div class="chip-badge">WiFi 6</div>
-      <div class="chip-specs">WiFi 6 · Zigbee · Thread · BLE 5 · 160MHz RISC-V</div>
-    </div>
-    <div class="chip-card">
-      <div class="chip-name">ESP32-C3</div>
-      <div class="chip-badge">BLE ONLY</div>
-      <div class="chip-specs">Single-core · 160MHz · WiFi + BLE · Tiny & cheap</div>
-    </div>
-    <div class="chip-card">
-      <div class="chip-name">ESP32 Classic</div>
-      <div class="chip-badge">PROVEN</div>
-      <div class="chip-specs">Dual 240MHz · WiFi + BLE · WROOM-32 module · ~$4</div>
+    <div class="res-card">
+      <div class="res-card-icon">💬</div>
+      <div class="res-card-title">ESP32.com Forum</div>
+      <div class="res-card-desc">Official Espressif community forum. Excellent for chip-specific questions, driver issues, and ESP-IDF troubleshooting that Reddit can't answer.</div>
+      <div class="res-card-tags"><span class="tag">Forum</span><span class="tag">Official</span><span class="tag">Support</span></div>
+      <div class="res-card-links"><a href="https://esp32.com/" target="_blank" class="res-link primary">Forum →</a></div>
     </div>
   </div>
 
   <hr class="section-divider" />
-  <div class="section-head"><h2>🌐 Community & Tools</h2></div>
-  <div class="link-list">
-    <div class="link-list-item"><a href="https://www.reddit.com/r/esp32/" target="_blank"><span class="lli-icon">📡</span> r/esp32</a><span class="lli-meta">Active community</span></div>
-    <div class="link-list-item"><a href="https://esp32.com/" target="_blank"><span class="lli-icon">💬</span> esp32.com — Official Forum</a><span class="lli-meta">Espressif-hosted</span></div>
-    <div class="link-list-item"><a href="https://www.espressif.com/en/products/socs/esp32-s3" target="_blank"><span class="lli-icon">🔷</span> ESP32-S3 Product Page</a><span class="lli-meta">Spec sheets</span></div>
-    <div class="link-list-item"><a href="https://platformio.org/lib" target="_blank"><span class="lli-icon">📦</span> PlatformIO Registry</a><span class="lli-meta">ESP32 libraries</span></div>
-    <div class="link-list-item"><a href="https://github.com/nicholaswilde/home-assistant-pull" target="_blank"><span class="lli-icon">🏠</span> ESPHome Community Examples</a><span class="lli-meta">Config templates</span></div>
+  <div class="section-head"><h2>🏠 Home Automation Firmware</h2></div>
+  <div class="card-grid">
+    <div class="res-card">
+      <div class="res-card-icon">🏠</div>
+      <div class="res-card-title">ESPHome</div>
+      <div class="res-card-desc">YAML-based firmware for ESP32/ESP8266 that integrates directly with Home Assistant. No custom code for most sensors — just config. The fastest path from ESP32 to Home Assistant dashboard.</div>
+      <div class="res-card-tags"><span class="tag">Home Assistant</span><span class="tag">YAML</span><span class="tag">No-Code</span></div>
+      <div class="res-card-links"><a href="https://esphome.io/" target="_blank" class="res-link primary">esphome.io →</a><a href="https://esphome.io/components/" target="_blank" class="res-link">Components →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">💡</div>
+      <div class="res-card-title">WLED</div>
+      <div class="res-card-desc">WiFi-controlled LED firmware for WS2812B strips. Browser UI, 100+ effects, Home Assistant integration, MQTT support. Flash once, control from anywhere.</div>
+      <div class="res-card-tags"><span class="tag">LEDs</span><span class="tag">WS2812B</span><span class="tag">WiFi</span></div>
+      <div class="res-card-links"><a href="https://kno.wled.ge/" target="_blank" class="res-link primary">WLED →</a><a href="https://github.com/Aircoookie/WLED" target="_blank" class="res-link">GitHub →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">🔌</div>
+      <div class="res-card-title">Tasmota</div>
+      <div class="res-card-desc">Open-source firmware for ESP8266/ESP32 based smart plugs and relays. Massive device compatibility list, MQTT-native, integrates with Home Assistant.</div>
+      <div class="res-card-tags"><span class="tag">Smart Home</span><span class="tag">MQTT</span><span class="tag">Home Assistant</span></div>
+      <div class="res-card-links"><a href="https://tasmota.github.io/docs/" target="_blank" class="res-link primary">Docs →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">📊</div>
+      <div class="res-card-title">Home Assistant MQTT Integration</div>
+      <div class="res-card-desc">The official HA MQTT docs — how to get your ESP32 sensor data into HA dashboards. Start here after wiring up your Mosquitto broker.</div>
+      <div class="res-card-tags"><span class="tag">Home Assistant</span><span class="tag">MQTT</span></div>
+      <div class="res-card-links"><a href="https://www.home-assistant.io/integrations/mqtt/" target="_blank" class="res-link primary">HA Docs →</a></div>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+  <div class="section-head"><h2>🛒 Quick Buys</h2></div>
+  <div class="buy-grid">
+    <a href="https://www.amazon.com/s?k=ESP32-S3+devkit" target="_blank" class="buy-chip">⭐ ESP32-S3<span class="buy-chip-sub">2026 recommended</span></a>
+    <a href="https://www.amazon.com/s?k=ESP32+WROOM+devkit" target="_blank" class="buy-chip">📡 ESP32 WROOM-32<span class="buy-chip-sub">Classic workhorse</span></a>
+    <a href="https://www.amazon.com/s?k=ESP32-C6+devkit" target="_blank" class="buy-chip">🆕 ESP32-C6<span class="buy-chip-sub">WiFi 6 + Zigbee</span></a>
+    <a href="https://www.amazon.com/s?k=LD2420+mmwave+sensor" target="_blank" class="buy-chip">📶 LD2420 mmWave<span class="buy-chip-sub">Presence detect</span></a>
+    <a href="https://www.amazon.com/s?k=BME280+sensor" target="_blank" class="buy-chip">🌡️ BME280<span class="buy-chip-sub">Temp/Hum/Pres</span></a>
+    <a href="https://www.amazon.com/s?k=ESP32+battery+shield+18650" target="_blank" class="buy-chip">🔋 Battery Shield<span class="buy-chip-sub">18650 + charging</span></a>
   </div>
 </section>
+
 <!-- ════════════════════════════════════
      TAB: POWER SUITE
 ════════════════════════════════════ -->
 <section class="tab-panel" id="tab-power" role="tabpanel">
   <div class="featured-card">
-    <h3>📊 Microsoft Power Suite — Your Work Stack</h3>
-    <p>Power BI, Power Automate, Power Apps, and Excel are central to your work at Vertiv. These resources cover everything from DAX mastery and report design to building Copilot Agents and automating workflows across the Microsoft 365 stack.</p>
+    <h3>📊 Power Suite — Your Professional Edge</h3>
+    <p>Power BI, Excel, and Power Automate are your daily tools at Vertiv. You've built forecasting dashboards, automated DAX measure cleanup, and explored Copilot Studio. These resources keep your skills sharp and ahead of the curve.</p>
   </div>
 
-  <div class="section-head"><h2>📊 Power BI</h2></div>
+  <div class="section-head"><h2>📊 Power BI Core</h2></div>
   <div class="card-grid">
-    <div class="res-card">
-      <div class="res-card-icon">📊</div>
-      <div class="res-card-title">Microsoft Power BI Docs</div>
-      <div class="res-card-desc">Official documentation for Power BI Desktop, Service, and Embedded. Covers data modeling, DAX, report design, sharing, and workspace administration.</div>
-      <div class="res-card-tags"><span class="tag">Official</span><span class="tag">Reference</span><span class="tag">Free</span></div>
-      <div class="res-card-links"><a href="https://learn.microsoft.com/en-us/power-bi/" target="_blank" class="res-link primary">Docs →</a><a href="https://powerbi.microsoft.com/en-us/blog/" target="_blank" class="res-link">Blog →</a></div>
-    </div>
     <div class="res-card">
       <div class="res-card-icon">📊</div>
       <div class="res-card-title">Guy in a Cube</div>
-      <div class="res-card-desc">The #1 Power BI YouTube channel — Adam and Patrick cover new features, DAX patterns, report design, and Q&A sessions. Weekly videos, consistent quality.</div>
-      <div class="res-card-tags"><span class="tag">YouTube</span><span class="tag">Power BI</span><span class="tag">DAX</span></div>
-      <div class="res-card-links"><a href="https://www.youtube.com/@GuyInACube" target="_blank" class="res-link primary">Watch →</a><a href="https://guyinacube.com/" target="_blank" class="res-link">Site →</a></div>
+      <div class="res-card-desc">The #1 Power BI resource. Adam and Patrick cover DAX, data modeling, report design, and release updates weekly. Subscribe and watch consistently.</div>
+      <div class="res-card-tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">YouTube</span></div>
+      <div class="res-card-links"><a href="https://www.youtube.com/@GuyInACube" target="_blank" class="res-link primary">YouTube →</a><a href="https://guyinacube.com/" target="_blank" class="res-link">Site →</a></div>
     </div>
     <div class="res-card">
       <div class="res-card-icon">📐</div>
-      <div class="res-card-title">SQLBI — DAX Mastery</div>
-      <div class="res-card-desc">Alberto Ferrari and Marco Russo's definitive DAX resource. daxpatterns.com, sqlbi.com articles, and DAX.guide. If you need to understand CALCULATE or context transition — start here.</div>
+      <div class="res-card-title">SQLBI — DAX Patterns</div>
+      <div class="res-card-desc">Alberto Ferrari and Marco Russo's encyclopedic DAX site. The DAX patterns library at daxpatterns.com covers every pattern you'll encounter — including forecasting and step charts.</div>
       <div class="res-card-tags"><span class="tag">DAX</span><span class="tag">Advanced</span><span class="tag">Patterns</span></div>
-      <div class="res-card-links"><a href="https://www.sqlbi.com/" target="_blank" class="res-link primary">sqlbi.com →</a><a href="https://dax.guide/" target="_blank" class="res-link">DAX.guide →</a><a href="https://www.daxpatterns.com/" target="_blank" class="res-link">Patterns →</a></div>
+      <div class="res-card-links"><a href="https://www.daxpatterns.com/" target="_blank" class="res-link primary">DAX Patterns →</a><a href="https://www.sqlbi.com/" target="_blank" class="res-link">SQLBI →</a></div>
     </div>
     <div class="res-card">
-      <div class="res-card-icon">🤝</div>
-      <div class="res-card-title">Power BI Community Forum</div>
-      <div class="res-card-desc">Microsoft's official community forum. Searchable archive of solved DAX and modeling problems. Ask questions, find answers from MVPs, and participate in challenges.</div>
-      <div class="res-card-tags"><span class="tag">Community</span><span class="tag">Q&A</span><span class="tag">Forum</span></div>
-      <div class="res-card-links"><a href="https://community.fabric.microsoft.com/t5/Power-BI/ct-p/powerbi" target="_blank" class="res-link primary">Forum →</a></div>
+      <div class="res-card-icon">🔍</div>
+      <div class="res-card-title">DAX Guide</div>
+      <div class="res-card-desc">Complete reference for every DAX function with examples, parameters, and compatibility notes. The MDN of DAX — bookmark this forever.</div>
+      <div class="res-card-tags"><span class="tag">DAX</span><span class="tag">Reference</span><span class="tag">Free</span></div>
+      <div class="res-card-links"><a href="https://dax.guide/" target="_blank" class="res-link primary">dax.guide →</a></div>
     </div>
     <div class="res-card">
-      <div class="res-card-icon">🏢</div>
-      <div class="res-card-title">Pragmatic Works</div>
-      <div class="res-card-desc">Professional Power BI, Power Automate, and Azure Data Factory training. Aligns closely with real enterprise BI environments — the style you see at Vertiv.</div>
-      <div class="res-card-tags"><span class="tag">Training</span><span class="tag">Enterprise</span></div>
-      <div class="res-card-links"><a href="https://www.youtube.com/@PragmaticWorks" target="_blank" class="res-link primary">YouTube →</a><a href="https://pragmaticworks.com/" target="_blank" class="res-link">Site →</a></div>
+      <div class="res-card-icon">🛠️</div>
+      <div class="res-card-title">Tabular Editor 2 (Free)</div>
+      <div class="res-card-desc">The tool you used to clean up 157 unused DAX measures at Vertiv. Best-practice analyzer, batch operations, and scripting for model management. Essential for any serious Power BI developer.</div>
+      <div class="res-card-tags"><span class="tag">Tabular Editor</span><span class="tag">DAX</span><span class="tag">Free</span></div>
+      <div class="res-card-links"><a href="https://tabulareditor.com/" target="_blank" class="res-link primary">Download →</a><a href="https://docs.tabulareditor.com/" target="_blank" class="res-link">Docs →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">📋</div>
+      <div class="res-card-title">Microsoft Fabric / Power BI Docs</div>
+      <div class="res-card-desc">Official Microsoft documentation for Power BI and the Fabric platform. The release notes page is the fastest way to track monthly feature releases.</div>
+      <div class="res-card-tags"><span class="tag">Official</span><span class="tag">Reference</span></div>
+      <div class="res-card-links"><a href="https://learn.microsoft.com/en-us/power-bi/" target="_blank" class="res-link primary">PBI Docs →</a><a href="https://powerbi.microsoft.com/en-us/blog/" target="_blank" class="res-link">Blog →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">🏆</div>
+      <div class="res-card-title">PL-300 Certification</div>
+      <div class="res-card-desc">Microsoft Power BI Data Analyst certification. Validates DAX, data modeling, and report building skills — aligns well with WGU coursework for DA credentials.</div>
+      <div class="res-card-tags"><span class="tag">Certification</span><span class="tag">PL-300</span></div>
+      <div class="res-card-links"><a href="https://learn.microsoft.com/en-us/credentials/certifications/power-bi-data-analyst-associate/" target="_blank" class="res-link primary">Exam Info →</a><a href="https://learn.microsoft.com/en-us/training/paths/prepare-for-power-bi-data-analyst-associate-certification/" target="_blank" class="res-link">Study Path →</a></div>
     </div>
   </div>
 
   <hr class="section-divider" />
-  <div class="section-head purple"><h2>🤖 Microsoft Copilot</h2><span class="section-tag">what you're building at Vertiv</span></div>
-  <div class="card-grid">
-    <div class="res-card new-item">
-      <div class="res-card-icon">🤖</div>
-      <div class="res-card-title">Copilot Studio</div>
-      <div class="res-card-desc">Microsoft's low-code platform for building Copilot Agents — the tool you're using at Vertiv. Connects Power BI data to conversational AI. Covers Power Virtual Agents functionality.</div>
-      <div class="res-card-tags"><span class="tag">Copilot</span><span class="tag">Agents</span><span class="tag">Power Platform</span></div>
-      <div class="res-card-links"><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/" target="_blank" class="res-link primary">Docs →</a></div>
-    </div>
-    <div class="res-card new-item">
-      <div class="res-card-icon">🔗</div>
-      <div class="res-card-title">Power BI + Copilot Integration</div>
-      <div class="res-card-desc">Microsoft's documentation on Copilot features within Power BI — natural language Q&A, report summaries, and AI-driven insights. The foundation of your Vertiv agent work.</div>
-      <div class="res-card-tags"><span class="tag">Copilot</span><span class="tag">Power BI</span><span class="tag">AI</span></div>
-      <div class="res-card-links"><a href="https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction" target="_blank" class="res-link primary">Docs →</a></div>
-    </div>
-  </div>
-
-  <hr class="section-divider" />
-  <div class="section-head"><h2>⚡ Power Automate & Apps</h2></div>
+  <div class="section-head"><h2>🔄 Power Automate</h2></div>
   <div class="card-grid">
     <div class="res-card">
       <div class="res-card-icon">⚡</div>
-      <div class="res-card-title">Power Automate Docs</div>
-      <div class="res-card-desc">Official documentation for flow creation, connectors, RPA, and cloud flows. The 500+ connectors make this the glue of the Microsoft 365 automation ecosystem.</div>
-      <div class="res-card-tags"><span class="tag">Automation</span><span class="tag">Flows</span><span class="tag">Official</span></div>
+      <div class="res-card-title">Power Automate Documentation</div>
+      <div class="res-card-desc">Official docs for cloud flows, desktop flows, and AI Builder. Start with the "Create your first flow" tutorial — then explore the connector library to see what you can automate.</div>
+      <div class="res-card-tags"><span class="tag">Automation</span><span class="tag">Official</span></div>
       <div class="res-card-links"><a href="https://learn.microsoft.com/en-us/power-automate/" target="_blank" class="res-link primary">Docs →</a></div>
     </div>
     <div class="res-card">
-      <div class="res-card-icon">💼</div>
-      <div class="res-card-title">Kevin Stratvert</div>
-      <div class="res-card-desc">Practical Microsoft 365 YouTube tutorials — Power Automate workflows, Excel, and Power Platform integrations. Accessible for all skill levels.</div>
-      <div class="res-card-tags"><span class="tag">YouTube</span><span class="tag">Power Automate</span><span class="tag">Excel</span></div>
-      <div class="res-card-links"><a href="https://www.youtube.com/@KevinStratvert" target="_blank" class="res-link primary">Watch →</a></div>
-    </div>
-  </div>
-</section>
-<!-- ════════════════════════════════════
-     TAB: WOODWORKING
-════════════════════════════════════ -->
-<section class="tab-panel" id="tab-woodworking" role="tabpanel">
-  <div class="featured-card">
-    <h3>🪵 Woodworking — Build Real Things</h3>
-    <p>From beginner-friendly furniture plans to hand-tool mastery — this tab collects the best woodworking resources across YouTube, blogs, plans, tools, and community. Whether you want to build a workbench, a cutting board, or a full kitchen, it starts here.</p>
-  </div>
-
-  <div class="section-head"><h2>⭐ Favorite Sites</h2><span class="section-tag">bookmarks</span></div>
-  <div class="card-grid">
-    <div class="res-card">
-      <div class="res-card-icon">🪵</div>
-      <div class="res-card-title">Rogue Engineer</div>
-      <div class="res-card-desc">Free DIY furniture plans with clear cut lists, material costs, and beginner-friendly instructions. Perfect starting point for anyone wanting to build real furniture without guesswork. Covers tables, beds, benches, and storage.</div>
-      <div class="res-card-tags"><span class="tag">Plans</span><span class="tag">Beginner</span><span class="tag">Furniture</span><span class="tag">Free</span></div>
-      <div class="res-card-links"><a href="https://rogueengineer.com/" target="_blank" class="res-link primary">rogueengineer.com →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">🔨</div>
-      <div class="res-card-title">Fix This Build That</div>
-      <div class="res-card-desc">Brad Rodriguez's practical woodworking site — shop projects, workbench builds, tool reviews, and beginner tutorials. Everything comes with detailed plans, material lists, and companion YouTube videos.</div>
-      <div class="res-card-tags"><span class="tag">Shop Projects</span><span class="tag">Tool Reviews</span><span class="tag">YouTube</span></div>
-      <div class="res-card-links"><a href="https://fixthisbuildthat.com/" target="_blank" class="res-link primary">fixthisbuildthat.com →</a><a href="https://www.youtube.com/@FixThisBuildThat" target="_blank" class="res-link">YouTube →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">📰</div>
-      <div class="res-card-title">Woodsmith</div>
-      <div class="res-card-desc">One of the most respected woodworking magazines. Detailed project plans with clear exploded diagrams, technique articles, and tool-tested advice. Both print and digital editions available.</div>
-      <div class="res-card-tags"><span class="tag">Magazine</span><span class="tag">Plans</span><span class="tag">Technique</span></div>
-      <div class="res-card-links"><a href="https://www.woodsmith.com/" target="_blank" class="res-link primary">woodsmith.com →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">🌲</div>
-      <div class="res-card-title">The Wood Whisperer</div>
-      <div class="res-card-desc">Marc Spagnuolo's blog and YouTube channel. Project-based learning with strong technique focus — joinery, finishing, and furniture builds explained at an intermediate level. Excellent podcast too.</div>
-      <div class="res-card-tags"><span class="tag">Intermediate</span><span class="tag">Technique</span><span class="tag">Joinery</span></div>
-      <div class="res-card-links"><a href="https://thewoodwhisperer.com/" target="_blank" class="res-link primary">thewoodwhisperer.com →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">📖</div>
-      <div class="res-card-title">Popular Woodworking</div>
-      <div class="res-card-desc">Comprehensive woodworking magazine with technique articles, tool reviews, shop tips, and project plans. Strong mix of hand tool and power tool content. Trusted by hobbyists and professionals alike.</div>
-      <div class="res-card-tags"><span class="tag">Magazine</span><span class="tag">Technique</span><span class="tag">Tool Reviews</span></div>
-      <div class="res-card-links"><a href="https://www.popularwoodworking.com/" target="_blank" class="res-link primary">popularwoodworking.com →</a></div>
+      <div class="res-card-icon">🤖</div>
+      <div class="res-card-title">Copilot Studio</div>
+      <div class="res-card-desc">Build custom Microsoft Copilot agents — what you're doing for Vertiv's Power BI assistant. Official docs include the system prompt engineering guide and connector setup.</div>
+      <div class="res-card-tags"><span class="tag">Copilot</span><span class="tag">AI Agents</span></div>
+      <div class="res-card-links"><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/" target="_blank" class="res-link primary">Docs →</a></div>
     </div>
   </div>
 
   <hr class="section-divider" />
-  <div class="section-head"><h2>🎥 YouTube Channels</h2><span class="section-tag">subscribe</span></div>
-  <div class="card-grid">
-    <div class="res-card">
-      <div class="res-card-icon">🔨</div>
-      <div class="res-card-title">Fix This Build That</div>
-      <div class="res-card-desc">Brad Rodriguez's channel — practical shop builds, workbenches, wall shelves, and tool reviews. Clear explanations, well-edited, beginner-to-intermediate. One of the best all-around woodworking channels.</div>
-      <div class="res-card-tags"><span class="tag">Shop Projects</span><span class="tag">Beginner-friendly</span><span class="tag">Tool Reviews</span></div>
-      <div class="res-card-links"><a href="https://www.youtube.com/@FixThisBuildThat" target="_blank" class="res-link primary">Watch →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">🪵</div>
-      <div class="res-card-title">Rogue Engineer</div>
-      <div class="res-card-desc">DIY furniture builds with companion plans. Walks through every project step-by-step with beginner-friendly narration. Great for first furniture builds like coffee tables, bed frames, and farmhouse benches.</div>
-      <div class="res-card-tags"><span class="tag">Furniture</span><span class="tag">Plans</span><span class="tag">Beginner</span></div>
-      <div class="res-card-links"><a href="https://www.youtube.com/@RogueEngineer" target="_blank" class="res-link primary">Watch →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">🔧</div>
-      <div class="res-card-title">3x3 Custom (April Wilkerson)</div>
-      <div class="res-card-desc">April builds everything — from shop storage to outdoor furniture. Strong emphasis on building your own shop and jigs. Inspiring for anyone who wants to start with limited space or tools.</div>
-      <div class="res-card-tags"><span class="tag">DIY</span><span class="tag">Shop Build</span><span class="tag">Jigs</span></div>
-      <div class="res-card-links"><a href="https://www.youtube.com/@3x3Custom" target="_blank" class="res-link primary">Watch →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">🌳</div>
-      <div class="res-card-title">Matt Cremona</div>
-      <div class="res-card-desc">Live-edge slabs, milling logs, and custom furniture. If you want to work with natural wood from raw log to finished piece, Matt is your guy. Sawmill content is unmatched.</div>
-      <div class="res-card-tags"><span class="tag">Live Edge</span><span class="tag">Sawmill</span><span class="tag">Advanced</span></div>
-      <div class="res-card-links"><a href="https://www.youtube.com/@MattCremona" target="_blank" class="res-link primary">Watch →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">😄</div>
-      <div class="res-card-title">Steve Ramsey — WWMM</div>
-      <div class="res-card-desc">Woodworking for Mere Mortals — Steve's tagline and philosophy. Fun, approachable weekend projects that don't require a full shop. The best channel for true beginners or small-space builders.</div>
-      <div class="res-card-tags"><span class="tag">Beginner</span><span class="tag">Weekend Projects</span><span class="tag">Small Shop</span></div>
-      <div class="res-card-links"><a href="https://www.youtube.com/@steeverino" target="_blank" class="res-link primary">Watch →</a><a href="https://www.woodworkingformeremortals.com/" target="_blank" class="res-link">Site →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">🎯</div>
-      <div class="res-card-title">Jay Bates</div>
-      <div class="res-card-desc">Excellent shop jig builds, workbenches, and storage solutions. Strong emphasis on making your own jigs to improve accuracy and repeatability. Great for leveling up your shop workflow.</div>
-      <div class="res-card-tags"><span class="tag">Jigs</span><span class="tag">Shop Storage</span><span class="tag">Intermediate</span></div>
-      <div class="res-card-links"><a href="https://www.youtube.com/@jaybates" target="_blank" class="res-link primary">Watch →</a></div>
-    </div>
-  </div>
-
-  <hr class="section-divider" />
-  <div class="section-head amber"><h2>📐 Plans & Projects</h2><span class="section-tag">build something</span></div>
-  <div class="card-grid">
-    <div class="res-card">
-      <div class="res-card-icon">🏡</div>
-      <div class="res-card-title">Ana White</div>
-      <div class="res-card-desc">Thousands of free furniture plans — from farmhouse dining tables to Montessori toddler beds. Cut lists, material lists, and step-by-step instructions included. The largest free woodworking plan library on the internet.</div>
-      <div class="res-card-tags"><span class="tag">Free Plans</span><span class="tag">Furniture</span><span class="tag">Beginner</span></div>
-      <div class="res-card-links"><a href="https://ana-white.com/" target="_blank" class="res-link primary">ana-white.com →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">📰</div>
-      <div class="res-card-title">Woodsmith Plans</div>
-      <div class="res-card-desc">Premium plans from Woodsmith magazine — extremely detailed with exploded drawings, step-by-step photos, and complete hardware lists. Worth paying for when you want to build something right.</div>
-      <div class="res-card-tags"><span class="tag">Premium Plans</span><span class="tag">Detailed</span><span class="tag">Magazine</span></div>
-      <div class="res-card-links"><a href="https://www.woodsmithplans.com/" target="_blank" class="res-link primary">woodsmithplans.com →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">🏠</div>
-      <div class="res-card-title">Family Handyman</div>
-      <div class="res-card-desc">DIY-focused plans spanning woodworking, home improvement, and shop projects. Good beginner-level coverage with practical skill-building projects that double as home upgrades.</div>
-      <div class="res-card-tags"><span class="tag">DIY</span><span class="tag">Plans</span><span class="tag">Home Improvement</span></div>
-      <div class="res-card-links"><a href="https://www.familyhandyman.com/category/woodworking/" target="_blank" class="res-link primary">Projects →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">🔩</div>
-      <div class="res-card-title">Instructables Woodworking</div>
-      <div class="res-card-desc">Community-submitted woodworking projects with photos and instructions. Great for unconventional builds, maker crossover projects (wood + electronics!), and unique ideas you won't find in magazines.</div>
-      <div class="res-card-tags"><span class="tag">Community</span><span class="tag">DIY</span><span class="tag">Projects</span></div>
-      <div class="res-card-links"><a href="https://www.instructables.com/woodworking/" target="_blank" class="res-link primary">Instructables →</a></div>
-    </div>
-  </div>
-
-  <hr class="section-divider" />
-  <div class="section-head green"><h2>🔧 Tools & Materials</h2><span class="section-tag">gear up</span></div>
-  <div class="card-grid">
-    <div class="res-card">
-      <div class="res-card-icon">🛠️</div>
-      <div class="res-card-title">Wood Magazine Tool Reviews</div>
-      <div class="res-card-desc">Rigorous, independent woodworking tool reviews — table saws, routers, track saws, hand tools. One of the few review sources that actually puts tools through real woodworking tests.</div>
-      <div class="res-card-tags"><span class="tag">Reviews</span><span class="tag">Power Tools</span><span class="tag">Independent</span></div>
-      <div class="res-card-links"><a href="https://www.woodmagazine.com/tools-and-supplies" target="_blank" class="res-link primary">Tool Reviews →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">✅</div>
-      <div class="res-card-title">Wirecutter Woodworking Tools</div>
-      <div class="res-card-desc">NYT Wirecutter's woodworking tool recommendations — rigorously tested picks for table saws, circular saws, random orbit sanders, and essential hand tools. Great for buying confidence.</div>
-      <div class="res-card-tags"><span class="tag">Reviews</span><span class="tag">Best Picks</span><span class="tag">Buying Guide</span></div>
-      <div class="res-card-links"><a href="https://www.nytimes.com/wirecutter/woodworking/" target="_blank" class="res-link primary">Wirecutter →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">🧮</div>
-      <div class="res-card-title">SawdustMaking (Calculator Tools)</div>
-      <div class="res-card-desc">Free woodworking calculators — board feet, shelf span, dovetail spacing, compound miter angles. Quick-reference tools that save time on the math before you cut.</div>
-      <div class="res-card-tags"><span class="tag">Calculators</span><span class="tag">Math</span><span class="tag">Free</span></div>
-      <div class="res-card-links"><a href="https://www.sawdustmaking.com/" target="_blank" class="res-link primary">sawdustmaking.com →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">🤝</div>
-      <div class="res-card-title">LumberJocks Community</div>
-      <div class="res-card-desc">Woodworking community with project showcases, reviews, and forums. Good for tool-specific discussions — especially older power tools, hand planes, and vintage equipment.</div>
-      <div class="res-card-tags"><span class="tag">Community</span><span class="tag">Reviews</span><span class="tag">Vintage Tools</span></div>
-      <div class="res-card-links"><a href="https://www.lumberjocks.com/" target="_blank" class="res-link primary">lumberjocks.com →</a></div>
-    </div>
-  </div>
-
-  <hr class="section-divider" />
-  <div class="section-head purple"><h2>📚 Learning & Technique</h2><span class="section-tag">improve your craft</span></div>
-  <div class="card-grid">
-    <div class="res-card">
-      <div class="res-card-icon">🪵</div>
-      <div class="res-card-title">Wood Magazine</div>
-      <div class="res-card-desc">One of America's longest-running woodworking magazines. Solid technique articles, project plans, finishing guides, and beginner instruction. Especially good for understanding wood species and grain behavior.</div>
-      <div class="res-card-tags"><span class="tag">Magazine</span><span class="tag">Technique</span><span class="tag">Finishing</span></div>
-      <div class="res-card-links"><a href="https://www.woodmagazine.com/" target="_blank" class="res-link primary">woodmagazine.com →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">✂️</div>
-      <div class="res-card-title">FineWoodworking</div>
-      <div class="res-card-desc">The premier woodworking magazine for intermediate and advanced woodworkers. Deep technique dives — hand plane tuning, joinery fundamentals, shop-made tools. Serious craft content for those who want to go deep.</div>
-      <div class="res-card-tags"><span class="tag">Advanced</span><span class="tag">Joinery</span><span class="tag">Craft</span></div>
-      <div class="res-card-links"><a href="https://www.finewoodworking.com/" target="_blank" class="res-link primary">finewoodworking.com →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">🖐️</div>
-      <div class="res-card-title">Paul Sellers — Hand Tool School</div>
-      <div class="res-card-desc">Master craftsman Paul Sellers teaches traditional hand tool woodworking. Zero-power-tool approach — chisels, saws, hand planes. His free YouTube tutorials are an excellent introduction to real craftsmanship.</div>
-      <div class="res-card-tags"><span class="tag">Hand Tools</span><span class="tag">Traditional</span><span class="tag">YouTube</span></div>
-      <div class="res-card-links"><a href="https://paulsellers.com/" target="_blank" class="res-link primary">paulsellers.com →</a><a href="https://www.youtube.com/@PaulSellers" target="_blank" class="res-link">YouTube →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">🎙️</div>
-      <div class="res-card-title">Wood Talk Podcast</div>
-      <div class="res-card-desc">Marc Spagnuolo (Wood Whisperer) and Matt Cremona's weekly podcast. Shop talk, technique discussions, listener Q&A, and industry news. Great for the commute or shop time.</div>
-      <div class="res-card-tags"><span class="tag">Podcast</span><span class="tag">Community</span><span class="tag">Weekly</span></div>
-      <div class="res-card-links"><a href="https://woodtalk.com/" target="_blank" class="res-link primary">woodtalk.com →</a></div>
-    </div>
-  </div>
-
-  <hr class="section-divider" />
-  <div class="section-head pink"><h2>🌐 Community</h2><span class="section-tag">join the conversation</span></div>
+  <div class="section-head"><h2>🌐 Community</h2></div>
   <div class="link-list">
-    <div class="link-list-item"><a href="https://www.reddit.com/r/woodworking/" target="_blank"><span class="lli-icon">🪵</span> r/woodworking</a><span class="lli-meta">700k+ members</span></div>
-    <div class="link-list-item"><a href="https://www.reddit.com/r/BeginnerWoodWorking/" target="_blank"><span class="lli-icon">🌱</span> r/BeginnerWoodWorking</a><span class="lli-meta">Beginner-friendly</span></div>
-    <div class="link-list-item"><a href="https://www.woodnet.net/forums/" target="_blank"><span class="lli-icon">🌐</span> Woodnet Forums</a><span class="lli-meta">Classic forum · hand tools</span></div>
-    <div class="link-list-item"><a href="https://www.sawmillcreek.org/" target="_blank"><span class="lli-icon">🌲</span> Sawmill Creek</a><span class="lli-meta">Active forum community</span></div>
-    <div class="link-list-item"><a href="https://thewoodwhisperer.com/the-guild/" target="_blank"><span class="lli-icon">🎓</span> The Wood Whisperer Guild</a><span class="lli-meta">Paid · premium community</span></div>
+    <div class="link-list-item"><a href="https://community.powerbi.com/" target="_blank"><span class="lli-icon">💬</span> Power BI Community Forum</a><span class="lli-meta">Official · very active</span></div>
+    <div class="link-list-item"><a href="https://www.reddit.com/r/PowerBI/" target="_blank"><span class="lli-icon">📊</span> r/PowerBI</a><span class="lli-meta">70k+ members</span></div>
+    <div class="link-list-item"><a href="https://www.reddit.com/r/MSFabric/" target="_blank"><span class="lli-icon">🏭</span> r/MSFabric</a><span class="lli-meta">Fabric platform</span></div>
+    <div class="link-list-item"><a href="https://www.pbiusergroup.com/" target="_blank"><span class="lli-icon">👥</span> Power BI User Group</a><span class="lli-meta">Local chapters</span></div>
   </div>
 </section>
+
 <!-- ════════════════════════════════════
      TAB: DATA ANALYTICS
 ════════════════════════════════════ -->
 <section class="tab-panel" id="tab-data-analytics" role="tabpanel">
   <div class="featured-card">
-    <h3>📈 Data Analytics — WGU BSDA Path</h3>
-    <p>You're starting the WGU Bachelor of Science in Data Analytics program. These resources bridge your current Python + Power BI skills toward the full BSDA toolkit: SQL, statistics, data wrangling, visualization, and modern data stack tools.</p>
+    <h3>📈 Data Analytics — WGU BSDA + Beyond</h3>
+    <p>You're entering the WGU Bachelor of Science, Data Analytics program. This tab is your companion: SQL, Python data stack, visualization tools, statistics, and practice resources that align with the BSDA curriculum and real-world DA roles.</p>
   </div>
 
-  <div class="section-head"><h2>🐍 Modern Python Data Stack</h2><span class="section-tag">2025–2026 tooling</span></div>
-  <div class="card-grid">
-    <div class="res-card new-item">
-      <div class="res-card-icon">🦆</div>
-      <div class="res-card-title">DuckDB</div>
-      <div class="res-card-desc">In-process OLAP SQL engine — runs inside Python, no server needed. Reads Parquet, CSV, and JSON natively. Becoming the default for local data analysis and a likely WGU exam topic.</div>
-      <div class="res-card-tags"><span class="tag">SQL</span><span class="tag">OLAP</span><span class="tag">Python</span></div>
-      <div class="res-card-links"><a href="https://duckdb.org/" target="_blank" class="res-link primary">duckdb.org →</a><a href="https://github.com/duckdb/duckdb" target="_blank" class="res-link">GitHub →</a></div>
-    </div>
-    <div class="res-card new-item">
-      <div class="res-card-icon">🐻‍❄️</div>
-      <div class="res-card-title">Polars</div>
-      <div class="res-card-desc">Blazing-fast DataFrame library in Rust. Drop-in pandas alternative with a cleaner API and massive performance gains on large datasets. Increasingly expected in data analyst roles in 2026.</div>
-      <div class="res-card-tags"><span class="tag">DataFrames</span><span class="tag">Rust</span><span class="tag">Python</span></div>
-      <div class="res-card-links"><a href="https://pola.rs/" target="_blank" class="res-link primary">pola.rs →</a><a href="https://docs.pola.rs/" target="_blank" class="res-link">Docs →</a></div>
-    </div>
-    <div class="res-card new-item">
-      <div class="res-card-icon">🌊</div>
-      <div class="res-card-title">Marimo</div>
-      <div class="res-card-desc">Reactive Python notebook — cells re-run automatically when dependencies change. No stale cells, works as a shareable app or .py script. The future of interactive Python data analysis.</div>
-      <div class="res-card-tags"><span class="tag">Notebook</span><span class="tag">Reactive</span><span class="tag">Python</span></div>
-      <div class="res-card-links"><a href="https://marimo.io/" target="_blank" class="res-link primary">marimo.io →</a><a href="https://github.com/marimo-team/marimo" target="_blank" class="res-link">GitHub →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">🐼</div>
-      <div class="res-card-title">pandas</div>
-      <div class="res-card-desc">Still the most-used data manipulation library in Python. Essential for WGU coursework. Learn it well — Polars is the future, but pandas is ubiquitous today in enterprise environments.</div>
-      <div class="res-card-tags"><span class="tag">DataFrames</span><span class="tag">Python</span><span class="tag">Essential</span></div>
-      <div class="res-card-links"><a href="https://pandas.pydata.org/docs/" target="_blank" class="res-link primary">Docs →</a><a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/" target="_blank" class="res-link">Tutorial →</a></div>
-    </div>
-  </div>
-
-  <hr class="section-divider" />
-  <div class="section-head"><h2>🗃️ SQL Resources</h2></div>
-  <div class="card-grid">
-    <div class="res-card">
-      <div class="res-card-icon">📊</div>
-      <div class="res-card-title">DataLemur — SQL Practice</div>
-      <div class="res-card-desc">Real SQL interview questions from top tech companies, organized by difficulty. Better than LeetCode for data analyst prep. Excellent for WGU SQL competency units.</div>
-      <div class="res-card-tags"><span class="tag">SQL</span><span class="tag">Practice</span><span class="tag">Free</span></div>
-      <div class="res-card-links"><a href="https://datalemur.com/" target="_blank" class="res-link primary">datalemur.com →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">🗃️</div>
-      <div class="res-card-title">Mode SQL Tutorial</div>
-      <div class="res-card-desc">Free interactive SQL tutorial with a real query environment. Covers beginner through advanced (window functions, subqueries, CTEs) — exactly what WGU BSDA exams test.</div>
-      <div class="res-card-tags"><span class="tag">SQL</span><span class="tag">Interactive</span><span class="tag">Free</span></div>
-      <div class="res-card-links"><a href="https://mode.com/sql-tutorial/" target="_blank" class="res-link primary">Tutorial →</a></div>
-    </div>
-    <div class="res-card">
-      <div class="res-card-icon">🏆</div>
-      <div class="res-card-title">Kaggle Learn</div>
-      <div class="res-card-desc">Free micro-courses in Python, pandas, SQL, ML, and data visualization. The SQL and data visualization tracks are excellent complements to WGU BSDA coursework.</div>
-      <div class="res-card-tags"><span class="tag">Free Courses</span><span class="tag">SQL</span><span class="tag">Python</span></div>
-      <div class="res-card-links"><a href="https://www.kaggle.com/learn" target="_blank" class="res-link primary">Kaggle Learn →</a><a href="https://www.kaggle.com/datasets" target="_blank" class="res-link">Datasets →</a></div>
-    </div>
-  </div>
-
-  <hr class="section-divider" />
-  <div class="section-head green"><h2>🎓 WGU BSDA Portal</h2></div>
+  <div class="section-head"><h2>🎓 WGU BSDA Resources</h2></div>
   <div class="card-grid">
     <div class="res-card">
       <div class="res-card-icon">🎓</div>
       <div class="res-card-title">WGU Student Portal</div>
-      <div class="res-card-desc">Primary hub for courses, degree plan, mentors, and competency units. Bookmark the course catalog for the BSDA program to map out your path.</div>
-      <div class="res-card-tags"><span class="tag">WGU</span><span class="tag">Portal</span><span class="tag">Official</span></div>
+      <div class="res-card-desc">Your home base. Degree plan, competency units, mentors, and course materials. Set up your course map early and identify which CUs use Tableau, SQL, and Python.</div>
+      <div class="res-card-tags"><span class="tag">WGU</span><span class="tag">Portal</span></div>
       <div class="res-card-links"><a href="https://my.wgu.edu/" target="_blank" class="res-link primary">my.wgu.edu →</a></div>
     </div>
     <div class="res-card">
+      <div class="res-card-icon">💬</div>
+      <div class="res-card-title">r/WGU — Community</div>
+      <div class="res-card-desc">Active community with program reviews, OA tips, and study guides by CU number. Search "BSDA" to find posts from people who've done exactly your courses.</div>
+      <div class="res-card-tags"><span class="tag">WGU</span><span class="tag">Community</span></div>
+      <div class="res-card-links"><a href="https://www.reddit.com/r/WGU/" target="_blank" class="res-link primary">r/WGU →</a><a href="https://www.reddit.com/r/WGU/search/?q=BSDA" target="_blank" class="res-link">BSDA Posts →</a></div>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+  <div class="section-head"><h2>🗃️ SQL</h2></div>
+  <div class="card-grid">
+    <div class="res-card">
+      <div class="res-card-icon">🦆</div>
+      <div class="res-card-title">DuckDB</div>
+      <div class="res-card-desc">In-process OLAP database — runs inside Python, handles Parquet/CSV/JSON without a server. Query local files with SQL instantly. Becoming the default local analytics engine.</div>
+      <div class="res-card-tags"><span class="tag">SQL</span><span class="tag">OLAP</span><span class="tag">Python</span></div>
+      <div class="res-card-links"><a href="https://duckdb.org/docs/" target="_blank" class="res-link primary">Docs →</a><a href="https://shell.duckdb.org/" target="_blank" class="res-link">Try Online →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">🏆</div>
+      <div class="res-card-title">DataLemur — SQL Practice</div>
+      <div class="res-card-desc">Real SQL interview questions from Amazon, Google, Meta, organized by difficulty. Covers window functions, CTEs, subqueries. Better than LeetCode for DA prep.</div>
+      <div class="res-card-tags"><span class="tag">SQL</span><span class="tag">Practice</span><span class="tag">Interviews</span></div>
+      <div class="res-card-links"><a href="https://datalemur.com/questions" target="_blank" class="res-link primary">Practice →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">🗃️</div>
+      <div class="res-card-title">Mode SQL Tutorial</div>
+      <div class="res-card-desc">Free interactive SQL tutorial with a real query environment. Beginner through advanced SQL — window functions, subqueries, CTEs. Exactly what WGU BSDA exams test.</div>
+      <div class="res-card-tags"><span class="tag">SQL</span><span class="tag">Interactive</span><span class="tag">Free</span></div>
+      <div class="res-card-links"><a href="https://mode.com/sql-tutorial/" target="_blank" class="res-link primary">Tutorial →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">📊</div>
+      <div class="res-card-title">StrataScratch</div>
+      <div class="res-card-desc">Data science interview practice — SQL and Python. Company-specific question banks (Netflix, Airbnb, Spotify). Real OA-style scenarios.</div>
+      <div class="res-card-tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Practice</span></div>
+      <div class="res-card-links"><a href="https://www.stratascratch.com/" target="_blank" class="res-link primary">Practice →</a></div>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+  <div class="section-head"><h2>🐍 Python Data Stack</h2></div>
+  <div class="card-grid">
+    <div class="res-card">
+      <div class="res-card-icon">🐼</div>
+      <div class="res-card-title">pandas</div>
+      <div class="res-card-desc">The standard DataFrame library. WGU BSDA uses pandas heavily. Master indexing, groupby, merge, and reshape — these are the building blocks for every DA project.</div>
+      <div class="res-card-tags"><span class="tag">DataFrames</span><span class="tag">Python</span><span class="tag">Essential</span></div>
+      <div class="res-card-links"><a href="https://pandas.pydata.org/docs/user_guide/" target="_blank" class="res-link primary">User Guide →</a><a href="https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf" target="_blank" class="res-link">Cheat Sheet →</a></div>
+    </div>
+    <div class="res-card new-item">
+      <div class="res-card-icon">🐻‍❄️</div>
+      <div class="res-card-title">Polars</div>
+      <div class="res-card-desc">Rust-powered DataFrame library — 5–50x faster than pandas on large datasets, cleaner API. Learn the lazy evaluation model. Increasingly expected in DA job postings.</div>
+      <div class="res-card-tags"><span class="tag">DataFrames</span><span class="tag">Fast</span><span class="tag">New</span></div>
+      <div class="res-card-links"><a href="https://docs.pola.rs/" target="_blank" class="res-link primary">Docs →</a><a href="https://pola.rs/book/index.html" target="_blank" class="res-link">User Guide →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">📊</div>
+      <div class="res-card-title">matplotlib + seaborn</div>
+      <div class="res-card-desc">The core Python visualization stack. seaborn wraps matplotlib with better defaults and statistical chart types. Master both for WGU BSDA projects.</div>
+      <div class="res-card-tags"><span class="tag">Visualization</span><span class="tag">Python</span></div>
+      <div class="res-card-links"><a href="https://matplotlib.org/stable/gallery/index.html" target="_blank" class="res-link">matplotlib →</a><a href="https://seaborn.pydata.org/examples/index.html" target="_blank" class="res-link">seaborn →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">🔢</div>
+      <div class="res-card-title">NumPy</div>
+      <div class="res-card-desc">Foundation of the Python data stack — arrays, math operations, linear algebra. You'll use it indirectly through pandas and scikit-learn, but knowing it directly helps.</div>
+      <div class="res-card-tags"><span class="tag">Arrays</span><span class="tag">Math</span><span class="tag">Foundation</span></div>
+      <div class="res-card-links"><a href="https://numpy.org/doc/stable/user/quickstart.html" target="_blank" class="res-link primary">Quickstart →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">📉</div>
+      <div class="res-card-title">scikit-learn</div>
+      <div class="res-card-desc">The standard Python ML library for DA work — regression, classification, clustering, cross-validation. Excellent consistent API and documentation.</div>
+      <div class="res-card-tags"><span class="tag">ML</span><span class="tag">Python</span><span class="tag">sklearn</span></div>
+      <div class="res-card-links"><a href="https://scikit-learn.org/stable/user_guide.html" target="_blank" class="res-link primary">User Guide →</a></div>
+    </div>
+    <div class="res-card">
       <div class="res-card-icon">📈</div>
+      <div class="res-card-title">statsmodels</div>
+      <div class="res-card-desc">Statistical modeling in Python — linear regression, hypothesis testing, time series. More stats-focused than scikit-learn and aligns with WGU BSDA's statistics requirements.</div>
+      <div class="res-card-tags"><span class="tag">Statistics</span><span class="tag">Regression</span></div>
+      <div class="res-card-links"><a href="https://www.statsmodels.org/stable/index.html" target="_blank" class="res-link primary">Docs →</a></div>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+  <div class="section-head"><h2>📊 Visualization Tools</h2></div>
+  <div class="card-grid">
+    <div class="res-card">
+      <div class="res-card-icon">🎨</div>
       <div class="res-card-title">Tableau Public</div>
-      <div class="res-card-desc">Free Tableau Desktop for non-commercial use. WGU BSDA includes Tableau competencies — build your portfolio here. The Tableau Public gallery is great for inspiration on data visualization design.</div>
+      <div class="res-card-desc">Free Tableau tier — WGU BSDA uses Tableau for data visualization coursework. Build dashboards, save to Tableau Public for your portfolio. Start with the official Training Videos.</div>
       <div class="res-card-tags"><span class="tag">Tableau</span><span class="tag">Visualization</span><span class="tag">Free</span></div>
-      <div class="res-card-links"><a href="https://public.tableau.com/" target="_blank" class="res-link primary">Tableau Public →</a></div>
+      <div class="res-card-links"><a href="https://public.tableau.com/" target="_blank" class="res-link primary">Tableau Public →</a><a href="https://www.tableau.com/learn/training" target="_blank" class="res-link">Free Training →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">🦆</div>
+      <div class="res-card-title">Plotly + Dash</div>
+      <div class="res-card-desc">Interactive Python charts that run in the browser. Dash extends Plotly into full web apps — perfect for deploying sensor dashboards from ESP32 data or WGU portfolio projects.</div>
+      <div class="res-card-tags"><span class="tag">Interactive</span><span class="tag">Python</span><span class="tag">Web Apps</span></div>
+      <div class="res-card-links"><a href="https://plotly.com/python/" target="_blank" class="res-link primary">Plotly Docs →</a><a href="https://dash.plotly.com/" target="_blank" class="res-link">Dash →</a></div>
+    </div>
+    <div class="res-card new-item">
+      <div class="res-card-icon">📐</div>
+      <div class="res-card-title">Evidence — BI as Code</div>
+      <div class="res-card-desc">Write SQL + Markdown, deploy beautiful data reports as static sites. Version-controlled analytics — great for portfolio projects and sharing data stories.</div>
+      <div class="res-card-tags"><span class="tag">BI</span><span class="tag">SQL</span><span class="tag">New</span></div>
+      <div class="res-card-links"><a href="https://evidence.dev/" target="_blank" class="res-link primary">evidence.dev →</a></div>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+  <div class="section-head"><h2>🏆 Practice & Portfolio</h2></div>
+  <div class="card-grid">
+    <div class="res-card">
+      <div class="res-card-icon">🏆</div>
+      <div class="res-card-title">Kaggle</div>
+      <div class="res-card-desc">Free datasets, competitions, and micro-courses. The Kaggle Learn tracks for Python, pandas, SQL, and data visualization directly complement WGU BSDA CUs.</div>
+      <div class="res-card-tags"><span class="tag">Datasets</span><span class="tag">Practice</span><span class="tag">Portfolio</span></div>
+      <div class="res-card-links"><a href="https://www.kaggle.com/learn" target="_blank" class="res-link primary">Kaggle Learn →</a><a href="https://www.kaggle.com/datasets" target="_blank" class="res-link">Datasets →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">📊</div>
+      <div class="res-card-title">Tidy Tuesday</div>
+      <div class="res-card-desc">Weekly data visualization challenge with public datasets. Great for building portfolio pieces, comparing approaches with the community, and practicing storytelling with data.</div>
+      <div class="res-card-tags"><span class="tag">Practice</span><span class="tag">Community</span><span class="tag">Visualization</span></div>
+      <div class="res-card-links"><a href="https://github.com/rfordatascience/tidytuesday" target="_blank" class="res-link primary">GitHub →</a></div>
     </div>
   </div>
 </section>
+
 <!-- ════════════════════════════════════
      TAB: EXCEL
 ════════════════════════════════════ -->
 <section class="tab-panel" id="tab-excel" role="tabpanel">
   <div class="featured-card">
-    <h3>📗 Excel — Still the King</h3>
-    <p>Despite all the Python and Power BI work, Excel remains essential for day-to-day analysis, ad hoc reports, and collaborating with non-technical stakeholders. These resources cover dynamic arrays, Power Query, LAMBDA, and the full modern Excel feature set.</p>
+    <h3>📗 Excel — Still Irreplaceable</h3>
+    <p>Excel is your daily tool at Vertiv and a core skill for WGU BSDA. Modern Excel (dynamic arrays, LAMBDA, Power Query M) is a fundamentally different animal from 2016 Excel. These resources cover the modern features that actually matter.</p>
   </div>
 
-  <div class="section-head"><h2>📚 Learning Resources</h2></div>
+  <div class="section-head"><h2>📚 Core Resources</h2></div>
   <div class="card-grid">
-    <div class="res-card">
-      <div class="res-card-icon">📖</div>
-      <div class="res-card-title">Microsoft Excel Docs</div>
-      <div class="res-card-desc">Official function reference and feature documentation. Every XLOOKUP, dynamic array, and Power Query M formula documented. Bookmark the function reference page.</div>
-      <div class="res-card-tags"><span class="tag">Reference</span><span class="tag">Official</span><span class="tag">Functions</span></div>
-      <div class="res-card-links"><a href="https://support.microsoft.com/en-us/excel" target="_blank" class="res-link primary">Excel Docs →</a><a href="https://support.microsoft.com/en-us/office/excel-functions-alphabetical-b3944572-255d-4efb-bb96-c6d90033e188" target="_blank" class="res-link">Function Reference →</a></div>
-    </div>
     <div class="res-card">
       <div class="res-card-icon">📗</div>
       <div class="res-card-title">Leila Gharani</div>
-      <div class="res-card-desc">Excel and Power Query expert on YouTube. Dynamic arrays, LAMBDA functions, and M language transformations explained with exceptional clarity. Best channel for Excel's modern features.</div>
-      <div class="res-card-tags"><span class="tag">YouTube</span><span class="tag">Dynamic Arrays</span><span class="tag">Power Query</span></div>
-      <div class="res-card-links"><a href="https://www.youtube.com/@LeilaGharani" target="_blank" class="res-link primary">Watch →</a></div>
+      <div class="res-card-desc">The best modern Excel educator. Dynamic arrays, LAMBDA, Power Query M, and Excel automation — explained at the right depth with clear examples. Her newsletter is worth subscribing to.</div>
+      <div class="res-card-tags"><span class="tag">Excel</span><span class="tag">Power Query</span><span class="tag">LAMBDA</span></div>
+      <div class="res-card-links"><a href="https://www.youtube.com/@LeilaGharani" target="_blank" class="res-link primary">YouTube →</a><a href="https://xelplus.com/" target="_blank" class="res-link">XelPlus →</a></div>
     </div>
     <div class="res-card">
       <div class="res-card-icon">📗</div>
-      <div class="res-card-title">ExcelIsFun</div>
-      <div class="res-card-desc">Mike Girvin's legendary Excel channel — thousands of tutorials, deep array formula coverage, and Power Query walkthroughs. The most comprehensive free Excel education on YouTube.</div>
-      <div class="res-card-tags"><span class="tag">YouTube</span><span class="tag">Deep-Dive</span><span class="tag">Arrays</span></div>
-      <div class="res-card-links"><a href="https://www.youtube.com/@excelisfun" target="_blank" class="res-link primary">Watch →</a></div>
+      <div class="res-card-title">ExcelIsFun — Mike Girvin</div>
+      <div class="res-card-desc">Thousands of Excel tutorials covering everything. Deep on array formulas, LAMBDA, Power Query, and data analysis. The definitive YouTube archive.</div>
+      <div class="res-card-tags"><span class="tag">Excel</span><span class="tag">Array Formulas</span><span class="tag">Deep-Dive</span></div>
+      <div class="res-card-links"><a href="https://www.youtube.com/@excelisfun" target="_blank" class="res-link primary">YouTube →</a></div>
     </div>
     <div class="res-card">
-      <div class="res-card-icon">💼</div>
-      <div class="res-card-title">Kevin Stratvert</div>
-      <div class="res-card-desc">Practical Microsoft 365 tutorials — Excel, Power Automate, and Power Platform integrations. Great for the everyday Excel user who wants to work smarter rather than harder.</div>
-      <div class="res-card-tags"><span class="tag">YouTube</span><span class="tag">Practical</span><span class="tag">M365</span></div>
-      <div class="res-card-links"><a href="https://www.youtube.com/@KevinStratvert" target="_blank" class="res-link primary">Watch →</a></div>
+      <div class="res-card-icon">💡</div>
+      <div class="res-card-title">Chandoo.org</div>
+      <div class="res-card-desc">Excel tips, dashboards, and templates. Excellent for chart design, conditional formatting, and building polished reports. The "Excel Ninja" training is well-regarded.</div>
+      <div class="res-card-tags"><span class="tag">Excel</span><span class="tag">Dashboards</span><span class="tag">Charts</span></div>
+      <div class="res-card-links"><a href="https://chandoo.org/" target="_blank" class="res-link primary">chandoo.org →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">📊</div>
+      <div class="res-card-title">The Spreadsheet Guru</div>
+      <div class="res-card-desc">Chris Newman's site — Excel VBA, automation, and macro guides. Deep focus on eliminating repetitive manual work through code. Strong on Power BI integration and building tools for non-technical users.</div>
+      <div class="res-card-tags"><span class="tag">VBA</span><span class="tag">Automation</span><span class="tag">Power BI</span></div>
+      <div class="res-card-links"><a href="https://www.thespreadsheetguru.com/" target="_blank" class="res-link primary">thespreadsheetguru.com →</a><a href="https://www.youtube.com/channel/UCUMl1vG7MRxw9458fCJ0QDA" target="_blank" class="res-link">YouTube →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">📋</div>
+      <div class="res-card-title">Microsoft Excel Docs</div>
+      <div class="res-card-desc">Official function reference. Every function has examples and parameter docs. The "What's New" page is the fastest way to track new Excel features each month.</div>
+      <div class="res-card-tags"><span class="tag">Reference</span><span class="tag">Official</span></div>
+      <div class="res-card-links"><a href="https://support.microsoft.com/en-us/excel" target="_blank" class="res-link primary">Excel Help →</a><a href="https://support.microsoft.com/en-us/office/excel-functions-alphabetical-b3944572-255d-4efb-bb96-c6d90033e188" target="_blank" class="res-link">Functions A-Z →</a></div>
     </div>
   </div>
 
   <hr class="section-divider" />
-  <div class="section-head"><h2>🌐 Community & Reference</h2></div>
+  <div class="section-head"><h2>⚡ Modern Excel Features to Master</h2></div>
+  <div class="card-grid">
+    <div class="res-card">
+      <div class="res-card-icon">📐</div>
+      <div class="res-card-title">Dynamic Arrays</div>
+      <div class="res-card-desc">FILTER, SORT, UNIQUE, SEQUENCE, XLOOKUP — the 2019+ functions that changed everything. These replace most VLOOKUP and IF workarounds. WGU DA coursework tests these heavily.</div>
+      <div class="res-card-tags"><span class="tag">FILTER</span><span class="tag">XLOOKUP</span><span class="tag">Modern</span></div>
+      <div class="res-card-links"><a href="https://support.microsoft.com/en-us/office/dynamic-array-formulas-and-spilled-array-behavior-205c6b06-03ba-4151-89a1-87a7eb36e531" target="_blank" class="res-link primary">MS Docs →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">λ</div>
+      <div class="res-card-title">LAMBDA Functions</div>
+      <div class="res-card-desc">Write reusable custom functions in Excel without VBA. LAMBDA + LET + MAP/REDUCE/SCAN create a mini functional programming environment. Leila Gharani has the best tutorials on this.</div>
+      <div class="res-card-tags"><span class="tag">LAMBDA</span><span class="tag">LET</span><span class="tag">Advanced</span></div>
+      <div class="res-card-links"><a href="https://www.youtube.com/@LeilaGharani" target="_blank" class="res-link primary">Leila's Tutorials →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">🔄</div>
+      <div class="res-card-title">Power Query (M Language)</div>
+      <div class="res-card-desc">ETL inside Excel. Clean, transform, and combine data sources without touching formulas. Pairs perfectly with Power BI — the M skills transfer directly.</div>
+      <div class="res-card-tags"><span class="tag">Power Query</span><span class="tag">M Language</span><span class="tag">ETL</span></div>
+      <div class="res-card-links"><a href="https://learn.microsoft.com/en-us/power-query/power-query-ui" target="_blank" class="res-link primary">Docs →</a></div>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+  <div class="section-head"><h2>🌐 Community</h2></div>
   <div class="link-list">
-    <div class="link-list-item"><a href="https://techcommunity.microsoft.com/category/excel" target="_blank"><span class="lli-icon">📗</span> Excel Tech Community</a><span class="lli-meta">Microsoft forums</span></div>
-    <div class="link-list-item"><a href="https://www.reddit.com/r/excel/" target="_blank"><span class="lli-icon">🤝</span> r/excel</a><span class="lli-meta">Help & tips</span></div>
-    <div class="link-list-item"><a href="https://chandoo.org/" target="_blank"><span class="lli-icon">📊</span> Chandoo.org</a><span class="lli-meta">Tutorials & templates</span></div>
-    <div class="link-list-item"><a href="https://www.exceljet.net/functions" target="_blank"><span class="lli-icon">⚡</span> ExcelJet — Function Guide</a><span class="lli-meta">Quick reference</span></div>
-    <div class="link-list-item"><a href="https://powerquery.how/" target="_blank"><span class="lli-icon">🔄</span> PowerQuery.how</a><span class="lli-meta">M language reference</span></div>
+    <div class="link-list-item"><a href="https://www.reddit.com/r/excel/" target="_blank"><span class="lli-icon">📗</span> r/excel</a><span class="lli-meta">635k+ members</span></div>
+    <div class="link-list-item"><a href="https://techcommunity.microsoft.com/category/excel" target="_blank"><span class="lli-icon">💬</span> Microsoft Tech Community — Excel</a><span class="lli-meta">Official</span></div>
+    <div class="link-list-item"><a href="https://www.mrexcel.com/board/" target="_blank"><span class="lli-icon">🏆</span> MrExcel Forum</a><span class="lli-meta">Classic forum</span></div>
   </div>
 </section>
+
+<!-- ════════════════════════════════════
+     TAB: WOODWORKING
+════════════════════════════════════ -->
+<section class="tab-panel" id="tab-woodworking" role="tabpanel">
+  <div class="featured-card">
+    <h3>🪵 Woodworking — Making Things That Last</h3>
+    <p>Woodworking pairs naturally with electronics — enclosures, project boxes, workshop furniture, LED-integrated shelving. Columbus has excellent resources including the Idea Foundry. These channels and tools will take you from cutting boards to cabinets.</p>
+  </div>
+
+  <div class="section-head"><h2>🎥 YouTube Channels</h2></div>
+  <div class="card-grid">
+    <div class="res-card">
+      <div class="res-card-icon">🪵</div>
+      <div class="res-card-title">I Like to Make Stuff</div>
+      <div class="res-card-desc">Bob's the perfect maker crossover channel — combines woodworking with electronics. "Maker 101" series, CNC projects, and LED-integrated builds. Perfect for your skill set.</div>
+      <div class="res-card-tags"><span class="tag">Maker</span><span class="tag">Electronics</span><span class="tag">Crossover</span></div>
+      <div class="res-card-links"><a href="https://www.youtube.com/@iliketomakestuff" target="_blank" class="res-link primary">Watch →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">🔨</div>
+      <div class="res-card-title">Steve Ramsey — Woodworking for Mere Mortals</div>
+      <div class="res-card-desc">Weekend woodworking projects using basic tools. The best beginner-friendly channel — practical projects you can actually finish without a full shop. 1.4M subscribers.</div>
+      <div class="res-card-tags"><span class="tag">Beginner</span><span class="tag">Weekend Projects</span></div>
+      <div class="res-card-links"><a href="https://www.youtube.com/@SteveRamsey" target="_blank" class="res-link primary">Watch →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">🌲</div>
+      <div class="res-card-title">The Wood Whisperer</div>
+      <div class="res-card-desc">Marc Spagnuolo's channel — furniture-level woodworking with excellent joinery tutorials. More advanced, but his finishing and wood selection guides are invaluable at any level.</div>
+      <div class="res-card-tags"><span class="tag">Furniture</span><span class="tag">Joinery</span><span class="tag">Advanced</span></div>
+      <div class="res-card-links"><a href="https://www.youtube.com/@thewoodwhisperer" target="_blank" class="res-link primary">Watch →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">🪚</div>
+      <div class="res-card-title">Stumpy Nubs Woodworking Journal</div>
+      <div class="res-card-desc">Incredibly practical workshop tips — jigs, shop setups, tool comparisons. Best source for "how do I set up my workshop on a budget" content.</div>
+      <div class="res-card-tags"><span class="tag">Workshop</span><span class="tag">Jigs</span><span class="tag">Tools</span></div>
+      <div class="res-card-links"><a href="https://www.youtube.com/@StumpyNubs" target="_blank" class="res-link primary">Watch →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">⚙️</div>
+      <div class="res-card-title">3x3 Custom</div>
+      <div class="res-card-desc">Tamar Hannah's channel — modern woodworking with great finishing and design sensibility. Strong on shop furniture builds and maker/woodworking overlap projects.</div>
+      <div class="res-card-tags"><span class="tag">Modern Design</span><span class="tag">Shop Builds</span></div>
+      <div class="res-card-links"><a href="https://www.youtube.com/@3x3CustomTamar" target="_blank" class="res-link primary">Watch →</a></div>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+  <div class="section-head"><h2>📚 Reference & Learning</h2></div>
+  <div class="card-grid">
+    <div class="res-card">
+      <div class="res-card-icon">📰</div>
+      <div class="res-card-title">Wood Magazine</div>
+      <div class="res-card-desc">Long-running woodworking magazine with free project plans, tool reviews, and technique guides on the website. Their free plan library is extensive.</div>
+      <div class="res-card-tags"><span class="tag">Plans</span><span class="tag">Techniques</span><span class="tag">Free Plans</span></div>
+      <div class="res-card-links"><a href="https://www.woodmagazine.com/" target="_blank" class="res-link primary">woodmagazine.com →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">🔧</div>
+      <div class="res-card-title">r/woodworking</div>
+      <div class="res-card-desc">Active community — project showcases, tool recommendations, finishing advice. Search before buying any tool. 2.8M+ members.</div>
+      <div class="res-card-tags"><span class="tag">Community</span><span class="tag">Q&A</span></div>
+      <div class="res-card-links"><a href="https://www.reddit.com/r/woodworking/" target="_blank" class="res-link primary">r/woodworking →</a><a href="https://www.reddit.com/r/BeginnerWoodWorking/" target="_blank" class="res-link">r/BeginnerWW →</a></div>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+  <div class="section-head"><h2>📍 Columbus Resources</h2></div>
+  <div class="event-grid">
+    <div class="event-card">
+      <div class="event-icon">🏭</div>
+      <div class="event-title">Columbus Idea Foundry</div>
+      <div class="event-desc">Columbus's major makerspace has full woodworking shop access — table saw, band saw, lathe. Member access is the fastest way to try tools before buying.</div>
+      <a href="https://www.ideafoundry.com/" target="_blank" class="res-link">Visit →</a>
+    </div>
+    <div class="event-card">
+      <div class="event-icon">🪵</div>
+      <div class="event-title">Zeyer Lumber — Columbus</div>
+      <div class="event-desc">Columbus hardwood dealer carrying domestic and exotic hardwoods, live edge slabs, and specialty materials. Better selection and pricing than big box stores. Custom dimensions available.</div>
+      <a href="https://www.zeyerlumber.com/" target="_blank" class="res-link">Visit →</a>
+    </div>
+    <div class="event-card">
+      <div class="event-icon">🔨</div>
+      <div class="event-title">Rockler — Columbus</div>
+      <div class="event-desc">Specialty woodworking tools, hardware, and lumber. In-store classes available. Good for specialty hardware (hinges, drawer slides, router bits).</div>
+      <a href="https://www.rockler.com/mw-store-locator" target="_blank" class="res-link">Find Store →</a>
+    </div>
+  </div>
+</section>
+
 <!-- ════════════════════════════════════
      TAB: TRENDS
 ════════════════════════════════════ -->
 <section class="tab-panel" id="tab-trends" role="tabpanel">
-  <div class="section-head"><h2>⚡ What's Hot Right Now</h2><span class="section-tag">live feeds · check weekly</span></div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:24px;">
+    <div style="background:linear-gradient(135deg,rgba(6,182,212,0.08),var(--bg2));border:1px solid rgba(6,182,212,0.25);border-radius:var(--radius);padding:16px;text-align:center;">
+      <div style="font-size:24px;margin-bottom:6px;">📡</div>
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;">ESP32-C6</div>
+      <div style="font-size:12px;color:var(--text2);margin-top:4px;">WiFi 6 + Zigbee combo dominating new designs</div>
+    </div>
+    <div style="background:linear-gradient(135deg,rgba(139,92,246,0.08),var(--bg2));border:1px solid rgba(139,92,246,0.25);border-radius:var(--radius);padding:16px;text-align:center;">
+      <div style="font-size:24px;margin-bottom:6px;">🤗</div>
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--accent2);text-transform:uppercase;letter-spacing:.1em;">LeRobot</div>
+      <div style="font-size:12px;color:var(--text2);margin-top:4px;">HuggingFace robot learning library going mainstream</div>
+    </div>
+    <div style="background:linear-gradient(135deg,rgba(63,185,80,0.08),var(--bg2));border:1px solid rgba(63,185,80,0.25);border-radius:var(--radius);padding:16px;text-align:center;">
+      <div style="font-size:24px;margin-bottom:6px;">🦆</div>
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;">DuckDB</div>
+      <div style="font-size:12px;color:var(--text2);margin-top:4px;">Replacing pandas+SQLite in local analytics stacks</div>
+    </div>
+    <div style="background:linear-gradient(135deg,rgba(245,158,11,0.08),var(--bg2));border:1px solid rgba(245,158,11,0.25);border-radius:var(--radius);padding:16px;text-align:center;">
+      <div style="font-size:24px;margin-bottom:6px;">🚀</div>
+      <div style="font-family:var(--font-mono);font-size:10px;color:var(--accent3);text-transform:uppercase;letter-spacing:.1em;">uv + Ruff</div>
+      <div style="font-size:12px;color:var(--text2);margin-top:4px;">Astral's Rust tools reshaping Python dev workflows</div>
+    </div>
+  </div>
+
+  <div class="section-head green"><h2>🔥 GitHub Trending — Maker / Robotics</h2><span class="section-tag">hot repos 2025–2026</span></div>
   <div class="card-grid">
+
     <div class="trend-card github">
       <div class="trend-header">
-        <span class="trend-icon">📈</span>
-        <div>
-          <div class="trend-title">GitHub Trending — Python</div>
-          <div class="trend-sub">trending · daily</div>
-        </div>
+        <div class="trend-icon">🤗</div>
+        <div><div class="trend-title">huggingface/lerobot</div><div class="trend-sub">Python · Robot Learning</div></div>
       </div>
-      <div class="trend-desc">See what Python projects are catching fire on GitHub right now. Great early signal for new tools, libraries, and frameworks before they hit mainstream tutorials.</div>
+      <div class="trend-desc">End-to-end robot learning library from Hugging Face. Pre-trained manipulation policies, imitation learning datasets, sim environments. Designed around the affordable SO-ARM100 arm.</div>
       <div class="trend-footer">
-        <a href="https://github.com/trending/python" target="_blank" class="res-link primary">View →</a>
-        <span class="trend-stat hot">Daily</span>
+        <span class="trend-stat hot">🔥 Trending</span>
+        <span class="trend-stat new">2025</span>
+        <a href="https://github.com/huggingface/lerobot" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
       </div>
     </div>
-    <div class="trend-card yt">
+
+    <div class="trend-card github">
       <div class="trend-header">
-        <span class="trend-icon">🤖</span>
-        <div>
-          <div class="trend-title">GitHub Trending — Arduino / C++</div>
-          <div class="trend-sub">trending · weekly</div>
-        </div>
+        <div class="trend-icon">🏠</div>
+        <div><div class="trend-title">esphome/esphome</div><div class="trend-sub">C++ / Python · IoT</div></div>
       </div>
-      <div class="trend-desc">Hardware and embedded projects trending this week. Often surfaces new sensor libraries, robotics frameworks, and creative ESP32/Arduino builds.</div>
+      <div class="trend-desc">YAML-based ESP32/ESP8266 firmware for Home Assistant. One of the most-starred home automation repos. If you're not using ESPHome for your HA ESP32 sensors yet, start.</div>
       <div class="trend-footer">
-        <a href="https://github.com/trending/c%2B%2B?since=weekly" target="_blank" class="res-link primary">View →</a>
-        <span class="trend-stat">Weekly</span>
+        <span class="trend-stat">⭐ 9k+</span>
+        <span class="trend-stat hot">Very Active</span>
+        <a href="https://github.com/esphome/esphome" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
       </div>
     </div>
+
+    <div class="trend-card github">
+      <div class="trend-header">
+        <div class="trend-icon">💡</div>
+        <div><div class="trend-title">Aircoookie/WLED</div><div class="trend-sub">C++ · LED Control</div></div>
+      </div>
+      <div class="trend-desc">WiFi-controlled WS2812B LED firmware. 14k+ stars, 100+ effects, Home Assistant integration. Flash once to an ESP32 and control your LED strips from your phone or HA.</div>
+      <div class="trend-footer">
+        <span class="trend-stat">⭐ 14k+</span>
+        <a href="https://github.com/Aircoookie/WLED" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
+      </div>
+    </div>
+
+    <div class="trend-card github">
+      <div class="trend-header">
+        <div class="trend-icon">🦆</div>
+        <div><div class="trend-title">duckdb/duckdb</div><div class="trend-sub">C++ / Python · Analytics</div></div>
+      </div>
+      <div class="trend-desc">In-process OLAP SQL engine. 22k+ stars and still climbing fast. The de facto standard for local data analytics in Python. Query Parquet and CSV directly with SQL.</div>
+      <div class="trend-footer">
+        <span class="trend-stat hot">🔥 Fastest Growing</span>
+        <span class="trend-stat">⭐ 22k+</span>
+        <a href="https://github.com/duckdb/duckdb" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
+      </div>
+    </div>
+
+    <div class="trend-card github">
+      <div class="trend-header">
+        <div class="trend-icon">🐻‍❄️</div>
+        <div><div class="trend-title">pola-rs/polars</div><div class="trend-sub">Rust / Python · DataFrames</div></div>
+      </div>
+      <div class="trend-desc">Blazing-fast DataFrame library. 28k+ stars. Cleaner API than pandas, lazy evaluation, 10–50x faster on large datasets. Showing up in DA job postings alongside pandas.</div>
+      <div class="trend-footer">
+        <span class="trend-stat">⭐ 28k+</span>
+        <span class="trend-stat hot">Growing Fast</span>
+        <a href="https://github.com/pola-rs/polars" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
+      </div>
+    </div>
+
+    <div class="trend-card github">
+      <div class="trend-header">
+        <div class="trend-icon">🚀</div>
+        <div><div class="trend-title">astral-sh/uv</div><div class="trend-sub">Rust · Python Tooling</div></div>
+      </div>
+      <div class="trend-desc">The Python package manager written in Rust. 36k+ stars, fastest growth in the Python tooling space. Replaces pip + virtualenv + pyenv in one binary.</div>
+      <div class="trend-footer">
+        <span class="trend-stat hot">🔥 #1 Trending</span>
+        <span class="trend-stat">⭐ 36k+</span>
+        <a href="https://github.com/astral-sh/uv" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="section-divider" />
+  <div class="section-head amber"><h2>🛠️ Tools Making Waves in 2026</h2></div>
+  <div class="card-grid">
+
     <div class="trend-card tool">
       <div class="trend-header">
-        <span class="trend-icon">💀</span>
-        <div>
-          <div class="trend-title">Hackaday — Latest Hacks</div>
-          <div class="trend-sub">daily posts</div>
-        </div>
+        <div class="trend-icon">🌊</div>
+        <div><div class="trend-title">Marimo</div><div class="trend-sub">Reactive Python Notebooks</div></div>
       </div>
-      <div class="trend-desc">Daily engineering hacks with editorial commentary. More opinionated and technical than Hackster — great for understanding the "why" behind builds.</div>
+      <div class="trend-desc">Reactive notebooks where cells re-run automatically. No more stale outputs. Deployable as web apps, shareable as .py scripts. Serious competition for Jupyter.</div>
       <div class="trend-footer">
-        <a href="https://hackaday.com/" target="_blank" class="res-link primary">Visit →</a>
-        <span class="trend-stat hot">Daily</span>
+        <span class="trend-stat new">2024</span>
+        <span class="trend-stat hot">Rising</span>
+        <a href="https://marimo.io/" target="_blank" class="res-link" style="margin-left:auto;">Try →</a>
       </div>
     </div>
+
+    <div class="trend-card tool">
+      <div class="trend-header">
+        <div class="trend-icon">🏃</div>
+        <div><div class="trend-title">micro-ROS</div><div class="trend-sub">ROS 2 on Microcontrollers</div></div>
+      </div>
+      <div class="trend-desc">Run ROS 2 nodes directly on ESP32 and Arduino. Bridges the gap between your maker hardware and ROS 2 robotics stack. Huge for serious robot projects.</div>
+      <div class="trend-footer">
+        <span class="trend-stat">ESP32 + ROS 2</span>
+        <a href="https://micro.ros.org/" target="_blank" class="res-link" style="margin-left:auto;">micro.ros.org →</a>
+      </div>
+    </div>
+
+    <div class="trend-card tool">
+      <div class="trend-header">
+        <div class="trend-icon">👁️</div>
+        <div><div class="trend-title">OpenMV</div><div class="trend-sub">Machine Vision on Microcontrollers</div></div>
+      </div>
+      <div class="trend-desc">MicroPython-based computer vision on tiny boards. Face detection, object tracking, color recognition — no Raspberry Pi needed. OpenMV Cam H7 is the flagship board.</div>
+      <div class="trend-footer">
+        <span class="trend-stat">MicroPython</span>
+        <span class="trend-stat">Vision</span>
+        <a href="https://openmv.io/" target="_blank" class="res-link" style="margin-left:auto;">openmv.io →</a>
+      </div>
+    </div>
+
+    <div class="trend-card tool">
+      <div class="trend-header">
+        <div class="trend-icon">📐</div>
+        <div><div class="trend-title">Evidence</div><div class="trend-sub">BI as Code</div></div>
+      </div>
+      <div class="trend-desc">SQL + Markdown → beautiful data reports deployed as static sites. Version-controlled analytics that lives in git. Great alternative to Power BI for personal portfolio work.</div>
+      <div class="trend-footer">
+        <span class="trend-stat new">New</span>
+        <a href="https://evidence.dev/" target="_blank" class="res-link" style="margin-left:auto;">evidence.dev →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="section-divider" />
+  <div class="section-head purple"><h2>💬 Community Buzz — What's Being Discussed</h2></div>
+  <div class="card-grid">
+
     <div class="trend-card data">
       <div class="trend-header">
-        <span class="trend-icon">🔨</span>
-        <div>
-          <div class="trend-title">Hackster.io — Trending Projects</div>
-          <div class="trend-sub">community trending</div>
-        </div>
+        <div class="trend-icon">📈</div>
+        <div><div class="trend-title">Data Analytics Subreddits</div><div class="trend-sub">r/dataanalysis · r/datascience · r/learnpython</div></div>
       </div>
-      <div class="trend-desc">Community maker projects sorted by trending — the real pulse of what hobbyists are building with Arduino, ESP32, Raspberry Pi, and AI hardware right now.</div>
+      <div class="trend-desc">Hot topics: DuckDB vs. Polars workflows, Python package management (uv), AI-assisted analysis with Claude/GPT, Power BI Fabric integration. WGU BSDA is actively discussed in r/WGU.</div>
       <div class="trend-footer">
-        <a href="https://www.hackster.io/projects?sort=trending" target="_blank" class="res-link primary">View →</a>
-        <span class="trend-stat new">Live</span>
+        <a href="https://www.reddit.com/r/dataanalysis/top/?t=week" target="_blank" class="res-link">r/dataanalysis →</a>
+        <a href="https://www.reddit.com/r/WGU/search/?q=BSDA" target="_blank" class="res-link">WGU BSDA →</a>
       </div>
     </div>
-    <div class="trend-card github">
-      <div class="trend-header">
-        <span class="trend-icon">📡</span>
-        <div>
-          <div class="trend-title">r/esp32 — Top This Week</div>
-          <div class="trend-sub">community · weekly</div>
-        </div>
-      </div>
-      <div class="trend-desc">Top-voted ESP32 projects and questions from the past week. A quick scan shows you what the community is actually building and what problems they're solving.</div>
-      <div class="trend-footer">
-        <a href="https://www.reddit.com/r/esp32/top/?t=week" target="_blank" class="res-link primary">View →</a>
-        <span class="trend-stat">Weekly</span>
-      </div>
-    </div>
+
     <div class="trend-card data">
       <div class="trend-header">
-        <span class="trend-icon">📈</span>
-        <div>
-          <div class="trend-title">r/dataanalysis — Top This Week</div>
-          <div class="trend-sub">community · weekly</div>
-        </div>
+        <div class="trend-icon">🔧</div>
+        <div><div class="trend-title">Maker & Hardware Subreddits</div><div class="trend-sub">r/esp32 · r/arduino · r/robotics · r/homeassistant</div></div>
       </div>
-      <div class="trend-desc">Data analysis projects, tool discoveries, and learning resources trending in the data analyst community this week. Good for discovering new workflows and libraries.</div>
+      <div class="trend-desc">Hot: ESP32-C6 Zigbee projects, LeRobot builds, micro-ROS experiments, WLED animations with HA scenes. The ESP32-S3 with native USB is dominating new project threads.</div>
       <div class="trend-footer">
-        <a href="https://www.reddit.com/r/dataanalysis/top/?t=week" target="_blank" class="res-link primary">View →</a>
-        <span class="trend-stat">Weekly</span>
+        <a href="https://www.reddit.com/r/esp32/top/?t=week" target="_blank" class="res-link">r/esp32 →</a>
+        <a href="https://www.reddit.com/r/robotics/top/?t=week" target="_blank" class="res-link">r/robotics →</a>
       </div>
+    </div>
+
+    <div class="trend-card data">
+      <div class="trend-header">
+        <div class="trend-icon">💻</div>
+        <div><div class="trend-title">Hacker News Maker Picks</div><div class="trend-sub">Show HN · Ask HN</div></div>
+      </div>
+      <div class="trend-desc">HN discussions on local LLMs for hardware (running Llama on Pi 5), DuckDB for log analysis, Python tooling wars (uv vs. poetry), and open-source robot arm designs are consistently popular.</div>
+      <div class="trend-footer">
+        <a href="https://news.ycombinator.com/show" target="_blank" class="res-link">Show HN →</a>
+        <a href="https://hn.algolia.com/?q=esp32" target="_blank" class="res-link">HN · esp32 →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <hr class="section-divider" />
+  <div class="section-head"><h2>🎥 YouTube Topics Blowing Up</h2></div>
+  <div class="card-grid">
+    <div class="trend-card yt">
+      <div class="trend-header"><div class="trend-icon">🤖</div><div><div class="trend-title">Open-Source Robot Arms</div></div></div>
+      <div class="trend-desc">SO-ARM100, Trossen, custom SCARA arms — maker-priced 6-DOF arms paired with LeRobot are producing a wave of hobbyist manipulation projects. Watch: James Bruton + HuggingFace collabs.</div>
+      <div class="trend-footer"><span class="trend-stat hot">🔥 Hot Topic</span></div>
+    </div>
+    <div class="trend-card yt">
+      <div class="trend-header"><div class="trend-icon">🏠</div><div><div class="trend-title">Matter / Zigbee Projects</div></div></div>
+      <div class="trend-desc">ESP32-C6 enabling Zigbee devices built from scratch. Home Assistant Matter integration tutorials are surging. "Build your own Zigbee sensor" videos are getting millions of views.</div>
+      <div class="trend-footer"><span class="trend-stat hot">Rising Fast</span></div>
+    </div>
+    <div class="trend-card yt">
+      <div class="trend-header"><div class="trend-icon">🦆</div><div><div class="trend-title">Local Data Analysis Stack</div></div></div>
+      <div class="trend-desc">DuckDB + Polars + Marimo tutorials are multiplying fast. The narrative is "pandas is fine but here's why pros are switching." Very relevant to your WGU BSDA work.</div>
+      <div class="trend-footer"><span class="trend-stat new">2025–2026</span></div>
+    </div>
+    <div class="trend-card yt">
+      <div class="trend-header"><div class="trend-icon">🧠</div><div><div class="trend-title">Edge AI on Microcontrollers</div></div></div>
+      <div class="trend-desc">Running small ML models on ESP32-S3 (with AI acceleration) and Pi 5 for local inference. TensorFlow Lite Micro and Edge Impulse are the main tools. OpenMV is the plug-and-play entry point.</div>
+      <div class="trend-footer"><span class="trend-stat hot">Hot</span></div>
     </div>
   </div>
 
   <hr class="section-divider" />
-  <div class="section-head purple"><h2>🧪 Tools to Watch</h2><span class="section-tag">2025–2026 picks</span></div>
-  <div class="card-grid">
-    <div class="res-card new-item">
-      <div class="res-card-icon">🦆</div>
-      <div class="res-card-title">DuckDB</div>
-      <div class="res-card-desc">In-process OLAP engine for Python. Replacing SQLite as the go-to local database for data analysis work. Already in production at major tech companies.</div>
-      <div class="res-card-tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Hot</span></div>
-      <div class="res-card-links"><a href="https://duckdb.org/" target="_blank" class="res-link primary">duckdb.org →</a></div>
-    </div>
-    <div class="res-card new-item">
-      <div class="res-card-icon">🤗</div>
-      <div class="res-card-title">LeRobot — Hugging Face</div>
-      <div class="res-card-desc">The most exciting development in hobbyist robotics: open-source robot learning policies, imitation learning, and sim environments. Works with the affordable SO-ARM100.</div>
-      <div class="res-card-tags"><span class="tag">Robotics</span><span class="tag">ML</span><span class="tag">Hot</span></div>
-      <div class="res-card-links"><a href="https://github.com/huggingface/lerobot" target="_blank" class="res-link primary">GitHub →</a></div>
-    </div>
-    <div class="res-card new-item">
-      <div class="res-card-icon">📡</div>
-      <div class="res-card-title">ESP32-C6</div>
-      <div class="res-card-desc">WiFi 6 + Zigbee + BLE 5 — the smart-home chip of 2026. Replaces ESP32 + Zigbee dongle combos with a single sub-$5 module. Native Matter protocol support.</div>
-      <div class="res-card-tags"><span class="tag">ESP32</span><span class="tag">WiFi 6</span><span class="tag">Zigbee</span></div>
-      <div class="res-card-links"><a href="https://www.espressif.com/en/products/socs/esp32-c6" target="_blank" class="res-link primary">Espressif →</a></div>
-    </div>
-    <div class="res-card new-item">
-      <div class="res-card-icon">🚀</div>
-      <div class="res-card-title">uv — Python Package Manager</div>
-      <div class="res-card-desc">10–100x faster than pip, written in Rust. Replaces pip, virtualenv, pyenv, and pip-tools. The Python tooling ecosystem is rallying around it quickly.</div>
-      <div class="res-card-tags"><span class="tag">Python</span><span class="tag">Tooling</span><span class="tag">Hot</span></div>
-      <div class="res-card-links"><a href="https://docs.astral.sh/uv/" target="_blank" class="res-link primary">Docs →</a></div>
-    </div>
+  <div class="section-head"><h2>🔗 Live Feed Links</h2></div>
+  <div class="link-list">
+    <div class="link-list-item"><a href="https://github.com/trending/python?since=weekly" target="_blank"><span class="lli-icon">🐍</span> GitHub Trending — Python (weekly)</a><span class="lli-meta">Live</span></div>
+    <div class="link-list-item"><a href="https://github.com/trending/c++?since=weekly" target="_blank"><span class="lli-icon">📡</span> GitHub Trending — C++ / Arduino (weekly)</a><span class="lli-meta">Live</span></div>
+    <div class="link-list-item"><a href="https://www.hackster.io/projects?sort=trending" target="_blank"><span class="lli-icon">🔨</span> Hackster.io — Trending Projects</a><span class="lli-meta">Live</span></div>
+    <div class="link-list-item"><a href="https://www.reddit.com/r/esp32/top/?t=week" target="_blank"><span class="lli-icon">📡</span> r/esp32 — Top This Week</a><span class="lli-meta">Weekly</span></div>
+    <div class="link-list-item"><a href="https://www.reddit.com/r/robotics/top/?t=week" target="_blank"><span class="lli-icon">🤖</span> r/robotics — Top This Week</a><span class="lli-meta">Weekly</span></div>
+    <div class="link-list-item"><a href="https://news.ycombinator.com/show" target="_blank"><span class="lli-icon">💻</span> Hacker News — Show HN</a><span class="lli-meta">Daily</span></div>
+    <div class="link-list-item"><a href="https://hn.algolia.com/?q=robotics&dateRange=pastMonth&type=story&sort=byPopularity" target="_blank"><span class="lli-icon">🔍</span> HN Search — Robotics (past month)</a><span class="lli-meta">Filtered</span></div>
+    <div class="link-list-item"><a href="https://www.reddit.com/r/dataanalysis/top/?t=week" target="_blank"><span class="lli-icon">📈</span> r/dataanalysis — Top This Week</a><span class="lli-meta">Weekly</span></div>
   </div>
 </section>
+
 <!-- ════════════════════════════════════
      TAB: ALL RESOURCES
 ════════════════════════════════════ -->
 <section class="tab-panel" id="tab-all" role="tabpanel">
-  <p style="font-size:13px;color:var(--text2);margin-bottom:20px;">Master index of every resource in this hub — use browser search (Ctrl/Cmd+F) or the search bar above to find anything.</p>
+  <div class="section-head"><h2>🐍 Python</h2></div>
+  <div class="all-section"><div class="all-list">
+    <div class="all-item"><span>🐍</span><a href="https://realpython.com/" target="_blank">Real Python</a><span class="all-item-sub">Tutorials & articles</span></div>
+    <div class="all-item"><span>📖</span><a href="https://docs.python.org/3/" target="_blank">Python Official Docs</a><span class="all-item-sub">Language reference</span></div>
+    <div class="all-item"><span>📦</span><a href="https://pypi.org/" target="_blank">PyPI</a><span class="all-item-sub">Package index</span></div>
+    <div class="all-item"><span>🤖</span><a href="https://automatetheboringstuff.com/" target="_blank">Automate the Boring Stuff</a><span class="all-item-sub">Free book</span></div>
+    <div class="all-item"><span>🚀</span><a href="https://docs.astral.sh/uv/" target="_blank">uv</a><span class="all-item-sub">Fast package manager</span></div>
+    <div class="all-item"><span>🧹</span><a href="https://docs.astral.sh/ruff/" target="_blank">Ruff</a><span class="all-item-sub">Linter + formatter</span></div>
+    <div class="all-item"><span>🌊</span><a href="https://marimo.io/" target="_blank">Marimo</a><span class="all-item-sub">Reactive notebooks</span></div>
+    <div class="all-item"><span>☁️</span><a href="https://www.pythonanywhere.com/" target="_blank">PythonAnywhere</a><span class="all-item-sub">Cloud hosting</span></div>
+    <div class="all-item"><span>🦜</span><a href="https://python.langchain.com/" target="_blank">LangChain</a><span class="all-item-sub">LLM framework</span></div>
+    <div class="all-item"><span>🦙</span><a href="https://ollama.com/" target="_blank">Ollama</a><span class="all-item-sub">Local LLMs</span></div>
+  </div></div>
 
-  <div class="all-section">
-    <div class="all-section-title">☕ WEEKEND / DAILY</div>
-    <div class="all-list">
-      <div class="all-item"><span style="font-size:13px">🔨</span><a href="https://www.hackster.io/" target="_blank">Hackster.io</a><span class="all-item-sub">Maker projects</span></div>
-      <div class="all-item"><span style="font-size:13px">💀</span><a href="https://hackaday.com/" target="_blank">Hackaday</a><span class="all-item-sub">Daily hacks</span></div>
-      <div class="all-item"><span style="font-size:13px">📡</span><a href="https://randomnerdtutorials.com/" target="_blank">Random Nerd Tutorials</a><span class="all-item-sub">ESP32 #1</span></div>
-      <div class="all-item"><span style="font-size:13px">🍓</span><a href="https://magpi.raspberrypi.com/" target="_blank">MagPi Magazine</a><span class="all-item-sub">Free PDF</span></div>
-      <div class="all-item"><span style="font-size:13px">🛠️</span><a href="https://makezine.com/" target="_blank">Make: Magazine</a><span class="all-item-sub">Monthly</span></div>
-      <div class="all-item"><span style="font-size:13px">🏭</span><a href="https://www.ideafoundry.com/" target="_blank">Columbus Idea Foundry</a><span class="all-item-sub">Local makerspace</span></div>
-    </div>
-  </div>
+  <div class="section-head"><h2>📟 Arduino</h2></div>
+  <div class="all-section"><div class="all-list">
+    <div class="all-item"><span>📖</span><a href="https://www.arduino.cc/reference/en/" target="_blank">Arduino Language Reference</a><span class="all-item-sub">Official</span></div>
+    <div class="all-item"><span>🔨</span><a href="https://projecthub.arduino.cc/" target="_blank">Arduino Project Hub</a><span class="all-item-sub">Official projects</span></div>
+    <div class="all-item"><span>🖥️</span><a href="https://wokwi.com/" target="_blank">Wokwi Simulator</a><span class="all-item-sub">Browser sim</span></div>
+    <div class="all-item"><span>⚡</span><a href="https://platformio.org/" target="_blank">PlatformIO</a><span class="all-item-sub">VS Code IDE</span></div>
+    <div class="all-item"><span>🎨</span><a href="https://learn.adafruit.com/" target="_blank">Adafruit Learning System</a><span class="all-item-sub">Free tutorials</span></div>
+    <div class="all-item"><span>⏱️</span><a href="https://lastminuteengineers.com/" target="_blank">Last Minute Engineers</a><span class="all-item-sub">Sensor tutorials</span></div>
+  </div></div>
 
-  <div class="all-section">
-    <div class="all-section-title">🎥 YOUTUBE CHANNELS</div>
-    <div class="all-list">
-      <div class="all-item"><span style="font-size:13px">🔧</span><a href="https://www.youtube.com/@paulmcwhorter" target="_blank">Paul McWhorter</a><span class="all-item-sub">Arduino / Python</span></div>
-      <div class="all-item"><span style="font-size:13px">⚙️</span><a href="https://www.youtube.com/@HowToMechatronics" target="_blank">How To Mechatronics</a><span class="all-item-sub">Arduino</span></div>
-      <div class="all-item"><span style="font-size:13px">📡</span><a href="https://www.youtube.com/@RandomNerdTutorials" target="_blank">Random Nerd Tutorials</a><span class="all-item-sub">ESP32</span></div>
-      <div class="all-item"><span style="font-size:13px">🇨🇭</span><a href="https://www.youtube.com/@AndreasSpiess" target="_blank">Andreas Spiess</a><span class="all-item-sub">ESP32 / IoT</span></div>
-      <div class="all-item"><span style="font-size:13px">📊</span><a href="https://www.youtube.com/@GuyInACube" target="_blank">Guy in a Cube</a><span class="all-item-sub">Power BI</span></div>
-      <div class="all-item"><span style="font-size:13px">📐</span><a href="https://www.youtube.com/@SQLBI" target="_blank">SQLBI</a><span class="all-item-sub">DAX</span></div>
-      <div class="all-item"><span style="font-size:13px">📗</span><a href="https://www.youtube.com/@LeilaGharani" target="_blank">Leila Gharani</a><span class="all-item-sub">Excel / Power Query</span></div>
-      <div class="all-item"><span style="font-size:13px">💼</span><a href="https://www.youtube.com/@KevinStratvert" target="_blank">Kevin Stratvert</a><span class="all-item-sub">Excel / Power Platform</span></div>
-      <div class="all-item"><span style="font-size:13px">🤖</span><a href="https://www.youtube.com/@jamesbruton" target="_blank">James Bruton</a><span class="all-item-sub">Robotics</span></div>
-      <div class="all-item"><span style="font-size:13px">🐍</span><a href="https://www.youtube.com/@realpython" target="_blank">Real Python</a><span class="all-item-sub">Python</span></div>
-    </div>
-  </div>
+  <div class="section-head"><h2>📡 ESP32</h2></div>
+  <div class="all-section"><div class="all-list">
+    <div class="all-item"><span>📡</span><a href="https://randomnerdtutorials.com/projects-esp32/" target="_blank">Random Nerd Tutorials</a><span class="all-item-sub">ESP32 #1</span></div>
+    <div class="all-item"><span>📖</span><a href="https://docs.espressif.com/projects/esp-idf/en/latest/" target="_blank">Espressif ESP-IDF Docs</a><span class="all-item-sub">Official reference</span></div>
+    <div class="all-item"><span>🏠</span><a href="https://esphome.io/" target="_blank">ESPHome</a><span class="all-item-sub">HA firmware</span></div>
+    <div class="all-item"><span>💡</span><a href="https://kno.wled.ge/" target="_blank">WLED</a><span class="all-item-sub">LED firmware</span></div>
+    <div class="all-item"><span>🔌</span><a href="https://tasmota.github.io/docs/" target="_blank">Tasmota</a><span class="all-item-sub">Smart home firmware</span></div>
+    <div class="all-item"><span>💬</span><a href="https://esp32.com/" target="_blank">esp32.com Forum</a><span class="all-item-sub">Official forum</span></div>
+  </div></div>
 
-  <div class="all-section">
-    <div class="all-section-title">🐍 PYTHON</div>
-    <div class="all-list">
-      <div class="all-item"><span style="font-size:13px">🐍</span><a href="https://realpython.com/" target="_blank">Real Python</a><span class="all-item-sub">Tutorials</span></div>
-      <div class="all-item"><span style="font-size:13px">📖</span><a href="https://docs.python.org/3/" target="_blank">Python Official Docs</a><span class="all-item-sub">Reference</span></div>
-      <div class="all-item"><span style="font-size:13px">📦</span><a href="https://pypi.org/" target="_blank">PyPI</a><span class="all-item-sub">Package index</span></div>
-      <div class="all-item"><span style="font-size:13px">🚀</span><a href="https://docs.astral.sh/uv/" target="_blank">uv Package Manager</a><span class="all-item-sub">New · fast</span></div>
-      <div class="all-item"><span style="font-size:13px">🤖</span><a href="https://automatetheboringstuff.com/" target="_blank">Automate the Boring Stuff</a><span class="all-item-sub">Free book</span></div>
-      <div class="all-item"><span style="font-size:13px">🦜</span><a href="https://python.langchain.com/docs/get_started/" target="_blank">LangChain</a><span class="all-item-sub">LLM agents</span></div>
-      <div class="all-item"><span style="font-size:13px">🦙</span><a href="https://ollama.com/" target="_blank">Ollama</a><span class="all-item-sub">Local LLMs</span></div>
-    </div>
-  </div>
+  <div class="section-head"><h2>🤖 Robotics</h2></div>
+  <div class="all-section"><div class="all-list">
+    <div class="all-item"><span>🤖</span><a href="https://roboticsbackend.com/" target="_blank">The Robotics Back-End</a><span class="all-item-sub">ROS 2 + Python</span></div>
+    <div class="all-item"><span>🦾</span><a href="https://docs.ros.org/en/jazzy/" target="_blank">ROS 2 Docs</a><span class="all-item-sub">Official</span></div>
+    <div class="all-item"><span>🤗</span><a href="https://github.com/huggingface/lerobot" target="_blank">LeRobot</a><span class="all-item-sub">Robot learning · NEW</span></div>
+    <div class="all-item"><span>🦾</span><a href="https://github.com/TheRobotStudio/SO-ARM100" target="_blank">SO-ARM100</a><span class="all-item-sub">Open robot arm</span></div>
+    <div class="all-item"><span>🚗</span><a href="https://docs.sunfounder.com/projects/picar-x/en/latest/" target="_blank">PiCar-X Docs</a><span class="all-item-sub">SunFounder</span></div>
+    <div class="all-item"><span>🏋️</span><a href="https://pybullet.org/" target="_blank">PyBullet</a><span class="all-item-sub">Physics sim</span></div>
+  </div></div>
 
-  <div class="all-section">
-    <div class="all-section-title">📟 ARDUINO</div>
-    <div class="all-list">
-      <div class="all-item"><span style="font-size:13px">📖</span><a href="https://www.arduino.cc/reference/en/" target="_blank">Arduino Language Reference</a><span class="all-item-sub">Official</span></div>
-      <div class="all-item"><span style="font-size:13px">🔨</span><a href="https://projecthub.arduino.cc/" target="_blank">Arduino Project Hub</a><span class="all-item-sub">Projects</span></div>
-      <div class="all-item"><span style="font-size:13px">⚡</span><a href="https://platformio.org/" target="_blank">PlatformIO</a><span class="all-item-sub">VS Code IDE</span></div>
-      <div class="all-item"><span style="font-size:13px">🖥️</span><a href="https://wokwi.com/" target="_blank">Wokwi Simulator</a><span class="all-item-sub">Browser sim</span></div>
-      <div class="all-item"><span style="font-size:13px">🎨</span><a href="https://learn.adafruit.com/" target="_blank">Adafruit Learning System</a><span class="all-item-sub">Tutorials</span></div>
-    </div>
-  </div>
+  <div class="section-head"><h2>📊 Power Suite</h2></div>
+  <div class="all-section"><div class="all-list">
+    <div class="all-item"><span>🔍</span><a href="https://dax.guide/" target="_blank">DAX Guide</a><span class="all-item-sub">Function reference</span></div>
+    <div class="all-item"><span>📐</span><a href="https://www.daxpatterns.com/" target="_blank">DAX Patterns</a><span class="all-item-sub">SQLBI patterns</span></div>
+    <div class="all-item"><span>🛠️</span><a href="https://tabulareditor.com/" target="_blank">Tabular Editor 2</a><span class="all-item-sub">Free · model mgmt</span></div>
+    <div class="all-item"><span>📊</span><a href="https://www.youtube.com/@GuyInACube" target="_blank">Guy in a Cube</a><span class="all-item-sub">YouTube #1</span></div>
+    <div class="all-item"><span>📋</span><a href="https://learn.microsoft.com/en-us/power-bi/" target="_blank">Power BI Docs</a><span class="all-item-sub">Official</span></div>
+    <div class="all-item"><span>🤖</span><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/" target="_blank">Copilot Studio Docs</a><span class="all-item-sub">Official</span></div>
+  </div></div>
 
-  <div class="all-section">
-    <div class="all-section-title">🤖 ROBOTICS</div>
-    <div class="all-list">
-      <div class="all-item"><span style="font-size:13px">🤖</span><a href="https://roboticsbackend.com/" target="_blank">The Robotics Back-End</a><span class="all-item-sub">ROS 2 / Python</span></div>
-      <div class="all-item"><span style="font-size:13px">🦾</span><a href="https://docs.ros.org/en/jazzy/" target="_blank">ROS 2 Docs</a><span class="all-item-sub">Official</span></div>
-      <div class="all-item"><span style="font-size:13px">🤗</span><a href="https://github.com/huggingface/lerobot" target="_blank">LeRobot — Hugging Face</a><span class="all-item-sub">Robot ML · NEW</span></div>
-      <div class="all-item"><span style="font-size:13px">👁️</span><a href="https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html" target="_blank">OpenCV Python</a><span class="all-item-sub">Computer vision</span></div>
-    </div>
-  </div>
+  <div class="section-head"><h2>📈 Data Analytics</h2></div>
+  <div class="all-section"><div class="all-list">
+    <div class="all-item"><span>🦆</span><a href="https://duckdb.org/" target="_blank">DuckDB</a><span class="all-item-sub">In-process SQL · NEW</span></div>
+    <div class="all-item"><span>🐻‍❄️</span><a href="https://pola.rs/" target="_blank">Polars</a><span class="all-item-sub">Fast DataFrames · NEW</span></div>
+    <div class="all-item"><span>🐼</span><a href="https://pandas.pydata.org/docs/" target="_blank">pandas</a><span class="all-item-sub">DataFrames standard</span></div>
+    <div class="all-item"><span>🎨</span><a href="https://public.tableau.com/" target="_blank">Tableau Public</a><span class="all-item-sub">Free visualization</span></div>
+    <div class="all-item"><span>🏆</span><a href="https://datalemur.com/" target="_blank">DataLemur</a><span class="all-item-sub">SQL practice</span></div>
+    <div class="all-item"><span>🏆</span><a href="https://www.kaggle.com/learn" target="_blank">Kaggle Learn</a><span class="all-item-sub">Free courses</span></div>
+    <div class="all-item"><span>🗃️</span><a href="https://mode.com/sql-tutorial/" target="_blank">Mode SQL Tutorial</a><span class="all-item-sub">Interactive SQL</span></div>
+    <div class="all-item"><span>🎓</span><a href="https://my.wgu.edu/" target="_blank">WGU Student Portal</a><span class="all-item-sub">BSDA program</span></div>
+  </div></div>
 
-  <div class="all-section">
-    <div class="all-section-title">📡 ESP32</div>
-    <div class="all-list">
-      <div class="all-item"><span style="font-size:13px">📡</span><a href="https://randomnerdtutorials.com/esp32-tutorials/" target="_blank">Random Nerd Tutorials</a><span class="all-item-sub">Best ESP32 site</span></div>
-      <div class="all-item"><span style="font-size:13px">🏠</span><a href="https://esphome.io/" target="_blank">ESPHome</a><span class="all-item-sub">HA integration</span></div>
-      <div class="all-item"><span style="font-size:13px">🔷</span><a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/" target="_blank">ESP-IDF Docs</a><span class="all-item-sub">Official SDK</span></div>
-      <div class="all-item"><span style="font-size:13px">🖥️</span><a href="https://wokwi.com/esp32" target="_blank">Wokwi ESP32 Sim</a><span class="all-item-sub">Browser simulator</span></div>
-    </div>
-  </div>
+  <div class="section-head"><h2>📗 Excel</h2></div>
+  <div class="all-section"><div class="all-list">
+    <div class="all-item"><span>📗</span><a href="https://www.youtube.com/@LeilaGharani" target="_blank">Leila Gharani</a><span class="all-item-sub">Modern Excel · YouTube</span></div>
+    <div class="all-item"><span>📗</span><a href="https://www.youtube.com/@excelisfun" target="_blank">ExcelIsFun</a><span class="all-item-sub">Deep-dive · YouTube</span></div>
+    <div class="all-item"><span>💡</span><a href="https://chandoo.org/" target="_blank">Chandoo.org</a><span class="all-item-sub">Dashboards</span></div>
+    <div class="all-item"><span>📊</span><a href="https://www.thespreadsheetguru.com/" target="_blank">The Spreadsheet Guru</a><span class="all-item-sub">VBA &amp; Automation</span></div>
+    <div class="all-item"><span>📋</span><a href="https://support.microsoft.com/en-us/excel" target="_blank">Microsoft Excel Help</a><span class="all-item-sub">Official</span></div>
+  </div></div>
 
-  <div class="all-section">
-    <div class="all-section-title">📊 POWER SUITE</div>
-    <div class="all-list">
-      <div class="all-item"><span style="font-size:13px">📊</span><a href="https://learn.microsoft.com/en-us/power-bi/" target="_blank">Power BI Docs</a><span class="all-item-sub">Official</span></div>
-      <div class="all-item"><span style="font-size:13px">📐</span><a href="https://www.sqlbi.com/" target="_blank">SQLBI</a><span class="all-item-sub">DAX mastery</span></div>
-      <div class="all-item"><span style="font-size:13px">📊</span><a href="https://guyinacube.com/" target="_blank">Guy in a Cube</a><span class="all-item-sub">Power BI YouTube</span></div>
-      <div class="all-item"><span style="font-size:13px">🤖</span><a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/" target="_blank">Copilot Studio</a><span class="all-item-sub">Copilot agents</span></div>
-      <div class="all-item"><span style="font-size:13px">⚡</span><a href="https://learn.microsoft.com/en-us/power-automate/" target="_blank">Power Automate Docs</a><span class="all-item-sub">Automation flows</span></div>
-    </div>
-  </div>
+  <div class="section-head"><h2>🎥 YouTube Channels</h2></div>
+  <div class="all-section"><div class="all-list">
+    <div class="all-item"><span>🔧</span><a href="https://www.youtube.com/@paulmcwhorter" target="_blank">Paul McWhorter</a><span class="all-item-sub">Arduino + Python</span></div>
+    <div class="all-item"><span>⚙️</span><a href="https://www.youtube.com/@HowToMechatronics" target="_blank">How To Mechatronics</a><span class="all-item-sub">Arduino projects</span></div>
+    <div class="all-item"><span>🤖</span><a href="https://www.youtube.com/@jamesbruton" target="_blank">James Bruton</a><span class="all-item-sub">Robotics</span></div>
+    <div class="all-item"><span>🇨🇭</span><a href="https://www.youtube.com/@AndreasSpiess" target="_blank">Andreas Spiess</a><span class="all-item-sub">ESP32 deep-dives</span></div>
+    <div class="all-item"><span>📡</span><a href="https://www.youtube.com/@RandomNerdTutorials" target="_blank">Random Nerd Tutorials</a><span class="all-item-sub">ESP32 YouTube</span></div>
+    <div class="all-item"><span>📊</span><a href="https://www.youtube.com/@GuyInACube" target="_blank">Guy in a Cube</a><span class="all-item-sub">Power BI</span></div>
+    <div class="all-item"><span>📐</span><a href="https://www.youtube.com/@SQLBI" target="_blank">SQLBI</a><span class="all-item-sub">DAX advanced</span></div>
+    <div class="all-item"><span>🪵</span><a href="https://www.youtube.com/@iliketomakestuff" target="_blank">I Like to Make Stuff</a><span class="all-item-sub">Maker crossover</span></div>
+  </div></div>
 
-  <div class="all-section">
-    <div class="all-section-title">🪵 WOODWORKING</div>
-    <div class="all-list">
-      <div class="all-item"><span style="font-size:13px">🪵</span><a href="https://rogueengineer.com/" target="_blank">Rogue Engineer</a><span class="all-item-sub">DIY furniture plans</span></div>
-      <div class="all-item"><span style="font-size:13px">🔨</span><a href="https://fixthisbuildthat.com/" target="_blank">Fix This Build That</a><span class="all-item-sub">Shop projects / YouTube</span></div>
-      <div class="all-item"><span style="font-size:13px">🏡</span><a href="https://ana-white.com/" target="_blank">Ana White</a><span class="all-item-sub">Free furniture plans</span></div>
-      <div class="all-item"><span style="font-size:13px">🌲</span><a href="https://thewoodwhisperer.com/" target="_blank">The Wood Whisperer</a><span class="all-item-sub">Technique / blog</span></div>
-      <div class="all-item"><span style="font-size:13px">😄</span><a href="https://www.woodworkingformeremortals.com/" target="_blank">Woodworking for Mere Mortals</a><span class="all-item-sub">Beginner</span></div>
-      <div class="all-item"><span style="font-size:13px">🖐️</span><a href="https://paulsellers.com/" target="_blank">Paul Sellers</a><span class="all-item-sub">Hand tools</span></div>
-      <div class="all-item"><span style="font-size:13px">✂️</span><a href="https://www.finewoodworking.com/" target="_blank">FineWoodworking</a><span class="all-item-sub">Advanced technique</span></div>
-      <div class="all-item"><span style="font-size:13px">🎙️</span><a href="https://woodtalk.com/" target="_blank">Wood Talk Podcast</a><span class="all-item-sub">Weekly podcast</span></div>
-      <div class="all-item"><span style="font-size:13px">🤝</span><a href="https://www.reddit.com/r/woodworking/" target="_blank">r/woodworking</a><span class="all-item-sub">Community</span></div>
-      <div class="all-item"><span style="font-size:13px">🌲</span><a href="https://www.sawmillcreek.org/" target="_blank">Sawmill Creek</a><span class="all-item-sub">Forums</span></div>
-    </div>
-  </div>
-
-  <div class="all-section">
-    <div class="all-section-title">📈 DATA ANALYTICS</div>
-    <div class="all-list">
-      <div class="all-item"><span style="font-size:13px">🦆</span><a href="https://duckdb.org/" target="_blank">DuckDB</a><span class="all-item-sub">OLAP SQL · New</span></div>
-      <div class="all-item"><span style="font-size:13px">🐻‍❄️</span><a href="https://pola.rs/" target="_blank">Polars</a><span class="all-item-sub">Fast DataFrames · New</span></div>
-      <div class="all-item"><span style="font-size:13px">📊</span><a href="https://datalemur.com/" target="_blank">DataLemur</a><span class="all-item-sub">SQL practice</span></div>
-      <div class="all-item"><span style="font-size:13px">🏆</span><a href="https://www.kaggle.com/learn" target="_blank">Kaggle Learn</a><span class="all-item-sub">Free courses</span></div>
-      <div class="all-item"><span style="font-size:13px">🎓</span><a href="https://my.wgu.edu/" target="_blank">WGU Student Portal</a><span class="all-item-sub">BSDA</span></div>
-    </div>
-  </div>
-
-  <div class="all-section">
-    <div class="all-section-title">📗 EXCEL</div>
-    <div class="all-list">
-      <div class="all-item"><span style="font-size:13px">📖</span><a href="https://support.microsoft.com/en-us/excel" target="_blank">Excel Docs</a><span class="all-item-sub">Official reference</span></div>
-      <div class="all-item"><span style="font-size:13px">⚡</span><a href="https://www.exceljet.net/functions" target="_blank">ExcelJet</a><span class="all-item-sub">Function guide</span></div>
-      <div class="all-item"><span style="font-size:13px">📊</span><a href="https://chandoo.org/" target="_blank">Chandoo.org</a><span class="all-item-sub">Tutorials / templates</span></div>
-    </div>
-  </div>
-
+  <div class="section-head"><h2>📰 Daily Reading</h2></div>
+  <div class="all-section"><div class="all-list">
+    <div class="all-item"><span>💀</span><a href="https://hackaday.com/" target="_blank">Hackaday</a><span class="all-item-sub">Daily hacks</span></div>
+    <div class="all-item"><span>🔨</span><a href="https://www.hackster.io/" target="_blank">Hackster.io</a><span class="all-item-sub">Maker projects</span></div>
+    <div class="all-item"><span>📡</span><a href="https://randomnerdtutorials.com/" target="_blank">Random Nerd Tutorials</a><span class="all-item-sub">ESP32 tutorials</span></div>
+    <div class="all-item"><span>🍓</span><a href="https://magpi.raspberrypi.com/" target="_blank">MagPi Magazine</a><span class="all-item-sub">Free PDF</span></div>
+    <div class="all-item"><span>💻</span><a href="https://news.ycombinator.com/" target="_blank">Hacker News</a><span class="all-item-sub">Tech news</span></div>
+    <div class="all-item"><span>🔷</span><a href="https://www.cnx-software.com/" target="_blank">CNX Software</a><span class="all-item-sub">New chips first</span></div>
+  </div></div>
 </section>
+
 </main>
 
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="footer-inner">
-    // maker_hub <span>·</span> built by Justin <span>·</span> Hilliard, OH <span>·</span> v5.0 <span>·</span> 2026
+    // maker_hub · <span>v5.0</span> · built by <span>@ovalt1nejenk1ns</span> · Hilliard, OH · <span>July 2026</span>
+    &nbsp;·&nbsp; <a href="https://github.com/ovalt1nejenk1ns/maker-hub" target="_blank" style="color:var(--text3)">GitHub →</a>
   </div>
 </footer>
 
 <script>
-  // ── TAB SWITCHING ──────────────────────────────────────────────
+  // ── TAB SWITCHING ──────────────────────────────────────
   const tabBtns = document.querySelectorAll('.tab-btn');
   const tabPanels = document.querySelectorAll('.tab-panel');
 
-  function activateTab(tabName) {
-    tabBtns.forEach(b => b.classList.toggle('active', b.dataset.tab === tabName));
-    tabPanels.forEach(p => p.classList.toggle('active', p.id === 'tab-' + tabName));
-    // Close search when switching tabs
-    const overlay = document.getElementById('search-overlay');
-    const input = document.getElementById('search-input');
-    overlay.classList.remove('active');
-    if (input) input.value = '';
-  }
-
   tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => activateTab(btn.dataset.tab));
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      tabBtns.forEach(b => b.classList.remove('active'));
+      tabPanels.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const panel = document.getElementById('tab-' + target);
+      if (panel) panel.classList.add('active');
+      // Close search if open
+      searchOverlay.classList.remove('active');
+      searchInput.value = '';
+    });
   });
 
-  // ── THEME TOGGLE ──────────────────────────────────────────────
-  const themeToggle = document.getElementById('theme-toggle');
-  const root = document.documentElement;
-  let darkMode = true;
-
-  function applyTheme() {
-    if (darkMode) {
-      root.removeAttribute('data-theme');
-      themeToggle.textContent = '🌙';
-    } else {
-      root.setAttribute('data-theme', 'light');
-      themeToggle.textContent = '☀️';
-    }
-  }
-
-  themeToggle.addEventListener('click', () => {
-    darkMode = !darkMode;
-    applyTheme();
-  });
-
-  // ── SEARCH ──────────────────────────────────────────────────
+  // ── SEARCH ─────────────────────────────────────────────
   const SEARCH_DATA = [
-    // WHAT'S NEW
-    { section: "What's New", title: "DuckDB", desc: "In-process OLAP SQL engine for Python", url: "https://duckdb.org/" },
-    { section: "What's New", title: "Polars", desc: "Fast DataFrame library in Rust", url: "https://pola.rs/" },
-    { section: "What's New", title: "Marimo", desc: "Reactive Python notebook", url: "https://marimo.io/" },
-    { section: "What's New", title: "uv — Python Package Manager", desc: "10–100x faster than pip", url: "https://docs.astral.sh/uv/" },
-    { section: "What's New", title: "LeRobot — Hugging Face", desc: "Open-source robot learning library", url: "https://github.com/huggingface/lerobot" },
-    { section: "What's New", title: "Ruff — Python Linter", desc: "Fast Python linter and formatter in Rust", url: "https://github.com/astral-sh/ruff" },
-    // WEEKEND
-    { section: "Weekend", title: "Hackster.io", desc: "Maker project hub", url: "https://www.hackster.io/" },
-    { section: "Weekend", title: "Hackaday", desc: "Daily engineering hacks", url: "https://hackaday.com/" },
-    { section: "Weekend", title: "Columbus Idea Foundry", desc: "Local Columbus makerspace", url: "https://www.ideafoundry.com/" },
-    // PYTHON
-    { section: "Python", title: "Real Python", desc: "Comprehensive Python tutorials", url: "https://realpython.com/" },
-    { section: "Python", title: "Python Official Docs", desc: "Authoritative Python reference", url: "https://docs.python.org/3/" },
-    { section: "Python", title: "PyPI", desc: "Python package index, 500k+ packages", url: "https://pypi.org/" },
-    { section: "Python", title: "uv", desc: "Ultra-fast Python package manager", url: "https://docs.astral.sh/uv/" },
-    { section: "Python", title: "LangChain", desc: "Framework for LLM apps and agents", url: "https://python.langchain.com/" },
-    { section: "Python", title: "Ollama", desc: "Run LLMs locally for free", url: "https://ollama.com/" },
-    { section: "Python", title: "MicroPython", desc: "Python for microcontrollers", url: "https://micropython.org/" },
-    { section: "Python", title: "Automate the Boring Stuff", desc: "Free practical Python book", url: "https://automatetheboringstuff.com/" },
-    // ARDUINO
-    { section: "Arduino", title: "Arduino Language Reference", desc: "Official Arduino function reference", url: "https://www.arduino.cc/reference/en/" },
-    { section: "Arduino", title: "Arduino Project Hub", desc: "Official curated project gallery", url: "https://projecthub.arduino.cc/" },
-    { section: "Arduino", title: "PlatformIO", desc: "VS Code extension for embedded development", url: "https://platformio.org/" },
-    { section: "Arduino", title: "Wokwi Simulator", desc: "Simulate Arduino in browser", url: "https://wokwi.com/" },
-    { section: "Arduino", title: "Adafruit Learning System", desc: "Best-written Arduino and CircuitPython guides", url: "https://learn.adafruit.com/" },
-    // ROBOTICS
-    { section: "Robotics", title: "The Robotics Back-End", desc: "ROS 2, Python, Raspberry Pi robotics", url: "https://roboticsbackend.com/" },
-    { section: "Robotics", title: "ROS 2 Documentation", desc: "Official ROS 2 docs and tutorials", url: "https://docs.ros.org/en/jazzy/" },
-    { section: "Robotics", title: "LeRobot", desc: "Hugging Face open-source robot learning", url: "https://github.com/huggingface/lerobot" },
-    { section: "Robotics", title: "PyBullet", desc: "Python physics simulation", url: "https://pybullet.org/" },
-    { section: "Robotics", title: "OpenCV Python", desc: "Computer vision for robotics", url: "https://docs.opencv.org/" },
+    // What's New
+    { section: "What's New", title: "DuckDB", desc: "In-process SQL OLAP engine for Python", url: "https://duckdb.org/", tags: ["sql","duck","analytics","olap"] },
+    { section: "What's New", title: "Polars", desc: "Fast DataFrame library written in Rust", url: "https://pola.rs/", tags: ["polars","dataframe","rust","python"] },
+    { section: "What's New", title: "Marimo", desc: "Reactive Python notebook", url: "https://marimo.io/", tags: ["marimo","notebook","reactive","python"] },
+    { section: "What's New", title: "uv Package Manager", desc: "Ultra-fast Python package manager in Rust", url: "https://docs.astral.sh/uv/", tags: ["uv","pip","python","tooling"] },
+    { section: "What's New", title: "LeRobot", desc: "Hugging Face robot learning library", url: "https://github.com/huggingface/lerobot", tags: ["lerobot","robot","ml","huggingface"] },
+    { section: "What's New", title: "Ruff", desc: "Fast Python linter and formatter", url: "https://docs.astral.sh/ruff/", tags: ["ruff","linter","formatter","python"] },
+    // Python
+    { section: "Python", title: "Real Python", desc: "Tutorials and articles for Python developers", url: "https://realpython.com/", tags: ["python","tutorial","library"] },
+    { section: "Python", title: "Python Official Docs", desc: "Language reference docs.python.org", url: "https://docs.python.org/3/", tags: ["python","docs","reference"] },
+    { section: "Python", title: "PyPI", desc: "Python Package Index — 500k packages", url: "https://pypi.org/", tags: ["python","packages","pip","libraries"] },
+    { section: "Python", title: "MicroPython", desc: "Python on ESP32 and microcontrollers", url: "https://micropython.org/", tags: ["micropython","esp32","embedded","firmware"] },
+    { section: "Python", title: "PySerial", desc: "Serial communication Python library", url: "https://pyserial.readthedocs.io/", tags: ["serial","arduino","uart","python"] },
+    { section: "Python", title: "paho-mqtt", desc: "Python MQTT client library", url: "https://pypi.org/project/paho-mqtt/", tags: ["mqtt","iot","home assistant","python"] },
+    { section: "Python", title: "LangChain", desc: "LLM app framework for Python", url: "https://python.langchain.com/", tags: ["langchain","llm","agents","ai","python"] },
+    { section: "Python", title: "Ollama", desc: "Run local LLMs — Llama, Mistral, Phi", url: "https://ollama.com/", tags: ["ollama","llm","local","ai","python"] },
+    { section: "Python", title: "Flask", desc: "Lightweight Python web framework", url: "https://flask.palletsprojects.com/", tags: ["flask","web","server","python"] },
+    { section: "Python", title: "PythonAnywhere", desc: "Cloud Python hosting with scheduled tasks", url: "https://www.pythonanywhere.com/", tags: ["hosting","cloud","scheduled","python"] },
+    { section: "Python", title: "watchdog", desc: "Filesystem event monitoring library", url: "https://pypi.org/project/watchdog/", tags: ["watchdog","filesystem","automation"] },
+    { section: "Python", title: "JupyterLab", desc: "Interactive Python notebooks", url: "https://jupyter.org/", tags: ["jupyter","notebook","interactive","python"] },
+    // Arduino
+    { section: "Arduino", title: "Arduino Language Reference", desc: "Official Arduino function reference", url: "https://www.arduino.cc/reference/en/", tags: ["arduino","reference","official"] },
+    { section: "Arduino", title: "Arduino Project Hub", desc: "Official curated project gallery", url: "https://projecthub.arduino.cc/", tags: ["arduino","projects","official"] },
+    { section: "Arduino", title: "Wokwi Simulator", desc: "Browser-based Arduino and ESP32 simulator", url: "https://wokwi.com/", tags: ["wokwi","simulator","arduino","esp32","browser"] },
+    { section: "Arduino", title: "PlatformIO", desc: "VS Code extension for embedded development", url: "https://platformio.org/", tags: ["platformio","vscode","ide","arduino","esp32"] },
+    { section: "Arduino", title: "Adafruit Learning System", desc: "Free tutorials for Arduino and CircuitPython", url: "https://learn.adafruit.com/", tags: ["adafruit","arduino","tutorial","free"] },
+    { section: "Arduino", title: "Last Minute Engineers", desc: "In-depth sensor and module tutorials", url: "https://lastminuteengineers.com/", tags: ["arduino","sensors","tutorials"] },
+    { section: "Arduino", title: "FastLED", desc: "WS2812B LED strip library", url: "https://fastled.io/", tags: ["fastled","ws2812b","led","arduino"] },
     // ESP32
-    { section: "ESP32", title: "ESP32 Arduino Core", desc: "Arduino framework for ESP32", url: "https://docs.espressif.com/projects/arduino-esp32/en/latest/" },
-    { section: "ESP32", title: "ESPHome", desc: "YAML config for ESP32 + Home Assistant", url: "https://esphome.io/" },
-    { section: "ESP32", title: "ESP-IDF", desc: "Espressif official SDK", url: "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/" },
-    { section: "ESP32", title: "Random Nerd Tutorials", desc: "Best ESP32 tutorial site", url: "https://randomnerdtutorials.com/" },
-    { section: "ESP32", title: "Wokwi ESP32 Simulator", desc: "Browser-based ESP32 simulation", url: "https://wokwi.com/esp32" },
-    // POWER SUITE
-    { section: "Power Suite", title: "Power BI Docs", desc: "Official Microsoft Power BI documentation", url: "https://learn.microsoft.com/en-us/power-bi/" },
-    { section: "Power Suite", title: "SQLBI", desc: "DAX patterns and Power BI mastery", url: "https://www.sqlbi.com/" },
-    { section: "Power Suite", title: "Guy in a Cube", desc: "#1 Power BI YouTube channel", url: "https://www.youtube.com/@GuyInACube" },
-    { section: "Power Suite", title: "Copilot Studio", desc: "Build Microsoft Copilot agents", url: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/" },
-    { section: "Power Suite", title: "Power Automate Docs", desc: "Microsoft flow automation docs", url: "https://learn.microsoft.com/en-us/power-automate/" },
-    // WOODWORKING
-    { section: "Woodworking", title: "Rogue Engineer", desc: "Free DIY furniture plans, beginner woodworking projects", url: "https://rogueengineer.com/" },
-    { section: "Woodworking", title: "Fix This Build That", desc: "Practical woodworking builds, shop projects, tool reviews", url: "https://fixthisbuildthat.com/" },
-    { section: "Woodworking", title: "Ana White", desc: "Thousands of free furniture plans", url: "https://ana-white.com/" },
-    { section: "Woodworking", title: "The Wood Whisperer", desc: "Intermediate woodworking technique and projects", url: "https://thewoodwhisperer.com/" },
-    { section: "Woodworking", title: "Woodsmith", desc: "Woodworking magazine with detailed project plans", url: "https://www.woodsmith.com/" },
-    { section: "Woodworking", title: "Popular Woodworking", desc: "Magazine with technique articles and tool reviews", url: "https://www.popularwoodworking.com/" },
-    { section: "Woodworking", title: "3x3 Custom (April Wilkerson)", desc: "DIY shop builds and jigs", url: "https://www.youtube.com/@3x3Custom" },
-    { section: "Woodworking", title: "Matt Cremona", desc: "Live edge slabs, sawmill, and custom furniture", url: "https://www.youtube.com/@MattCremona" },
-    { section: "Woodworking", title: "Steve Ramsey — WWMM", desc: "Woodworking for Mere Mortals — beginner friendly", url: "https://www.youtube.com/@steeverino" },
-    { section: "Woodworking", title: "Jay Bates", desc: "Shop jigs, workbenches, and storage builds", url: "https://www.youtube.com/@jaybates" },
-    { section: "Woodworking", title: "Woodsmith Plans", desc: "Premium detailed woodworking plans", url: "https://www.woodsmithplans.com/" },
-    { section: "Woodworking", title: "Family Handyman", desc: "DIY plans for furniture and home improvement", url: "https://www.familyhandyman.com/category/woodworking/" },
-    { section: "Woodworking", title: "Instructables Woodworking", desc: "Community DIY woodworking projects", url: "https://www.instructables.com/woodworking/" },
-    { section: "Woodworking", title: "Wood Magazine", desc: "Woodworking magazine with technique and tool reviews", url: "https://www.woodmagazine.com/" },
-    { section: "Woodworking", title: "Wirecutter Woodworking Tools", desc: "Independently tested tool recommendations", url: "https://www.nytimes.com/wirecutter/woodworking/" },
-    { section: "Woodworking", title: "SawdustMaking", desc: "Free woodworking calculators", url: "https://www.sawdustmaking.com/" },
-    { section: "Woodworking", title: "LumberJocks", desc: "Woodworking community with project showcases", url: "https://www.lumberjocks.com/" },
-    { section: "Woodworking", title: "FineWoodworking", desc: "Advanced woodworking technique and joinery", url: "https://www.finewoodworking.com/" },
-    { section: "Woodworking", title: "Paul Sellers", desc: "Hand tool woodworking and traditional craft", url: "https://paulsellers.com/" },
-    { section: "Woodworking", title: "Wood Talk Podcast", desc: "Weekly woodworking podcast with Marc Spagnuolo", url: "https://woodtalk.com/" },
-    { section: "Woodworking", title: "r/woodworking", desc: "Reddit woodworking community, 700k+ members", url: "https://www.reddit.com/r/woodworking/" },
-    { section: "Woodworking", title: "r/BeginnerWoodWorking", desc: "Beginner-friendly Reddit woodworking community", url: "https://www.reddit.com/r/BeginnerWoodWorking/" },
-    { section: "Woodworking", title: "Woodnet Forums", desc: "Classic woodworking forum, hand tool focused", url: "https://www.woodnet.net/forums/" },
-    { section: "Woodworking", title: "Sawmill Creek", desc: "Active woodworking forum community", url: "https://www.sawmillcreek.org/" },
-    // DATA ANALYTICS
-    { section: "Data Analytics", title: "DuckDB", desc: "In-process OLAP SQL engine", url: "https://duckdb.org/" },
-    { section: "Data Analytics", title: "Polars", desc: "Fast Python DataFrame library", url: "https://pola.rs/" },
-    { section: "Data Analytics", title: "DataLemur", desc: "SQL practice interview questions", url: "https://datalemur.com/" },
-    { section: "Data Analytics", title: "Mode SQL Tutorial", desc: "Free interactive SQL tutorial", url: "https://mode.com/sql-tutorial/" },
-    { section: "Data Analytics", title: "Kaggle Learn", desc: "Free data science micro-courses", url: "https://www.kaggle.com/learn" },
-    { section: "Data Analytics", title: "WGU Student Portal", desc: "WGU BSDA enrollment portal", url: "https://my.wgu.edu/" },
-    // EXCEL
-    { section: "Excel", title: "Excel Docs", desc: "Official Microsoft Excel documentation", url: "https://support.microsoft.com/en-us/excel" },
-    { section: "Excel", title: "Leila Gharani", desc: "Excel and Power Query YouTube channel", url: "https://www.youtube.com/@LeilaGharani" },
-    { section: "Excel", title: "ExcelIsFun", desc: "Mike Girvin's Excel YouTube channel", url: "https://www.youtube.com/@excelisfun" },
-    { section: "Excel", title: "ExcelJet", desc: "Excel function quick reference", url: "https://www.exceljet.net/functions" },
-    { section: "Excel", title: "Chandoo.org", desc: "Excel tutorials and templates", url: "https://chandoo.org/" },
-    // YOUTUBE
-    { section: "YouTube", title: "Paul McWhorter", desc: "Arduino and Python for beginners", url: "https://www.youtube.com/@paulmcwhorter" },
-    { section: "YouTube", title: "How To Mechatronics", desc: "Arduino projects with schematics", url: "https://www.youtube.com/@HowToMechatronics" },
-    { section: "YouTube", title: "James Bruton", desc: "Hobbyist robotics and complex builds", url: "https://www.youtube.com/@jamesbruton" },
-    { section: "YouTube", title: "I Like To Make Stuff", desc: "Woodworking + electronics crossover", url: "https://www.youtube.com/@iliketomakestuff" },
+    { section: "ESP32", title: "Random Nerd Tutorials ESP32", desc: "Best ESP32 tutorial site", url: "https://randomnerdtutorials.com/projects-esp32/", tags: ["esp32","tutorial","wifi","mqtt","micropython"] },
+    { section: "ESP32", title: "Espressif ESP-IDF Docs", desc: "Official ESP32 technical reference", url: "https://docs.espressif.com/projects/esp-idf/en/latest/", tags: ["esp32","esp-idf","espressif","official"] },
+    { section: "ESP32", title: "ESPHome", desc: "YAML firmware for ESP32 Home Assistant integration", url: "https://esphome.io/", tags: ["esphome","home assistant","yaml","esp32","iot"] },
+    { section: "ESP32", title: "WLED", desc: "WiFi LED control firmware for WS2812B", url: "https://kno.wled.ge/", tags: ["wled","led","ws2812b","esp32","wifi"] },
+    { section: "ESP32", title: "Tasmota", desc: "Open-source firmware for smart home devices", url: "https://tasmota.github.io/docs/", tags: ["tasmota","smart home","mqtt","esp8266","esp32"] },
+    // Robotics
+    { section: "Robotics", title: "The Robotics Back-End", desc: "ROS 2, Python, Raspberry Pi robotics", url: "https://roboticsbackend.com/", tags: ["ros2","robotics","python","raspberry pi"] },
+    { section: "Robotics", title: "ROS 2 Documentation", desc: "Official Robot Operating System 2 docs", url: "https://docs.ros.org/en/jazzy/", tags: ["ros2","robotics","official"] },
+    { section: "Robotics", title: "LeRobot by Hugging Face", desc: "Robot learning library", url: "https://github.com/huggingface/lerobot", tags: ["lerobot","robot","ml","huggingface"] },
+    { section: "Robotics", title: "PyBullet", desc: "Python physics simulation for robots", url: "https://pybullet.org/", tags: ["pybullet","simulation","physics","python"] },
+    { section: "Robotics", title: "SunFounder PiCar-X", desc: "Robot car with Python SDK", url: "https://docs.sunfounder.com/projects/picar-x/en/latest/", tags: ["picar-x","sunfounder","raspberry pi","python"] },
+    // Power Suite
+    { section: "Power Suite", title: "DAX Guide", desc: "Complete DAX function reference", url: "https://dax.guide/", tags: ["dax","power bi","reference"] },
+    { section: "Power Suite", title: "DAX Patterns", desc: "SQLBI DAX patterns library", url: "https://www.daxpatterns.com/", tags: ["dax","power bi","patterns","sqlbi"] },
+    { section: "Power Suite", title: "Tabular Editor 2", desc: "Free Power BI model management tool", url: "https://tabulareditor.com/", tags: ["tabular editor","power bi","dax","free"] },
+    { section: "Power Suite", title: "Guy in a Cube", desc: "Power BI YouTube channel", url: "https://www.youtube.com/@GuyInACube", tags: ["power bi","dax","youtube"] },
+    { section: "Power Suite", title: "Copilot Studio", desc: "Build Microsoft Copilot agents", url: "https://learn.microsoft.com/en-us/microsoft-copilot-studio/", tags: ["copilot","studio","ai","microsoft"] },
+    // Data Analytics
+    { section: "Data Analytics", title: "DuckDB", desc: "In-process SQL analytics engine", url: "https://duckdb.org/", tags: ["duckdb","sql","analytics","python"] },
+    { section: "Data Analytics", title: "Polars", desc: "Fast Rust-based DataFrame library", url: "https://pola.rs/", tags: ["polars","dataframe","python","rust"] },
+    { section: "Data Analytics", title: "pandas", desc: "Standard Python DataFrame library", url: "https://pandas.pydata.org/docs/", tags: ["pandas","dataframe","python"] },
+    { section: "Data Analytics", title: "Tableau Public", desc: "Free Tableau for data visualization", url: "https://public.tableau.com/", tags: ["tableau","visualization","free"] },
+    { section: "Data Analytics", title: "DataLemur", desc: "SQL interview practice questions", url: "https://datalemur.com/", tags: ["sql","practice","interview","data"] },
+    { section: "Data Analytics", title: "Kaggle", desc: "Datasets, competitions, and free courses", url: "https://www.kaggle.com/learn", tags: ["kaggle","dataset","python","sql","ml"] },
+    { section: "Data Analytics", title: "WGU Student Portal", desc: "WGU BSDA program portal", url: "https://my.wgu.edu/", tags: ["wgu","bsda","data analytics","degree"] },
+    // Excel
+    { section: "Excel", title: "Leila Gharani", desc: "Modern Excel: LAMBDA, Power Query, dynamic arrays", url: "https://www.youtube.com/@LeilaGharani", tags: ["excel","lambda","power query","youtube"] },
+    { section: "Excel", title: "ExcelIsFun", desc: "Mike Girvin's Excel tutorial archive", url: "https://www.youtube.com/@excelisfun", tags: ["excel","formulas","array","youtube"] },
+    { section: "Excel", title: "Chandoo.org", desc: "Excel dashboards and tips", url: "https://chandoo.org/", tags: ["excel","dashboards","charts"] },
+    { section: "Excel", title: "The Spreadsheet Guru", desc: "Excel VBA, automation, and Power BI integration", url: "https://www.thespreadsheetguru.com/", tags: ["excel","vba","automation","power bi"] },
+    // Woodworking
+    { section: "Woodworking", title: "I Like to Make Stuff", desc: "Maker crossover: wood + electronics", url: "https://www.youtube.com/@iliketomakestuff", tags: ["woodworking","maker","electronics","youtube"] },
+    { section: "Woodworking", title: "Steve Ramsey Woodworking", desc: "Beginner-friendly weekend projects", url: "https://www.youtube.com/@SteveRamsey", tags: ["woodworking","beginner","youtube"] },
+    { section: "Woodworking", title: "Columbus Idea Foundry", desc: "Columbus makerspace with wood shop", url: "https://www.ideafoundry.com/", tags: ["makerspace","columbus","woodworking","tools"] },
+    // News / Daily
+    { section: "Daily", title: "Hackaday", desc: "Daily engineering hacks and news", url: "https://hackaday.com/", tags: ["hackaday","news","engineering","daily"] },
+    { section: "Daily", title: "Hackster.io", desc: "Maker project community", url: "https://www.hackster.io/", tags: ["hackster","maker","projects","community"] },
+    { section: "Daily", title: "CNX Software", desc: "New chip and embedded hardware news", url: "https://www.cnx-software.com/", tags: ["cnx","chips","hardware","news"] },
   ];
 
   const searchInput = document.getElementById('search-input');
   const searchOverlay = document.getElementById('search-overlay');
   const searchContainer = document.getElementById('search-results-container');
 
-  function renderSearchResults(q) {
-    if (!q) {
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.trim().toLowerCase();
+    if (q.length < 2) {
       searchOverlay.classList.remove('active');
       return;
     }
-    const ql = q.toLowerCase();
-    const results = SEARCH_DATA.filter(d =>
-      d.title.toLowerCase().includes(ql) ||
-      d.desc.toLowerCase().includes(ql) ||
-      d.section.toLowerCase().includes(ql)
+    const hits = SEARCH_DATA.filter(item =>
+      item.title.toLowerCase().includes(q) ||
+      item.desc.toLowerCase().includes(q) ||
+      item.section.toLowerCase().includes(q) ||
+      item.tags.some(t => t.includes(q))
     );
-    searchOverlay.classList.add('active');
-    if (results.length === 0) {
+    if (hits.length === 0) {
       searchContainer.innerHTML = '<p class="no-results">No results for "' + q + '"</p>';
-      return;
-    }
-    searchContainer.innerHTML = '<div class="search-results-grid">' +
-      results.map(r =>
-        '<div class="search-result-card"><a href="' + r.url + '" target="_blank">' +
-        '<div class="src-section">' + r.section + '</div>' +
-        '<div class="src-title">' + r.title + '</div>' +
-        '<div class="src-desc">' + r.desc + '</div>' +
-        '</a></div>'
-      ).join('') +
+    } else {
+      searchContainer.innerHTML = '<div class="search-results-grid">' +
+        hits.slice(0, 24).map(r =>
+          '<div class="search-result-card"><a href="' + r.url + '" target="_blank">' +
+          '<div class="src-section">' + r.section + '</div>' +
+          '<div class="src-title">' + r.title + '</div>' +
+          '<div class="src-desc">' + r.desc + '</div>' +
+          '</a></div>'
+        ).join('') +
       '</div>';
+    }
+    searchOverlay.classList.add('active');
+  });
+
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.header-search') && !e.target.closest('.search-overlay')) {
+      searchOverlay.classList.remove('active');
+      searchInput.value = '';
+    }
+  });
+
+  searchInput.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      searchOverlay.classList.remove('active');
+      searchInput.value = '';
+      searchInput.blur();
+    }
+  });
+
+  // ── THEME TOGGLE ───────────────────────────────────────
+  const themeToggle = document.getElementById('theme-toggle');
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      themeToggle.textContent = '☀️';
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+      themeToggle.textContent = '🌙';
+    }
+    localStorage.setItem('maker-hub-theme', theme);
   }
 
-  if (searchInput) {
-    searchInput.addEventListener('input', e => renderSearchResults(e.target.value.trim()));
-    searchInput.addEventListener('keydown', e => {
-      if (e.key === 'Escape') {
-        searchInput.value = '';
-        searchOverlay.classList.remove('active');
-      }
-    });
-  }
+  themeToggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme');
+    applyTheme(current === 'light' ? 'dark' : 'light');
+  });
+
+  // Load saved theme
+  const saved = localStorage.getItem('maker-hub-theme');
+  if (saved) applyTheme(saved);
 </script>
+
 </body>
 </html>
