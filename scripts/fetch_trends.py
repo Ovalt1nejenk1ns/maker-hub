@@ -1,11 +1,12 @@
 """
 fetch_trends.py
-Pulls trending content from GitHub, Reddit, and Hacker News.
+Pulls trending content from GitHub, Reddit (RSS — avoids 403s), and Hacker News.
 Saves results to trends_data.json for use by refresh_hub.py.
 """
 
 import json
 import time
+import xml.etree.ElementTree as ET
 import requests
 from datetime import datetime, timedelta, timezone
 
@@ -20,7 +21,6 @@ def fetch_github_trending(topics, days=14):
     """
     Use the GitHub Search API to find top-starred repos active in the
     last `days` days for each maker-relevant topic.
-    No auth required; rate-limited to 10 req/min unauthenticated.
     """
     since = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
     results = []
@@ -47,48 +47,48 @@ def fetch_github_trending(topics, days=14):
                         "topic": topic,
                     })
         except Exception as e:
-            print(f"  [GitHub] Error fetching topic '{topic}': {e}")
+            print(f"  [GitHub] Warning: could not fetch topic '{topic}': {e}")
 
-        time.sleep(0.5)   # stay well under rate limit
+        time.sleep(0.5)
 
-    # Sort by stars, cap at 12
     results.sort(key=lambda x: x["stars"], reverse=True)
     return results[:12]
 
 
-# ── Reddit ────────────────────────────────────────────────────────────────────
+# ── Reddit (RSS — avoids JSON API 403s) ──────────────────────────────────────
 
-def fetch_reddit_top(subreddits, limit=5):
+def fetch_reddit_rss(subreddits, limit=5):
     """
-    Fetch top posts from the past week across maker/data subreddits.
-    Uses Reddit's public JSON API — no auth needed.
+    Fetch top posts via Reddit's RSS endpoint, which is far less likely
+    to return 403s than the JSON API from a GitHub Actions runner.
     """
+    NS = {"atom": "http://www.w3.org/2005/Atom"}
     results = []
 
     for sub in subreddits:
-        url = f"https://www.reddit.com/r/{sub}/top.json?t=week&limit={limit}"
+        url = f"https://www.reddit.com/r/{sub}/top.rss?t=week&limit={limit}"
         try:
             r = requests.get(url, headers=HEADERS, timeout=10)
             r.raise_for_status()
-            posts = r.json().get("data", {}).get("children", [])
-            for post in posts:
-                d = post["data"]
-                if d.get("stickied") or d.get("score", 0) < 50:
-                    continue
-                results.append({
-                    "title": d["title"],
-                    "subreddit": sub,
-                    "score": d["score"],
-                    "comments": d.get("num_comments", 0),
-                    "url": f"https://reddit.com{d['permalink']}",
-                })
+            root = ET.fromstring(r.content)
+            for entry in root.findall("atom:entry", NS)[:limit]:
+                title_el = entry.find("atom:title", NS)
+                link_el  = entry.find("atom:link",  NS)
+                title = title_el.text if title_el is not None else ""
+                link  = link_el.get("href", "") if link_el is not None else ""
+                if title and link:
+                    results.append({
+                        "title": title,
+                        "subreddit": sub,
+                        "url": link,
+                    })
         except Exception as e:
-            print(f"  [Reddit] Error fetching r/{sub}: {e}")
+            # Non-fatal — log and move on so one bad subreddit doesn't kill the run
+            print(f"  [Reddit] Warning: could not fetch r/{sub}: {e}")
 
         time.sleep(0.3)
 
-    results.sort(key=lambda x: x["score"], reverse=True)
-    return results[:12]
+    return results[:15]
 
 
 # ── Hacker News ───────────────────────────────────────────────────────────────
@@ -102,8 +102,8 @@ MAKER_KEYWORDS = [
 
 def fetch_hn_top(limit=8):
     """
-    Fetch top HN stories filtered to maker/data/engineering topics.
-    Uses the official Firebase-backed HN API.
+    Fetch top HN stories filtered to maker/data/engineering topics
+    via the official Firebase-backed HN API.
     """
     try:
         r = requests.get(
@@ -112,7 +112,7 @@ def fetch_hn_top(limit=8):
         )
         story_ids = r.json()[:150]
     except Exception as e:
-        print(f"  [HN] Could not fetch top story list: {e}")
+        print(f"  [HN] Warning: could not fetch top story list: {e}")
         return []
 
     stories = []
@@ -153,8 +153,8 @@ if __name__ == "__main__":
     ])
     print(f"  → {len(github)} repos")
 
-    print("Fetching Reddit top posts...")
-    reddit = fetch_reddit_top([
+    print("Fetching Reddit top posts (RSS)...")
+    reddit = fetch_reddit_rss([
         "arduino", "esp32", "learnpython", "robotics",
         "datascience", "homelab", "raspberry_pi", "MachineLearning",
     ])
@@ -174,4 +174,4 @@ if __name__ == "__main__":
     with open("trends_data.json", "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
 
-    print(f"\nSaved trends_data.json ({len(github)} GH repos · {len(reddit)} Reddit · {len(hn)} HN)")
+    print(f"\nSaved trends_data.json ({len(github)} GH · {len(reddit)} Reddit · {len(hn)} HN)")
