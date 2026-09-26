@@ -1,0 +1,45 @@
+name: Bi-Weekly Maker Hub Refresh
+
+on:
+  schedule:
+    # 9:00 AM ET on the 1st and 15th of every month
+    # UTC offset: ET is UTC-4 (EDT) / UTC-5 (EST) — using 13:00 UTC covers both
+    - cron: '0 13 1,15 * *'
+  workflow_dispatch:   # Allows manual trigger from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic requests
+
+      - name: Fetch trending data
+        run: python scripts/fetch_trends.py
+
+      - name: Refresh hub content via Claude API
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/refresh_hub.py
+
+      - name: Commit and push if index.html changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --staged --quiet || (
+            git commit -m "chore: bi-weekly content refresh — $(date +'%B %d %Y')"
+            git push
+          )
