@@ -3093,7 +3093,10 @@
       tabPanels.forEach(p => p.classList.remove('active'));
       btn.classList.add('active');
       const panel = document.getElementById('tab-' + target);
-      if (panel) panel.classList.add('active');
+      if (panel) {
+        panel.classList.add('active');
+        panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
       // Close search if open
       searchOverlay.classList.remove('active');
       searchInput.value = '';
