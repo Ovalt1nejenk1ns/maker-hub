@@ -375,6 +375,7 @@
      TAB: WHAT'S NEW
 ════════════════════════════════════ -->
 <section class="tab-panel active" id="tab-whats-new" role="tabpanel">
+  <p id="trends-updated" class="changelog-date" style="margin:0 0 14px;"></p>
   <div class="changelog-card">
     <div class="changelog-version">
       <span class="changelog-v">v6.0</span>
@@ -427,7 +428,184 @@
       <div class="res-card-icon">🦆</div>
       <div class="res-card-title">DuckDB</div>
       <div class="res-card-desc">In-process OLAP SQL engine — runs inside Python, handles Parquet/CSV without a server. Fast, free, and becoming the default tool for local data analysis. Essential for WGU BSDA work.</div>
-      <div class="res-card-tags"><span class="tag">SQL</span><span class="tag">OLAP</span><span class="tag">Python</span
+      <div class="res-card-tags"><span class="tag">SQL</span><span class="tag">OLAP</span><span class="tag">Python</span></div>
+      <div class="res-card-links"><a href="https://duckdb.org/" target="_blank" class="res-link primary">duckdb.org →</a><a href="https://github.com/duckdb/duckdb" target="_blank" class="res-link">GitHub →</a></div>
+    </div>
+
+    <div class="res-card new-item">
+      <div class="res-card-icon">🐻‍❄️</div>
+      <div class="res-card-title">Polars</div>
+      <div class="res-card-desc">Blazing-fast DataFrame library written in Rust. Drop-in pandas alternative with a cleaner API and massive performance gains on large datasets. Increasingly expected in data analytics roles.</div>
+      <div class="res-card-tags"><span class="tag">DataFrames</span><span class="tag">Rust</span><span class="tag">Python</span></div>
+      <div class="res-card-links"><a href="https://pola.rs/" target="_blank" class="res-link primary">pola.rs →</a><a href="https://docs.pola.rs/" target="_blank" class="res-link">Docs →</a></div>
+    </div>
+
+    <div class="res-card new-item">
+      <div class="res-card-icon">🌊</div>
+      <div class="res-card-title">Marimo</div>
+      <div class="res-card-desc">Reactive Python notebook — cells re-run automatically when dependencies change, like a spreadsheet. No more stale cells. Works as an interactive app, shareable notebook, or .py script.</div>
+      <div class="res-card-tags"><span class="tag">Notebook</span><span class="tag">Reactive</span><span class="tag">Python</span></div>
+      <div class="res-card-links"><a href="https://marimo.io/" target="_blank" class="res-link primary">marimo.io →</a><a href="https://github.com/marimo-team/marimo" target="_blank" class="res-link">GitHub →</a></div>
+    </div>
+
+    <div class="res-card new-item">
+      <div class="res-card-icon">🚀</div>
+      <div class="res-card-title">uv — Python Package Manager</div>
+      <div class="res-card-desc">10–100x faster than pip, written in Rust by Astral (makers of Ruff). Replaces pip, pip-tools, pyenv, and virtualenv in one tool. Install once, never think about env setup again.</div>
+      <div class="res-card-tags"><span class="tag">Tooling</span><span class="tag">Rust</span><span class="tag">Python</span></div>
+      <div class="res-card-links"><a href="https://github.com/astral-sh/uv" target="_blank" class="res-link primary">GitHub →</a><a href="https://docs.astral.sh/uv/" target="_blank" class="res-link">Docs →</a></div>
+    </div>
+
+    <div class="res-card new-item">
+      <div class="res-card-icon">🤗</div>
+      <div class="res-card-title">LeRobot — Hugging Face</div>
+      <div class="res-card-desc">Hugging Face's open-source robot learning library. Pre-trained policies, datasets, simulation environments. Designed around the SO-ARM100 affordable robot arm. The biggest thing in hobbyist robotics ML right now.</div>
+      <div class="res-card-tags"><span class="tag">Robotics</span><span class="tag">ML</span><span class="tag">Open Source</span></div>
+      <div class="res-card-links"><a href="https://github.com/huggingface/lerobot" target="_blank" class="res-link primary">GitHub →</a><a href="https://huggingface.co/lerobot" target="_blank" class="res-link">HF Hub →</a></div>
+    </div>
+
+    <div class="res-card new-item">
+      <div class="res-card-icon">🧹</div>
+      <div class="res-card-title">Ruff — Python Linter</div>
+      <div class="res-card-desc">Extremely fast Python linter and formatter, written in Rust. Replaces flake8, isort, pyupgrade, and black in one command. VS Code extension available. Ships with uv.</div>
+      <div class="res-card-tags"><span class="tag">Linter</span><span class="tag">Formatter</span><span class="tag">Python</span></div>
+      <div class="res-card-links"><a href="https://github.com/astral-sh/ruff" target="_blank" class="res-link primary">GitHub →</a><a href="https://docs.astral.sh/ruff/" target="_blank" class="res-link">Docs →</a></div>
+    </div>
+
+    <div class="res-card new-item">
+      <div class="res-card-icon">📐</div>
+      <div class="res-card-title">Evidence — BI as Code</div>
+      <div class="res-card-desc">Write SQL + Markdown, deploy beautiful data reports. Version-controlled analytics reporting that works like a static site generator. Great complement to Power BI for data storytelling.</div>
+      <div class="res-card-tags"><span class="tag">BI</span><span class="tag">SQL</span><span class="tag">Markdown</span></div>
+      <div class="res-card-links"><a href="https://evidence.dev/" target="_blank" class="res-link primary">evidence.dev →</a><a href="https://github.com/evidence-dev/evidence" target="_blank" class="res-link">GitHub →</a></div>
+    </div>
+
+    <div class="res-card new-item">
+      <div class="res-card-icon">📡</div>
+      <div class="res-card-title">ESP32-C6</div>
+      <div class="res-card-desc">Espressif's WiFi 6 + Zigbee + BLE 5 combo chip. The C6 is the new recommended choice for any project needing smart-home protocol compatibility. Replaces ESP32 + Zigbee dongles.</div>
+      <div class="res-card-tags"><span class="tag">ESP32</span><span class="tag">WiFi 6</span><span class="tag">Zigbee</span></div>
+      <div class="res-card-links"><a href="https://www.espressif.com/en/products/socs/esp32-c6" target="_blank" class="res-link primary">Espressif →</a></div>
+    </div>
+
+  </div>
+
+  <hr class="section-divider" />
+  <div class="section-head green"><h2>🎓 WGU BSDA — Enrollment Resources</h2><span class="section-tag">just added</span></div>
+  <div class="card-grid">
+
+    <div class="res-card">
+      <div class="res-card-icon">🎓</div>
+      <div class="res-card-title">WGU Student Portal</div>
+      <div class="res-card-desc">Your primary hub for courses, degree plan, mentors, and competency units. Bookmark the course catalog for the BSDA program to map out your path.</div>
+      <div class="res-card-tags"><span class="tag">WGU</span><span class="tag">Portal</span></div>
+      <div class="res-card-links"><a href="https://my.wgu.edu/" target="_blank" class="res-link primary">my.wgu.edu →</a></div>
+    </div>
+
+    <div class="res-card">
+      <div class="res-card-icon">📊</div>
+      <div class="res-card-title">DataLemur — SQL Practice</div>
+      <div class="res-card-desc">Real interview questions from top tech companies, organized by difficulty. SQL-focused with Python analytics problems too. Better than LeetCode for data analyst prep.</div>
+      <div class="res-card-tags"><span class="tag">SQL</span><span class="tag">Practice</span><span class="tag">Interviews</span></div>
+      <div class="res-card-links"><a href="https://datalemur.com/" target="_blank" class="res-link primary">datalemur.com →</a></div>
+    </div>
+
+    <div class="res-card">
+      <div class="res-card-icon">🏆</div>
+      <div class="res-card-title">Kaggle</div>
+      <div class="res-card-desc">Free datasets, competitions, and courses in Python, pandas, SQL, ML. The Kaggle Learn micro-courses (free) are excellent complements to WGU coursework — especially the SQL and data visualization tracks.</div>
+      <div class="res-card-tags"><span class="tag">Datasets</span><span class="tag">Competitions</span><span class="tag">Learning</span></div>
+      <div class="res-card-links"><a href="https://www.kaggle.com/learn" target="_blank" class="res-link primary">Kaggle Learn →</a><a href="https://www.kaggle.com/datasets" target="_blank" class="res-link">Datasets →</a></div>
+    </div>
+
+    <div class="res-card">
+      <div class="res-card-icon">🗃️</div>
+      <div class="res-card-title">Mode Analytics SQL Tutorial</div>
+      <div class="res-card-desc">Free interactive SQL tutorial with a real query environment. Covers beginner through advanced SQL (window functions, subqueries, CTEs) — exactly what WGU BSDA exams test.</div>
+      <div class="res-card-tags"><span class="tag">SQL</span><span class="tag">Interactive</span><span class="tag">Free</span></div>
+      <div class="res-card-links"><a href="https://mode.com/sql-tutorial/" target="_blank" class="res-link primary">SQL Tutorial →</a></div>
+    </div>
+
+  </div>
+
+  <hr class="section-divider" />
+  <div class="section-head amber"><h2>📐 Statistics — WGU BSDA Core</h2><span class="section-tag">curriculum-aligned</span></div>
+  <div class="card-grid">
+    <div class="res-card new-item">
+      <div class="res-card-icon">📊</div>
+      <div class="res-card-title">StatQuest with Josh Starmer</div>
+      <div class="res-card-desc">The best statistics YouTube channel — breaks down statistical concepts (p-values, regression, ML algorithms) with clear visuals. WGU BSDA stats units become much easier after watching these.</div>
+      <div class="res-card-tags"><span class="tag">Statistics</span><span class="tag">YouTube</span><span class="tag">Free</span></div>
+      <div class="res-card-links"><a href="https://www.youtube.com/@statquest" target="_blank" class="res-link primary">YouTube →</a></div>
+    </div>
+    <div class="res-card new-item">
+      <div class="res-card-icon">🎓</div>
+      <div class="res-card-title">Khan Academy — Statistics & Probability</div>
+      <div class="res-card-desc">Free, structured stats curriculum. Covers distributions, hypothesis testing, confidence intervals, and regression — exactly what WGU BSDA tests. Great for filling gaps before OAs.</div>
+      <div class="res-card-tags"><span class="tag">Statistics</span><span class="tag">Free</span><span class="tag">Beginner</span></div>
+      <div class="res-card-links"><a href="https://www.khanacademy.org/math/statistics-probability" target="_blank" class="res-link primary">Start Learning →</a></div>
+    </div>
+    <div class="res-card new-item">
+      <div class="res-card-icon">📖</div>
+      <div class="res-card-title">Think Stats (Allen Downey)</div>
+      <div class="res-card-desc">Free book: statistics for programmers using Python. Skips the math-heavy approach and goes straight to computing distributions, regressions, and hypothesis tests in code. Perfectly paired with WGU BSDA.</div>
+      <div class="res-card-tags"><span class="tag">Book</span><span class="tag">Python</span><span class="tag">Free</span></div>
+      <div class="res-card-links"><a href="https://greenteapress.com/thinkstats2/html/index.html" target="_blank" class="res-link primary">Read Free →</a></div>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+  <div class="section-head purple"><h2>🏭 Microsoft Fabric</h2><span class="section-tag">Vertiv + LLC stack</span></div>
+  <div class="card-grid">
+    <div class="res-card new-item">
+      <div class="res-card-icon">🏭</div>
+      <div class="res-card-title">Microsoft Fabric — Learn</div>
+      <div class="res-card-desc">Microsoft's unified analytics platform — Lakehouse, Data Factory, Synapse, Power BI all in one. Free Microsoft Learn paths cover Fabric fundamentals, data engineering, and analytics. Direct Vertiv relevance.</div>
+      <div class="res-card-tags"><span class="tag">Fabric</span><span class="tag">Microsoft</span><span class="tag">Free</span></div>
+      <div class="res-card-links"><a href="https://learn.microsoft.com/en-us/fabric/" target="_blank" class="res-link primary">MS Learn →</a></div>
+    </div>
+    <div class="res-card new-item">
+      <div class="res-card-icon">📺</div>
+      <div class="res-card-title">Guy in a Cube</div>
+      <div class="res-card-desc">Adam and Patrick's YouTube channel — the best Power BI and Fabric content on YouTube. Weekly updates on new features, DAX deep dives, and Fabric architecture walkthroughs.</div>
+      <div class="res-card-tags"><span class="tag">Power BI</span><span class="tag">Fabric</span><span class="tag">YouTube</span></div>
+      <div class="res-card-links"><a href="https://www.youtube.com/@GuyInACube" target="_blank" class="res-link primary">YouTube →</a></div>
+    </div>
+    <div class="res-card">
+      <div class="res-card-icon">💎</div>
+      <div class="res-card-title">SQLBI — DAX Mastery</div>
+      <div class="res-card-desc">Marco Russo and Alberto Ferrari's site — the authoritative source for DAX. DAX Formatter, DAX Guide reference, and deep articles on calculation groups, time intelligence, and optimization.</div>
+      <div class="res-card-tags"><span class="tag">DAX</span><span class="tag">Power BI</span><span class="tag">Advanced</span></div>
+      <div class="res-card-links"><a href="https://www.sqlbi.com/" target="_blank" class="res-link primary">sqlbi.com →</a><a href="https://dax.guide/" target="_blank" class="res-link">DAX Guide →</a></div>
+    </div>
+  </div>
+
+  <hr class="section-divider" />
+  <div class="section-head green"><h2>🏢 LLC / Consulting Tools</h2><span class="section-tag">Mapenomi Studio</span></div>
+  <div class="card-grid">
+    <div class="res-card new-item">
+      <div class="res-card-icon">🔄</div>
+      <div class="res-card-title">dbt (data build tool)</div>
+      <div class="res-card-desc">Transform data in your warehouse using SQL. Version-controlled, tested, and documented data models. The standard for analytics engineering — excellent for building repeatable client data pipelines.</div>
+      <div class="res-card-tags"><span class="tag">SQL</span><span class="tag">Transform</span><span class="tag">Analytics Eng</span></div>
+      <div class="res-card-links"><a href="https://docs.getdbt.com/" target="_blank" class="res-link primary">Docs →</a><a href="https://www.getdbt.com/community" target="_blank" class="res-link">Community →</a></div>
+    </div>
+    <div class="res-card new-item">
+      <div class="res-card-icon">✅</div>
+      <div class="res-card-title">Great Expectations</div>
+      <div class="res-card-desc">Data quality and validation framework for Python pipelines. Define expectations about your data, run checks automatically, and surface issues before bad data reaches clients or dashboards.</div>
+      <div class="res-card-tags"><span class="tag">Data Quality</span><span class="tag">Python</span><span class="tag">Pipelines</span></div>
+      <div class="res-card-links"><a href="https://greatexpectations.io/gx-oss" target="_blank" class="res-link primary">Docs →</a></div>
+    </div>
+    <div class="res-card new-item">
+      <div class="res-card-icon">📊</div>
+      <div class="res-card-title">Metabase</div>
+      <div class="res-card-desc">Open source BI tool — connect to any database and build dashboards without SQL. Free self-hosted version. Ideal for delivering client-facing dashboards without a Power BI Pro license dependency.</div>
+      <div class="res-card-tags"><span class="tag">BI</span><span class="tag">Open Source</span><span class="tag">Dashboards</span></div>
+      <div class="res-card-links"><a href="https://www.metabase.com/" target="_blank" class="res-link primary">metabase.com →</a><a href="https://github.com/metabase/metabase" target="_blank" class="res-link">GitHub →</a></div>
+    </div>
+  </div>
+</section>
 
 <!-- ════════════════════════════════════
      TAB: WEEKEND
@@ -2500,320 +2678,7 @@
      TAB: TRENDS
 ════════════════════════════════════ -->
 <section class="tab-panel" id="tab-trends" role="tabpanel">
-
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin-bottom:24px;">
-    <div style="background:linear-gradient(135deg,rgba(6,182,212,0.08),var(--bg2));border:1px solid rgba(6,182,212,0.25);border-radius:var(--radius);padding:16px;text-align:center;">
-      <div style="font-size:24px;margin-bottom:6px;">🐍</div>
-      <div style="font-family:var(--font-mono);font-size:10px;color:var(--accent);text-transform:uppercase;letter-spacing:.1em;">awesome-python</div>
-      <div style="font-size:12px;color:var(--text2);margin-top:4px;">327k stars — definitive "which tool" reference</div>
-    </div>
-    <div style="background:linear-gradient(135deg,rgba(139,92,246,0.08),var(--bg2));border:1px solid rgba(139,92,246,0.25);border-radius:var(--radius);padding:16px;text-align:center;">
-      <div style="font-size:24px;margin-bottom:6px;">🤗</div>
-      <div style="font-family:var(--font-mono);font-size:10px;color:var(--accent2);text-transform:uppercase;letter-spacing:.1em;">Transformers</div>
-      <div style="font-size:12px;color:var(--text2);margin-top:4px;">167k stars — state-of-the-art ML models</div>
-    </div>
-    <div style="background:linear-gradient(135deg,rgba(63,185,80,0.08),var(--bg2));border:1px solid rgba(63,185,80,0.25);border-radius:var(--radius);padding:16px;text-align:center;">
-      <div style="font-size:24px;margin-bottom:6px;">🦆</div>
-      <div style="font-family:var(--font-mono);font-size:10px;color:var(--green);text-transform:uppercase;letter-spacing:.1em;">DuckDB</div>
-      <div style="font-size:12px;color:var(--text2);margin-top:4px;">OLAP SQL engine — local analytics standard</div>
-    </div>
-    <div style="background:linear-gradient(135deg,rgba(245,158,11,0.08),var(--bg2));border:1px solid rgba(245,158,11,0.25);border-radius:var(--radius);padding:16px;text-align:center;">
-      <div style="font-size:24px;margin-bottom:6px;">🚀</div>
-      <div style="font-family:var(--font-mono);font-size:10px;color:var(--accent3);text-transform:uppercase;letter-spacing:.1em;">LLMs from Scratch</div>
-      <div style="font-size:12px;color:var(--text2);margin-top:4px;">Build ChatGPT-like LLMs step-by-step</div>
-    </div>
-  </div>
-
-  <div class="section-head green"><h2>🔥 GitHub Trending — October 15, 2026</h2><span class="section-tag">hot repos python & ml</span></div>
-  <div class="card-grid">
-
-    <div class="trend-card github">
-      <div class="trend-header">
-        <div class="trend-icon">🐍</div>
-        <div><div class="trend-title">vinta/awesome-python</div><div class="trend-sub">Python · Reference</div></div>
-      </div>
-      <div class="trend-desc">The definitive list that answers "I want to do X in Python, which tool should I use?" 327k stars and growing. The canonical reference for every Python use case from web to data to ML.</div>
-      <div class="trend-footer">
-        <span class="trend-stat">⭐ 327k+</span>
-        <span class="trend-stat hot">Essential</span>
-        <a href="https://github.com/vinta/awesome-python" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
-      </div>
-    </div>
-
-    <div class="trend-card github">
-      <div class="trend-header">
-        <div class="trend-icon">📚</div>
-        <div><div class="trend-title">practical-tutorials/project-based-learning</div><div class="trend-sub">Multi-language · Learning</div></div>
-      </div>
-      <div class="trend-desc">Curated list of project-based tutorials across all languages. 286k stars. The best way to learn by building real things. Organized by language and difficulty.</div>
-      <div class="trend-footer">
-        <span class="trend-stat">⭐ 286k+</span>
-        <a href="https://github.com/practical-tutorials/project-based-learning" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
-      </div>
-    </div>
-
-    <div class="trend-card github">
-      <div class="trend-header">
-        <div class="trend-icon">🧮</div>
-        <div><div class="trend-title">TheAlgorithms/Python</div><div class="trend-sub">Python · Algorithms</div></div>
-      </div>
-      <div class="trend-desc">All algorithms implemented in Python — sorting, searching, dynamic programming, graph algorithms, and more. 225k stars. Reference or study guide for interview prep and algorithm mastery.</div>
-      <div class="trend-footer">
-        <span class="trend-stat">⭐ 225k+</span>
-        <a href="https://github.com/TheAlgorithms/Python" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
-      </div>
-    </div>
-
-    <div class="trend-card github">
-      <div class="trend-header">
-        <div class="trend-icon">🤖</div>
-        <div><div class="trend-title">tensorflow/tensorflow</div><div class="trend-sub">C++ / Python · ML Framework</div></div>
-      </div>
-      <div class="trend-desc">An Open Source Machine Learning Framework for Everyone. 200k+ stars. TensorFlow remains one of the industry standards for building and deploying ML models at scale.</div>
-      <div class="trend-footer">
-        <span class="trend-stat">⭐ 200k+</span>
-        <span class="trend-stat hot">Industry Standard</span>
-        <a href="https://github.com/tensorflow/tensorflow" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
-      </div>
-    </div>
-
-    <div class="trend-card github">
-      <div class="trend-header">
-        <div class="trend-icon">🎥</div>
-        <div><div class="trend-title">yt-dlp/yt-dlp</div><div class="trend-sub">Python · Utilities</div></div>
-      </div>
-      <div class="trend-desc">A feature-rich command-line audio/video downloader. 198k stars. The most capable open-source video downloader — supports 1000+ sites, formats, and post-processing options.</div>
-      <div class="trend-footer">
-        <span class="trend-stat">⭐ 198k+</span>
-        <a href="https://github.com/yt-dlp/yt-dlp" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
-      </div>
-    </div>
-
-    <div class="trend-card github">
-      <div class="trend-header">
-        <div class="trend-icon">💬</div>
-        <div><div class="trend-title">f/prompts.chat</div><div class="trend-sub">Prompts · AI / ChatGPT</div></div>
-      </div>
-      <div class="trend-desc">Share, discover, and collect prompts from the community. Free and open source — self-host for your organization. 173k stars. The go-to resource for effective ChatGPT / LLM prompting.</div>
-      <div class="trend-footer">
-        <span class="trend-stat">⭐ 173k+</span>
-        <a href="https://github.com/f/prompts.chat" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
-      </div>
-    </div>
-
-    <div class="trend-card github">
-      <div class="trend-header">
-        <div class="trend-icon">🤗</div>
-        <div><div class="trend-title">huggingface/transformers</div><div class="trend-sub">Python · LLM / ML Models</div></div>
-      </div>
-      <div class="trend-desc">Transformers: state-of-the-art model-definition framework for NLP, vision, audio, and multimodal. 167k+ stars. The standard library for working with pre-trained models and fine-tuning.</div>
-      <div class="trend-footer">
-        <span class="trend-stat">⭐ 167k+</span>
-        <span class="trend-stat hot">🔥 Most Active</span>
-        <a href="https://github.com/huggingface/transformers" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
-      </div>
-    </div>
-
-    <div class="trend-card github">
-      <div class="trend-header">
-        <div class="trend-icon">🧠</div>
-        <div><div class="trend-title">rasbt/LLMs-from-scratch</div><div class="trend-sub">Python · LLM Education</div></div>
-      </div>
-      <div class="trend-desc">Implement a ChatGPT-like LLM in PyTorch from scratch, step by step. 106k stars. The definitive hands-on course for understanding how modern LLMs actually work under the hood.</div>
-      <div class="trend-footer">
-        <span class="trend-stat">⭐ 106k+</span>
-        <span class="trend-stat hot">Rising Fast</span>
-        <a href="https://github.com/rasbt/LLMs-from-scratch" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
-      </div>
-    </div>
-
-    <div class="trend-card github">
-      <div class="trend-header">
-        <div class="trend-icon">🔥</div>
-        <div><div class="trend-title">pytorch/pytorch</div><div class="trend-sub">C++ / Python · ML Framework</div></div>
-      </div>
-      <div class="trend-desc">Tensors and Dynamic neural networks in Python with strong GPU acceleration. 104k+ stars. PyTorch has become the dominant research and production ML framework — especially for LLMs and deep learning.</div>
-      <div class="trend-footer">
-        <span class="trend-stat">⭐ 104k+</span>
-        <span class="trend-stat hot">Industry Standard</span>
-        <a href="https://github.com/pytorch/pytorch" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
-      </div>
-    </div>
-
-    <div class="trend-card github">
-      <div class="trend-header">
-        <div class="trend-icon">📡</div>
-        <div><div class="trend-title">ruvnet/RuView</div><div class="trend-sub">Python / C · WiFi Sensing</div></div>
-      </div>
-      <div class="trend-desc">Turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring, and presence detection — all without video. 98k stars. Cutting-edge IoT/sensor innovation.</div>
-      <div class="trend-footer">
-        <span class="trend-stat">⭐ 98k+</span>
-        <a href="https://github.com/ruvnet/RuView" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
-      </div>
-    </div>
-
-    <div class="trend-card github">
-      <div class="trend-header">
-        <div class="trend-icon">🏠</div>
-        <div><div class="trend-title">home-assistant/core</div><div class="trend-sub">Python · Home Automation</div></div>
-      </div>
-      <div class="trend-desc">Open source home automation that puts local control and privacy first. 91k+ stars. The dominant home automation platform — integrates ESP32, Raspberry Pi, and 1000+ smart devices.</div>
-      <div class="trend-footer">
-        <span class="trend-stat">⭐ 91k+</span>
-        <span class="trend-stat hot">Essential</span>
-        <a href="https://github.com/home-assistant/core" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
-      </div>
-    </div>
-
-    <div class="trend-card github">
-      <div class="trend-header">
-        <div class="trend-icon">🎓</div>
-        <div><div class="trend-title">Developer-Y/cs-video-courses</div><div class="trend-sub">Learning · Computer Science</div></div>
-      </div>
-      <div class="trend-desc">Comprehensive list of Computer Science courses with video lectures. 83k+ stars. Covers algorithms, data structures, systems, AI, robotics, and more — all with free YouTube links.</div>
-      <div class="trend-footer">
-        <span class="trend-stat">⭐ 83k+</span>
-        <a href="https://github.com/Developer-Y/cs-video-courses" target="_blank" class="res-link" style="margin-left:auto;">View →</a>
-      </div>
-    </div>
-
-  </div>
-
-  <hr class="section-divider" />
-  <div class="section-head amber"><h2>🛠️ Tools Making Waves in 2026</h2></div>
-  <div class="card-grid">
-
-    <div class="trend-card tool">
-      <div class="trend-header">
-        <div class="trend-icon">🌊</div>
-        <div><div class="trend-title">Marimo</div><div class="trend-sub">Reactive Python Notebooks</div></div>
-      </div>
-      <div class="trend-desc">Reactive notebooks where cells re-run automatically. No more stale outputs. Deployable as web apps, shareable as .py scripts. Serious competition for Jupyter.</div>
-      <div class="trend-footer">
-        <span class="trend-stat new">2024</span>
-        <span class="trend-stat hot">Rising</span>
-        <a href="https://marimo.io/" target="_blank" class="res-link" style="margin-left:auto;">Try →</a>
-      </div>
-    </div>
-
-    <div class="trend-card tool">
-      <div class="trend-header">
-        <div class="trend-icon">🏃</div>
-        <div><div class="trend-title">micro-ROS</div><div class="trend-sub">ROS 2 on Microcontrollers</div></div>
-      </div>
-      <div class="trend-desc">Run ROS 2 nodes directly on ESP32 and Arduino. Bridges the gap between your maker hardware and ROS 2 robotics stack. Huge for serious robot projects.</div>
-      <div class="trend-footer">
-        <span class="trend-stat">ESP32 + ROS 2</span>
-        <a href="https://micro.ros.org/" target="_blank" class="res-link" style="margin-left:auto;">micro.ros.org →</a>
-      </div>
-    </div>
-
-    <div class="trend-card tool">
-      <div class="trend-header">
-        <div class="trend-icon">👁️</div>
-        <div><div class="trend-title">OpenMV</div><div class="trend-sub">Machine Vision on Microcontrollers</div></div>
-      </div>
-      <div class="trend-desc">MicroPython-based computer vision on tiny boards. Face detection, object tracking, color recognition — no Raspberry Pi needed. OpenMV Cam H7 is the flagship board.</div>
-      <div class="trend-footer">
-        <span class="trend-stat">MicroPython</span>
-        <span class="trend-stat">Vision</span>
-        <a href="https://openmv.io/" target="_blank" class="res-link" style="margin-left:auto;">openmv.io →</a>
-      </div>
-    </div>
-
-    <div class="trend-card tool">
-      <div class="trend-header">
-        <div class="trend-icon">📐</div>
-        <div><div class="trend-title">Evidence</div><div class="trend-sub">BI as Code</div></div>
-      </div>
-      <div class="trend-desc">SQL + Markdown → beautiful data reports deployed as static sites. Version-controlled analytics that lives in git. Great alternative to Power BI for personal portfolio work.</div>
-      <div class="trend-footer">
-        <span class="trend-stat new">New</span>
-        <a href="https://evidence.dev/" target="_blank" class="res-link" style="margin-left:auto;">evidence.dev →</a>
-      </div>
-    </div>
-
-  </div>
-
-  <hr class="section-divider" />
-  <div class="section-head purple"><h2>💬 Community Buzz — What's Being Discussed</h2></div>
-  <div class="card-grid">
-
-    <div class="trend-card data">
-      <div class="trend-header">
-        <div class="trend-icon">🧵</div>
-        <div><div class="trend-title">r/arduino — Hot This Week</div><div class="trend-sub">Embedded & Maker Projects</div></div>
-      </div>
-      <div class="trend-desc">Top discussion: "Why buy a smartwatch when you can hold a 3D-rendering, game-playing RGB square in your hand?" ESP32 CAM video playback, Teensy 4.1 hand exoskeleton builds, Arduino Nanos shipping. DIY wearables and custom hardware dominating.</div>
-      <div class="trend-footer">
-        <a href="https://www.reddit.com/r/arduino/comments/1x1gc6v/why_buy_a_smartwatch_when_you_can_hold_a/" target="_blank" class="res-link">RGB Square Post →</a>
-        <a href="https://www.reddit.com/r/arduino/top/?t=week" target="_blank" class="res-link">Top This Week →</a>
-      </div>
-    </div>
-
-    <div class="trend-card data">
-      <div class="trend-header">
-        <div class="trend-icon">🔍</div>
-        <div><div class="trend-title">Hacker News — Security & AI</div><div class="trend-sub">Tech Trends & Discussion</div></div>
-      </div>
-      <div class="trend-desc">Top story (933 points): "Containment and monitoring failures are to blame for AI hacking reports — experts." Also trending: "Has AI tells" (132 pts), "$15M Simons Foundation effort to help mathematicians navigate AI era" (152 pts), "Market selloff tests AI data centre deal boom."</div>
-      <div class="trend-footer">
-        <a href="https://news.ycombinator.com/item?id=41869201" target="_blank" class="res-link">Security Story →</a>
-        <a href="https://news.ycombinator.com/show" target="_blank" class="res-link">Show HN →</a>
-      </div>
-    </div>
-
-    <div class="trend-card data">
-      <div class="trend-header">
-        <div class="trend-icon">💻</div>
-        <div><div class="trend-title">HN Maker Trends</div><div class="trend-sub">Development & Tools</div></div>
-      </div>
-      <div class="trend-desc">HN Show HN highlights: "Proa — Rust web framework with fast SSR" (21 pts), "Game of Life but Multiplayer, Hypermedia and Python" (7 pts), "BlastLoop — structure-first coding for AI agents" (5 pts). Web framework and AI tooling discussions leading the week.</div>
-      <div class="trend-footer">
-        <a href="https://proa.so/" target="_blank" class="res-link">Proa Framework →</a>
-        <a href="https://hn.algolia.com/?q=show+hn" target="_blank" class="res-link">Show HN Search →</a>
-      </div>
-    </div>
-
-  </div>
-
-  <hr class="section-divider" />
-  <div class="section-head"><h2>🎥 YouTube Topics Blowing Up</h2></div>
-  <div class="card-grid">
-    <div class="trend-card yt">
-      <div class="trend-header"><div class="trend-icon">🤖</div><div><div class="trend-title">Open-Source Robot Arms</div></div></div>
-      <div class="trend-desc">SO-ARM100, Trossen, custom SCARA arms — maker-priced 6-DOF arms paired with LeRobot are producing a wave of hobbyist manipulation projects. Watch: James Bruton + HuggingFace collabs.</div>
-      <div class="trend-footer"><span class="trend-stat hot">🔥 Hot Topic</span></div>
-    </div>
-    <div class="trend-card yt">
-      <div class="trend-header"><div class="trend-icon">🏠</div><div><div class="trend-title">Matter / Zigbee Projects</div></div></div>
-      <div class="trend-desc">ESP32-C6 enabling Zigbee devices built from scratch. Home Assistant Matter integration tutorials are surging. "Build your own Zigbee sensor" videos are getting millions of views.</div>
-      <div class="trend-footer"><span class="trend-stat hot">Rising Fast</span></div>
-    </div>
-    <div class="trend-card yt">
-      <div class="trend-header"><div class="trend-icon">🦆</div><div><div class="trend-title">Local Data Analysis Stack</div></div></div>
-      <div class="trend-desc">DuckDB + Polars + Marimo tutorials are multiplying fast. The narrative is "pandas is fine but here's why pros are switching." Very relevant to your WGU BSDA work.</div>
-      <div class="trend-footer"><span class="trend-stat new">2025–2026</span></div>
-    </div>
-    <div class="trend-card yt">
-      <div class="trend-header"><div class="trend-icon">🧠</div><div><div class="trend-title">Edge AI on Microcontrollers</div></div></div>
-      <div class="trend-desc">Running small ML models on ESP32-S3 (with AI acceleration) and Pi 5 for local inference. TensorFlow Lite Micro and Edge Impulse are the main tools. OpenMV is the plug-and-play entry point.</div>
-      <div class="trend-footer"><span class="trend-stat hot">Hot</span></div>
-    </div>
-  </div>
-
-  <hr class="section-divider" />
-  <div class="section-head"><h2>🔗 Live Feed Links</h2></div>
-  <div class="link-list">
-    <div class="link-list-item"><a href="https://github.com/trending/python?since=weekly" target="_blank"><span class="lli-icon">🐍</span> GitHub Trending — Python (weekly)</a><span class="lli-meta">Live</span></div>
-    <div class="link-list-item"><a href="https://github.com/trending/c++?since=weekly" target="_blank"><span class="lli-icon">📡</span> GitHub Trending — C++ / Arduino (weekly)</a><span class="lli-meta">Live</span></div>
-    <div class="link-list-item"><a href="https://www.hackster.io/projects?sort=trending" target="_blank"><span class="lli-icon">🔨</span> Hackster.io — Trending Projects</a><span class="lli-meta">Live</span></div>
-    <div class="link-list-item"><a href="https://www.reddit.com/r/esp32/top/?t=week" target="_blank"><span class="lli-icon">📡</span> r/esp32 — Top This Week</a><span class="lli-meta">Weekly</span></div>
-    <div class="link-list-item"><a href="https://www.reddit.com/r/arduino/top/?t=week" target="_blank"><span class="lli-icon">🤖</span> r/arduino — Top This Week</a><span class="lli-meta">Weekly</span></div>
-    <div class="link-list-item"><a href="https://news.ycombinator.com/show" target="_blank"><span class="lli-icon">💻</span> Hacker News — Show HN</a><span class="lli-meta">Daily</span></div>
-    <div class="link-list-item"><a href="https://hn.algolia.com/?q=robotics&dateRange=pastMonth&type=story&sort=byPopularity" target="_blank"><span class="lli-icon">🔍</span> HN Search — Robotics (past month)</a><span class="lli-meta">Filtered</span></div>
-    <div class="link-list-item"><a href="https://www.reddit.com/r/dataanalysis/top/?t=week" target="_blank"><span class="lli-icon">📈</span> r/dataanalysis — Top This Week</a><span class="lli-meta">Weekly</span></div>
-  </div>
+  <!-- Rendered from trends.js by trends-render.js -->
 </section>
 
 <!-- ════════════════════════════════════
@@ -2977,6 +2842,8 @@
 </footer>
 
 <script src="data.js"></script>
+<script src="trends.js"></script>
+<script src="trends-render.js"></script>
 <script>
   // ── TAB SWITCHING ──────────────────────────────────────
   const tabBtns = document.querySelectorAll('.tab-btn');
