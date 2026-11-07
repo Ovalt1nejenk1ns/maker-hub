@@ -1,0 +1,42 @@
+[
+  {
+    "group": "Calibrate & troubleshoot",
+    "items": [
+      {
+        "title": "Teaching Tech calibration guide",
+        "url": "https://teachingtechyt.github.io/calibration.html",
+        "note": "Step-by-step tuning: temperature, flow, retraction, acceleration."
+      },
+      {
+        "title": "Prusa Knowledge Base",
+        "url": "https://help.prusa3d.com/",
+        "note": "Good troubleshooting articles that apply to most printers, not just Prusa."
+      }
+    ]
+  },
+  {
+    "group": "Models & software",
+    "items": [
+      {
+        "title": "Printables",
+        "url": "https://www.printables.com/",
+        "note": "Large model library with good filtering."
+      },
+      {
+        "title": "OrcaSlicer",
+        "url": "https://github.com/OrcaSlicer/OrcaSlicer",
+        "note": "Popular open-source slicer with built-in calibration tools."
+      },
+      {
+        "title": "Klipper docs",
+        "url": "https://www.klipper3d.org/",
+        "note": "Firmware for faster, tunable printers."
+      },
+      {
+        "title": "FreeCAD",
+        "url": "https://www.freecad.org/",
+        "note": "Free parametric CAD for designing your own parts."
+      }
+    ]
+  }
+]

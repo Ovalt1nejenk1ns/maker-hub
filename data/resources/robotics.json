@@ -1,0 +1,52 @@
+[
+  {
+    "group": "Arduino",
+    "items": [
+      {
+        "title": "Arduino documentation",
+        "url": "https://docs.arduino.cc/",
+        "note": "Official tutorials and board docs."
+      },
+      {
+        "title": "Arduino language reference",
+        "url": "https://www.arduino.cc/reference/en/",
+        "note": "Every function and constant, with examples."
+      }
+    ]
+  },
+  {
+    "group": "ESP32",
+    "items": [
+      {
+        "title": "Arduino core for ESP32",
+        "url": "https://docs.espressif.com/projects/arduino-esp32/en/latest/",
+        "note": "Official docs for using ESP32 with the Arduino IDE."
+      },
+      {
+        "title": "Random Nerd Tutorials",
+        "url": "https://randomnerdtutorials.com/",
+        "note": "Beginner-friendly ESP32 and Arduino projects with wiring diagrams."
+      }
+    ]
+  },
+  {
+    "group": "Simulation & learning",
+    "items": [
+      {
+        "title": "Wokwi",
+        "url": "https://wokwi.com/",
+        "note": "Simulate Arduino and ESP32 circuits in the browser before you wire anything."
+      },
+      {
+        "title": "Adafruit Learn",
+        "url": "https://learn.adafruit.com/",
+        "note": "Detailed guides for sensors, displays and motors."
+      },
+      {
+        "title": "Hackaday",
+        "url": "https://hackaday.com/",
+        "note": "Daily hardware projects for ideas and inspiration."
+      }
+    ]
+  }
+]

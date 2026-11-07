@@ -269,6 +269,237 @@
           "hn_url": "https://news.ycombinator.com/item?id=50398485"
         }
       ]
+    },
+    "robotics": {
+      "repos": [
+        {
+          "name": "lvgl/lvgl",
+          "url": "https://github.com/lvgl/lvgl",
+          "desc": "LVGL is a free, full-featured embedded UI library for devices from small MCUs to 3D-capable MPUs, enhanced by LVGL Pro, a professional editor and tooling.",
+          "language": "C",
+          "stars": 25111,
+          "created": "2016-06-08",
+          "pushed": "2026-11-06"
+        },
+        {
+          "name": "arendst/Tasmota",
+          "url": "https://github.com/arendst/Tasmota",
+          "desc": "Alternative firmware for ESP8266 and ESP32 based devices with easy configuration using webUI, OTA updates, automation using timers or rules, expandability and entirely local control over MQTT, HTTP, Serial or KNX. Full documentation at",
+          "language": "C",
+          "stars": 24969,
+          "created": "2017-01-28",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "tinygo-org/tinygo",
+          "url": "https://github.com/tinygo-org/tinygo",
+          "desc": "Go compiler for small places. Microcontrollers, WebAssembly (WASM/WASI), and command-line tools. Based on LLVM.",
+          "language": "Go",
+          "stars": 17902,
+          "created": "2018-06-07",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "espressif/arduino-esp32",
+          "url": "https://github.com/espressif/arduino-esp32",
+          "desc": "Arduino core for the ESP32 family of SoCs",
+          "language": "C++",
+          "stars": 17689,
+          "created": "2016-10-06",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "MarlinFirmware/Marlin",
+          "url": "https://github.com/MarlinFirmware/Marlin",
+          "desc": "Marlin is a firmware for RepRap 3D printers optimized for both 8 and 32 bit microcontrollers.  Marlin supports all common platforms.   Many commercial 3D printers come with Marlin installed.  Check with your vendor if you need source code for your specific machine.",
+          "language": "C++",
+          "stars": 17652,
+          "created": "2011-08-13",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "justcallmekoko/ESP32Marauder",
+          "url": "https://github.com/justcallmekoko/ESP32Marauder",
+          "desc": "A suite of WiFi/Bluetooth offensive and defensive tools for the ESP32",
+          "language": "C++",
+          "stars": 13022,
+          "created": "2019-09-13",
+          "pushed": "2026-10-29"
+        },
+        {
+          "name": "makerspet/oomwoo",
+          "url": "https://github.com/makerspet/oomwoo",
+          "desc": "Open-source vacuum robot cleaner",
+          "language": "Python",
+          "stars": 13006,
+          "created": "2026-06-10",
+          "pushed": "2026-11-05"
+        },
+        {
+          "name": "platformio/platformio-core",
+          "url": "https://github.com/platformio/platformio-core",
+          "desc": "Your Gateway to Embedded Software Development Excellence :alien:",
+          "language": "Python",
+          "stars": 9585,
+          "created": "2014-05-09",
+          "pushed": "2026-10-16"
+        }
+      ],
+      "hn": []
+    },
+    "data": {
+      "repos": [
+        {
+          "name": "d3/d3",
+          "url": "https://github.com/d3/d3",
+          "desc": "Bring data to life with SVG, Canvas and HTML. :bar_chart::chart_with_upwards_trend::tada:",
+          "language": "Shell",
+          "stars": 113876,
+          "created": "2010-09-27",
+          "pushed": "2026-11-03"
+        },
+        {
+          "name": "netdata/netdata",
+          "url": "https://github.com/netdata/netdata",
+          "desc": "The fastest path to AI-powered full stack observability, even for lean teams.",
+          "language": "Go",
+          "stars": 81301,
+          "created": "2013-06-17",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "grafana/grafana",
+          "url": "https://github.com/grafana/grafana",
+          "desc": "The open and composable observability and data visualization platform. Visualize metrics, logs, and traces from multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB, Postgres and many more.",
+          "language": "TypeScript",
+          "stars": 77752,
+          "created": "2013-12-11",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "apache/superset",
+          "url": "https://github.com/apache/superset",
+          "desc": "Apache Superset is a Data Visualization and Data Exploration Platform",
+          "language": "Python",
+          "stars": 75449,
+          "created": "2015-07-21",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "apache/echarts",
+          "url": "https://github.com/apache/echarts",
+          "desc": "Apache ECharts is a powerful, interactive charting and data visualization library for browser",
+          "language": "TypeScript",
+          "stars": 67691,
+          "created": "2013-04-03",
+          "pushed": "2026-10-13"
+        },
+        {
+          "name": "cathrynlavery/diagram-design",
+          "url": "https://github.com/cathrynlavery/diagram-design",
+          "desc": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+          "language": "HTML",
+          "stars": 65660,
+          "created": "2026-04-16",
+          "pushed": "2026-11-06"
+        },
+        {
+          "name": "pathwaycom/serviette",
+          "url": "https://github.com/pathwaycom/serviette",
+          "desc": "A no-code RAG server that keeps answers in sync with your documents. Works with 8 vector databases. Built on Pathway.",
+          "language": "Python",
+          "stars": 58722,
+          "created": "2023-07-19",
+          "pushed": "2026-11-02"
+        },
+        {
+          "name": "pandas-dev/pandas",
+          "url": "https://github.com/pandas-dev/pandas",
+          "desc": "Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures similar to R data.frame objects, statistical functions, and much more",
+          "language": "Python",
+          "stars": 50520,
+          "created": "2010-08-24",
+          "pushed": "2026-11-07"
+        }
+      ],
+      "hn": []
+    },
+    "board-games": {
+      "repos": [
+        {
+          "name": "SabakiHQ/Sabaki",
+          "url": "https://github.com/SabakiHQ/Sabaki",
+          "desc": "An elegant Go board and SGF editor for a more civilized age.",
+          "language": "JavaScript",
+          "stars": 2795,
+          "created": "2015-04-25",
+          "pushed": "2026-10-31"
+        },
+        {
+          "name": "opendilab/LightZero",
+          "url": "https://github.com/opendilab/LightZero",
+          "desc": "[NeurIPS 2023 Spotlight] LightZero: A Unified Benchmark for Monte Carlo Tree Search in General Sequential Decision Scenarios (awesome MCTS)",
+          "language": "Python",
+          "stars": 1660,
+          "created": "2022-10-08",
+          "pushed": "2026-10-15"
+        },
+        {
+          "name": "fairy-stockfish/Fairy-Stockfish",
+          "url": "https://github.com/fairy-stockfish/Fairy-Stockfish",
+          "desc": "chess variant engine supporting Xiangqi, Shogi, Janggi, Makruk, S-Chess, Crazyhouse, Bughouse, and many more",
+          "language": "C++",
+          "stars": 927,
+          "created": "2018-06-22",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "cozuya/secret-hitler",
+          "url": "https://github.com/cozuya/secret-hitler",
+          "desc": "A web adaptation of the social deduction board game Secret Hitler, originally developed in early fall 2016.  https://secrethitler.io",
+          "language": "JavaScript",
+          "stars": 852,
+          "created": "2016-09-17",
+          "pushed": "2026-11-06"
+        },
+        {
+          "name": "pokerth/pokerth",
+          "url": "https://github.com/pokerth/pokerth",
+          "desc": "PokerTH is a poker game written in C++/Qt.",
+          "language": "C++",
+          "stars": 698,
+          "created": "2012-05-10",
+          "pushed": "2026-11-02"
+        },
+        {
+          "name": "xqbase/eleeye",
+          "url": "https://github.com/xqbase/eleeye",
+          "desc": "ElephantEye - a XiangQi (Chinese Chess) Engine for XQWizard with Strong AI",
+          "language": "C++",
+          "stars": 408,
+          "created": "2015-02-07",
+          "pushed": "2026-10-23"
+        },
+        {
+          "name": "tobymao/18xx",
+          "url": "https://github.com/tobymao/18xx",
+          "desc": "A platform for playing 18xx games online!",
+          "language": "Ruby",
+          "stars": 376,
+          "created": "2019-05-23",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "nhmkdev/cardmaker",
+          "url": "https://github.com/nhmkdev/cardmaker",
+          "desc": "An application that generates graphics via data sources.",
+          "language": "C#",
+          "stars": 315,
+          "created": "2015-08-20",
+          "pushed": "2026-10-24"
+        }
+      ],
+      "hn": []
     }
   }
 }

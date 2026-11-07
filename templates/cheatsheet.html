@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}{{ tcfg.label }} cheat sheet · {{ cfg.SITE_TITLE }}{% endblock %}
+{% block body %}
+<p><a href="../index.html">← {{ tcfg.icon }} {{ tcfg.label }}</a></p>
+<article class="sheet">{{ body|safe }}</article>
+{% endblock %}

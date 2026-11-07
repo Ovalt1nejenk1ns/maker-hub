@@ -1,0 +1,47 @@
+[
+  {
+    "group": "Python data stack",
+    "items": [
+      {
+        "title": "10 minutes to pandas",
+        "url": "https://pandas.pydata.org/docs/user_guide/10min.html",
+        "note": "Quick tour of the core API."
+      },
+      {
+        "title": "Python Data Science Handbook",
+        "url": "https://jakevdp.github.io/PythonDataScienceHandbook/",
+        "note": "Free online book covering NumPy, pandas, Matplotlib and scikit-learn."
+      },
+      {
+        "title": "seaborn tutorial",
+        "url": "https://seaborn.pydata.org/tutorial.html",
+        "note": "Statistical plots with less code."
+      },
+      {
+        "title": "DuckDB docs",
+        "url": "https://duckdb.org/docs/",
+        "note": "Run SQL directly on CSV and Parquet files."
+      }
+    ]
+  },
+  {
+    "group": "SQL & practice",
+    "items": [
+      {
+        "title": "SQLBolt",
+        "url": "https://sqlbolt.com/",
+        "note": "Short interactive SQL lessons."
+      },
+      {
+        "title": "Kaggle Learn",
+        "url": "https://www.kaggle.com/learn",
+        "note": "Short free courses with notebooks, plus datasets to practice on."
+      },
+      {
+        "title": "KDnuggets",
+        "url": "https://www.kdnuggets.com/",
+        "note": "Data-science news and tutorials."
+      }
+    ]
+  }
+]

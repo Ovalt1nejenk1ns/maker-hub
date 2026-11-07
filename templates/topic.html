@@ -2,8 +2,33 @@
 {% block title %}{{ tcfg.label }} · {{ cfg.SITE_TITLE }}{% endblock %}
 {% block body %}
 <h1>{{ tcfg.icon }} {{ tcfg.label }}</h1>
-<p class="muted">{{ tcfg.blurb }} Repos active in the last {{ cfg.LOOKBACK_DAYS }} days, ranked by stars.</p>
-<h2>GitHub</h2>
+<p class="muted">{{ tcfg.blurb }}</p>
+<p class="jump"><a href="#news">News</a> · {% if has_sheet %}<a href="cheatsheet/index.html">Cheat sheet</a> · {% endif %}{% if resources %}<a href="#resources">Resources</a> · {% endif %}<a href="#trending">Trending</a></p>
+
+<h2 id="news">Latest news</h2>
+{% if t.news %}
+<ul class="news">
+{% for n in t.news %}<li><a href="{{ n.url }}">{{ n.title }}</a> <span class="muted">{{ n.source }}{% if n.date %} · {{ n.date }}{% endif %}</span></li>{% endfor %}
+</ul>
+{% else %}<p class="muted">No news yet. It appears after the first scheduled refresh.</p>{% endif %}
+
+{% if has_sheet %}
+<h2>Cheat sheet</h2>
+<p><a class="btn" href="cheatsheet/index.html">Open the {{ tcfg.label }} cheat sheet →</a></p>
+{% endif %}
+
+{% if resources %}
+<h2 id="resources">Resources</h2>
+{% for g in resources %}
+<h3>{{ g.group }}</h3>
+<ul class="res">
+{% for r in g["items"] %}<li><a href="{{ r.url }}">{{ r.title }}</a> — <span class="muted">{{ r.note }}</span></li>{% endfor %}
+</ul>
+{% endfor %}
+{% endif %}
+
+<h2 id="trending">Trending on GitHub</h2>
+<p class="muted">Repos active in the last {{ cfg.LOOKBACK_DAYS }} days, ranked by stars.</p>
 <div class="cards">
 {% for r in t.repos %}
   <article class="card">
@@ -18,5 +43,5 @@
 <ul class="hn">
 {% for s in t.hn %}<li><a href="{{ s.url }}">{{ s.title }}</a> <span class="muted">{{ s.points }} pts · <a href="{{ s.hn_url }}">discussion</a></span></li>{% endfor %}
 </ul>
-{% else %}<p class="muted">No Hacker News stories in the last two weeks (or the fetch failed — the next run will retry).</p>{% endif %}
+{% else %}<p class="muted">No Hacker News stories in the last two weeks (or the fetch failed; the next run will retry).</p>{% endif %}
 {% endblock %}
