@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["templates/**", "static/**", "scripts/**", "config.py"]
+    paths: ["templates/**", "static/**", "scripts/**", "config.py", "content/**", "data/resources/**", "requirements.txt"]
 permissions:
   contents: write
   pages: write
