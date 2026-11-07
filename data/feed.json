@@ -8,7 +8,7 @@
           "url": "https://github.com/apache/superset",
           "desc": "Apache Superset is a Data Visualization and Data Exploration Platform",
           "language": "Python",
-          "stars": 75449,
+          "stars": 75448,
           "created": "2015-07-21",
           "pushed": "2026-11-07"
         },
@@ -17,7 +17,7 @@
           "url": "https://github.com/scikit-learn/scikit-learn",
           "desc": "scikit-learn: machine learning in Python",
           "language": "Python",
-          "stars": 68081,
+          "stars": 68082,
           "created": "2010-08-17",
           "pushed": "2026-11-06"
         },
@@ -35,7 +35,7 @@
           "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
           "desc": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
           "language": "Python",
-          "stars": 56394,
+          "stars": 56396,
           "created": "2025-10-19",
           "pushed": "2026-11-02"
         },
@@ -44,7 +44,7 @@
           "url": "https://github.com/Gathin23/cleanyourtv",
           "desc": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
           "language": "Python",
-          "stars": 53839,
+          "stars": 53855,
           "created": "2026-10-17",
           "pushed": "2026-11-07"
         },
@@ -53,7 +53,7 @@
           "url": "https://github.com/pandas-dev/pandas",
           "desc": "Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures similar to R data.frame objects, statistical functions, and much more",
           "language": "Python",
-          "stars": 50520,
+          "stars": 50521,
           "created": "2010-08-24",
           "pushed": "2026-11-07"
         },
@@ -62,7 +62,7 @@
           "url": "https://github.com/metabase/metabase",
           "desc": "The easy-to-use open source Business Intelligence and Embedded Analytics tool that lets everyone work with data :bar_chart:",
           "language": "Clojure",
-          "stars": 50223,
+          "stars": 50224,
           "created": "2015-02-02",
           "pushed": "2026-11-07"
         },
@@ -107,6 +107,56 @@
           "url": "https://github.com/atifcodesalot/pyWolf3D",
           "hn_url": "https://news.ycombinator.com/item?id=50338891"
         }
+      ],
+      "news": [
+        {
+          "title": "Graham Dumpleton: Muru: looking inside the workers",
+          "url": "https://grahamdumpleton.me/posts/2026/11/muru-looking-inside-the-workers/",
+          "date": "2026-11-07",
+          "source": "Planet Python"
+        },
+        {
+          "title": "Peter Hoffmann: Stable URLs for 42,000 Huts and Peaks",
+          "url": "https://peter-hoffmann.com/2026/stable-urls-for-huts-and-peaks.html",
+          "date": "2026-11-07",
+          "source": "Planet Python"
+        },
+        {
+          "title": "Python Project Structure: How to Choose the Right Layout",
+          "url": "https://realpython.com/python-application-layouts/",
+          "date": "2026-11-07",
+          "source": "Real Python"
+        },
+        {
+          "title": "Managing Multiple Python Versions With pyenv",
+          "url": "https://realpython.com/intro-to-pyenv/",
+          "date": "2026-11-07",
+          "source": "Real Python"
+        },
+        {
+          "title": "Thonny: The Beginner-Friendly Python Editor",
+          "url": "https://realpython.com/python-thonny/",
+          "date": "2026-11-07",
+          "source": "Real Python"
+        },
+        {
+          "title": "Absolute vs Relative Imports in Python",
+          "url": "https://realpython.com/absolute-vs-relative-python-imports/",
+          "date": "2026-11-07",
+          "source": "Real Python"
+        },
+        {
+          "title": "Quiz: Managing Multiple Python Versions With pyenv",
+          "url": "https://realpython.com/quizzes/intro-to-pyenv/",
+          "date": "2026-11-07",
+          "source": "Real Python"
+        },
+        {
+          "title": "\"Michael Kennedy's Thoughts on Technology\": Catch the import. Name the culprit. Keep threads free: Introducing gilguard",
+          "url": "https://mkennedy.codes/posts/catch-the-import-name-the-culprit-keep-threads-free-introducing-gilguard/",
+          "date": "2026-11-06",
+          "source": "Planet Python"
+        }
       ]
     },
     "3d-printing": {
@@ -134,7 +184,7 @@
           "url": "https://github.com/OrcaSlicer/OrcaSlicer",
           "desc": "G-code generator for 3D printers (Bambu, Prusa, Voron, VzBot, RatRig, Creality, etc.)",
           "language": "C++",
-          "stars": 16363,
+          "stars": 16364,
           "created": "2022-07-16",
           "pushed": "2026-11-07"
         },
@@ -143,7 +193,7 @@
           "url": "https://github.com/makerspet/oomwoo",
           "desc": "Open-source vacuum robot cleaner",
           "language": "Python",
-          "stars": 13006,
+          "stars": 13007,
           "created": "2026-06-10",
           "pushed": "2026-11-05"
         },
@@ -161,7 +211,7 @@
           "url": "https://github.com/Ultimaker/Cura",
           "desc": "3D printer / slicing GUI built on top of the Uranium framework",
           "language": "Python",
-          "stars": 7074,
+          "stars": 7073,
           "created": "2014-06-16",
           "pushed": "2026-11-06"
         },
@@ -184,7 +234,57 @@
           "pushed": "2026-11-04"
         }
       ],
-      "hn": []
+      "hn": [],
+      "news": [
+        {
+          "title": "How Firefighters Use 3D Printing to Save Lives, Time and Money",
+          "url": "https://blog.prusa3d.com/how-firefighters-use-3d-printing-to-save-lives-time-and-money_138620/",
+          "date": "2026-10-30",
+          "source": "Prusa Blog"
+        },
+        {
+          "title": "Printing the Proof: How Prusament and 3D Printing Shape the CAIM1 Camera",
+          "url": "https://blog.prusa3d.com/printing-the-proof-how-prusament-and-3d-printing-shape-the-caim1-camera_139186/",
+          "date": "2026-10-29",
+          "source": "Prusa Blog"
+        },
+        {
+          "title": "Prusa Black Friday 2026 Is Here! Grab the Biggest Deals of the Year",
+          "url": "https://blog.prusa3d.com/prusa-black-friday-2026-is-here-grab-the-biggest-deals-of-the-year_138966/",
+          "date": "2026-10-22",
+          "source": "Prusa Blog"
+        },
+        {
+          "title": "400°C HT Hotend is out! Plus: New Materials and HighTemp Sheets for CORE One+/L+.",
+          "url": "https://blog.prusa3d.com/ht-hotend-is-out-plus-we-offer-new-materials-and-hightemp-sheets-for-core-one-l_138625/",
+          "date": "2026-10-21",
+          "source": "Prusa Blog"
+        },
+        {
+          "title": "Blender for 3D Printing: The 5-Minute Guide to STL Editing",
+          "url": "https://blog.prusa3d.com/blender-for-3d-printing-the-5-minute-guide-to-direct-mesh-editing_138255/",
+          "date": "2026-10-20",
+          "source": "Prusa Blog"
+        },
+        {
+          "title": "Prusament Pellets: Raw material batches for large-format 3D printing or small-scale polymer research & development",
+          "url": "https://blog.prusa3d.com/prusament-pellets-raw-material-batches-for-large-format-3d-printing-or-small-scale-polymer-research-development_138773/",
+          "date": "2026-10-13",
+          "source": "Prusa Blog"
+        },
+        {
+          "title": "Print colorful and glowing Halloween decorations with our spooky offer",
+          "url": "https://blog.prusa3d.com/get-ready-for-halloween-with-our-spooky-filament-offer_138639/",
+          "date": "2026-10-06",
+          "source": "Prusa Blog"
+        },
+        {
+          "title": "Factorio Has Arrived on Printables",
+          "url": "https://blog.prusa3d.com/factorio-has-arrived-on-printables_138519/",
+          "date": "2026-09-24",
+          "source": "Prusa Blog"
+        }
+      ]
     },
     "woodworking": {
       "repos": [
@@ -268,6 +368,56 @@
           "url": "https://portalworkers.com/blog/up-and-over-tool-chest/",
           "hn_url": "https://news.ycombinator.com/item?id=50398485"
         }
+      ],
+      "news": [
+        {
+          "title": "Get ‘The Essential Woodworker’ at the 2010 Price",
+          "url": "https://blog.lostartpress.com/2026/11/06/get-the-essential-woodworker-at-the-2010-price/",
+          "date": "2026-11-06",
+          "source": "Lost Art Press"
+        },
+        {
+          "title": "How to Make a Replacement Molding Plane Wedge",
+          "url": "https://woodandshop.com/make-a-replacement-molding-plane-wedge/",
+          "date": "2026-11-05",
+          "source": "Wood and Shop"
+        },
+        {
+          "title": "Ulster Folk Museum (Yes, There are Chairs)",
+          "url": "https://blog.lostartpress.com/2026/11/04/ulster-folk-museum-yes-there-are-chairs/",
+          "date": "2026-11-04",
+          "source": "Lost Art Press"
+        },
+        {
+          "title": "Revised Edition of ‘Make Fresh Milk Paint’ – What’s New",
+          "url": "https://blog.lostartpress.com/2026/11/02/revised-edition-of-make-fresh-milk-paint-whats-new/",
+          "date": "2026-11-02",
+          "source": "Lost Art Press"
+        },
+        {
+          "title": "Free Shipping All November",
+          "url": "https://blog.lostartpress.com/2026/11/01/free-shipping-all-november/",
+          "date": "2026-11-01",
+          "source": "Lost Art Press"
+        },
+        {
+          "title": "How to Connect a Wooden Vise to Your Workbench",
+          "url": "https://woodandshop.com/connect-wooden-vise-workbench-vise-garter/",
+          "date": "2026-10-29",
+          "source": "Wood and Shop"
+        },
+        {
+          "title": "10 Steps – Hand Planing for Beginners – Crash Course!",
+          "url": "https://woodandshop.com/10-steps-hand-planing-for-beginners/",
+          "date": "2026-10-22",
+          "source": "Wood and Shop"
+        },
+        {
+          "title": "A Tall Drink of a Cabinet",
+          "url": "https://blog.lostartpress.com/2026/10/13/a-tall-drink-of-a-cabinet/",
+          "date": "2026-10-13",
+          "source": "Lost Art Press"
+        }
       ]
     },
     "robotics": {
@@ -277,7 +427,7 @@
           "url": "https://github.com/lvgl/lvgl",
           "desc": "LVGL is a free, full-featured embedded UI library for devices from small MCUs to 3D-capable MPUs, enhanced by LVGL Pro, a professional editor and tooling.",
           "language": "C",
-          "stars": 25111,
+          "stars": 25110,
           "created": "2016-06-08",
           "pushed": "2026-11-06"
         },
@@ -331,7 +481,7 @@
           "url": "https://github.com/makerspet/oomwoo",
           "desc": "Open-source vacuum robot cleaner",
           "language": "Python",
-          "stars": 13006,
+          "stars": 13007,
           "created": "2026-06-10",
           "pushed": "2026-11-05"
         },
@@ -342,10 +492,91 @@
           "language": "Python",
           "stars": 9585,
           "created": "2014-05-09",
-          "pushed": "2026-10-16"
+          "pushed": "2026-11-07"
         }
       ],
-      "hn": []
+      "hn": [
+        {
+          "title": "Show HN: Marelleo, an open-source story box I built for my kids using ESP32",
+          "points": 195,
+          "url": "https://zebra.rodeo/en/blog/marelleo/",
+          "hn_url": "https://news.ycombinator.com/item?id=50260753"
+        },
+        {
+          "title": "Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents",
+          "points": 80,
+          "url": "https://news.ycombinator.com/item?id=50291116",
+          "hn_url": "https://news.ycombinator.com/item?id=50291116"
+        },
+        {
+          "title": "Show HN: I rebuilt Kubernetes for ESP32 microcontrollers",
+          "points": 53,
+          "url": "https://github.com/arterialist/kube32",
+          "hn_url": "https://news.ycombinator.com/item?id=50291812"
+        },
+        {
+          "title": "Show HN: Live speech-to-text on an ESP32-P4 microcontroller, no cloud",
+          "points": 16,
+          "url": "https://github.com/BoumedineBillal/esp32-pie-asr",
+          "hn_url": "https://news.ycombinator.com/item?id=50253150"
+        },
+        {
+          "title": "ESP32Authenticator – a password manager and FIDO2 key on an e-ink reader",
+          "points": 6,
+          "url": "https://github.com/merlokk/ESP32Authenticator",
+          "hn_url": "https://news.ycombinator.com/item?id=50385074"
+        }
+      ],
+      "news": [
+        {
+          "title": "Building a Homemade Induction Soldering Iron",
+          "url": "https://hackaday.com/2026/11/07/building-a-homemade-induction-soldering-iron/",
+          "date": "2026-11-07",
+          "source": "Hackaday"
+        },
+        {
+          "title": "Supercon 2026: Streaming Live",
+          "url": "https://hackaday.com/2026/11/07/supercon-2026-streaming-live/",
+          "date": "2026-11-07",
+          "source": "Hackaday"
+        },
+        {
+          "title": "Repairing a Polaroid 630 SL Lightmixer Instant Camera",
+          "url": "https://hackaday.com/2026/11/07/repairing-a-polaroid-630-sl-lightmixer-instant-camera/",
+          "date": "2026-11-07",
+          "source": "Hackaday"
+        },
+        {
+          "title": "Active Antenna Runs on a Single Lithium-Ion Cell",
+          "url": "https://hackaday.com/2026/11/07/active-antenna-runs-on-a-single-lithium-ion-cell/",
+          "date": "2026-11-07",
+          "source": "Hackaday"
+        },
+        {
+          "title": "The Hidden Microcontroller Inside a LoRa chip",
+          "url": "https://hackaday.com/2026/11/07/the-hidden-microcontroller-inside-a-lora-chip/",
+          "date": "2026-11-07",
+          "source": "Hackaday"
+        },
+        {
+          "title": "A Bike-Friendly, DIY Action Cam Stereo Microphone",
+          "url": "https://hackaday.com/2026/11/07/a-bike-friendly-diy-action-cam-stereo-microphone/",
+          "date": "2026-11-07",
+          "source": "Hackaday"
+        },
+        {
+          "title": "Automate That Halloween Treating",
+          "url": "https://hackaday.com/2026/11/06/automate-that-halloween-treating/",
+          "date": "2026-11-07",
+          "source": "Hackaday"
+        },
+        {
+          "title": "Unveiled at ROSCon: the easiest way to bring Arduino I/O into ROS 2",
+          "url": "https://blog.arduino.cc/2026/11/06/unveiled-at-roscon-the-easiest-way-to-bring-arduino-i-o-into-ros-2/",
+          "date": "2026-11-06",
+          "source": "Arduino Blog"
+        }
+      ]
     },
     "data": {
       "repos": [
@@ -354,7 +585,7 @@
           "url": "https://github.com/d3/d3",
           "desc": "Bring data to life with SVG, Canvas and HTML. :bar_chart::chart_with_upwards_trend::tada:",
           "language": "Shell",
-          "stars": 113876,
+          "stars": 113877,
           "created": "2010-09-27",
           "pushed": "2026-11-03"
         },
@@ -363,7 +594,7 @@
           "url": "https://github.com/netdata/netdata",
           "desc": "The fastest path to AI-powered full stack observability, even for lean teams.",
           "language": "Go",
-          "stars": 81301,
+          "stars": 81300,
           "created": "2013-06-17",
           "pushed": "2026-11-07"
         },
@@ -381,7 +612,7 @@
           "url": "https://github.com/apache/superset",
           "desc": "Apache Superset is a Data Visualization and Data Exploration Platform",
           "language": "Python",
-          "stars": 75449,
+          "stars": 75448,
           "created": "2015-07-21",
           "pushed": "2026-11-07"
         },
@@ -417,12 +648,81 @@
           "url": "https://github.com/pandas-dev/pandas",
           "desc": "Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures similar to R data.frame objects, statistical functions, and much more",
           "language": "Python",
-          "stars": 50520,
+          "stars": 50521,
           "created": "2010-08-24",
           "pushed": "2026-11-07"
         }
       ],
-      "hn": []
+      "hn": [
+        {
+          "title": "WorkOS reports security breach",
+          "points": 81,
+          "url": "https://news.ycombinator.com/item?id=50345712",
+          "hn_url": "https://news.ycombinator.com/item?id=50345712"
+        },
+        {
+          "title": "Only 0.5% of 383,000 CVEs are ever exploited in real-world attacks",
+          "points": 16,
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/11/02/exploited-vulnerabilities-common-data-driven-analysis-real-world-attacks/",
+          "hn_url": "https://news.ycombinator.com/item?id=50353072"
+        },
+        {
+          "title": "Little evidence that data centers cause widespread ground warming",
+          "points": 6,
+          "url": "https://phys.org/news/2026-11-satellite-analysis-evidence-centers-widespread.html",
+          "hn_url": "https://news.ycombinator.com/item?id=50371028"
+        }
+      ],
+      "news": [
+        {
+          "title": "Free AI and Data Courses with 365 Data Science: 100% Unlimited Access until Nov 20",
+          "url": "https://www.kdnuggets.com/2026/10/365careers/free-ai-and-data-courses-with-365-data-science-100-unlimited-access-until-nov-20",
+          "date": "2026-11-06",
+          "source": "KDnuggets"
+        },
+        {
+          "title": "How to Give Your AI Agent Memory",
+          "url": "https://www.kdnuggets.com/how-to-give-your-ai-agent-memory",
+          "date": "2026-11-06",
+          "source": "KDnuggets"
+        },
+        {
+          "title": "Top 7 Python Libraries for Time Series Analysis and Modeling",
+          "url": "https://www.kdnuggets.com/top-7-python-libraries-for-time-series-analysis-and-modeling",
+          "date": "2026-11-06",
+          "source": "KDnuggets"
+        },
+        {
+          "title": "Web Scraping 7,000 Pages in 3 Minutes with Python and Olostep",
+          "url": "https://www.kdnuggets.com/web-scraping-7000-pages-in-3-minutes-with-python-and-olostep",
+          "date": "2026-11-05",
+          "source": "KDnuggets"
+        },
+        {
+          "title": "What I Did with Hermes Agent, Ollama & Local Models",
+          "url": "https://www.kdnuggets.com/what-i-did-with-hermes-agent-ollama-local-models",
+          "date": "2026-11-05",
+          "source": "KDnuggets"
+        },
+        {
+          "title": "The Data Science Interview in 2026: What’s Changed and How to Prepare",
+          "url": "https://www.kdnuggets.com/the-data-science-interview-in-2026-whats-changed-and-how-to-prepare",
+          "date": "2026-11-04",
+          "source": "KDnuggets"
+        },
+        {
+          "title": "7 Small Specialist Models That Beat Giant LLMs at One Job",
+          "url": "https://www.kdnuggets.com/7-small-specialist-models-that-beat-giant-llms-at-one-job",
+          "date": "2026-11-04",
+          "source": "KDnuggets"
+        },
+        {
+          "title": "Using LLM Summarization in Your Scikit-Learn Pipelines with Scikit-LLM",
+          "url": "https://www.kdnuggets.com/using-llm-summarization-in-your-scikit-learn-pipelines-with-scikit-llm",
+          "date": "2026-11-03",
+          "source": "KDnuggets"
+        }
+      ]
     },
     "board-games": {
       "repos": [
@@ -467,7 +767,7 @@
           "url": "https://github.com/pokerth/pokerth",
           "desc": "PokerTH is a poker game written in C++/Qt.",
           "language": "C++",
-          "stars": 698,
+          "stars": 699,
           "created": "2012-05-10",
           "pushed": "2026-11-02"
         },
@@ -499,7 +799,70 @@
           "pushed": "2026-10-24"
         }
       ],
-      "hn": []
+      "hn": [
+        {
+          "title": "Ask HN: Who is hiring? (November 2026)",
+          "points": 251,
+          "url": "https://news.ycombinator.com/item?id=50338728",
+          "hn_url": "https://news.ycombinator.com/item?id=50338728"
+        },
+        {
+          "title": "Show HN: Jointter – A daily word puzzle using dots and lines",
+          "points": 15,
+          "url": "https://www.jointter.com/",
+          "hn_url": "https://news.ycombinator.com/item?id=50317548"
+        }
+      ],
+      "news": [
+        {
+          "title": "Deckers Review",
+          "url": "https://www.boardgamequest.com/deckers-review/",
+          "date": "2026-11-06",
+          "source": "Board Game Quest"
+        },
+        {
+          "title": "Not Alone: Remastered Edition Review",
+          "url": "https://www.boardgamequest.com/not-alone-remastered-edition-review/",
+          "date": "2026-11-05",
+          "source": "Board Game Quest"
+        },
+        {
+          "title": "Football U Review",
+          "url": "https://www.boardgamequest.com/football-u-review/",
+          "date": "2026-11-04",
+          "source": "Board Game Quest"
+        },
+        {
+          "title": "Into the Machine Review",
+          "url": "https://www.boardgamequest.com/into-the-machine-review/",
+          "date": "2026-11-03",
+          "source": "Board Game Quest"
+        },
+        {
+          "title": "Kano Review",
+          "url": "https://www.boardgamequest.com/kano-review/",
+          "date": "2026-11-02",
+          "source": "Board Game Quest"
+        },
+        {
+          "title": "Crowdfunding Campaigns of the Week – 11/2/26",
+          "url": "https://www.boardgamequest.com/crowdfunding-campaigns-of-the-week-11-2-26/",
+          "date": "2026-11-02",
+          "source": "Board Game Quest"
+        },
+        {
+          "title": "Enchanted Ivy Review",
+          "url": "https://www.boardgamequest.com/enchanted-ivy-review/",
+          "date": "2026-10-30",
+          "source": "Board Game Quest"
+        },
+        {
+          "title": "Honeypot Review",
+          "url": "https://www.boardgamequest.com/honeypot-review/",
+          "date": "2026-10-29",
+          "source": "Board Game Quest"
+        }
+      ]
     }
   }
 }
