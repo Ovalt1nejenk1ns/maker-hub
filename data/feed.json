@@ -1,0 +1,236 @@
+{
+  "updated": "2026-11-07",
+  "topics": {
+    "python": {
+      "repos": [
+        {
+          "name": "apache/superset",
+          "url": "https://github.com/apache/superset",
+          "desc": "Apache Superset is a Data Visualization and Data Exploration Platform",
+          "language": "Python",
+          "stars": 75449,
+          "created": "2015-07-21",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "scikit-learn/scikit-learn",
+          "url": "https://github.com/scikit-learn/scikit-learn",
+          "desc": "scikit-learn: machine learning in Python",
+          "language": "Python",
+          "stars": 68080,
+          "created": "2010-08-17",
+          "pushed": "2026-11-06"
+        },
+        {
+          "name": "sansan0/TrendRadar",
+          "url": "https://github.com/sansan0/TrendRadar",
+          "desc": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI 自然语言对话分析、情感洞察与趋势预测等。支持 Docker ，数据本地/云端自持。集成微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 等渠道智能推送。",
+          "language": "Python",
+          "stars": 63517,
+          "created": "2025-04-28",
+          "pushed": "2026-11-05"
+        },
+        {
+          "name": "K-Dense-AI/scientific-agent-skills",
+          "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+          "desc": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
+          "language": "Python",
+          "stars": 56395,
+          "created": "2025-10-19",
+          "pushed": "2026-11-02"
+        },
+        {
+          "name": "Gathin23/cleanyourtv",
+          "url": "https://github.com/Gathin23/cleanyourtv",
+          "desc": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
+          "language": "Python",
+          "stars": 53824,
+          "created": "2026-10-17",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "pandas-dev/pandas",
+          "url": "https://github.com/pandas-dev/pandas",
+          "desc": "Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures similar to R data.frame objects, statistical functions, and much more",
+          "language": "Python",
+          "stars": 50518,
+          "created": "2010-08-24",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "metabase/metabase",
+          "url": "https://github.com/metabase/metabase",
+          "desc": "The easy-to-use open source Business Intelligence and Embedded Analytics tool that lets everyone work with data :bar_chart:",
+          "language": "Clojure",
+          "stars": 50223,
+          "created": "2015-02-02",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "streamlit/streamlit",
+          "url": "https://github.com/streamlit/streamlit",
+          "desc": "Streamlit — A faster way to build and share data apps.",
+          "language": "Python",
+          "stars": 46257,
+          "created": "2019-08-24",
+          "pushed": "2026-11-07"
+        }
+      ],
+      "hn": []
+    },
+    "3d-printing": {
+      "repos": [
+        {
+          "name": "FreeCAD/FreeCAD",
+          "url": "https://github.com/FreeCAD/FreeCAD",
+          "desc": "Official source code of FreeCAD, a free and opensource multiplatform 3D parametric modeler.",
+          "language": "C++",
+          "stars": 35226,
+          "created": "2012-09-09",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "MarlinFirmware/Marlin",
+          "url": "https://github.com/MarlinFirmware/Marlin",
+          "desc": "Marlin is a firmware for RepRap 3D printers optimized for both 8 and 32 bit microcontrollers.  Marlin supports all common platforms.   Many commercial 3D printers come with Marlin installed.  Check with your vendor if you need source code for your specific machine.",
+          "language": "C++",
+          "stars": 17652,
+          "created": "2011-08-13",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "OrcaSlicer/OrcaSlicer",
+          "url": "https://github.com/OrcaSlicer/OrcaSlicer",
+          "desc": "G-code generator for 3D printers (Bambu, Prusa, Voron, VzBot, RatRig, Creality, etc.)",
+          "language": "C++",
+          "stars": 16363,
+          "created": "2022-07-16",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "makerspet/oomwoo",
+          "url": "https://github.com/makerspet/oomwoo",
+          "desc": "Open-source vacuum robot cleaner",
+          "language": "Python",
+          "stars": 13006,
+          "created": "2026-06-10",
+          "pushed": "2026-11-05"
+        },
+        {
+          "name": "openscad/openscad",
+          "url": "https://github.com/openscad/openscad",
+          "desc": "OpenSCAD - The Programmers Solid 3D CAD Modeller",
+          "language": "C++",
+          "stars": 10609,
+          "created": "2010-11-03",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "Ultimaker/Cura",
+          "url": "https://github.com/Ultimaker/Cura",
+          "desc": "3D printer / slicing GUI built on top of the Uranium framework",
+          "language": "Python",
+          "stars": 7074,
+          "created": "2014-06-16",
+          "pushed": "2026-11-06"
+        },
+        {
+          "name": "cnr-isti-vclab/meshlab",
+          "url": "https://github.com/cnr-isti-vclab/meshlab",
+          "desc": "The open source mesh processing system",
+          "language": "C++",
+          "stars": 5904,
+          "created": "2016-11-07",
+          "pushed": "2026-11-02"
+        },
+        {
+          "name": "dw-0/kiauh",
+          "url": "https://github.com/dw-0/kiauh",
+          "desc": "Klipper Installation And Update Helper",
+          "language": "Python",
+          "stars": 4585,
+          "created": "2020-05-22",
+          "pushed": "2026-11-04"
+        }
+      ],
+      "hn": []
+    },
+    "woodworking": {
+      "repos": [
+        {
+          "name": "cncjs/cncjs",
+          "url": "https://github.com/cncjs/cncjs",
+          "desc": "A web-based interface for CNC milling controller running Grbl, Marlin, Smoothieware, or TinyG.",
+          "language": "JavaScript",
+          "stars": 2666,
+          "created": "2015-08-21",
+          "pushed": "2026-10-31"
+        },
+        {
+          "name": "winder/Universal-G-Code-Sender",
+          "url": "https://github.com/winder/Universal-G-Code-Sender",
+          "desc": "A cross-platform G-Code sender for GRBL, Smoothieware, TinyG and G2core.",
+          "language": "Java",
+          "stars": 2283,
+          "created": "2012-06-26",
+          "pushed": "2026-11-05"
+        },
+        {
+          "name": "microsoft/maker.js",
+          "url": "https://github.com/microsoft/maker.js",
+          "desc": "📐⚙ 2D vector line drawing and shape modeling for CNC and laser cutters.",
+          "language": "TypeScript",
+          "stars": 2047,
+          "created": "2015-05-08",
+          "pushed": "2026-10-29"
+        },
+        {
+          "name": "luc-github/ESP3D",
+          "url": "https://github.com/luc-github/ESP3D",
+          "desc": "FW for ESP8266/ESP8285/ESP32 used with 3D printer",
+          "language": "C",
+          "stars": 2004,
+          "created": "2015-04-16",
+          "pushed": "2026-11-05"
+        },
+        {
+          "name": "GridSpace/grid-apps",
+          "url": "https://github.com/GridSpace/grid-apps",
+          "desc": "Browser-based Slicer for 3D Printing, CAM, Laser (Kiri:Moto) and mesh editor (Mesh:Tool)",
+          "language": "JavaScript",
+          "stars": 930,
+          "created": "2017-04-18",
+          "pushed": "2026-10-22"
+        },
+        {
+          "name": "svenhb/GRBL-Plotter",
+          "url": "https://github.com/svenhb/GRBL-Plotter",
+          "desc": "A GCode sender (not only for lasers or plotters) for up to two GRBL controller. SVG, DXF, HPGL import. 6 axis DRO.",
+          "language": "C#",
+          "stars": 908,
+          "created": "2016-06-16",
+          "pushed": "2026-10-20"
+        },
+        {
+          "name": "lairdubois/lairdubois-opencutlist-sketchup-extension",
+          "url": "https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension",
+          "desc": "OpenCutList is a SketchUp Extension for automating the generation of cut lists for woodworking projects.",
+          "language": "Ruby",
+          "stars": 623,
+          "created": "2016-12-03",
+          "pushed": "2026-11-07"
+        },
+        {
+          "name": "OpenTS-Developers/OpenTS",
+          "url": "https://github.com/OpenTS-Developers/OpenTS",
+          "desc": "A modern and faithful open source rebuild of the Tiberian Sun engine.",
+          "language": "C++",
+          "stars": 617,
+          "created": "2026-06-28",
+          "pushed": "2026-11-04"
+        }
+      ],
+      "hn": []
+    }
+  }
+}
