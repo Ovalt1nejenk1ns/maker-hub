@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block body %}
+<section class="hero">
+  <h1>{{ cfg.SITE_TITLE }}</h1>
+  <p>{{ cfg.SITE_TAGLINE }}</p>
+</section>
+<div class="grid">
+{% for k, c in topics.items() %}
+  {% set t = feed.topics[k] %}
+  <section class="panel">
+    <h2>{{ c.icon }} <a href="{{ k }}/index.html">{{ c.label }}</a></h2>
+    <p class="muted">{{ c.blurb }}</p>
+    <ol class="mini">
+    {% for r in t.repos[:4] %}
+      <li><a href="{{ r.url }}">{{ r.name }}</a> <span class="stars">★ {{ '{:,}'.format(r.stars) }}</span></li>
+    {% else %}<li class="muted">No data yet.</li>{% endfor %}
+    </ol>
+    <a class="more" href="{{ k }}/index.html">See all →</a>
+  </section>
+{% endfor %}
+</div>
+{% endblock %}

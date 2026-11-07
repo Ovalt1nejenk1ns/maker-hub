@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ tcfg.label }} · {{ cfg.SITE_TITLE }}{% endblock %}
+{% block body %}
+<h1>{{ tcfg.icon }} {{ tcfg.label }}</h1>
+<p class="muted">{{ tcfg.blurb }} Repos active in the last {{ cfg.LOOKBACK_DAYS }} days, ranked by stars.</p>
+<h2>GitHub</h2>
+<div class="cards">
+{% for r in t.repos %}
+  <article class="card">
+    <h3><a href="{{ r.url }}">{{ r.name }}</a></h3>
+    <p>{{ r.desc or 'No description.' }}</p>
+    <p class="meta"><span class="stars">★ {{ '{:,}'.format(r.stars) }}</span> · {{ r.language }} · created {{ r.created }}{% if r.created >= (updated[:8] ~ '01') %} <span class="tag">new</span>{% endif %}</p>
+  </article>
+{% else %}<p class="muted">No repos collected yet.</p>{% endfor %}
+</div>
+<h2>Hacker News</h2>
+{% if t.hn %}
+<ul class="hn">
+{% for s in t.hn %}<li><a href="{{ s.url }}">{{ s.title }}</a> <span class="muted">{{ s.points }} pts · <a href="{{ s.hn_url }}">discussion</a></span></li>{% endfor %}
+</ul>
+{% else %}<p class="muted">No Hacker News stories in the last two weeks (or the fetch failed — the next run will retry).</p>{% endif %}
+{% endblock %}

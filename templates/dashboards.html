@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Dashboards · {{ cfg.SITE_TITLE }}{% endblock %}
+{% block body %}
+<h1>📊 Dashboards</h1>
+<p class="muted">Charts are drawn by Python at build time (plain SVG, no JavaScript). The trend lines appear once a repo has two or more weekly snapshots in <code>data/history.csv</code>.</p>
+{% for k, c in topics.items() %}
+<section class="panel wide">
+  <h2>{{ c.icon }} {{ c.label }}</h2>
+  <h3>Stars — top repos this window</h3>{{ dash[k].bars|safe }}
+  {% if dash[k].langs %}<h3>Languages among top repos</h3>{{ dash[k].langs|safe }}{% endif %}
+  <h3>Star growth over time</h3>
+  {% if dash[k].trend %}{{ dash[k].trend|safe }}
+    <p class="legend">{% for n in dash[k].legend %}<span class="key s{{ loop.index0 % 6 }}">{{ n }}</span>{% endfor %}</p>
+  {% else %}<p class="muted">Collecting data — {{ dash[k].snapshots }} snapshot{{ '' if dash[k].snapshots == 1 else 's' }} so far, need 2+ (one per weekly run).</p>{% endif %}
+</section>
+{% endfor %}
+{% endblock %}
