@@ -3,7 +3,9 @@
 Uses only the standard library. Set GITHUB_TOKEN to raise the API rate limit
 (GitHub Actions provides one automatically).
 """
-import csv, json, os, sys, urllib.parse, urllib.request
+import csv, json, os, re, sys, urllib.parse, urllib.request
+import xml.etree.ElementTree as ET
+from email.utils import parsedate_to_datetime
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
@@ -66,6 +68,50 @@ def hn_stories(query, since_ts):
     } for h in sorted(hits, key=lambda h: h["points"], reverse=True)]
 
 
+def _text(el, *names):
+    for n in names:
+        found = el.find(n)
+        if found is not None and (found.text or "").strip():
+            return found.text.strip()
+    return ""
+
+
+def _parse_date(raw):
+    try:
+        return parsedate_to_datetime(raw).astimezone(timezone.utc).date().isoformat()
+    except Exception:
+        return raw[:10] if re.match(r"\d{4}-\d{2}-\d{2}", raw or "") else ""
+
+
+def fetch_news(feeds, limit=8):
+    """Parse RSS 2.0 and Atom feeds with the stdlib. Returns None if every feed failed."""
+    items, ok = [], False
+    atom = "{http://www.w3.org/2005/Atom}"
+    for source, url in feeds:
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "maker-hub-collector"})
+            with urllib.request.urlopen(req, timeout=30) as r:
+                root = ET.fromstring(r.read())
+        except Exception as e:
+            print(f"  feed failed ({source}): {e}", file=sys.stderr)
+            continue
+        ok = True
+        for it in root.iter("item"):                     # RSS
+            items.append({"title": _text(it, "title"), "url": _text(it, "link"),
+                          "date": _parse_date(_text(it, "pubDate")), "source": source})
+        for en in root.iter(atom + "entry"):             # Atom
+            link = en.find(atom + "link")
+            items.append({"title": _text(en, atom + "title"),
+                          "url": link.get("href") if link is not None else "",
+                          "date": _parse_date(_text(en, atom + "published", atom + "updated")),
+                          "source": source})
+    if not ok:
+        return None
+    items = [i for i in items if i["title"] and i["url"].startswith("http")]
+    items.sort(key=lambda i: i["date"], reverse=True)
+    return items[:limit]
+
+
 def main():
     today = date.today()
     since = (today - timedelta(days=config.LOOKBACK_DAYS)).isoformat()
@@ -82,10 +128,12 @@ def main():
         print(f"{key}…")
         repos = github_repos(cfg, since)
         hn = hn_stories(cfg["hn_query"], since_ts)
+        news = fetch_news(cfg.get("news_feeds", []))
         prev = old.get("topics", {}).get(key, {})
         feed["topics"][key] = {
             "repos": repos or prev.get("repos", []),   # keep last good data on failure
             "hn": hn if hn is not None else prev.get("hn", []),
+            "news": news if news is not None else prev.get("news", []),
         }
         snapshots += [(today.isoformat(), key, r["name"], r["stars"]) for r in repos]
 

@@ -10,12 +10,13 @@
   <section class="panel">
     <h2>{{ c.icon }} <a href="{{ k }}/index.html">{{ c.label }}</a></h2>
     <p class="muted">{{ c.blurb }}</p>
+    {% if t.news %}<p class="latest"><span class="muted">Latest:</span> <a href="{{ t.news[0].url }}">{{ t.news[0].title }}</a></p>{% endif %}
     <ol class="mini">
     {% for r in t.repos[:4] %}
       <li><a href="{{ r.url }}">{{ r.name }}</a> <span class="stars">★ {{ '{:,}'.format(r.stars) }}</span></li>
     {% else %}<li class="muted">No data yet.</li>{% endfor %}
     </ol>
-    <a class="more" href="{{ k }}/index.html">See all →</a>
+    <a class="more" href="{{ k }}/index.html">See all →</a> · <a class="more" href="{{ k }}/cheatsheet/index.html">Cheat sheet</a>
   </section>
 {% endfor %}
 </div>

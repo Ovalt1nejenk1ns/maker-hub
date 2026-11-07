@@ -1,0 +1,27 @@
+[
+  {
+    "group": "Reading",
+    "items": [
+      {
+        "title": "Lost Art Press blog",
+        "url": "https://blog.lostartpress.com/",
+        "note": "Hand-tool and traditional furniture writing."
+      },
+      {
+        "title": "Wood and Shop",
+        "url": "https://woodandshop.com/",
+        "note": "Hand-tool how-tos and shop-built jigs."
+      },
+      {
+        "title": "The Wood Database",
+        "url": "https://www.wood-database.com/",
+        "note": "Look up species: hardness, workability, toxicity, typical uses."
+      },
+      {
+        "title": "Fine Woodworking",
+        "url": "https://www.finewoodworking.com/",
+        "note": "Magazine with techniques, tool reviews and plans (some content is paywalled)."
+      }
+    ]
+  }
+]

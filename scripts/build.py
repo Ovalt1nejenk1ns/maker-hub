@@ -1,5 +1,6 @@
 """data/*.json|csv + templates/ -> site/ (plain static HTML). Run: python scripts/build.py"""
 import csv, json, shutil, sys
+import markdown
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -41,7 +42,17 @@ def main():
 
     for key, cfg in config.TOPICS.items():
         t = feed["topics"][key]
-        render("topic.html", f"{key}/index.html", "../", key=key, t=t, tcfg=cfg, **common)
+        res_path = ROOT / f"data/resources/{key}.json"
+        resources = json.loads(res_path.read_text()) if res_path.exists() else []
+        sheet_path = ROOT / f"content/cheatsheets/{key}.md"
+        has_sheet = sheet_path.exists()
+        render("topic.html", f"{key}/index.html", "../", key=key, t=t, tcfg=cfg,
+               resources=resources, has_sheet=has_sheet, **common)
+        if has_sheet:
+            html = markdown.markdown(sheet_path.read_text(encoding="utf-8"),
+                                     extensions=["tables", "fenced_code"])
+            render("cheatsheet.html", f"{key}/cheatsheet/index.html", "../../",
+                   key=key, tcfg=cfg, body=html, **common)
 
     dash = {}
     for key, cfg in config.TOPICS.items():

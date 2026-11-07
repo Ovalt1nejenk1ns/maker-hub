@@ -1,0 +1,32 @@
+[
+  {
+    "group": "Find & learn games",
+    "items": [
+      {
+        "title": "BoardGameGeek",
+        "url": "https://boardgamegeek.com/",
+        "note": "The main database: rankings, rulebooks, forums and weight ratings."
+      },
+      {
+        "title": "Board Game Arena",
+        "url": "https://en.boardgamearena.com/",
+        "note": "Play and learn many games online for free."
+      },
+      {
+        "title": "Board Game Quest",
+        "url": "https://boardgamequest.com/",
+        "note": "Reviews and news."
+      },
+      {
+        "title": "Meeple Mountain",
+        "url": "https://www.meeplemountain.com/",
+        "note": "Reviews, news and humor."
+      },
+      {
+        "title": "Shut Up & Sit Down",
+        "url": "https://www.shutupandsitdown.com/",
+        "note": "Reviews and recommendations."
+      }
+    ]
+  }
+]

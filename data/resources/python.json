@@ -1,0 +1,47 @@
+[
+  {
+    "group": "Learn",
+    "items": [
+      {
+        "title": "The Python Tutorial",
+        "url": "https://docs.python.org/3/tutorial/",
+        "note": "Official, and the best place to learn the language itself."
+      },
+      {
+        "title": "Automate the Boring Stuff",
+        "url": "https://automatetheboringstuff.com/",
+        "note": "Free book; practical scripting projects."
+      },
+      {
+        "title": "Real Python",
+        "url": "https://realpython.com/",
+        "note": "In-depth tutorials; a good next step after the basics."
+      },
+      {
+        "title": "Python Tutor",
+        "url": "https://pythontutor.com/",
+        "note": "Step through code visually to see how variables and the call stack change."
+      },
+      {
+        "title": "Exercism: Python track",
+        "url": "https://exercism.org/tracks/python",
+        "note": "Free exercises with mentor-style feedback."
+      }
+    ]
+  },
+  {
+    "group": "Reference",
+    "items": [
+      {
+        "title": "Standard library docs",
+        "url": "https://docs.python.org/3/library/",
+        "note": "Browse here before installing a package; there's often a module already."
+      },
+      {
+        "title": "PEP 8 style guide",
+        "url": "https://peps.python.org/pep-0008/",
+        "note": "The naming and formatting conventions most Python code follows."
+      }
+    ]
+  }
+]
