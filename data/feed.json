@@ -17,7 +17,7 @@
           "url": "https://github.com/scikit-learn/scikit-learn",
           "desc": "scikit-learn: machine learning in Python",
           "language": "Python",
-          "stars": 68080,
+          "stars": 68081,
           "created": "2010-08-17",
           "pushed": "2026-11-06"
         },
@@ -35,7 +35,7 @@
           "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
           "desc": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
           "language": "Python",
-          "stars": 56395,
+          "stars": 56394,
           "created": "2025-10-19",
           "pushed": "2026-11-02"
         },
@@ -44,7 +44,7 @@
           "url": "https://github.com/Gathin23/cleanyourtv",
           "desc": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
           "language": "Python",
-          "stars": 53824,
+          "stars": 53839,
           "created": "2026-10-17",
           "pushed": "2026-11-07"
         },
@@ -53,7 +53,7 @@
           "url": "https://github.com/pandas-dev/pandas",
           "desc": "Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures similar to R data.frame objects, statistical functions, and much more",
           "language": "Python",
-          "stars": 50518,
+          "stars": 50520,
           "created": "2010-08-24",
           "pushed": "2026-11-07"
         },
@@ -71,12 +71,43 @@
           "url": "https://github.com/streamlit/streamlit",
           "desc": "Streamlit — A faster way to build and share data apps.",
           "language": "Python",
-          "stars": 46257,
+          "stars": 46261,
           "created": "2019-08-24",
           "pushed": "2026-11-07"
         }
       ],
-      "hn": []
+      "hn": [
+        {
+          "title": "Python's experimental JIT to be removed",
+          "points": 580,
+          "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
+          "hn_url": "https://news.ycombinator.com/item?id=50257419"
+        },
+        {
+          "title": "Python on My Wrist",
+          "points": 95,
+          "url": "https://tildeweb.nl/~michiel/python-on-my-wrist.html",
+          "hn_url": "https://news.ycombinator.com/item?id=50255573"
+        },
+        {
+          "title": "Much Ado About None: Sentinel Values in Python",
+          "points": 78,
+          "url": "https://florianwilhelm.info/2026/10/sentinel_values/",
+          "hn_url": "https://news.ycombinator.com/item?id=50297068"
+        },
+        {
+          "title": "PyLings: Solve Exercises and Learn Python",
+          "points": 52,
+          "url": "https://github.com/thesayfulla/pylings",
+          "hn_url": "https://news.ycombinator.com/item?id=50394977"
+        },
+        {
+          "title": "Show HN: PyWolf3D, a wolfenstein3D clone written from scratch in Python",
+          "points": 31,
+          "url": "https://github.com/atifcodesalot/pyWolf3D",
+          "hn_url": "https://news.ycombinator.com/item?id=50338891"
+        }
+      ]
     },
     "3d-printing": {
       "repos": [
@@ -139,7 +170,7 @@
           "url": "https://github.com/cnr-isti-vclab/meshlab",
           "desc": "The open source mesh processing system",
           "language": "C++",
-          "stars": 5904,
+          "stars": 5905,
           "created": "2016-11-07",
           "pushed": "2026-11-02"
         },
@@ -230,7 +261,14 @@
           "pushed": "2026-11-04"
         }
       ],
-      "hn": []
+      "hn": [
+        {
+          "title": "AI-supported woodworking: Building an up-and-over tool chest with a clever hinge",
+          "points": 8,
+          "url": "https://portalworkers.com/blog/up-and-over-tool-chest/",
+          "hn_url": "https://news.ycombinator.com/item?id=50398485"
+        }
+      ]
     }
   }
 }
