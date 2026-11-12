@@ -97,15 +97,16 @@ def main():
 
     for key, cfg in config.TOPICS.items():
         t = feed["topics"][key]
-        resources = load_json(f"data/resources/{key}.json", [])
-        ideas = load_json(f"content/ideas/{key}.json", [])
-        adjacent = load_json(f"content/adjacent/{key}.json", [])
-        has_sheet = (ROOT / f"content/cheatsheets/{key}.md").exists()
-        quickref = md(f"content/quickref/{key}.md")
-        tips = [{"t": x, "s": label[key]} for x in all_tips.get(key, [])]
+        res_path = ROOT / f"data/resources/{key}.json"
+        resources = json.loads(res_path.read_text()) if res_path.exists() else []
+        sheet_path = ROOT / f"content/cheatsheets/{key}.md"
+        has_sheet = sheet_path.exists()
+        qr_path = ROOT / f"content/quickref/{key}.md"
+        quickref = (markdown.markdown(qr_path.read_text(encoding="utf-8"),
+                                      extensions=["tables", "fenced_code"])
+                    if qr_path.exists() else "")
         render("topic.html", f"{key}/index.html", "../", key=key, t=t, tcfg=cfg,
-               resources=resources, has_sheet=has_sheet, quickref=quickref,
-               ideas=ideas, adjacent=adjacent, **{**common, "page_tips": tips or site_tips})
+               resources=resources, has_sheet=has_sheet, quickref=quickref, **common)
         if has_sheet:
             render("cheatsheet.html", f"{key}/cheatsheet/index.html", "../../",
                    key=key, tcfg=cfg, body=md(f"content/cheatsheets/{key}.md"),

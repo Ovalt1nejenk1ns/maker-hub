@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09",
+  "updated": "2026-11-12",
   "topics": {
     "python": {
       "repos": [
@@ -8,25 +8,25 @@
           "url": "https://github.com/apache/superset",
           "desc": "Apache Superset is a Data Visualization and Data Exploration Platform",
           "language": "Python",
-          "stars": 75455,
+          "stars": 75482,
           "created": "2015-07-21",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-12"
         },
         {
           "name": "scikit-learn/scikit-learn",
           "url": "https://github.com/scikit-learn/scikit-learn",
           "desc": "scikit-learn: machine learning in Python",
           "language": "Python",
-          "stars": 68114,
+          "stars": 68145,
           "created": "2010-08-17",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-11"
         },
         {
           "name": "sansan0/TrendRadar",
           "url": "https://github.com/sansan0/TrendRadar",
           "desc": "⭐AI-driven public opinion & trend monitor with multi-platform aggregation, RSS, and smart alerts.🎯 告别信息过载，你的 AI 舆情监控助手与热点筛选工具！聚合多平台热点 +  RSS 订阅，支持关键词精准筛选。AI 智能筛选新闻 + AI 翻译 +  AI 分析简报直推手机，也支持接入 MCP 架构，赋能 AI 自然语言对话分析、情感洞察与趋势预测等。支持 Docker ，数据本地/云端自持。集成微信/飞书/钉钉/Telegram/邮件/ntfy/bark/slack 等渠道智能推送。",
           "language": "Python",
-          "stars": 63550,
+          "stars": 63592,
           "created": "2025-04-28",
           "pushed": "2026-11-05"
         },
@@ -35,7 +35,7 @@
           "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
           "desc": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
           "language": "Python",
-          "stars": 56601,
+          "stars": 56845,
           "created": "2025-10-19",
           "pushed": "2026-11-09"
         },
@@ -44,51 +44,39 @@
           "url": "https://github.com/Gathin23/cleanyourtv",
           "desc": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
           "language": "Python",
-          "stars": 55407,
+          "stars": 56541,
           "created": "2026-10-17",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-11"
         },
         {
           "name": "pandas-dev/pandas",
           "url": "https://github.com/pandas-dev/pandas",
           "desc": "Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures similar to R data.frame objects, statistical functions, and much more",
           "language": "Python",
-          "stars": 50553,
+          "stars": 50492,
           "created": "2010-08-24",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-11"
         },
         {
           "name": "metabase/metabase",
           "url": "https://github.com/metabase/metabase",
           "desc": "The easy-to-use open source Business Intelligence and Embedded Analytics tool that lets everyone work with data :bar_chart:",
           "language": "Clojure",
-          "stars": 50250,
+          "stars": 50288,
           "created": "2015-02-02",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-12"
         },
         {
           "name": "streamlit/streamlit",
           "url": "https://github.com/streamlit/streamlit",
           "desc": "Streamlit — A faster way to build and share data apps.",
           "language": "Python",
-          "stars": 46283,
+          "stars": 46320,
           "created": "2019-08-24",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-12"
         }
       ],
       "hn": [
-        {
-          "title": "Python's experimental JIT to be removed",
-          "points": 580,
-          "url": "https://lwn.net/SubscriberLink/1102102/0c00e4d550f25f8c/",
-          "hn_url": "https://news.ycombinator.com/item?id=50257419"
-        },
-        {
-          "title": "Python on My Wrist",
-          "points": 95,
-          "url": "https://tildeweb.nl/~michiel/python-on-my-wrist.html",
-          "hn_url": "https://news.ycombinator.com/item?id=50255573"
-        },
         {
           "title": "Much Ado About None: Sentinel Values in Python",
           "points": 78,
@@ -106,56 +94,68 @@
           "points": 52,
           "url": "https://github.com/thesayfulla/pylings",
           "hn_url": "https://news.ycombinator.com/item?id=50394977"
+        },
+        {
+          "title": "Show HN: PyWolf3D, a wolfenstein3D clone written from scratch in Python",
+          "points": 31,
+          "url": "https://github.com/atifcodesalot/pyWolf3D",
+          "hn_url": "https://news.ycombinator.com/item?id=50338891"
+        },
+        {
+          "title": "Show HN: Capo-S3 – a typed, async-first S3 client for Python",
+          "points": 17,
+          "url": "https://pypi.org/project/capo-s3/",
+          "hn_url": "https://news.ycombinator.com/item?id=50293303"
         }
       ],
       "news": [
         {
-          "title": "Graham Dumpleton: Muru: import once, fork many",
-          "url": "https://grahamdumpleton.me/posts/2026/11/muru-import-once-fork-many/",
-          "date": "2026-11-09",
+          "title": "The Python Coding Stack: Use Your Initiative",
+          "url": "https://www.thepythoncodingstack.com/p/use-your-initiative",
+          "date": "2026-11-11",
           "source": "Planet Python"
         },
         {
-          "title": "Armin Ronacher: AI and Irontown",
-          "url": "https://lucumr.pocoo.org/2026/11/9/irontown/",
-          "date": "2026-11-09",
+          "title": "Python GUIs: Keeping Your Main Window Open After Closing a Dialog in PyQt6 — Why your app closes when you dismiss a dialog, and how to fix it",
+          "url": "https://www.pythonguis.com/faq/dialogs-question-accept-cancel/",
+          "date": "2026-11-11",
           "source": "Planet Python"
         },
         {
-          "title": "TDD With AI Agents: Design the Tests First, Let the Agent Implement",
-          "url": "https://realpython.com/tdd-ai-agents/",
-          "date": "2026-11-09",
+          "title": "Graham Dumpleton: AI as a lifestyle choice",
+          "url": "https://grahamdumpleton.me/posts/2026/11/ai-as-a-lifestyle-choice/",
+          "date": "2026-11-11",
+          "source": "Planet Python"
+        },
+        {
+          "title": "Graham Dumpleton: Muru: WSGI and ASGI together",
+          "url": "https://grahamdumpleton.me/posts/2026/11/muru-wsgi-and-asgi-together/",
+          "date": "2026-11-11",
+          "source": "Planet Python"
+        },
+        {
+          "title": "Seth Michael Larson: Creating for yourself",
+          "url": "https://sethmlarson.dev/creating-for-yourself?utm_campaign=rss",
+          "date": "2026-11-11",
+          "source": "Planet Python"
+        },
+        {
+          "title": "Python HTTPX: Making HTTP Requests With HTTPX2",
+          "url": "https://realpython.com/python-httpx/",
+          "date": "2026-11-11",
           "source": "Real Python"
         },
         {
-          "title": "Quiz: TDD With AI Agents: Design the Tests First, Let the Agent Implement",
-          "url": "https://realpython.com/quizzes/tdd-ai-agents/",
-          "date": "2026-11-09",
+          "title": "Quiz: Python HTTPX: Making HTTP Requests With HTTPX2",
+          "url": "https://realpython.com/quizzes/python-httpx/",
+          "date": "2026-11-11",
           "source": "Real Python"
         },
         {
-          "title": "LernerPython blog, from Reuven Lerner: New course: Introduction to agentic coding with Claude Code",
-          "url": "https://lernerpython.com/2026/11/08/new-course-introduction-to-agentic-coding-with-claude-code/",
-          "date": "2026-11-08",
+          "title": "PyCoder’s Weekly: Issue #760: Type Checkers, Claude Code Hooks, MarkItDown, and More (2026-11-10)",
+          "url": "https://pycoders.com/issues/760",
+          "date": "2026-11-10",
           "source": "Planet Python"
-        },
-        {
-          "title": "LernerPython blog, from Reuven Lerner: Pandas 3.1 filter: Selecting rows with a pd.col condition",
-          "url": "https://lernerpython.com/2026/11/08/pandas-3-1-filter-selecting-rows-with-a-pd-col-condition/",
-          "date": "2026-11-08",
-          "source": "Planet Python"
-        },
-        {
-          "title": "Graham Dumpleton: Muru: how it fits together",
-          "url": "https://grahamdumpleton.me/posts/2026/11/muru-how-it-fits-together/",
-          "date": "2026-11-08",
-          "source": "Planet Python"
-        },
-        {
-          "title": "Using Python's pip to Manage Your Projects' Dependencies",
-          "url": "https://realpython.com/what-is-pip/",
-          "date": "2026-11-08",
-          "source": "Real Python"
         }
       ]
     },
@@ -166,61 +166,61 @@
           "url": "https://github.com/FreeCAD/FreeCAD",
           "desc": "Official source code of FreeCAD, a free and opensource multiplatform 3D parametric modeler.",
           "language": "C++",
-          "stars": 35309,
+          "stars": 35369,
           "created": "2012-09-09",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-11"
         },
         {
           "name": "MarlinFirmware/Marlin",
           "url": "https://github.com/MarlinFirmware/Marlin",
           "desc": "Marlin is a firmware for RepRap 3D printers optimized for both 8 and 32 bit microcontrollers.  Marlin supports all common platforms.   Many commercial 3D printers come with Marlin installed.  Check with your vendor if you need source code for your specific machine.",
           "language": "C++",
-          "stars": 17652,
+          "stars": 17656,
           "created": "2011-08-13",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-12"
         },
         {
           "name": "OrcaSlicer/OrcaSlicer",
           "url": "https://github.com/OrcaSlicer/OrcaSlicer",
           "desc": "G-code generator for 3D printers (Bambu, Prusa, Voron, VzBot, RatRig, Creality, etc.)",
           "language": "C++",
-          "stars": 16403,
+          "stars": 16431,
           "created": "2022-07-16",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-11"
         },
         {
           "name": "makerspet/oomwoo",
           "url": "https://github.com/makerspet/oomwoo",
           "desc": "Open-source vacuum robot cleaner",
           "language": "Python",
-          "stars": 13031,
+          "stars": 13063,
           "created": "2026-06-10",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-10"
         },
         {
           "name": "openscad/openscad",
           "url": "https://github.com/openscad/openscad",
           "desc": "OpenSCAD - The Programmers Solid 3D CAD Modeller",
           "language": "C++",
-          "stars": 10627,
+          "stars": 10636,
           "created": "2010-11-03",
-          "pushed": "2026-11-07"
+          "pushed": "2026-11-11"
         },
         {
           "name": "Ultimaker/Cura",
           "url": "https://github.com/Ultimaker/Cura",
           "desc": "3D printer / slicing GUI built on top of the Uranium framework",
           "language": "Python",
-          "stars": 7074,
+          "stars": 7079,
           "created": "2014-06-16",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-11"
         },
         {
           "name": "cnr-isti-vclab/meshlab",
           "url": "https://github.com/cnr-isti-vclab/meshlab",
           "desc": "The open source mesh processing system",
           "language": "C++",
-          "stars": 5907,
+          "stars": 5909,
           "created": "2016-11-07",
           "pushed": "2026-11-02"
         },
@@ -229,9 +229,9 @@
           "url": "https://github.com/dw-0/kiauh",
           "desc": "Klipper Installation And Update Helper",
           "language": "Python",
-          "stars": 4586,
+          "stars": 4591,
           "created": "2020-05-22",
-          "pushed": "2026-11-04"
+          "pushed": "2026-11-10"
         }
       ],
       "hn": [],
@@ -293,9 +293,9 @@
           "url": "https://github.com/cncjs/cncjs",
           "desc": "A web-based interface for CNC milling controller running Grbl, Marlin, Smoothieware, or TinyG.",
           "language": "JavaScript",
-          "stars": 2666,
+          "stars": 2668,
           "created": "2015-08-21",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-11"
         },
         {
           "name": "winder/Universal-G-Code-Sender",
@@ -304,7 +304,7 @@
           "language": "Java",
           "stars": 2284,
           "created": "2012-06-26",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-10"
         },
         {
           "name": "microsoft/maker.js",
@@ -329,7 +329,7 @@
           "url": "https://github.com/GridSpace/grid-apps",
           "desc": "Browser-based Slicer for 3D Printing, CAM, Laser (Kiri:Moto) and mesh editor (Mesh:Tool)",
           "language": "JavaScript",
-          "stars": 933,
+          "stars": 934,
           "created": "2017-04-18",
           "pushed": "2026-10-22"
         },
@@ -338,27 +338,27 @@
           "url": "https://github.com/svenhb/GRBL-Plotter",
           "desc": "A GCode sender (not only for lasers or plotters) for up to two GRBL controller. SVG, DXF, HPGL import. 6 axis DRO.",
           "language": "C#",
-          "stars": 908,
+          "stars": 909,
           "created": "2016-06-16",
           "pushed": "2026-10-20"
         },
         {
-          "name": "lairdubois/lairdubois-opencutlist-sketchup-extension",
-          "url": "https://github.com/lairdubois/lairdubois-opencutlist-sketchup-extension",
-          "desc": "OpenCutList is a SketchUp Extension for automating the generation of cut lists for woodworking projects.",
-          "language": "Ruby",
-          "stars": 623,
-          "created": "2016-12-03",
-          "pushed": "2026-11-09"
+          "name": "BenchUp3D/editor",
+          "url": "https://github.com/BenchUp3D/editor",
+          "desc": "Free, open-source 3D woodworking and modeling software and SketchUp alternative. Built with Rust, WebAssembly and WebGPU. Runs in your browser or on desktop. 100% vibe-coded with great emphase on stability, rendering speed and UI/UX.",
+          "language": "Rust",
+          "stars": 780,
+          "created": "2026-10-23",
+          "pushed": "2026-11-11"
         },
         {
           "name": "OpenTS-Developers/OpenTS",
           "url": "https://github.com/OpenTS-Developers/OpenTS",
           "desc": "A modern and faithful open source rebuild of the Tiberian Sun engine.",
           "language": "C++",
-          "stars": 622,
+          "stars": 628,
           "created": "2026-06-28",
-          "pushed": "2026-11-04"
+          "pushed": "2026-11-11"
         }
       ],
       "hn": [
@@ -427,52 +427,52 @@
           "url": "https://github.com/lvgl/lvgl",
           "desc": "LVGL is a free, full-featured embedded UI library for devices from small MCUs to 3D-capable MPUs, enhanced by LVGL Pro, a professional editor and tooling.",
           "language": "C",
-          "stars": 25123,
+          "stars": 25145,
           "created": "2016-06-08",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-11"
         },
         {
           "name": "arendst/Tasmota",
           "url": "https://github.com/arendst/Tasmota",
           "desc": "Alternative firmware for ESP8266 and ESP32 based devices with easy configuration using webUI, OTA updates, automation using timers or rules, expandability and entirely local control over MQTT, HTTP, Serial or KNX. Full documentation at",
           "language": "C",
-          "stars": 24973,
+          "stars": 24983,
           "created": "2017-01-28",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-11"
         },
         {
           "name": "tinygo-org/tinygo",
           "url": "https://github.com/tinygo-org/tinygo",
           "desc": "Go compiler for small places. Microcontrollers, WebAssembly (WASM/WASI), and command-line tools. Based on LLVM.",
           "language": "Go",
-          "stars": 17905,
+          "stars": 17909,
           "created": "2018-06-07",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-11"
         },
         {
           "name": "espressif/arduino-esp32",
           "url": "https://github.com/espressif/arduino-esp32",
           "desc": "Arduino core for the ESP32 family of SoCs",
           "language": "C++",
-          "stars": 17695,
+          "stars": 17713,
           "created": "2016-10-06",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-12"
         },
         {
           "name": "MarlinFirmware/Marlin",
           "url": "https://github.com/MarlinFirmware/Marlin",
           "desc": "Marlin is a firmware for RepRap 3D printers optimized for both 8 and 32 bit microcontrollers.  Marlin supports all common platforms.   Many commercial 3D printers come with Marlin installed.  Check with your vendor if you need source code for your specific machine.",
           "language": "C++",
-          "stars": 17652,
+          "stars": 17656,
           "created": "2011-08-13",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-12"
         },
         {
           "name": "justcallmekoko/ESP32Marauder",
           "url": "https://github.com/justcallmekoko/ESP32Marauder",
           "desc": "A suite of WiFi/Bluetooth offensive and defensive tools for the ESP32",
           "language": "C++",
-          "stars": 13049,
+          "stars": 13075,
           "created": "2019-09-13",
           "pushed": "2026-10-29"
         },
@@ -481,26 +481,26 @@
           "url": "https://github.com/makerspet/oomwoo",
           "desc": "Open-source vacuum robot cleaner",
           "language": "Python",
-          "stars": 13031,
+          "stars": 13063,
           "created": "2026-06-10",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-10"
         },
         {
           "name": "platformio/platformio-core",
           "url": "https://github.com/platformio/platformio-core",
           "desc": "Your Gateway to Embedded Software Development Excellence :alien:",
           "language": "Python",
-          "stars": 9591,
+          "stars": 9597,
           "created": "2014-05-09",
           "pushed": "2026-11-09"
         }
       ],
       "hn": [
         {
-          "title": "Show HN: Marelleo, an open-source story box I built for my kids using ESP32",
-          "points": 195,
-          "url": "https://zebra.rodeo/en/blog/marelleo/",
-          "hn_url": "https://news.ycombinator.com/item?id=50260753"
+          "title": "Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents",
+          "points": 80,
+          "url": "https://news.ycombinator.com/item?id=50291116",
+          "hn_url": "https://news.ycombinator.com/item?id=50291116"
         },
         {
           "title": "Show HN: I rebuilt Kubernetes for ESP32 microcontrollers",
@@ -509,14 +509,8 @@
           "hn_url": "https://news.ycombinator.com/item?id=50291812"
         },
         {
-          "title": "Show HN: Live speech-to-text on an ESP32-P4 microcontroller, no cloud",
-          "points": 16,
-          "url": "https://github.com/BoumedineBillal/esp32-pie-asr",
-          "hn_url": "https://news.ycombinator.com/item?id=50253150"
-        },
-        {
           "title": "I turned an ESP32-S3 into a Tailscale gateway with recovery functions",
-          "points": 9,
+          "points": 10,
           "url": "https://news.ycombinator.com/item?id=50403882",
           "hn_url": "https://news.ycombinator.com/item?id=50403882"
         },
@@ -529,51 +523,51 @@
       ],
       "news": [
         {
-          "title": "From Phone, To SDR, No Extra Hardware",
-          "url": "https://hackaday.com/2026/11/09/from-phone-to-sdr-no-extra-hardware/",
-          "date": "2026-11-09",
+          "title": "FLOSS Weekly Episode 883: Telnet Broke Us",
+          "url": "https://hackaday.com/2026/11/11/floss-weekly-episode-883-telnet-broke-us/",
+          "date": "2026-11-12",
           "source": "Hackaday"
         },
         {
-          "title": "UDP Broadcasting Meets the More Focused Multicasting",
-          "url": "https://hackaday.com/2026/11/09/udp-broadcasting-meets-the-more-focused-multicasting/",
-          "date": "2026-11-09",
+          "title": "Modular, 3D Printed Train Whistles For Everyone",
+          "url": "https://hackaday.com/2026/11/11/modular-3d-printed-train-whistles-for-everyone/",
+          "date": "2026-11-11",
           "source": "Hackaday"
         },
         {
-          "title": "Reverse Engineering a 1960s Diode-Transistor Logic IC",
-          "url": "https://hackaday.com/2026/11/09/reverse-engineering-a-1960s-diode-transistor-logic-ic/",
-          "date": "2026-11-09",
+          "title": "CHIP 8: The Pong Game’s Afoot!",
+          "url": "https://hackaday.com/2026/11/11/chip-8-the-pong-games-afoot/",
+          "date": "2026-11-11",
           "source": "Hackaday"
         },
         {
-          "title": "Radon Active",
-          "url": "https://hackaday.com/2026/11/09/radon-active/",
-          "date": "2026-11-09",
+          "title": "The Drawer Every Standing Desk Needs",
+          "url": "https://hackaday.com/2026/11/11/the-drawer-every-standing-desk-needs/",
+          "date": "2026-11-11",
           "source": "Hackaday"
         },
         {
-          "title": "Web Satellite Tracker Plays the Music of the Spheres",
-          "url": "https://hackaday.com/2026/11/09/web-satellite-tracker-plays-the-music-of-the-spheres/",
-          "date": "2026-11-09",
+          "title": "EV Batteries Are Proving Hardier Than Expected",
+          "url": "https://hackaday.com/2026/11/11/ev-batteries-are-proving-hardier-than-expected/",
+          "date": "2026-11-11",
           "source": "Hackaday"
         },
         {
-          "title": "Determining Location by Listening for Airplanes",
-          "url": "https://hackaday.com/2026/11/09/determining-location-by-listening-for-airplanes/",
-          "date": "2026-11-09",
+          "title": "Why Engineers are Forced to Create Junk Designs",
+          "url": "https://hackaday.com/2026/11/11/why-engineers-are-forced-to-create-junk-designs/",
+          "date": "2026-11-11",
           "source": "Hackaday"
         },
         {
-          "title": "A Smart Alarm Clock That Doesn’t Sell Your Soul",
-          "url": "https://hackaday.com/2026/11/08/a-smart-alarm-clock-that-doesnt-sell-your-soul/",
-          "date": "2026-11-09",
+          "title": "This Coffee Machine is DOOMed",
+          "url": "https://hackaday.com/2026/11/10/this-coffee-machine-is-doomed/",
+          "date": "2026-11-11",
           "source": "Hackaday"
         },
         {
-          "title": "Learn to make your own music – with the Arduino® UNO™ Q board",
-          "url": "https://blog.arduino.cc/2026/11/09/learn-to-make-your-own-music-with-the-arduino-uno-q-board/",
-          "date": "2026-11-09",
+          "title": "Just announced at electronica: the Arduino® Nano™ family is now XL!",
+          "url": "https://blog.arduino.cc/2026/11/10/just-announced-at-electronica-the-arduino-nano-family-is-now-xl/",
+          "date": "2026-11-10",
           "source": "Arduino Blog"
         }
       ]
@@ -585,7 +579,7 @@
           "url": "https://github.com/d3/d3",
           "desc": "Bring data to life with SVG, Canvas and HTML. :bar_chart::chart_with_upwards_trend::tada:",
           "language": "Shell",
-          "stars": 113890,
+          "stars": 113911,
           "created": "2010-09-27",
           "pushed": "2026-11-03"
         },
@@ -594,63 +588,63 @@
           "url": "https://github.com/netdata/netdata",
           "desc": "The fastest path to AI-powered full stack observability, even for lean teams.",
           "language": "Go",
-          "stars": 81330,
+          "stars": 81373,
           "created": "2013-06-17",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-12"
         },
         {
           "name": "grafana/grafana",
           "url": "https://github.com/grafana/grafana",
           "desc": "The open and composable observability and data visualization platform. Visualize metrics, logs, and traces from multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB, Postgres and many more.",
-          "language": "Go",
-          "stars": 77795,
+          "language": "TypeScript",
+          "stars": 77849,
           "created": "2013-12-11",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-12"
         },
         {
           "name": "apache/superset",
           "url": "https://github.com/apache/superset",
           "desc": "Apache Superset is a Data Visualization and Data Exploration Platform",
           "language": "Python",
-          "stars": 75455,
+          "stars": 75482,
           "created": "2015-07-21",
-          "pushed": "2026-11-09"
-        },
-        {
-          "name": "apache/echarts",
-          "url": "https://github.com/apache/echarts",
-          "desc": "Apache ECharts is a powerful, interactive charting and data visualization library for browser",
-          "language": "TypeScript",
-          "stars": 67697,
-          "created": "2013-04-03",
-          "pushed": "2026-10-13"
+          "pushed": "2026-11-12"
         },
         {
           "name": "cathrynlavery/diagram-design",
           "url": "https://github.com/cathrynlavery/diagram-design",
           "desc": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
           "language": "HTML",
-          "stars": 66070,
+          "stars": 66531,
           "created": "2026-04-16",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-10"
         },
         {
           "name": "pathwaycom/serviette",
           "url": "https://github.com/pathwaycom/serviette",
           "desc": "A no-code RAG server that keeps answers in sync with your documents. Works with 8 vector databases. Built on Pathway.",
           "language": "Python",
-          "stars": 58720,
+          "stars": 58707,
           "created": "2023-07-19",
-          "pushed": "2026-11-02"
+          "pushed": "2026-11-10"
         },
         {
           "name": "pandas-dev/pandas",
           "url": "https://github.com/pandas-dev/pandas",
           "desc": "Flexible and powerful data analysis / manipulation library for Python, providing labeled data structures similar to R data.frame objects, statistical functions, and much more",
           "language": "Python",
-          "stars": 50553,
+          "stars": 50492,
           "created": "2010-08-24",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-11"
+        },
+        {
+          "name": "metabase/metabase",
+          "url": "https://github.com/metabase/metabase",
+          "desc": "The easy-to-use open source Business Intelligence and Embedded Analytics tool that lets everyone work with data :bar_chart:",
+          "language": "Clojure",
+          "stars": 50288,
+          "created": "2015-02-02",
+          "pushed": "2026-11-12"
         }
       ],
       "hn": [
@@ -659,6 +653,12 @@
           "points": 81,
           "url": "https://news.ycombinator.com/item?id=50345712",
           "hn_url": "https://news.ycombinator.com/item?id=50345712"
+        },
+        {
+          "title": "Tell HN: Notion AI chat sessions have been exposed via Fireworks AI hack",
+          "points": 18,
+          "url": "https://news.ycombinator.com/item?id=50436636",
+          "hn_url": "https://news.ycombinator.com/item?id=50436636"
         },
         {
           "title": "Only 0.5% of 383,000 CVEs are ever exploited in real-world attacks",
@@ -675,51 +675,51 @@
       ],
       "news": [
         {
-          "title": "Free AI and Data Courses with 365 Data Science: 100% Unlimited Access until Nov 20",
-          "url": "https://www.kdnuggets.com/2026/10/365careers/free-ai-and-data-courses-with-365-data-science-100-unlimited-access-until-nov-20",
-          "date": "2026-11-06",
+          "title": "Where Does Abacus.AI’s Smaug Model Improve Performance the Most?",
+          "url": "https://www.kdnuggets.com/2026/11/abacus/where-does-abacus-ais-smaug-model-improve-performance-the-most",
+          "date": "2026-11-11",
           "source": "KDnuggets"
         },
         {
-          "title": "How to Give Your AI Agent Memory",
-          "url": "https://www.kdnuggets.com/how-to-give-your-ai-agent-memory",
-          "date": "2026-11-06",
+          "title": "What Senior Data Science Job Postings Actually Ask for in 2026",
+          "url": "https://www.kdnuggets.com/what-senior-data-science-job-postings-actually-ask-for-in-2026",
+          "date": "2026-11-11",
           "source": "KDnuggets"
         },
         {
-          "title": "Top 7 Python Libraries for Time Series Analysis and Modeling",
-          "url": "https://www.kdnuggets.com/top-7-python-libraries-for-time-series-analysis-and-modeling",
-          "date": "2026-11-06",
+          "title": "9 Key LLM Inference Metrics Explained in 5 Minutes",
+          "url": "https://www.kdnuggets.com/9-key-llm-inference-metrics-explained-in-5-minutes",
+          "date": "2026-11-11",
           "source": "KDnuggets"
         },
         {
-          "title": "Web Scraping 7,000 Pages in 3 Minutes with Python and Olostep",
-          "url": "https://www.kdnuggets.com/web-scraping-7000-pages-in-3-minutes-with-python-and-olostep",
-          "date": "2026-11-05",
+          "title": "How to Use AI for Enterprise BI",
+          "url": "https://www.kdnuggets.com/2026/11/lansa/how-to-use-ai-for-enterprise-bi",
+          "date": "2026-11-10",
           "source": "KDnuggets"
         },
         {
-          "title": "What I Did with Hermes Agent, Ollama & Local Models",
-          "url": "https://www.kdnuggets.com/what-i-did-with-hermes-agent-ollama-local-models",
-          "date": "2026-11-05",
+          "title": "Integrating LLM Translation into Your Scikit-Learn Pipelines with Scikit-LLM",
+          "url": "https://www.kdnuggets.com/integrating-llm-translation-into-your-scikit-learn-pipelines-with-scikit-llm",
+          "date": "2026-11-10",
           "source": "KDnuggets"
         },
         {
-          "title": "The Data Science Interview in 2026: What’s Changed and How to Prepare",
-          "url": "https://www.kdnuggets.com/the-data-science-interview-in-2026-whats-changed-and-how-to-prepare",
-          "date": "2026-11-04",
+          "title": "5 Techniques for Fine-Tuning LLMs Without Breaking the Bank",
+          "url": "https://www.kdnuggets.com/5-techniques-for-fine-tuning-llms-without-breaking-the-bank",
+          "date": "2026-11-10",
           "source": "KDnuggets"
         },
         {
-          "title": "7 Small Specialist Models That Beat Giant LLMs at One Job",
-          "url": "https://www.kdnuggets.com/7-small-specialist-models-that-beat-giant-llms-at-one-job",
-          "date": "2026-11-04",
+          "title": "Can AI Spot Data Leakage Before Your Model Hits 99% Accuracy?",
+          "url": "https://www.kdnuggets.com/can-ai-spot-data-leakage-before-your-model-hits-99-accuracy",
+          "date": "2026-11-09",
           "source": "KDnuggets"
         },
         {
-          "title": "Using LLM Summarization in Your Scikit-Learn Pipelines with Scikit-LLM",
-          "url": "https://www.kdnuggets.com/using-llm-summarization-in-your-scikit-learn-pipelines-with-scikit-llm",
-          "date": "2026-11-03",
+          "title": "5 Useful Python Automation Scripts for Beginners",
+          "url": "https://www.kdnuggets.com/5-useful-python-automation-scripts-for-beginners",
+          "date": "2026-11-09",
           "source": "KDnuggets"
         }
       ]
@@ -749,7 +749,7 @@
           "url": "https://github.com/fairy-stockfish/Fairy-Stockfish",
           "desc": "chess variant engine supporting Xiangqi, Shogi, Janggi, Makruk, S-Chess, Crazyhouse, Bughouse, and many more",
           "language": "C++",
-          "stars": 928,
+          "stars": 929,
           "created": "2018-06-22",
           "pushed": "2026-11-07"
         },
@@ -767,16 +767,16 @@
           "url": "https://github.com/pokerth/pokerth",
           "desc": "PokerTH is a poker game written in C++/Qt.",
           "language": "C++",
-          "stars": 700,
+          "stars": 701,
           "created": "2012-05-10",
-          "pushed": "2026-11-02"
+          "pushed": "2026-11-10"
         },
         {
           "name": "xqbase/eleeye",
           "url": "https://github.com/xqbase/eleeye",
           "desc": "ElephantEye - a XiangQi (Chinese Chess) Engine for XQWizard with Strong AI",
           "language": "C++",
-          "stars": 408,
+          "stars": 409,
           "created": "2015-02-07",
           "pushed": "2026-10-23"
         },
@@ -785,9 +785,9 @@
           "url": "https://github.com/tobymao/18xx",
           "desc": "A platform for playing 18xx games online!",
           "language": "Ruby",
-          "stars": 376,
+          "stars": 377,
           "created": "2019-05-23",
-          "pushed": "2026-11-09"
+          "pushed": "2026-11-10"
         },
         {
           "name": "nhmkdev/cardmaker",
@@ -796,21 +796,15 @@
           "language": "C#",
           "stars": 315,
           "created": "2015-08-20",
-          "pushed": "2026-10-24"
+          "pushed": "2026-11-10"
         }
       ],
       "hn": [
         {
           "title": "Ask HN: Who is hiring? (November 2026)",
-          "points": 255,
+          "points": 256,
           "url": "https://news.ycombinator.com/item?id=50338728",
           "hn_url": "https://news.ycombinator.com/item?id=50338728"
-        },
-        {
-          "title": "Launch HN: Simantic (YC F26) – Firmware Simulation for AI Agents",
-          "points": 80,
-          "url": "https://news.ycombinator.com/item?id=50291116",
-          "hn_url": "https://news.ycombinator.com/item?id=50291116"
         },
         {
           "title": "Show HN: Jointter – A daily word puzzle using dots and lines",
@@ -820,12 +814,30 @@
         },
         {
           "title": "Show HN: My daily word puzzle Jointter revisited",
-          "points": 6,
+          "points": 9,
           "url": "https://news.ycombinator.com/item?id=50426593",
           "hn_url": "https://news.ycombinator.com/item?id=50426593"
+        },
+        {
+          "title": "Ask HR: Systems Engineering's Senior Pipeline Crisis",
+          "points": 7,
+          "url": "https://news.ycombinator.com/item?id=50446617",
+          "hn_url": "https://news.ycombinator.com/item?id=50446617"
         }
       ],
       "news": [
+        {
+          "title": "Phantom Ink Review",
+          "url": "https://www.boardgamequest.com/phantom-ink-review/",
+          "date": "2026-11-11",
+          "source": "Board Game Quest"
+        },
+        {
+          "title": "Star Trek: Captain’s Chair – To Boldly Go Review",
+          "url": "https://www.boardgamequest.com/star-trek-captains-chair-to-boldly-go-review/",
+          "date": "2026-11-10",
+          "source": "Board Game Quest"
+        },
         {
           "title": "Crowdfunding Campaigns of the Week – 11/9/26",
           "url": "https://www.boardgamequest.com/crowdfunding-campaigns-of-the-week-11-9-26/",
@@ -860,18 +872,6 @@
           "title": "Kano Review",
           "url": "https://www.boardgamequest.com/kano-review/",
           "date": "2026-11-02",
-          "source": "Board Game Quest"
-        },
-        {
-          "title": "Crowdfunding Campaigns of the Week – 11/2/26",
-          "url": "https://www.boardgamequest.com/crowdfunding-campaigns-of-the-week-11-2-26/",
-          "date": "2026-11-02",
-          "source": "Board Game Quest"
-        },
-        {
-          "title": "Enchanted Ivy Review",
-          "url": "https://www.boardgamequest.com/enchanted-ivy-review/",
-          "date": "2026-10-30",
           "source": "Board Game Quest"
         }
       ]
