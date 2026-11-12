@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Folder tidy-up script",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "pathlib, shutil",
+    "desc": "Sort a messy Downloads folder into subfolders by file type and date. Add a dry-run flag that only prints what it would move."
+  },
+  {
+    "title": "Personal expense tracker",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "csv, sqlite3, argparse",
+    "desc": "Import bank CSV exports into a SQLite file and print monthly totals by category from the command line."
+  },
+  {
+    "title": "Weather on the command line",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "urllib, json",
+    "desc": "Fetch a forecast from the free Open-Meteo API and print a tidy 3-day summary for your town."
+  },
+  {
+    "title": "Markdown to static site",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "markdown, jinja2",
+    "desc": "Turn a folder of Markdown notes into linked HTML pages with an index. This site is built the same way."
+  },
+  {
+    "title": "Web page change watcher",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "urllib, hashlib, difflib",
+    "desc": "Check a page on a schedule, store a hash, and show a diff when it changes. Be polite: fetch rarely and respect robots.txt."
+  }
+]

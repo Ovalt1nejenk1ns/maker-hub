@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Braitenberg vehicles",
+    "why": "A thought experiment: wire two sensors to two motors and the result seems to show fear, love or curiosity.",
+    "url": "https://en.wikipedia.org/wiki/Braitenberg_vehicle",
+    "how": "Short read"
+  },
+  {
+    "title": "BEAM robots",
+    "why": "Solar-powered bugs built from a handful of transistors, with no microcontroller and no code at all.",
+    "url": "https://en.wikipedia.org/wiki/BEAM_robotics",
+    "how": "Short read"
+  },
+  {
+    "title": "Off-grid mesh messaging",
+    "why": "Meshtastic radios pass text messages for miles with no phone network or internet.",
+    "url": "https://meshtastic.org/",
+    "how": "Read, then maybe buy a radio"
+  },
+  {
+    "title": "Software-defined radio",
+    "why": "A cheap USB stick lets you hear aircraft, weather satellites and much more.",
+    "url": "https://www.rtl-sdr.com/about-rtl-sdr/",
+    "how": "Read"
+  },
+  {
+    "title": "Citizen air sensing",
+    "why": "Thousands of people run home-built sensors that feed a live world map of air quality.",
+    "url": "https://sensor.community/en/",
+    "how": "Explore the map"
+  }
+]

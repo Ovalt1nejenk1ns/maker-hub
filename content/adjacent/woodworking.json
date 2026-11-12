@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Japanese joinery",
+    "why": "Temples built with interlocking joints and no nails, some standing for over a thousand years.",
+    "url": "https://en.wikipedia.org/wiki/Japanese_carpentry",
+    "how": "20-minute read"
+  },
+  {
+    "title": "Wooden gears and marble machines",
+    "why": "Matthias Wandel builds machines out of plywood, including a wooden combination lock.",
+    "url": "https://woodgears.ca/",
+    "how": "Idle browsing"
+  },
+  {
+    "title": "Kumiko",
+    "why": "Lattice panels made from hundreds of tiny pieces held together by fit alone.",
+    "url": "https://en.wikipedia.org/wiki/Kumiko_(woodworking)",
+    "how": "Short read"
+  },
+  {
+    "title": "Green woodworking",
+    "why": "Carving spoons and bowls from freshly cut wood with an axe and a knife, no workshop needed.",
+    "url": "https://en.wikipedia.org/wiki/Green_woodworking",
+    "how": "Short read"
+  },
+  {
+    "title": "Reading tree rings",
+    "why": "Dendrochronology dates old buildings, paintings and past climates from the pattern of rings in timber.",
+    "url": "https://en.wikipedia.org/wiki/Dendrochronology",
+    "how": "20-minute read"
+  }
+]

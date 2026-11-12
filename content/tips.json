@@ -1,0 +1,44 @@
+{
+  "python": [
+    "enumerate(xs, start=1) gives you a counter that starts at 1.",
+    "Run python -m venv .venv to give each project its own packages.",
+    "breakpoint() drops you into the debugger at that line.",
+    "An f-string like f\"{n:,}\" formats a number with thousands separators.",
+    "A default argument like bucket=[] is created once and shared by every call. Use None instead."
+  ],
+  "3d-printing": [
+    "Most failed prints start with the first layer. Clean the bed and level it before changing anything else.",
+    "PLA is the easiest filament to start with. PETG is tougher and handles more heat.",
+    "Damp filament pops and strings. Store spools in a sealed box with desiccant.",
+    "Parts are weakest between layers, so orient a print so the load runs along the layers.",
+    "Change one slicer setting at a time, or you will not know what fixed the problem."
+  ],
+  "woodworking": [
+    "Wood moves across the grain as humidity changes, so leave solid panels room to expand.",
+    "Measure twice, cut once. Better still, mark from the workpiece instead of a ruler when you can.",
+    "Sand through the grits in order. Skipping from 80 to 220 leaves scratches that show under finish.",
+    "Glue is stronger than the wood on long-grain joints, but weak on end grain.",
+    "Wear eye and hearing protection, and keep a push stick next to the table saw."
+  ],
+  "robotics": [
+    "The pins on an ESP32 are 3.3 V. Feeding them 5 V signals can damage the board.",
+    "Never power motors or servos from a microcontroller pin. Give them their own supply and share the ground.",
+    "Use millis() instead of delay() so your sketch can do several things at once.",
+    "A floating input reads random values. Use INPUT_PULLUP or add a resistor.",
+    "Print to the serial monitor early and often. It is the simplest debugger you have."
+  ],
+  "data": [
+    "Look at the raw rows before you chart anything. df.head() and df.describe() take seconds.",
+    "Correlation does not show cause. Ask what else could explain the pattern.",
+    "The median is a better typical value than the mean when the data has outliers.",
+    "Start bar chart axes at zero, or small differences will look large.",
+    "Keep the raw data untouched and do every cleaning step in code, so you can repeat it."
+  ],
+  "board-games": [
+    "Teach a game by starting with how you win, then how a turn works.",
+    "With two six-sided dice, 7 is the most likely total and comes up one roll in six.",
+    "Sleeve cards for games you play often. It is cheaper than replacing a worn deck.",
+    "The best player count for a game is often not its maximum. Check before game night.",
+    "Play the first game with open hands so everyone learns the rules together."
+  ]
+}

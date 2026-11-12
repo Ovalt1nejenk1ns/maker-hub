@@ -32,6 +32,34 @@
 {% endfor %}
 {% endif %}
 
+{% if ideas %}
+<h2 id="ideas">Project ideas <button type="button" id="surprise" class="btn small" hidden>🎲 Surprise me</button></h2>
+<p class="muted">Things to build next, roughly easiest first.</p>
+<div class="cards">
+{% for i in ideas %}
+  <article class="card idea" id="idea-{{ loop.index }}">
+    <h3>{{ i.title }}</h3>
+    <p>{{ i.desc }}</p>
+    <p class="meta"><span class="tag lvl-{{ i.level|lower }}">{{ i.level }}</span> · {{ i.time }} · needs: {{ i.needs }}</p>
+  </article>
+{% endfor %}
+</div>
+{% endif %}
+
+{% if adjacent %}
+<h2 id="explore">🐇 Rabbit holes</h2>
+<p class="muted">Next door to {{ tcfg.label }}, but probably not on your radar. Good with a coffee.</p>
+<div class="cards">
+{% for a in adjacent %}
+  <article class="card hole">
+    <h3><a href="{{ a.url }}">{{ a.title }}</a></h3>
+    <p>{{ a.why }}</p>
+    {% if a.how %}<p class="meta">{{ a.how }}</p>{% endif %}
+  </article>
+{% endfor %}
+</div>
+{% endif %}
+
 <h2 id="trending">Trending on GitHub</h2>
 <p class="muted">Repos active in the last {{ cfg.LOOKBACK_DAYS }} days, ranked by stars.</p>
 <div class="cards">

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Conway's Game of Life",
+    "why": "Four rules on a grid produce gliders, guns and even working computers. Nobody designed most of it; people found it.",
+    "url": "https://conwaylife.com/",
+    "how": "Browse and play"
+  },
+  {
+    "title": "Generative art",
+    "why": "Artists write short programs and let randomness do the drawing. py5 lets you do it in Python.",
+    "url": "https://py5coding.org/",
+    "how": "Look, then try"
+  },
+  {
+    "title": "Live-coded music",
+    "why": "Sonic Pi turns code into sound as you type. People perform whole sets this way, on stage.",
+    "url": "https://sonic-pi.net/",
+    "how": "Listen and tinker"
+  },
+  {
+    "title": "Build a computer from scratch",
+    "why": "Nand to Tetris starts with a single logic gate and ends with a machine that runs Tetris.",
+    "url": "https://www.nand2tetris.org/",
+    "how": "Long weekend project"
+  },
+  {
+    "title": "Esoteric languages",
+    "why": "Programming languages built as jokes, puzzles and art, including one written entirely in whitespace.",
+    "url": "https://esolangs.org/wiki/Main_Page",
+    "how": "Idle browsing"
+  }
+]

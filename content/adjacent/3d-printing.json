@@ -1,0 +1,32 @@
+[
+  {
+    "title": "507 Mechanical Movements",
+    "why": "A Victorian catalogue of clever mechanisms, now animated. Most of them could be printed.",
+    "url": "http://507movements.com/",
+    "how": "Idle browsing"
+  },
+  {
+    "title": "Mathematical sculpture",
+    "why": "Henry Segerman prints shapes that explain hard maths, such as shadows that turn into grids.",
+    "url": "https://www.segerman.org/",
+    "how": "Look and wonder"
+  },
+  {
+    "title": "Compliant mechanisms",
+    "why": "Parts that bend instead of using hinges, so a whole machine can be one printed piece.",
+    "url": "https://www.compliantmechanisms.byu.edu/",
+    "how": "Read and watch"
+  },
+  {
+    "title": "Photogrammetry",
+    "why": "Walk around an object taking photos and free software turns them into a 3D model.",
+    "url": "https://alicevision.org/",
+    "how": "Try it with your phone"
+  },
+  {
+    "title": "Strandbeests",
+    "why": "Theo Jansen's wind-powered walking sculptures. Small printed versions walk across a desk.",
+    "url": "https://www.strandbeest.com/",
+    "how": "Watch"
+  }
+]

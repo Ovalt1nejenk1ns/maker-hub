@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Print-and-play night",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Printer, card sleeves, scissors",
+    "desc": "Print a free print-and-play game, sleeve the cards with old playing cards behind them, and try it before buying anything."
+  },
+  {
+    "title": "Custom box insert",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Foam core and glue, or a 3D printer",
+    "desc": "Measure a game box and build trays so setup takes two minutes instead of ten."
+  },
+  {
+    "title": "Design an 18-card microgame",
+    "level": "Intermediate",
+    "time": "2 weekends",
+    "needs": "Index cards, pencil",
+    "desc": "Limit yourself to 18 cards. Playtest with blank cards first and change one rule at a time."
+  },
+  {
+    "title": "Score tracker web page",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "HTML, a little JavaScript or Python",
+    "desc": "Build a simple score pad for a favourite game that adds up totals and remembers past games."
+  },
+  {
+    "title": "Dice probability explorer",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Python, collections.Counter",
+    "desc": "Simulate thousands of rolls to see why 7 is the most common total of two dice, then test the odds in a game you own."
+  }
+]

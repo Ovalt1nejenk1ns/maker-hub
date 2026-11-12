@@ -1,0 +1,32 @@
+[
+  {
+    "title": "The Pudding",
+    "why": "Visual essays that answer odd questions with data, such as how song lyrics have changed.",
+    "url": "https://pudding.cool/",
+    "how": "Pick one essay"
+  },
+  {
+    "title": "Dear Data",
+    "why": "Two designers sent each other hand-drawn charts of their week on postcards for a year.",
+    "url": "http://www.dear-data.com/theproject",
+    "how": "Look and wonder"
+  },
+  {
+    "title": "Spurious correlations",
+    "why": "Charts of things that track each other perfectly and have nothing to do with each other.",
+    "url": "https://www.tylervigen.com/spurious-correlations",
+    "how": "Idle browsing"
+  },
+  {
+    "title": "Benford's law",
+    "why": "In many real data sets about 30% of numbers start with 1. Auditors use this to spot fraud.",
+    "url": "https://en.wikipedia.org/wiki/Benford%27s_law",
+    "how": "Short read"
+  },
+  {
+    "title": "Citizen science",
+    "why": "Zooniverse lets you classify galaxies, count penguins or transcribe old ship logs for real research.",
+    "url": "https://www.zooniverse.org/",
+    "how": "Join a project"
+  }
+]
