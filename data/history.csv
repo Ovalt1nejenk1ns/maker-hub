@@ -95,11 +95,11 @@ date,topic,repo,stars
 2026-11-09,board-games,xqbase/eleeye,408
 2026-11-09,board-games,tobymao/18xx,376
 2026-11-09,board-games,nhmkdev/cardmaker,315
-2026-11-12,python,apache/superset,75482
+2026-11-12,python,apache/superset,75483
 2026-11-12,python,scikit-learn/scikit-learn,68145
 2026-11-12,python,sansan0/TrendRadar,63592
-2026-11-12,python,K-Dense-AI/scientific-agent-skills,56845
-2026-11-12,python,Gathin23/cleanyourtv,56543
+2026-11-12,python,K-Dense-AI/scientific-agent-skills,56846
+2026-11-12,python,Gathin23/cleanyourtv,56545
 2026-11-12,python,pandas-dev/pandas,50492
 2026-11-12,python,metabase/metabase,50288
 2026-11-12,python,streamlit/streamlit,46320
@@ -119,7 +119,7 @@ date,topic,repo,stars
 2026-11-12,woodworking,svenhb/GRBL-Plotter,909
 2026-11-12,woodworking,BenchUp3D/editor,780
 2026-11-12,woodworking,OpenTS-Developers/OpenTS,628
-2026-11-12,robotics,lvgl/lvgl,25145
+2026-11-12,robotics,lvgl/lvgl,25146
 2026-11-12,robotics,arendst/Tasmota,24983
 2026-11-12,robotics,tinygo-org/tinygo,17909
 2026-11-12,robotics,espressif/arduino-esp32,17713
@@ -128,10 +128,10 @@ date,topic,repo,stars
 2026-11-12,robotics,makerspet/oomwoo,13063
 2026-11-12,robotics,platformio/platformio-core,9597
 2026-11-12,data,d3/d3,113911
-2026-11-12,data,netdata/netdata,81373
+2026-11-12,data,netdata/netdata,81374
 2026-11-12,data,grafana/grafana,77849
-2026-11-12,data,apache/superset,75482
-2026-11-12,data,cathrynlavery/diagram-design,66531
+2026-11-12,data,apache/superset,75483
+2026-11-12,data,cathrynlavery/diagram-design,66532
 2026-11-12,data,pathwaycom/serviette,58707
 2026-11-12,data,pandas-dev/pandas,50492
 2026-11-12,data,metabase/metabase,50288

@@ -8,7 +8,7 @@
           "url": "https://github.com/apache/superset",
           "desc": "Apache Superset is a Data Visualization and Data Exploration Platform",
           "language": "Python",
-          "stars": 75482,
+          "stars": 75483,
           "created": "2015-07-21",
           "pushed": "2026-11-12"
         },
@@ -35,7 +35,7 @@
           "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
           "desc": "Turn any AI agent into an AI Scientist. The #1 Agent Skills library for science, used by 250,000+ scientists worldwide. 177 ready-to-use validated skills plus 100+ scientific databases covering biology, chemistry, medicine, and drug discovery. Compatible with Cursor, Claude Code, Codex, Pi, Antigravity, and the open Agent Skills standard.",
           "language": "Python",
-          "stars": 56845,
+          "stars": 56846,
           "created": "2025-10-19",
           "pushed": "2026-11-09"
         },
@@ -44,7 +44,7 @@
           "url": "https://github.com/Gathin23/cleanyourtv",
           "desc": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
           "language": "Python",
-          "stars": 56543,
+          "stars": 56545,
           "created": "2026-10-17",
           "pushed": "2026-11-11"
         },
@@ -427,7 +427,7 @@
           "url": "https://github.com/lvgl/lvgl",
           "desc": "LVGL is a free, full-featured embedded UI library for devices from small MCUs to 3D-capable MPUs, enhanced by LVGL Pro, a professional editor and tooling.",
           "language": "C",
-          "stars": 25145,
+          "stars": 25146,
           "created": "2016-06-08",
           "pushed": "2026-11-11"
         },
@@ -588,7 +588,7 @@
           "url": "https://github.com/netdata/netdata",
           "desc": "The fastest path to AI-powered full stack observability, even for lean teams.",
           "language": "Go",
-          "stars": 81373,
+          "stars": 81374,
           "created": "2013-06-17",
           "pushed": "2026-11-12"
         },
@@ -606,7 +606,7 @@
           "url": "https://github.com/apache/superset",
           "desc": "Apache Superset is a Data Visualization and Data Exploration Platform",
           "language": "Python",
-          "stars": 75482,
+          "stars": 75483,
           "created": "2015-07-21",
           "pushed": "2026-11-12"
         },
@@ -615,7 +615,7 @@
           "url": "https://github.com/cathrynlavery/diagram-design",
           "desc": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
           "language": "HTML",
-          "stars": 66531,
+          "stars": 66532,
           "created": "2026-04-16",
           "pushed": "2026-11-10"
         },
