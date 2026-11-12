@@ -3,7 +3,7 @@
 {% block body %}
 <h1>{{ tcfg.icon }} {{ tcfg.label }}</h1>
 <p class="muted">{{ tcfg.blurb }}</p>
-<p class="jump"><a href="#news">News</a> · {% if has_sheet %}<a href="cheatsheet/index.html">Cheat sheet</a> · {% endif %}{% if quickref %}<a href="#quickref">Quick reference</a> · {% endif %}{% if resources %}<a href="#resources">Resources</a> · {% endif %}<a href="#trending">Trending</a></p>
+<p class="jump"><a href="#news">News</a> · {% if has_sheet %}<a href="cheatsheet/index.html">Cheat sheet</a> · {% endif %}{% if quickref %}<a href="#quickref">Quick reference</a> · {% endif %}{% if resources %}<a href="#resources">Resources</a> · {% endif %}{% if ideas %}<a href="#ideas">Project ideas</a> · {% endif %}{% if adjacent %}<a href="#explore">Rabbit holes</a> · {% endif %}<a href="#trending">Trending</a></p>
 
 <h2 id="news">Latest news</h2>
 {% if t.news %}
