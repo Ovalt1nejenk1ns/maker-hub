@@ -34,7 +34,7 @@
 
 {% if ideas %}
 <h2 id="ideas">Project ideas <button type="button" id="surprise" class="btn small" hidden>🎲 Surprise me</button></h2>
-<p class="muted">Things to build next, roughly easiest first.</p>
+<p class="muted">Things to build next, roughly easiest first.{% if ideas_total > ideas|length %} {{ ideas|length }} of {{ ideas_total }}; a new set every Saturday.{% endif %}</p>
 <div class="cards">
 {% for i in ideas %}
   <article class="card idea" id="idea-{{ loop.index }}">
@@ -48,7 +48,7 @@
 
 {% if adjacent %}
 <h2 id="explore">🐇 Rabbit holes</h2>
-<p class="muted">Next door to {{ tcfg.label }}, but probably not on your radar. Good with a coffee.</p>
+<p class="muted">Next door to {{ tcfg.label }}, but probably not on your radar. Good with a coffee.{% if holes_total > adjacent|length %} {{ adjacent|length }} of {{ holes_total }}; a new set every Saturday.{% endif %}</p>
 <div class="cards">
 {% for a in adjacent %}
   <article class="card hole">

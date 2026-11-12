@@ -33,5 +33,110 @@
     "time": "1 weekend",
     "needs": "urllib, hashlib, difflib",
     "desc": "Check a page on a schedule, store a hash, and show a diff when it changes. Be polite: fetch rarely and respect robots.txt."
+  },
+  {
+    "title": "Password generator",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "secrets, string, argparse",
+    "desc": "Generate strong random passwords or word-based passphrases, with flags for length and symbols."
+  },
+  {
+    "title": "Quiz from a JSON file",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "json, random",
+    "desc": "Ask questions from a file in random order and keep score. Write a question set on one of your hobbies."
+  },
+  {
+    "title": "Word counts for a classic book",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "collections, re",
+    "desc": "Download a plain-text book from Project Gutenberg and list its most common words. Compare two authors."
+  },
+  {
+    "title": "Pomodoro timer",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "time, argparse",
+    "desc": "A command-line timer for 25-minute work blocks and short breaks that logs each finished block to a file."
+  },
+  {
+    "title": "Game of Life in the terminal",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "time, random",
+    "desc": "Animate Conway's Game of Life with plain characters. Add a few famous starting patterns."
+  },
+  {
+    "title": "Photo renamer",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "Pillow, pathlib",
+    "desc": "Rename photos by the date stored inside them so that a folder sorts in the order the pictures were taken."
+  },
+  {
+    "title": "Feed reader",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "urllib, xml.etree",
+    "desc": "Read a list of RSS feeds and print the newest headlines. The collector behind this site does the same."
+  },
+  {
+    "title": "Text adventure engine",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "json, dataclasses",
+    "desc": "Describe rooms, items and exits in a data file, and write a small engine that lets you walk around."
+  },
+  {
+    "title": "Maze generator and solver",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "random, collections",
+    "desc": "Carve a random maze, print it, then find the way out with a breadth-first search."
+  },
+  {
+    "title": "Spirograph with turtle",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "turtle, math",
+    "desc": "Draw looping spirograph curves and experiment with the numbers until something beautiful appears."
+  },
+  {
+    "title": "Sudoku solver",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "plain Python",
+    "desc": "Solve any sudoku by backtracking, then time it on puzzles rated as the hardest."
+  },
+  {
+    "title": "Link shortener",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "http.server, sqlite3",
+    "desc": "A tiny web server on your own machine that turns long links into short codes and redirects them."
+  },
+  {
+    "title": "Mandelbrot picture",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Pillow",
+    "desc": "Compute the Mandelbrot set pixel by pixel and save it as an image. Then try your own colour scheme."
+  },
+  {
+    "title": "Nonsense text generator",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "random, collections",
+    "desc": "Build a Markov chain from a book and generate new sentences in the same style."
+  },
+  {
+    "title": "Duplicate file finder",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "hashlib, pathlib",
+    "desc": "Find identical files by hashing their contents and report how much space the copies waste."
   }
 ]

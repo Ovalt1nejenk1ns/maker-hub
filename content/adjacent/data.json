@@ -28,5 +28,95 @@
     "why": "Zooniverse lets you classify galaxies, count penguins or transcribe old ship logs for real research.",
     "url": "https://www.zooniverse.org/",
     "how": "Join a project"
+  },
+  {
+    "title": "Florence Nightingale's diagrams",
+    "why": "She used a new kind of chart to persuade the British government that hospitals were killing soldiers.",
+    "url": "https://en.wikipedia.org/wiki/Florence_Nightingale",
+    "how": "20-minute read"
+  },
+  {
+    "title": "John Snow's cholera map",
+    "why": "Dots on a street map of London pointed to one water pump and changed public health.",
+    "url": "https://en.wikipedia.org/wiki/1854_Broad_Street_cholera_outbreak",
+    "how": "Short read"
+  },
+  {
+    "title": "Minard's map",
+    "why": "Napoleon's march on Moscow drawn in 1869 as a single shrinking line. Often called the best chart ever made.",
+    "url": "https://en.wikipedia.org/wiki/Charles_Joseph_Minard",
+    "how": "Short read"
+  },
+  {
+    "title": "Anscombe's quartet",
+    "why": "Four data sets with the same averages and correlations that look nothing alike when plotted.",
+    "url": "https://en.wikipedia.org/wiki/Anscombe%27s_quartet",
+    "how": "Short read"
+  },
+  {
+    "title": "Simpson's paradox",
+    "why": "A trend that holds in every group can reverse when the groups are added together.",
+    "url": "https://en.wikipedia.org/wiki/Simpson%27s_paradox",
+    "how": "Short read"
+  },
+  {
+    "title": "Our World in Data",
+    "why": "Long-run charts on almost everything, from child mortality to the price of light.",
+    "url": "https://ourworldindata.org/",
+    "how": "Pick one chart"
+  },
+  {
+    "title": "Dollar Street",
+    "why": "Photos of homes around the world, sorted by income. People at the same income live alike everywhere.",
+    "url": "https://www.gapminder.org/dollar-street",
+    "how": "Explore"
+  },
+  {
+    "title": "Survivorship bias",
+    "why": "The wartime story of the bombers that came back, and why the armour belonged where they had no holes.",
+    "url": "https://en.wikipedia.org/wiki/Survivorship_bias",
+    "how": "Short read"
+  },
+  {
+    "title": "Seeing Theory",
+    "why": "A visual introduction to probability where every idea is something you can drag and play with.",
+    "url": "https://seeing-theory.brown.edu/",
+    "how": "Play in your browser"
+  },
+  {
+    "title": "The birthday problem",
+    "why": "In a room of 23 people there is an even chance that two share a birthday.",
+    "url": "https://en.wikipedia.org/wiki/Birthday_problem",
+    "how": "Short read"
+  },
+  {
+    "title": "Zipf's law",
+    "why": "In any language the second most common word appears about half as often as the first. Nobody is sure why.",
+    "url": "https://en.wikipedia.org/wiki/Zipf%27s_law",
+    "how": "Short read"
+  },
+  {
+    "title": "OpenStreetMap",
+    "why": "A map of the whole world drawn by volunteers, and free for anyone to download as data.",
+    "url": "https://www.openstreetmap.org/about",
+    "how": "Find your street"
+  },
+  {
+    "title": "W. E. B. Du Bois's charts",
+    "why": "Hand-drawn, strikingly modern charts on Black life in America, made for the 1900 Paris Exposition.",
+    "url": "https://en.wikipedia.org/wiki/The_Exhibit_of_American_Negroes",
+    "how": "Look and wonder"
+  },
+  {
+    "title": "Sonification",
+    "why": "Turning data into sound in place of pictures. A Geiger counter is the everyday example.",
+    "url": "https://en.wikipedia.org/wiki/Sonification",
+    "how": "Short read"
+  },
+  {
+    "title": "The wisdom of crowds",
+    "why": "At a 1906 fair, the middle guess of the crowd for the weight of an ox was almost exactly right.",
+    "url": "https://en.wikipedia.org/wiki/Wisdom_of_the_crowd",
+    "how": "Short read"
   }
 ]

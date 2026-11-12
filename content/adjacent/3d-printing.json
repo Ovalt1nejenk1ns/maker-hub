@@ -28,5 +28,95 @@
     "why": "Theo Jansen's wind-powered walking sculptures. Small printed versions walk across a desk.",
     "url": "https://www.strandbeest.com/",
     "how": "Watch"
+  },
+  {
+    "title": "Auxetic materials",
+    "why": "Structures that get fatter when you stretch them. Easy to print, strange to hold.",
+    "url": "https://en.wikipedia.org/wiki/Auxetics",
+    "how": "Short read"
+  },
+  {
+    "title": "The gyroid",
+    "why": "That wavy infill pattern is a real mathematical surface, and it also appears in butterfly wings.",
+    "url": "https://en.wikipedia.org/wiki/Gyroid",
+    "how": "Short read"
+  },
+  {
+    "title": "The Miura fold",
+    "why": "A way of folding a sheet so it opens in one pull. Used for maps and for solar panels in space.",
+    "url": "https://en.wikipedia.org/wiki/Miura_fold",
+    "how": "Short read, then fold paper"
+  },
+  {
+    "title": "Lithophanes",
+    "why": "Thin panels that look like nothing until lit from behind, when a photograph appears.",
+    "url": "https://en.wikipedia.org/wiki/Lithophane",
+    "how": "Short read"
+  },
+  {
+    "title": "Voronoi diagrams",
+    "why": "The pattern in giraffe skin, dragonfly wings and cracked mud, and in a lot of printed lamps.",
+    "url": "https://en.wikipedia.org/wiki/Voronoi_diagram",
+    "how": "Short read"
+  },
+  {
+    "title": "Tensegrity",
+    "why": "Structures where the solid parts never touch and seem to float, held only by tension.",
+    "url": "https://en.wikipedia.org/wiki/Tensegrity",
+    "how": "Short read"
+  },
+  {
+    "title": "Automata",
+    "why": "Hand-cranked mechanical figures, some centuries old, that write, draw or play music.",
+    "url": "https://en.wikipedia.org/wiki/Automaton",
+    "how": "20-minute read"
+  },
+  {
+    "title": "Lost-wax casting",
+    "why": "A 6,000-year-old way to turn a model into metal. A printed part can stand in for the wax.",
+    "url": "https://en.wikipedia.org/wiki/Lost-wax_casting",
+    "how": "20-minute read"
+  },
+  {
+    "title": "Printed buildings",
+    "why": "The same idea as a desktop printer, scaled up to squeeze out houses in concrete.",
+    "url": "https://en.wikipedia.org/wiki/Construction_3D_printing",
+    "how": "Short read"
+  },
+  {
+    "title": "RepRap",
+    "why": "The project that set out to build a printer able to print its own parts, and started the hobby.",
+    "url": "https://reprap.org/wiki/RepRap",
+    "how": "Idle browsing"
+  },
+  {
+    "title": "Museum objects in 3D",
+    "why": "The Smithsonian has scanned fossils, spacecraft and statues that you can turn around on screen.",
+    "url": "https://3d.si.edu/",
+    "how": "Explore"
+  },
+  {
+    "title": "Burr puzzles",
+    "why": "Interlocking notched sticks that slide apart only in one order. A good test of print tolerances.",
+    "url": "https://en.wikipedia.org/wiki/Burr_puzzle",
+    "how": "Short read"
+  },
+  {
+    "title": "Topology optimisation",
+    "why": "Software removes every bit of material a part does not need. The results look like bone.",
+    "url": "https://en.wikipedia.org/wiki/Topology_optimization",
+    "how": "Short read"
+  },
+  {
+    "title": "The Antikythera mechanism",
+    "why": "A geared astronomical calculator from ancient Greece. People now build working replicas.",
+    "url": "https://en.wikipedia.org/wiki/Antikythera_mechanism",
+    "how": "20-minute read"
+  },
+  {
+    "title": "Bioprinting",
+    "why": "Printers that lay down living cells in place of plastic, in the hope of building tissue.",
+    "url": "https://en.wikipedia.org/wiki/3D_bioprinting",
+    "how": "Short read"
   }
 ]

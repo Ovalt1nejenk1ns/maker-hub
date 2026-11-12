@@ -28,5 +28,95 @@
     "why": "Programming languages built as jokes, puzzles and art, including one written entirely in whitespace.",
     "url": "https://esolangs.org/wiki/Main_Page",
     "how": "Idle browsing"
+  },
+  {
+    "title": "Advent of Code",
+    "why": "Twenty-five small story puzzles every December, and every past year is still open to play.",
+    "url": "https://adventofcode.com/",
+    "how": "Solve one"
+  },
+  {
+    "title": "Project Euler",
+    "why": "Hundreds of maths puzzles that are painful by hand and satisfying with a short program.",
+    "url": "https://projecteuler.net/",
+    "how": "Solve one"
+  },
+  {
+    "title": "Quines",
+    "why": "Programs whose only output is their own source code. Writing one is a classic brain-teaser.",
+    "url": "https://en.wikipedia.org/wiki/Quine_(computing)",
+    "how": "Short read"
+  },
+  {
+    "title": "Rule 110",
+    "why": "A one-line rule for colouring cells that turns out to be able to compute anything a computer can.",
+    "url": "https://en.wikipedia.org/wiki/Rule_110",
+    "how": "Short read"
+  },
+  {
+    "title": "L-systems",
+    "why": "A few rewriting rules grow convincing ferns, trees and snowflakes. Invented by a botanist.",
+    "url": "https://en.wikipedia.org/wiki/L-system",
+    "how": "Read, then draw one"
+  },
+  {
+    "title": "The Mandelbrot set",
+    "why": "One short formula, repeated, draws a shape with endless detail however far you zoom in.",
+    "url": "https://en.wikipedia.org/wiki/Mandelbrot_set",
+    "how": "Read and stare"
+  },
+  {
+    "title": "Logo and the turtle",
+    "why": "A 1960s language built so children could learn maths by steering a drawing robot.",
+    "url": "https://en.wikipedia.org/wiki/Logo_(programming_language)",
+    "how": "Short read"
+  },
+  {
+    "title": "PICO-8",
+    "why": "A made-up 1980s-style console with tiny limits. People squeeze whole games into it.",
+    "url": "https://www.lexaloffle.com/pico-8.php",
+    "how": "Play in your browser"
+  },
+  {
+    "title": "The Nature of Code",
+    "why": "A free book on simulating flocking, gravity and evolution with small programs.",
+    "url": "https://natureofcode.com/",
+    "how": "Read a chapter"
+  },
+  {
+    "title": "Markov chains, visually",
+    "why": "A playable explainer of the simple idea behind predictive text and weather models.",
+    "url": "https://setosa.io/ev/markov-chains/",
+    "how": "10 minutes, in your browser"
+  },
+  {
+    "title": "Crafting Interpreters",
+    "why": "A free, friendly book that walks you through building your own programming language.",
+    "url": "https://craftinginterpreters.com/",
+    "how": "Long read"
+  },
+  {
+    "title": "The demoscene",
+    "why": "A subculture that makes music videos in real time, some from programs smaller than this page.",
+    "url": "https://en.wikipedia.org/wiki/Demoscene",
+    "how": "Read, then watch a few"
+  },
+  {
+    "title": "Code golf",
+    "why": "A sport where the shortest program wins. The answers are unreadable and oddly beautiful.",
+    "url": "https://code.golf/",
+    "how": "Try a hole"
+  },
+  {
+    "title": "Wave function collapse",
+    "why": "An algorithm that grows whole towns and patterns from one tiny example image.",
+    "url": "https://github.com/mxgmn/WaveFunctionCollapse",
+    "how": "Look at the pictures"
+  },
+  {
+    "title": "Boids",
+    "why": "Three simple rules per bird are enough to make a convincing flock. Films have used it since the 1990s.",
+    "url": "https://www.red3d.com/cwr/boids/",
+    "how": "Short read"
   }
 ]

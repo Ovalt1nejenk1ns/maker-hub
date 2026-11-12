@@ -33,5 +33,110 @@
     "time": "2 weekends",
     "needs": "Chassis kit, ultrasonic sensor, motor driver",
     "desc": "Drive forward, measure distance, and turn away from walls. Then add smoother behaviour with a simple state machine."
+  },
+  {
+    "title": "Traffic lights",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Arduino, 3 LEDs, button",
+    "desc": "Run a pedestrian crossing sequence without using delay(), so that the button always responds."
+  },
+  {
+    "title": "Reaction timer",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Arduino, LED, button",
+    "desc": "Light an LED after a random wait and measure how fast you hit the button. Keep a high score."
+  },
+  {
+    "title": "Parking sensor",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Arduino, ultrasonic sensor, buzzer",
+    "desc": "Beep faster as an object gets closer, like the sensor in a car bumper."
+  },
+  {
+    "title": "Desktop radar",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "Servo, ultrasonic sensor",
+    "desc": "Sweep the sensor on a servo and draw what it sees as a radar screen on your computer."
+  },
+  {
+    "title": "Light-seeking robot",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "2 light sensors, 2 motors, chassis",
+    "desc": "Build a Braitenberg vehicle, then swap the two wires and watch it flee the light."
+  },
+  {
+    "title": "E-paper weather display",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "ESP32, e-paper screen",
+    "desc": "Show the forecast on a screen that keeps its picture with the power off."
+  },
+  {
+    "title": "Desk air monitor",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "ESP32, CO2 sensor",
+    "desc": "Measure CO2 at your desk and light up when it is time to open a window."
+  },
+  {
+    "title": "LED matrix clock",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "ESP32, LED matrix",
+    "desc": "A clock that sets itself over Wi-Fi and scrolls the date now and then."
+  },
+  {
+    "title": "Cardboard robot arm",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "4 small servos, potentiometers",
+    "desc": "A small arm controlled by turning knobs. Record a sequence of moves and replay it."
+  },
+  {
+    "title": "Morse code key",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Arduino, button, buzzer",
+    "desc": "Tap out Morse code and have the board decode it to text on the serial monitor."
+  },
+  {
+    "title": "Light theremin",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Arduino, light sensor, speaker",
+    "desc": "Wave a hand over a light sensor to change the pitch. Noisy and very satisfying."
+  },
+  {
+    "title": "Motion night light",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "PIR sensor, LED strip",
+    "desc": "A strip that fades up when someone walks past in the dark and fades out again."
+  },
+  {
+    "title": "Self-balancing robot",
+    "level": "Advanced",
+    "time": "2 weekends",
+    "needs": "IMU, 2 geared motors, driver",
+    "desc": "Two wheels and a PID loop. Expect to spend most of the time tuning three numbers."
+  },
+  {
+    "title": "Doorbell notifier",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "ESP32, MQTT broker",
+    "desc": "Detect the doorbell and send a message to your phone over your home network."
+  },
+  {
+    "title": "Web-controlled rover",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "ESP32, motor driver, chassis",
+    "desc": "Drive a small rover from a web page served by the robot itself."
   }
 ]
