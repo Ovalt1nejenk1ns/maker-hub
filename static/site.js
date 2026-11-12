@@ -86,22 +86,21 @@
     });
   }
 
-  /* Home page: random project idea from any topic */
-  var hi = document.getElementById("home-idea");
-  if (hi) {
-    var ideas = JSON.parse(hi.getAttribute("data-ideas") || "[]"), shown = null;
+  /* Home page: random pickers (rabbit holes, project ideas) */
+  [].forEach.call(document.querySelectorAll(".roller"), function (box) {
+    var items = JSON.parse(box.getAttribute("data-items") || "[]"), shown = null;
     var roll = function () {
-      if (!ideas.length) return;
-      var i = pick(ideas);
-      if (ideas.length > 1) while (i === shown) i = pick(ideas);
+      if (!items.length) return;
+      var i = pick(items);
+      if (items.length > 1) while (i === shown) i = pick(items);
       shown = i;
-      var a = hi.querySelector(".idea-title");
+      var a = box.querySelector(".idea-title");
       a.textContent = i.t; a.href = href(i.u);
-      hi.querySelector(".idea-desc").textContent = i.d;
-      hi.querySelector(".idea-meta").textContent = i.s + " · " + i.m;
+      box.querySelector(".idea-desc").textContent = i.d;
+      box.querySelector(".idea-meta").textContent = i.m ? i.s + " · " + i.m : i.s;
     };
     roll();
-    var again = hi.querySelector("button");
+    var again = box.querySelector("button");
     if (again) { again.hidden = false; again.addEventListener("click", roll); }
-  }
+  });
 })();

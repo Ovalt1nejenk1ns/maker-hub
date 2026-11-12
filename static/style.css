@@ -56,3 +56,5 @@ button.btn{border:0;cursor:pointer;font:inherit;font-weight:600}.btn.small{font-
 .tip button{margin-left:auto;background:none;border:1px solid var(--line);color:var(--accent2);border-radius:6px;padding:3px 10px;cursor:pointer;font:inherit;font-size:.8rem}
 .tip button:hover{border-color:var(--accent2)}
 h2[id],h3[id]{scroll-margin-top:90px}
+.pickers{margin:20px 0}.pickers .panel{display:flex;flex-direction:column}.pickers .btn{margin-top:auto;align-self:flex-start}
+.hole{border-left:4px solid var(--s2)}.hole h3{font-size:1.05rem}

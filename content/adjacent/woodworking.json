@@ -1,24 +1,32 @@
 [
   {
-    "title": "CNC routing",
-    "why": "Computer-controlled cutting for signs, joinery and repeat parts.",
-    "url": "https://www.cnccookbook.com/"
+    "title": "Japanese joinery",
+    "why": "Temples built with interlocking joints and no nails, some standing for over a thousand years.",
+    "url": "https://en.wikipedia.org/wiki/Japanese_carpentry",
+    "how": "20-minute read"
   },
   {
-    "title": "3D-printed jigs",
-    "why": "Print drill guides, corner clamps and dust-collection adapters for the shop.",
-    "url": "",
-    "hub": "3d-printing"
+    "title": "Wooden gears and marble machines",
+    "why": "Matthias Wandel builds machines out of plywood, including a wooden combination lock.",
+    "url": "https://woodgears.ca/",
+    "how": "Idle browsing"
   },
   {
-    "title": "Hand-tool sharpening",
-    "why": "Sharp chisels and planes change everything. Paul Sellers teaches a simple method.",
-    "url": "https://paulsellers.com/"
+    "title": "Kumiko",
+    "why": "Lattice panels made from hundreds of tiny pieces held together by fit alone.",
+    "url": "https://en.wikipedia.org/wiki/Kumiko_(woodworking)",
+    "how": "Short read"
   },
   {
-    "title": "Board game accessories",
-    "why": "Dice towers, card holders and box inserts make good small projects.",
-    "url": "",
-    "hub": "board-games"
+    "title": "Green woodworking",
+    "why": "Carving spoons and bowls from freshly cut wood with an axe and a knife, no workshop needed.",
+    "url": "https://en.wikipedia.org/wiki/Green_woodworking",
+    "how": "Short read"
+  },
+  {
+    "title": "Reading tree rings",
+    "why": "Dendrochronology dates old buildings, paintings and past climates from the pattern of rings in timber.",
+    "url": "https://en.wikipedia.org/wiki/Dendrochronology",
+    "how": "20-minute read"
   }
 ]

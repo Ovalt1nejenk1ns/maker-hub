@@ -89,7 +89,7 @@ def main():
     site_tips = [{"t": t, "s": label[k]} for k in config.TOPICS for t in all_tips.get(k, [])]
     common = dict(updated=feed["updated"], page_tips=site_tips)
     search = []      # site-wide search index: t=title, u=url, k=kind, s=topic
-    home_ideas = []
+    home_ideas, home_holes = [], []
 
     def add(title, url, kind, key):
         if title and url:
@@ -128,10 +128,12 @@ def main():
             home_ideas.append({"t": idea["title"], "d": idea["desc"], "s": label[key], "u": url,
                                "m": f'{idea["level"]} · {idea["time"]}'})
         for a in adjacent:
-            add(f'{a["title"]}: {a["why"]}', a.get("url") or f'{a["hub"]}/index.html', "Explore next", key)
+            add(f'{a["title"]}: {a["why"]}', a["url"], "Rabbit hole", key)
+            home_holes.append({"t": a["title"], "d": a["why"], "u": a["url"],
+                               "s": f"Next door to {label[key]}", "m": a.get("how", "")})
 
     render("index.html", "index.html", "", feed=feed, digest=build_digest(feed, hist),
-           home_ideas=home_ideas, **common)
+           home_ideas=home_ideas, home_holes=home_holes, **common)
 
     dash = {}
     for key, cfg in config.TOPICS.items():

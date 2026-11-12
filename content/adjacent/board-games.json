@@ -1,25 +1,32 @@
 [
   {
-    "title": "Game design",
-    "why": "Make your own. The Board Game Design Lab has interviews and guides.",
-    "url": "https://boardgamedesignlab.com/"
+    "title": "The Royal Game of Ur",
+    "why": "A 4,500-year-old game whose rules were recovered from a clay tablet in the British Museum.",
+    "url": "https://en.wikipedia.org/wiki/Royal_Game_of_Ur",
+    "how": "Short read"
   },
   {
-    "title": "3D-printed inserts and minis",
-    "why": "Organisers, tokens and terrain for games you own.",
-    "url": "",
-    "hub": "3d-printing"
+    "title": "Go",
+    "why": "Simple rules that are older than chess, with more possible games than atoms in the universe.",
+    "url": "https://online-go.com/learn-to-play-go",
+    "how": "Learn in your browser"
   },
   {
-    "title": "Probability with Python",
-    "why": "Simulate dice and card draws to understand the odds in a game.",
-    "url": "",
-    "hub": "python"
+    "title": "The Evolution of Trust",
+    "why": "A playable explainer on game theory and why people cooperate or cheat.",
+    "url": "https://ncase.me/trust/",
+    "how": "30 minutes, in your browser"
   },
   {
-    "title": "Wooden accessories",
-    "why": "Dice trays and card racks are approachable shop projects.",
-    "url": "",
-    "hub": "woodworking"
+    "title": "Hex",
+    "why": "A game that cannot end in a draw. It was invented twice, once by John Nash.",
+    "url": "https://en.wikipedia.org/wiki/Hex_(board_game)",
+    "how": "Short read"
+  },
+  {
+    "title": "Interactive fiction",
+    "why": "Text adventures never went away. Thousands of free story games can be played in a browser.",
+    "url": "https://ifdb.org/",
+    "how": "Play one"
   }
 ]

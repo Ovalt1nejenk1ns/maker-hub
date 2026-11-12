@@ -36,14 +36,19 @@
   </div>
 </section>
 
-{% if home_ideas %}
-<section id="home-idea" class="panel wide build" data-ideas='{{ home_ideas|tojson }}'>
-  <h2>🛠 Build this next</h2>
-  <p><a class="idea-title" href="{{ home_ideas[0].u }}">{{ home_ideas[0].t }}</a> <span class="idea-meta muted">{{ home_ideas[0].s }} · {{ home_ideas[0].m }}</span></p>
-  <p class="idea-desc">{{ home_ideas[0].d }}</p>
-  <button type="button" class="btn" hidden>🎲 Surprise me</button>
+<div class="grid pickers">
+{% for title, items, label in [("🐇 Go down a rabbit hole", home_holes, "🎲 Take me somewhere else"), ("🛠 Build this next", home_ideas, "🎲 Surprise me")] %}
+{% if items %}
+<section class="panel build roller" data-items='{{ items|tojson }}'>
+  <h2>{{ title }}</h2>
+  <p><a class="idea-title" href="{{ items[0].u }}">{{ items[0].t }}</a></p>
+  <p class="idea-desc">{{ items[0].d }}</p>
+  <p class="idea-meta muted small">{{ items[0].s }} · {{ items[0].m }}</p>
+  <button type="button" class="btn" hidden>{{ label }}</button>
 </section>
 {% endif %}
+{% endfor %}
+</div>
 
 <h2>Topics</h2>
 <div class="grid">
@@ -58,7 +63,7 @@
       <li><a href="{{ r.url }}">{{ r.name }}</a> <span class="stars">★ {{ '{:,}'.format(r.stars) }}</span></li>
     {% else %}<li class="muted">No data yet.</li>{% endfor %}
     </ol>
-    <a class="more" href="{{ k }}/index.html">See all →</a> · <a class="more" href="{{ k }}/cheatsheet/index.html">Cheat sheet</a> · <a class="more" href="{{ k }}/index.html#ideas">Project ideas</a>
+    <a class="more" href="{{ k }}/index.html">See all →</a> · <a class="more" href="{{ k }}/cheatsheet/index.html">Cheat sheet</a> · <a class="more" href="{{ k }}/index.html#ideas">Project ideas</a> · <a class="more" href="{{ k }}/index.html#explore">Rabbit holes</a>
   </section>
 {% endfor %}
 </div>

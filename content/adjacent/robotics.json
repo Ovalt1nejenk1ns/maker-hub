@@ -1,23 +1,32 @@
 [
   {
-    "title": "3D printing",
-    "why": "Print your own chassis, brackets and enclosures.",
-    "url": "",
-    "hub": "3d-printing"
+    "title": "Braitenberg vehicles",
+    "why": "A thought experiment: wire two sensors to two motors and the result seems to show fear, love or curiosity.",
+    "url": "https://en.wikipedia.org/wiki/Braitenberg_vehicle",
+    "how": "Short read"
   },
   {
-    "title": "CircuitPython",
-    "why": "Python on a microcontroller. You edit code on the board as if it were a USB drive.",
-    "url": "https://circuitpython.org/"
+    "title": "BEAM robots",
+    "why": "Solar-powered bugs built from a handful of transistors, with no microcontroller and no code at all.",
+    "url": "https://en.wikipedia.org/wiki/BEAM_robotics",
+    "how": "Short read"
   },
   {
-    "title": "Home automation",
-    "why": "ESPHome turns an ESP32 into a smart-home sensor with a short config file.",
-    "url": "https://esphome.io/"
+    "title": "Off-grid mesh messaging",
+    "why": "Meshtastic radios pass text messages for miles with no phone network or internet.",
+    "url": "https://meshtastic.org/",
+    "how": "Read, then maybe buy a radio"
   },
   {
-    "title": "PCB design",
-    "why": "KiCad is free and takes a breadboard project to a real circuit board.",
-    "url": "https://www.kicad.org/"
+    "title": "Software-defined radio",
+    "why": "A cheap USB stick lets you hear aircraft, weather satellites and much more.",
+    "url": "https://www.rtl-sdr.com/about-rtl-sdr/",
+    "how": "Read"
+  },
+  {
+    "title": "Citizen air sensing",
+    "why": "Thousands of people run home-built sensors that feed a live world map of air quality.",
+    "url": "https://sensor.community/en/",
+    "how": "Explore the map"
   }
 ]

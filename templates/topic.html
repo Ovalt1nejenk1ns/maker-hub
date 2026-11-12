@@ -3,7 +3,7 @@
 {% block body %}
 <h1>{{ tcfg.icon }} {{ tcfg.label }}</h1>
 <p class="muted">{{ tcfg.blurb }}</p>
-<p class="jump"><a href="#news">News</a> · {% if has_sheet %}<a href="cheatsheet/index.html">Cheat sheet</a> · {% endif %}{% if quickref %}<a href="#quickref">Quick reference</a> · {% endif %}{% if resources %}<a href="#resources">Resources</a> · {% endif %}{% if ideas %}<a href="#ideas">Project ideas</a> · {% endif %}{% if adjacent %}<a href="#explore">Explore next</a> · {% endif %}<a href="#trending">Trending</a></p>
+<p class="jump"><a href="#news">News</a> · {% if has_sheet %}<a href="cheatsheet/index.html">Cheat sheet</a> · {% endif %}{% if quickref %}<a href="#quickref">Quick reference</a> · {% endif %}{% if resources %}<a href="#resources">Resources</a> · {% endif %}{% if ideas %}<a href="#ideas">Project ideas</a> · {% endif %}{% if adjacent %}<a href="#explore">Rabbit holes</a> · {% endif %}<a href="#trending">Trending</a></p>
 
 <h2 id="news">Latest news</h2>
 {% if t.news %}
@@ -47,11 +47,17 @@
 {% endif %}
 
 {% if adjacent %}
-<h2 id="explore">Explore next</h2>
-<p class="muted">If you like {{ tcfg.label }}, these are close neighbours.</p>
-<ul class="res">
-{% for a in adjacent %}<li>{% if a.hub and not a.url %}<a href="../{{ a.hub }}/index.html">{{ topics[a.hub].icon }} {{ a.title }}</a> <span class="tag here">on this site</span>{% else %}<a href="{{ a.url }}">{{ a.title }}</a>{% endif %} — <span class="muted">{{ a.why }}</span></li>{% endfor %}
-</ul>
+<h2 id="explore">🐇 Rabbit holes</h2>
+<p class="muted">Next door to {{ tcfg.label }}, but probably not on your radar. Good with a coffee.</p>
+<div class="cards">
+{% for a in adjacent %}
+  <article class="card hole">
+    <h3><a href="{{ a.url }}">{{ a.title }}</a></h3>
+    <p>{{ a.why }}</p>
+    {% if a.how %}<p class="meta">{{ a.how }}</p>{% endif %}
+  </article>
+{% endfor %}
+</div>
 {% endif %}
 
 <h2 id="trending">Trending on GitHub</h2>
