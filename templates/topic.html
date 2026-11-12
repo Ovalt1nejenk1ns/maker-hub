@@ -3,7 +3,7 @@
 {% block body %}
 <h1>{{ tcfg.icon }} {{ tcfg.label }}</h1>
 <p class="muted">{{ tcfg.blurb }}</p>
-<p class="jump"><a href="#news">News</a> · {% if has_sheet %}<a href="cheatsheet/index.html">Cheat sheet</a> · {% endif %}{% if quickref %}<a href="#quickref">Quick reference</a> · {% endif %}{% if resources %}<a href="#resources">Resources</a> · {% endif %}<a href="#trending">Trending</a></p>
+<p class="jump"><a href="#news">News</a> · {% if has_sheet %}<a href="cheatsheet/index.html">Cheat sheet</a> · {% endif %}{% if quickref %}<a href="#quickref">Quick reference</a> · {% endif %}{% if resources %}<a href="#resources">Resources</a> · {% endif %}{% if ideas %}<a href="#ideas">Project ideas</a> · {% endif %}{% if adjacent %}<a href="#explore">Explore next</a> · {% endif %}<a href="#trending">Trending</a></p>
 
 <h2 id="news">Latest news</h2>
 {% if t.news %}
@@ -30,6 +30,28 @@
 {% for r in g["items"] %}<li><a href="{{ r.url }}">{{ r.title }}</a> — <span class="muted">{{ r.note }}</span></li>{% endfor %}
 </ul>
 {% endfor %}
+{% endif %}
+
+{% if ideas %}
+<h2 id="ideas">Project ideas <button type="button" id="surprise" class="btn small" hidden>🎲 Surprise me</button></h2>
+<p class="muted">Things to build next, roughly easiest first.</p>
+<div class="cards">
+{% for i in ideas %}
+  <article class="card idea" id="idea-{{ loop.index }}">
+    <h3>{{ i.title }}</h3>
+    <p>{{ i.desc }}</p>
+    <p class="meta"><span class="tag lvl-{{ i.level|lower }}">{{ i.level }}</span> · {{ i.time }} · needs: {{ i.needs }}</p>
+  </article>
+{% endfor %}
+</div>
+{% endif %}
+
+{% if adjacent %}
+<h2 id="explore">Explore next</h2>
+<p class="muted">If you like {{ tcfg.label }}, these are close neighbours.</p>
+<ul class="res">
+{% for a in adjacent %}<li>{% if a.hub and not a.url %}<a href="../{{ a.hub }}/index.html">{{ topics[a.hub].icon }} {{ a.title }}</a> <span class="tag here">on this site</span>{% else %}<a href="{{ a.url }}">{{ a.title }}</a>{% endif %} — <span class="muted">{{ a.why }}</span></li>{% endfor %}
+</ul>
 {% endif %}
 
 <h2 id="trending">Trending on GitHub</h2>

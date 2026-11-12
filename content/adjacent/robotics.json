@@ -1,0 +1,23 @@
+[
+  {
+    "title": "3D printing",
+    "why": "Print your own chassis, brackets and enclosures.",
+    "url": "",
+    "hub": "3d-printing"
+  },
+  {
+    "title": "CircuitPython",
+    "why": "Python on a microcontroller. You edit code on the board as if it were a USB drive.",
+    "url": "https://circuitpython.org/"
+  },
+  {
+    "title": "Home automation",
+    "why": "ESPHome turns an ESP32 into a smart-home sensor with a short config file.",
+    "url": "https://esphome.io/"
+  },
+  {
+    "title": "PCB design",
+    "why": "KiCad is free and takes a breadboard project to a real circuit board.",
+    "url": "https://www.kicad.org/"
+  }
+]

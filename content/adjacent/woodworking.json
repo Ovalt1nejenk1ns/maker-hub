@@ -1,0 +1,24 @@
+[
+  {
+    "title": "CNC routing",
+    "why": "Computer-controlled cutting for signs, joinery and repeat parts.",
+    "url": "https://www.cnccookbook.com/"
+  },
+  {
+    "title": "3D-printed jigs",
+    "why": "Print drill guides, corner clamps and dust-collection adapters for the shop.",
+    "url": "",
+    "hub": "3d-printing"
+  },
+  {
+    "title": "Hand-tool sharpening",
+    "why": "Sharp chisels and planes change everything. Paul Sellers teaches a simple method.",
+    "url": "https://paulsellers.com/"
+  },
+  {
+    "title": "Board game accessories",
+    "why": "Dice towers, card holders and box inserts make good small projects.",
+    "url": "",
+    "hub": "board-games"
+  }
+]

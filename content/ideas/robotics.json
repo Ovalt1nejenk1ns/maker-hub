@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Wi-Fi temperature logger",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "ESP32, BME280 or DHT22 sensor",
+    "desc": "Read temperature and humidity and show them on a small web page served by the board itself."
+  },
+  {
+    "title": "Line-following robot",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Arduino, 2 motors, motor driver, IR sensors",
+    "desc": "A two-wheeled car that follows black tape. A classic first robot that teaches sensors and control loops."
+  },
+  {
+    "title": "Plant watering reminder",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Microcontroller, capacitive soil sensor, LED",
+    "desc": "Light an LED or send a message when the soil gets dry. Capacitive sensors last longer than the bare-metal resistive kind."
+  },
+  {
+    "title": "Pan-tilt camera mount",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "2 hobby servos, joystick or web page",
+    "desc": "Drive two servos to aim a camera. Power the servos from their own supply, not from a pin on the board."
+  },
+  {
+    "title": "Obstacle-avoiding rover",
+    "level": "Intermediate",
+    "time": "2 weekends",
+    "needs": "Chassis kit, ultrasonic sensor, motor driver",
+    "desc": "Drive forward, measure distance, and turn away from walls. Then add smoother behaviour with a simple state machine."
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Python",
+    "why": "The language behind pandas, Jupyter and most data tools.",
+    "url": "",
+    "hub": "python"
+  },
+  {
+    "title": "SQL",
+    "why": "Still the most useful data skill. SQLBolt teaches it in short interactive lessons.",
+    "url": "https://sqlbolt.com/"
+  },
+  {
+    "title": "Statistics",
+    "why": "Know when a difference is real. Khan Academy covers the basics for free.",
+    "url": "https://www.khanacademy.org/math/statistics-probability"
+  },
+  {
+    "title": "Data visualisation",
+    "why": "From Data to Viz helps you pick the right chart for your data.",
+    "url": "https://www.data-to-viz.com/"
+  }
+]

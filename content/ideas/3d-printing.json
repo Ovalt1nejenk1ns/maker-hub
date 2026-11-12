@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Calibration set",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Any FDM printer, calipers",
+    "desc": "Print a temperature tower and a calibration cube, measure them, and write down the settings that work for each filament."
+  },
+  {
+    "title": "Gridfinity drawer bins",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "PLA or PETG",
+    "desc": "Print a baseplate and a few bins to organise one drawer. The grid is 42 mm, so bins from different designers fit together."
+  },
+  {
+    "title": "Custom cable clips",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "CAD basics",
+    "desc": "Measure a cable, model a clip to fit it, and print it. A small part is the quickest way to learn tolerances."
+  },
+  {
+    "title": "Print-in-place hinge box",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "Well-tuned printer",
+    "desc": "Design a small box whose hinge prints already assembled. You will learn clearances and bridging."
+  },
+  {
+    "title": "Heat-set insert enclosure",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "Brass inserts, soldering iron",
+    "desc": "Make an electronics case with threaded brass inserts so the lid can be screwed on and off many times."
+  }
+]

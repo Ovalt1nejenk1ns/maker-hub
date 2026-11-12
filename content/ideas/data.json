@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Analyse your own spending",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "pandas, a bank CSV export",
+    "desc": "Load a year of transactions, group by month and category, and chart where the money goes."
+  },
+  {
+    "title": "City weather history",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "pandas, matplotlib, Open-Meteo",
+    "desc": "Download ten years of daily temperatures and check whether summers where you live are getting warmer."
+  },
+  {
+    "title": "SQL on CSV files with DuckDB",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "duckdb",
+    "desc": "Query a large CSV directly with SQL, no database server needed. Compare the speed with pandas."
+  },
+  {
+    "title": "Public dataset dashboard",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "pandas, plotly or Streamlit",
+    "desc": "Pick an open dataset from your city or country and build three charts that answer one clear question."
+  },
+  {
+    "title": "Board game collection stats",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "pandas, a collection CSV export",
+    "desc": "Export your collection and plays, then find your most-played games, cost per play, and what is gathering dust."
+  }
+]

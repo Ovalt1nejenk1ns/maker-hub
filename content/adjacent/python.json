@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Data analytics",
+    "why": "The most popular use of Python. pandas turns spreadsheets into something you can script.",
+    "url": "",
+    "hub": "data"
+  },
+  {
+    "title": "MicroPython",
+    "why": "The Python you know, running on a microcontroller. A gentle way into electronics.",
+    "url": "https://micropython.org/"
+  },
+  {
+    "title": "Home automation",
+    "why": "Home Assistant is written in Python and can be extended with your own scripts.",
+    "url": "https://www.home-assistant.io/"
+  },
+  {
+    "title": "Web apps",
+    "why": "Flask gets a small site or API running in a few lines.",
+    "url": "https://flask.palletsprojects.com/"
+  }
+]

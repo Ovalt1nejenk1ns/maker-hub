@@ -1,0 +1,24 @@
+[
+  {
+    "title": "CAD modelling",
+    "why": "Designing your own parts is where printing gets useful. FreeCAD is free and parametric.",
+    "url": "https://www.freecad.org/"
+  },
+  {
+    "title": "Code-based CAD",
+    "why": "OpenSCAD describes models as code, which suits programmers and adjustable designs.",
+    "url": "https://openscad.org/"
+  },
+  {
+    "title": "Electronics enclosures",
+    "why": "Print cases and mounts for microcontroller projects.",
+    "url": "",
+    "hub": "robotics"
+  },
+  {
+    "title": "Shop jigs and fixtures",
+    "why": "Printed drill guides and clamps are useful at the workbench.",
+    "url": "",
+    "hub": "woodworking"
+  }
+]

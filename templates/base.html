@@ -6,15 +6,29 @@
 <title>{% block title %}{{ cfg.SITE_TITLE }}{% endblock %}</title>
 <link rel="stylesheet" href="{{ root }}style.css">
 </head>
-<body>
+<body data-root="{{ root }}">
 <header class="top">
   <a class="brand" href="{{ root }}index.html">⚙ {{ cfg.SITE_TITLE }}</a>
   <nav>
     {% for k, c in topics.items() %}<a href="{{ root }}{{ k }}/index.html">{{ c.icon }} {{ c.label }}</a>{% endfor %}
     <a href="{{ root }}dashboards/index.html">📊 Dashboards</a>
   </nav>
+  <div class="search">
+    <input id="q" type="search" placeholder="Search news, repos, ideas…  ( / )" aria-label="Search the site" autocomplete="off">
+    <div id="results" hidden></div>
+  </div>
 </header>
-<main>{% block body %}{% endblock %}</main>
+<main>{% block body %}{% endblock %}
+{% if page_tips %}
+<aside id="tip" class="tip" data-tips='{{ page_tips|tojson }}'>
+  <strong>💡 Did you know?</strong>
+  <span class="tip-text">{{ page_tips[0].t }}</span>
+  <span class="tip-src muted">{{ page_tips[0].s }}</span>
+  <button type="button" hidden>Another tip</button>
+</aside>
+{% endif %}
+</main>
 <footer>Data refreshed {{ updated }} from the GitHub and Hacker News APIs · built with Python</footer>
+<script src="{{ root }}site.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Edge-grain cutting board",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Hardwood, clamps, glue",
+    "desc": "Glue up strips of maple or walnut, flatten, sand and finish with food-safe mineral oil."
+  },
+  {
+    "title": "Bench hook and shooting board",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Scrap plywood, saw",
+    "desc": "Two simple jigs that make hand sawing and trimming ends square much easier. Good first projects."
+  },
+  {
+    "title": "Simple step stool",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Pine board, screws or dowels",
+    "desc": "A sturdy stool with angled sides. Practise accurate crosscuts and a strong joint."
+  },
+  {
+    "title": "Dovetailed keepsake box",
+    "level": "Intermediate",
+    "time": "2 weekends",
+    "needs": "Dovetail saw, chisels, marking gauge",
+    "desc": "Cut through dovetails by hand at the four corners. Expect the second box to look much better than the first."
+  },
+  {
+    "title": "French cleat tool wall",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Plywood, table or circular saw",
+    "desc": "Rip plywood strips at 45 degrees and hang them on the wall, then build holders that can be rearranged at any time."
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Game design",
+    "why": "Make your own. The Board Game Design Lab has interviews and guides.",
+    "url": "https://boardgamedesignlab.com/"
+  },
+  {
+    "title": "3D-printed inserts and minis",
+    "why": "Organisers, tokens and terrain for games you own.",
+    "url": "",
+    "hub": "3d-printing"
+  },
+  {
+    "title": "Probability with Python",
+    "why": "Simulate dice and card draws to understand the odds in a game.",
+    "url": "",
+    "hub": "python"
+  },
+  {
+    "title": "Wooden accessories",
+    "why": "Dice trays and card racks are approachable shop projects.",
+    "url": "",
+    "hub": "woodworking"
+  }
+]

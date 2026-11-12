@@ -4,6 +4,48 @@
   <h1>{{ cfg.SITE_TITLE }}</h1>
   <p>{{ cfg.SITE_TAGLINE }}</p>
 </section>
+
+<section class="week">
+  <h2>🗞 This week</h2>
+  <div class="grid">
+    <div class="panel">
+      <h3>🚀 Rising fastest</h3>
+      {% if digest.gainers %}
+      <ol class="mini">
+      {% for g in digest.gainers %}<li><a href="{{ g.url }}">{{ g.name }}</a> <span class="gain">+{{ '{:,}'.format(g.gain) }} ★</span> <span class="muted">{{ topics[g.topic].icon }}</span></li>{% endfor %}
+      </ol>
+      <p class="muted small">Stars gained since {{ digest.since }}.</p>
+      {% else %}<p class="muted">Needs two data snapshots. Check back after the next refresh.</p>{% endif %}
+    </div>
+    <div class="panel">
+      <h3>📰 Fresh news</h3>
+      {% if digest.news %}
+      <ul class="mini plain">
+      {% for n in digest.news %}<li>{{ topics[n.topic].icon }} <a href="{{ n.url }}">{{ n.title }}</a> <span class="muted">{{ n.source }}</span></li>{% endfor %}
+      </ul>
+      {% else %}<p class="muted">No news yet. It appears after the first scheduled refresh.</p>{% endif %}
+    </div>
+    <div class="panel">
+      <h3>🔥 Top on Hacker News</h3>
+      {% if digest.hn %}
+      <ul class="mini plain">
+      {% for s in digest.hn %}<li>{{ topics[s.topic].icon }} <a href="{{ s.url }}">{{ s.title }}</a> <span class="muted">{{ s.points }} pts · <a href="{{ s.hn_url }}">discussion</a></span></li>{% endfor %}
+      </ul>
+      {% else %}<p class="muted">No stories in the last two weeks.</p>{% endif %}
+    </div>
+  </div>
+</section>
+
+{% if home_ideas %}
+<section id="home-idea" class="panel wide build" data-ideas='{{ home_ideas|tojson }}'>
+  <h2>🛠 Build this next</h2>
+  <p><a class="idea-title" href="{{ home_ideas[0].u }}">{{ home_ideas[0].t }}</a> <span class="idea-meta muted">{{ home_ideas[0].s }} · {{ home_ideas[0].m }}</span></p>
+  <p class="idea-desc">{{ home_ideas[0].d }}</p>
+  <button type="button" class="btn" hidden>🎲 Surprise me</button>
+</section>
+{% endif %}
+
+<h2>Topics</h2>
 <div class="grid">
 {% for k, c in topics.items() %}
   {% set t = feed.topics[k] %}
@@ -16,7 +58,7 @@
       <li><a href="{{ r.url }}">{{ r.name }}</a> <span class="stars">★ {{ '{:,}'.format(r.stars) }}</span></li>
     {% else %}<li class="muted">No data yet.</li>{% endfor %}
     </ol>
-    <a class="more" href="{{ k }}/index.html">See all →</a> · <a class="more" href="{{ k }}/cheatsheet/index.html">Cheat sheet</a>
+    <a class="more" href="{{ k }}/index.html">See all →</a> · <a class="more" href="{{ k }}/cheatsheet/index.html">Cheat sheet</a> · <a class="more" href="{{ k }}/index.html#ideas">Project ideas</a>
   </section>
 {% endfor %}
 </div>
