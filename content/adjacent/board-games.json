@@ -28,5 +28,95 @@
     "why": "Text adventures never went away. Thousands of free story games can be played in a browser.",
     "url": "https://ifdb.org/",
     "how": "Play one"
+  },
+  {
+    "title": "Mancala",
+    "why": "A family of seed-sowing games played across Africa and Asia, on boards or in holes in the ground.",
+    "url": "https://en.wikipedia.org/wiki/Mancala",
+    "how": "Short read"
+  },
+  {
+    "title": "Senet",
+    "why": "A game from ancient Egypt, found in Tutankhamun's tomb. The original rules are lost.",
+    "url": "https://en.wikipedia.org/wiki/Senet",
+    "how": "Short read"
+  },
+  {
+    "title": "Hnefatafl",
+    "why": "The Viking board game where the two sides are unequal: a king tries to escape a larger army.",
+    "url": "https://en.wikipedia.org/wiki/Tafl_games",
+    "how": "Short read"
+  },
+  {
+    "title": "Nim",
+    "why": "A game with piles of matchsticks that mathematics has solved completely. Learn the trick and you cannot lose.",
+    "url": "https://en.wikipedia.org/wiki/Nim",
+    "how": "Short read, then try it on someone"
+  },
+  {
+    "title": "Shogi",
+    "why": "Japanese chess, where the pieces you capture change sides and come back as your own.",
+    "url": "https://en.wikipedia.org/wiki/Shogi",
+    "how": "Short read"
+  },
+  {
+    "title": "The Landlord's Game",
+    "why": "The 1904 game that Monopoly grew from, designed to show why monopolies are bad.",
+    "url": "https://en.wikipedia.org/wiki/The_Landlord%27s_Game",
+    "how": "Short read"
+  },
+  {
+    "title": "Kriegsspiel",
+    "why": "The 19th-century Prussian army wargame that is the ancestor of modern hobby wargames.",
+    "url": "https://en.wikipedia.org/wiki/Kriegsspiel",
+    "how": "Short read"
+  },
+  {
+    "title": "Nomic",
+    "why": "A game in which changing the rules is a move. It was invented by a philosopher.",
+    "url": "https://en.wikipedia.org/wiki/Nomic",
+    "how": "Short read"
+  },
+  {
+    "title": "Gamebooks",
+    "why": "Books where you choose what happens next and turn to that page. Some need dice and a pencil.",
+    "url": "https://en.wikipedia.org/wiki/Gamebook",
+    "how": "Short read"
+  },
+  {
+    "title": "Chess puzzles",
+    "why": "Lichess serves an endless stream of free puzzles taken from real games.",
+    "url": "https://lichess.org/training",
+    "how": "Solve a few"
+  },
+  {
+    "title": "Pyramid games",
+    "why": "One set of stackable plastic pyramids and hundreds of different games invented for it.",
+    "url": "https://en.wikipedia.org/wiki/Icehouse_pieces",
+    "how": "Short read"
+  },
+  {
+    "title": "The maths of Dobble",
+    "why": "Any two cards share exactly one symbol. The trick comes from geometry.",
+    "url": "https://en.wikipedia.org/wiki/Dobble",
+    "how": "Short read"
+  },
+  {
+    "title": "Sprouts",
+    "why": "A pencil-and-paper game invented by two mathematicians. A few dots are enough to start.",
+    "url": "https://en.wikipedia.org/wiki/Sprouts_(game)",
+    "how": "Read, then play on a napkin"
+  },
+  {
+    "title": "AlphaGo and move 37",
+    "why": "In 2016 a program played a Go move that no professional would have chosen, and it won the game.",
+    "url": "https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol",
+    "how": "20-minute read"
+  },
+  {
+    "title": "Intransitive dice",
+    "why": "Three dice where A usually beats B, B usually beats C, and C usually beats A.",
+    "url": "https://en.wikipedia.org/wiki/Intransitive_dice",
+    "how": "Short read"
   }
 ]

@@ -33,5 +33,110 @@
     "time": "1 weekend",
     "needs": "Plywood, table or circular saw",
     "desc": "Rip plywood strips at 45 degrees and hang them on the wall, then build holders that can be rearranged at any time."
+  },
+  {
+    "title": "Mitred picture frame",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Mitre saw or mitre box, clamps",
+    "desc": "Four mitres that have to close cleanly. A humbling and useful exercise in accuracy."
+  },
+  {
+    "title": "Floating shelf",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Drill, hidden bracket",
+    "desc": "A plain shelf with no visible support. Finding the studs is half the job."
+  },
+  {
+    "title": "Joiner's mallet",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Hardwood offcuts, saw, chisel",
+    "desc": "Make the tool you will use for every later project. The handle wedges into the head."
+  },
+  {
+    "title": "Carved spoon",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Carving knife, hook knife, green wood",
+    "desc": "Carve a spoon from a freshly cut branch. No bench and no power tools needed."
+  },
+  {
+    "title": "Bird box",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "One fence board, saw, screws",
+    "desc": "A nest box cut from a single board. Look up the right hole size for your local birds."
+  },
+  {
+    "title": "Cedar planter",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Cedar boards, drill",
+    "desc": "A slatted planter box for the porch, with drainage and no finish needed."
+  },
+  {
+    "title": "Pair of sawhorses",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Construction lumber, saw",
+    "desc": "Sturdy sawhorses that stack. Every later project gets easier with them."
+  },
+  {
+    "title": "Small bookshelf",
+    "level": "Intermediate",
+    "time": "2 weekends",
+    "needs": "Router or dado plane, clamps",
+    "desc": "Shelves housed in dados so that the joints carry the weight, not the screws."
+  },
+  {
+    "title": "End-grain coasters",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Offcuts, saw, sandpaper",
+    "desc": "Slice and glue offcuts into coasters. A quick way to practise sanding and finishing."
+  },
+  {
+    "title": "Serving tray",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "Router or chisels",
+    "desc": "A tray with cut-out handles and a rebated base. A good first gift project."
+  },
+  {
+    "title": "Basic workbench",
+    "level": "Intermediate",
+    "time": "2 weekends",
+    "needs": "Construction lumber, bolts",
+    "desc": "A heavy, flat bench from ordinary timber. Flatten the top by hand as practice."
+  },
+  {
+    "title": "Marking gauge",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "Hardwood offcut, a small blade",
+    "desc": "A shop-made gauge with a wedge lock. Tools you make yourself get used the most."
+  },
+  {
+    "title": "Shaker peg rail",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Drill, dowel or bought pegs",
+    "desc": "A long rail of pegs for coats and bags, as plain as the originals."
+  },
+  {
+    "title": "Tool tote",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Pine boards, dowel, nails",
+    "desc": "The classic open toolbox with a dowel handle. Try nailed rebates at the corners."
+  },
+  {
+    "title": "Chessboard",
+    "level": "Advanced",
+    "time": "2 weekends",
+    "needs": "Two contrasting hardwoods, clamps",
+    "desc": "Glue up strips, cross-cut, flip every other strip and glue again. Accuracy matters at every step."
   }
 ]

@@ -33,5 +33,110 @@
     "time": "1 evening",
     "needs": "Python, collections.Counter",
     "desc": "Simulate thousands of rolls to see why 7 is the most common total of two dice, then test the odds in a game you own."
+  },
+  {
+    "title": "Design a roll-and-write",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Paper, dice, pencils",
+    "desc": "Design a game that fits on one sheet and plays with two dice. Test it at the next game night."
+  },
+  {
+    "title": "Where do you land in Monopoly?",
+    "level": "Intermediate",
+    "time": "1 evening",
+    "needs": "Python, random",
+    "desc": "Simulate a million turns and find which squares get landed on most. Jail changes everything."
+  },
+  {
+    "title": "House rules booklet",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "A word processor",
+    "desc": "Write down the house rules your group actually uses and print them as a small booklet."
+  },
+  {
+    "title": "Game night log",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "A spreadsheet",
+    "desc": "Record who played what and who won. After a few months, chart the standings."
+  },
+  {
+    "title": "Dice tower",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "Thin plywood or a 3D printer",
+    "desc": "Build a tower with baffles inside that tumbles the dice into a tray."
+  },
+  {
+    "title": "Redesign a player aid",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Any layout tool",
+    "desc": "Take the game your group finds hardest to remember and fit a turn summary on one card."
+  },
+  {
+    "title": "Write a solo variant",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "A game you own, index cards",
+    "desc": "Invent an automatic opponent driven by a small deck of cards, and play against it."
+  },
+  {
+    "title": "Unbeatable noughts and crosses",
+    "level": "Intermediate",
+    "time": "1 evening",
+    "needs": "Python",
+    "desc": "Write a minimax player that never loses, then make it explain each move."
+  },
+  {
+    "title": "Custom meeples",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "3D printer or a scroll saw",
+    "desc": "Replace the plain pieces in a favourite game with ones that fit its theme."
+  },
+  {
+    "title": "Card game from a spreadsheet",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "Python, Pillow",
+    "desc": "Generate a deck of printable cards from a spreadsheet, so rebalancing takes one edit."
+  },
+  {
+    "title": "Five-minute teach",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "A game you know well",
+    "desc": "Write and rehearse a script that teaches a game in five minutes. Harder than it sounds."
+  },
+  {
+    "title": "How many shuffles?",
+    "level": "Intermediate",
+    "time": "1 evening",
+    "needs": "Python, random",
+    "desc": "Simulate riffle shuffles and measure how many it takes to mix a deck properly."
+  },
+  {
+    "title": "Make an ancient game",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "Wood, or card and paint",
+    "desc": "Build a board for the Royal Game of Ur or Hnefatafl and learn the reconstructed rules."
+  },
+  {
+    "title": "Campaign journal",
+    "level": "Beginner",
+    "time": "Ongoing",
+    "needs": "A notebook",
+    "desc": "Keep an in-character diary of a campaign or legacy game. It is fun to read back a year later."
+  },
+  {
+    "title": "Connect Four bot",
+    "level": "Advanced",
+    "time": "2 weekends",
+    "needs": "Python",
+    "desc": "Write a player that looks several moves ahead with alpha-beta pruning, and try to beat it."
   }
 ]

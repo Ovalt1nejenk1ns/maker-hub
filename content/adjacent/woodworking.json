@@ -28,5 +28,95 @@
     "why": "Dendrochronology dates old buildings, paintings and past climates from the pattern of rings in timber.",
     "url": "https://en.wikipedia.org/wiki/Dendrochronology",
     "how": "20-minute read"
+  },
+  {
+    "title": "Yakisugi",
+    "why": "A Japanese way of preserving cladding by charring its surface. Also called shou sugi ban.",
+    "url": "https://en.wikipedia.org/wiki/Yakisugi",
+    "how": "Short read"
+  },
+  {
+    "title": "The Windsor chair",
+    "why": "A chair built from green and dry wood so that it tightens itself as it seasons.",
+    "url": "https://en.wikipedia.org/wiki/Windsor_chair",
+    "how": "Short read"
+  },
+  {
+    "title": "Steam bending",
+    "why": "Wood left in steam goes soft enough to bend into curves and keeps the shape when it cools.",
+    "url": "https://en.wikipedia.org/wiki/Steam_bending",
+    "how": "Short read"
+  },
+  {
+    "title": "Marquetry",
+    "why": "Pictures made from thin slices of different woods, with the grain doing the shading.",
+    "url": "https://en.wikipedia.org/wiki/Marquetry",
+    "how": "Short read"
+  },
+  {
+    "title": "Lutherie",
+    "why": "Building violins and guitars, where a fraction of a millimetre of wood changes the sound.",
+    "url": "https://en.wikipedia.org/wiki/Luthier",
+    "how": "Short read"
+  },
+  {
+    "title": "Timber framing",
+    "why": "Barns and halls held together by pegged joints, raised by a whole village in a day.",
+    "url": "https://en.wikipedia.org/wiki/Timber_framing",
+    "how": "20-minute read"
+  },
+  {
+    "title": "Coppicing",
+    "why": "Cut certain trees to the ground and they grow back as straight poles, for centuries.",
+    "url": "https://en.wikipedia.org/wiki/Coppicing",
+    "how": "Short read"
+  },
+  {
+    "title": "Bog oak",
+    "why": "Timber preserved in peat for thousands of years, dug up black and nearly as hard as stone.",
+    "url": "https://en.wikipedia.org/wiki/Bog-wood",
+    "how": "Short read"
+  },
+  {
+    "title": "Shaker furniture",
+    "why": "Furniture made by a religious community that treated plainness and usefulness as a duty.",
+    "url": "https://en.wikipedia.org/wiki/Shaker_furniture",
+    "how": "Short read"
+  },
+  {
+    "title": "Japanese puzzle boxes",
+    "why": "Boxes that open only after a secret sequence of sliding moves, sometimes dozens of them.",
+    "url": "https://en.wikipedia.org/wiki/Himitsu-Bako",
+    "how": "Short read"
+  },
+  {
+    "title": "Stave churches",
+    "why": "Wooden churches in Norway that have stood since the Middle Ages, dragon heads and all.",
+    "url": "https://en.wikipedia.org/wiki/Stave_church",
+    "how": "20-minute read"
+  },
+  {
+    "title": "The pole lathe",
+    "why": "A lathe powered by a springy branch and your foot. Chair makers used them out in the woods.",
+    "url": "https://en.wikipedia.org/wiki/Pole_lathe",
+    "how": "Short read"
+  },
+  {
+    "title": "John Harrison's wooden clocks",
+    "why": "Before he solved the longitude problem, this carpenter built clocks almost entirely from wood.",
+    "url": "https://en.wikipedia.org/wiki/John_Harrison",
+    "how": "20-minute read"
+  },
+  {
+    "title": "Cooperage",
+    "why": "Making watertight barrels from staves, with no glue and no nails.",
+    "url": "https://en.wikipedia.org/wiki/Cooper_(profession)",
+    "how": "Short read"
+  },
+  {
+    "title": "Clinker boats",
+    "why": "Hulls made from overlapping planks. It is how the Vikings built their longships.",
+    "url": "https://en.wikipedia.org/wiki/Clinker_(boat_building)",
+    "how": "Short read"
   }
 ]

@@ -33,5 +33,110 @@
     "time": "1 evening",
     "needs": "pandas, a collection CSV export",
     "desc": "Export your collection and plays, then find your most-played games, cost per play, and what is gathering dust."
+  },
+  {
+    "title": "Your step count, charted",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "pandas, matplotlib",
+    "desc": "Export the step data from your phone and find your most and least active weekdays and months."
+  },
+  {
+    "title": "Baby names over time",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "pandas, public name data",
+    "desc": "Chart how the popularity of your own name has risen and fallen over a century."
+  },
+  {
+    "title": "Reading log dashboard",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "A spreadsheet or pandas",
+    "desc": "Record the books you finish and chart pages per month, genres and ratings."
+  },
+  {
+    "title": "Test Benford's law",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "pandas",
+    "desc": "Count the first digits in a real data set, such as town populations, and compare with the prediction."
+  },
+  {
+    "title": "Film ratings explorer",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "pandas, MovieLens data",
+    "desc": "Find which genres and decades rate best, and how the answer changes with the number of votes."
+  },
+  {
+    "title": "Map your walks",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "gpxpy, folium",
+    "desc": "Load the GPS tracks from your phone or watch and draw every walk on one map."
+  },
+  {
+    "title": "Listening history",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "pandas, your streaming export",
+    "desc": "Request your listening history and chart your top artists by year and by hour of the day."
+  },
+  {
+    "title": "Home energy use",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "pandas, meter readings",
+    "desc": "Chart your electricity use against outdoor temperature and look for what drives it."
+  },
+  {
+    "title": "Live earthquake map",
+    "level": "Intermediate",
+    "time": "1 evening",
+    "needs": "USGS feed, folium",
+    "desc": "Plot the last week of earthquakes from the public USGS feed, sized by magnitude."
+  },
+  {
+    "title": "A week on a postcard",
+    "level": "Beginner",
+    "time": "1 week",
+    "needs": "Pen and a postcard",
+    "desc": "Pick one thing to count for a week, such as doors or thank-yous, and draw it by hand, Dear Data style."
+  },
+  {
+    "title": "Wikipedia attention",
+    "level": "Intermediate",
+    "time": "1 evening",
+    "needs": "Wikimedia pageviews API",
+    "desc": "Chart daily page views for a topic and match the spikes to what was in the news."
+  },
+  {
+    "title": "Family survey",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "A form tool, a spreadsheet",
+    "desc": "Write a short, light-hearted survey for family or friends and present the results as charts."
+  },
+  {
+    "title": "League table simulator",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "random, pandas",
+    "desc": "Simulate the rest of a sports season thousands of times and estimate each team's chances."
+  },
+  {
+    "title": "Redraw a famous chart",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "matplotlib",
+    "desc": "Recreate Nightingale's diagram or Minard's map in code. You learn the tool and the design at once."
+  },
+  {
+    "title": "Bird sightings near you",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "eBird or GBIF data, pandas",
+    "desc": "Download local bird records and chart which species turn up in which months."
   }
 ]

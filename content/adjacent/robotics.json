@@ -28,5 +28,95 @@
     "why": "Thousands of people run home-built sensors that feed a live world map of air quality.",
     "url": "https://sensor.community/en/",
     "how": "Explore the map"
+  },
+  {
+    "title": "Shakey the robot",
+    "why": "The first robot that could reason about its own actions, built in the 1960s. It wobbled.",
+    "url": "https://en.wikipedia.org/wiki/Shakey_the_robot",
+    "how": "Short read"
+  },
+  {
+    "title": "Grey Walter's tortoises",
+    "why": "Two valves and two sensors made 1940s robots that seemed to explore, hesitate and go home.",
+    "url": "https://en.wikipedia.org/wiki/William_Grey_Walter",
+    "how": "Short read"
+  },
+  {
+    "title": "Passive walkers",
+    "why": "Legged machines that stroll down a gentle slope with no motors, no sensors and no computer.",
+    "url": "https://en.wikipedia.org/wiki/Passive_dynamics",
+    "how": "Short read"
+  },
+  {
+    "title": "Soft robots",
+    "why": "Robots made of rubber and air, with no rigid parts. Some are modelled on the octopus.",
+    "url": "https://en.wikipedia.org/wiki/Soft_robotics",
+    "how": "Short read"
+  },
+  {
+    "title": "Swarm robotics",
+    "why": "Hundreds of very simple robots that together form shapes none of them knows about.",
+    "url": "https://en.wikipedia.org/wiki/Swarm_robotics",
+    "how": "Short read"
+  },
+  {
+    "title": "Karakuri puppets",
+    "why": "Clockwork dolls from Edo-period Japan that carry a cup of tea across the room to a guest.",
+    "url": "https://en.wikipedia.org/wiki/Karakuri_puppet",
+    "how": "Short read"
+  },
+  {
+    "title": "The Jacquard loom",
+    "why": "A loom controlled by punched cards, more than a century before computers borrowed the idea.",
+    "url": "https://en.wikipedia.org/wiki/Jacquard_machine",
+    "how": "Short read"
+  },
+  {
+    "title": "The uncanny valley",
+    "why": "Why an almost-human robot is more unsettling than one that is plainly a machine.",
+    "url": "https://en.wikipedia.org/wiki/Uncanny_valley",
+    "how": "Short read"
+  },
+  {
+    "title": "RoboCup",
+    "why": "A robot football league whose stated goal is to beat the human world champions by 2050.",
+    "url": "https://www.robocup.org/",
+    "how": "Watch a match"
+  },
+  {
+    "title": "Mars rovers",
+    "why": "Robots driven from another planet, with a delay of minutes on every command.",
+    "url": "https://en.wikipedia.org/wiki/Mars_rover",
+    "how": "20-minute read"
+  },
+  {
+    "title": "The theremin",
+    "why": "An electronic instrument from the 1920s that you play without touching it.",
+    "url": "https://en.wikipedia.org/wiki/Theremin",
+    "how": "Read, then listen"
+  },
+  {
+    "title": "PID control",
+    "why": "The century-old feedback idea behind cruise control, thermostats and balancing robots.",
+    "url": "https://en.wikipedia.org/wiki/PID_controller",
+    "how": "Short read"
+  },
+  {
+    "title": "Slime mould that solves mazes",
+    "why": "A single-celled blob with no brain that finds the shortest path between food sources.",
+    "url": "https://en.wikipedia.org/wiki/Physarum_polycephalum",
+    "how": "Short read"
+  },
+  {
+    "title": "High-altitude balloons",
+    "why": "Hobbyists send cameras and sensors to the edge of space, then chase them down by radio.",
+    "url": "https://en.wikipedia.org/wiki/High-altitude_balloon",
+    "how": "Short read"
+  },
+  {
+    "title": "Useless machines",
+    "why": "A box whose only function is to switch itself off. One of the pioneers of AI built an early one.",
+    "url": "https://en.wikipedia.org/wiki/Useless_machine",
+    "how": "Short read"
   }
 ]

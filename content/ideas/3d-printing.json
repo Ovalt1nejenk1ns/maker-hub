@@ -33,5 +33,110 @@
     "time": "1 weekend",
     "needs": "Brass inserts, soldering iron",
     "desc": "Make an electronics case with threaded brass inserts so the lid can be screwed on and off many times."
+  },
+  {
+    "title": "Headphone hook",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Any slicer, basic CAD",
+    "desc": "Design a hook that clamps under your desk. A good first part to measure, model and print yourself."
+  },
+  {
+    "title": "Adjustable phone stand",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Basic CAD",
+    "desc": "A stand with two or three viewing angles and a slot for the charging cable."
+  },
+  {
+    "title": "Vase-mode plant pot",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Slicer with spiral mode",
+    "desc": "Print a pot as one continuous spiral wall, plus a matching drip tray in normal mode."
+  },
+  {
+    "title": "Lithophane night light",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "White filament, LED puck",
+    "desc": "Turn a favourite photo into a curved lithophane and mount it over a small light."
+  },
+  {
+    "title": "Threaded jar and lid",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "CAD with a thread tool",
+    "desc": "Model a screw-top jar and adjust the clearance until the lid turns smoothly."
+  },
+  {
+    "title": "Cookie cutter from a drawing",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Inkscape, any CAD",
+    "desc": "Trace a simple drawing into an outline and extrude it into a cutter. Wash by hand only."
+  },
+  {
+    "title": "Spool-core drawers",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "An empty filament spool",
+    "desc": "Fit curved swing-out drawers into an empty spool to hold screws and nozzles."
+  },
+  {
+    "title": "Print-in-place gears",
+    "level": "Intermediate",
+    "time": "1 weekend",
+    "needs": "CAD or a parametric model",
+    "desc": "A set of gears that prints already assembled and turns straight off the bed."
+  },
+  {
+    "title": "Replacement knob",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Calipers, basic CAD",
+    "desc": "Measure a broken or missing knob at home and print a replacement that fits the shaft."
+  },
+  {
+    "title": "Pegboard tool holders",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Calipers, basic CAD",
+    "desc": "Design holders for your own tools that hook into a pegboard, each sized to one tool."
+  },
+  {
+    "title": "Tolerance test coin",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Any CAD",
+    "desc": "A small disc with slots from 0.1 to 0.5 mm that shows what clearance your printer can manage."
+  },
+  {
+    "title": "Two-colour name tags",
+    "level": "Beginner",
+    "time": "1 evening",
+    "needs": "Two filaments",
+    "desc": "Change filament part-way up the print to get raised lettering in a second colour."
+  },
+  {
+    "title": "Under-desk cable tray",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Basic CAD, screws",
+    "desc": "A tray in sections that screws under a desk and hides a power strip and its cables."
+  },
+  {
+    "title": "Board game token set",
+    "level": "Beginner",
+    "time": "1 weekend",
+    "needs": "Basic CAD",
+    "desc": "Replace cardboard tokens from a favourite game with printed ones, and a tray to hold them."
+  },
+  {
+    "title": "Living-hinge bag clip",
+    "level": "Intermediate",
+    "time": "1 evening",
+    "needs": "PETG or PP filament",
+    "desc": "A clip that folds on a thin printed hinge. Test how many bends it survives."
   }
 ]

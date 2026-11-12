@@ -2,6 +2,7 @@
 import csv, json, shutil, sys
 import markdown
 from collections import Counter, defaultdict
+from datetime import date
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -33,6 +34,23 @@ def md(rel):
     p = ROOT / rel
     return (markdown.markdown(p.read_text(encoding="utf-8"), extensions=["tables", "fenced_code"])
             if p.exists() else "")
+
+
+PER_WEEK = 5                                   # ideas / rabbit holes shown per topic page
+LEVELS = {"Beginner": 0, "Intermediate": 1, "Advanced": 2}
+
+
+def this_week(items, n=PER_WEEK, today=None):
+    """Pick this week's n items from a larger pool, in file order, wrapping round at the end.
+
+    The pick changes each Saturday (UTC), in step with the Friday-night refresh, so every
+    build during the same week shows the same items.
+    """
+    if len(items) <= n:
+        return items
+    week = ((today or date.today()).toordinal() - 6) // 7      # ordinal % 7 == 6 is a Saturday
+    start = (week * n) % len(items)
+    return [items[(start + j) % len(items)] for j in range(n)]
 
 
 def build_digest(feed, hist):
@@ -98,14 +116,17 @@ def main():
     for key, cfg in config.TOPICS.items():
         t = feed["topics"][key]
         resources = load_json(f"data/resources/{key}.json", [])
-        ideas = load_json(f"content/ideas/{key}.json", [])
-        adjacent = load_json(f"content/adjacent/{key}.json", [])
+        ideas_pool = load_json(f"content/ideas/{key}.json", [])
+        holes_pool = load_json(f"content/adjacent/{key}.json", [])
+        ideas = sorted(this_week(ideas_pool), key=lambda i: LEVELS.get(i["level"], 1))
+        adjacent = this_week(holes_pool)
         has_sheet = (ROOT / f"content/cheatsheets/{key}.md").exists()
         quickref = md(f"content/quickref/{key}.md")
         tips = [{"t": x, "s": label[key]} for x in all_tips.get(key, [])]
         render("topic.html", f"{key}/index.html", "../", key=key, t=t, tcfg=cfg,
                resources=resources, has_sheet=has_sheet, quickref=quickref,
-               ideas=ideas, adjacent=adjacent, **{**common, "page_tips": tips or site_tips})
+               ideas=ideas, adjacent=adjacent, ideas_total=len(ideas_pool),
+               holes_total=len(holes_pool), **{**common, "page_tips": tips or site_tips})
         if has_sheet:
             render("cheatsheet.html", f"{key}/cheatsheet/index.html", "../../",
                    key=key, tcfg=cfg, body=md(f"content/cheatsheets/{key}.md"),
@@ -127,7 +148,7 @@ def main():
             add(f'{idea["title"]}: {idea["desc"]}', url, "Project idea", key)
             home_ideas.append({"t": idea["title"], "d": idea["desc"], "s": label[key], "u": url,
                                "m": f'{idea["level"]} · {idea["time"]}'})
-        for a in adjacent:
+        for a in holes_pool:
             add(f'{a["title"]}: {a["why"]}', a["url"], "Rabbit hole", key)
             home_holes.append({"t": a["title"], "d": a["why"], "u": a["url"],
                                "s": f"Next door to {label[key]}", "m": a.get("how", "")})
