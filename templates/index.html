@@ -1,5 +1,4 @@
 {% extends "base.html" %}
-{% from "_pin.html" import pin %}
 {% block body %}
 {% set n_news = feed.topics.values()|map(attribute='news')|map('length')|sum %}
 {% set n_tools = feed.topics.values()|map(attribute='repos')|map('length')|sum %}
@@ -11,7 +10,7 @@
     <a href="#signal"><b>{{ n_news }}</b><span>headlines</span></a>
     <a href="#tools"><b>{{ n_tools }}</b><span>tools tracked</span></a>
     <a href="#reference"><b>{{ reference|selectattr('has_sheet')|list|length }}</b><span>cheat sheets</span></a>
-    <a href="board/index.html"><b>{{ n_pins }}</b><span>pinned</span></a>
+    <a href="#sectors"><b>{{ topics|length }}</b><span>topics</span></a>
   </div>
 </section>
 
@@ -26,7 +25,7 @@
         <li class="t-{{ n.topic }}">
           <span class="dot"></span>
           <a href="{{ n.url }}">{{ n.title }}</a>
-          <span class="meta">{{ topics[n.topic].short }} · {{ n.source }}{% if n.date %} · <time data-ago datetime="{{ n.date }}">{{ n.date }}</time>{% endif %} {{ pin(n.title, n.url, n.topic, "Article") }}</span>
+          <span class="meta">{{ topics[n.topic].short }} · {{ n.source }}{% if n.date %} · <time data-ago datetime="{{ n.date }}">{{ n.date }}</time>{% endif %}</span>
         </li>
       {% endfor %}
       </ul>
@@ -40,7 +39,7 @@
         <li class="t-{{ s.topic }}">
           <span class="pts">{{ s.points }}</span>
           <a href="{{ s.url }}">{{ s.title }}</a>
-          <span class="meta">{{ topics[s.topic].short }} · <a href="{{ s.hn_url }}">discuss</a> {{ pin(s.title, s.url, s.topic, "Article") }}</span>
+          <span class="meta">{{ topics[s.topic].short }} · <a href="{{ s.hn_url }}">discuss</a></span>
         </li>
       {% endfor %}
       </ul>
@@ -60,7 +59,7 @@
       {% for g in digest.gainers %}
         <li class="t-{{ g.topic }}">
           <a href="{{ g.url }}">{{ g.name }}</a>
-          <span class="gain">+{{ '{:,}'.format(g.gain) }} ★ {{ pin(g.name, g.url, g.topic, "Tool") }}</span>
+          <span class="gain">+{{ '{:,}'.format(g.gain) }} ★</span>
           <span class="bar"><i style="width:{{ (100 * g.gain / top)|round(1) }}%"></i></span>
         </li>
       {% endfor %}
@@ -76,7 +75,7 @@
           <span class="dot"></span>
           <a href="{{ r.url }}">{{ r.name }}</a>
           <span class="meta">{{ r.desc|truncate(90) if r.desc else 'No description.' }}</span>
-          <span class="meta mono">★ {{ '{:,}'.format(r.stars) }}{% if r.gain %} · <span class="up">+{{ '{:,}'.format(r.gain) }}</span>{% endif %} · since {{ r.created[:7] }} {{ pin(r.name, r.url, r.topic, "Tool") }}</span>
+          <span class="meta mono">★ {{ '{:,}'.format(r.stars) }}{% if r.gain %} · <span class="up">+{{ '{:,}'.format(r.gain) }}</span>{% endif %} · since {{ r.created[:7] }}</span>
         </li>
       {% endfor %}
       </ul>

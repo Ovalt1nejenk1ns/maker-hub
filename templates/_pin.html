@@ -1,7 +1,0 @@
-{# 📌 button. With a saved GitHub token, site.js pins in one click via the API;
-   without one it offers a one-time setup, and the href is a plain fallback (pre-filled issue form). #}
-{% macro pin(title, url, topic="", kind="Link") -%}
-<a class="pinbtn" href="{{ pin_url(title, url, topic, kind) }}" target="_blank" rel="noopener"
-   data-title="{{ title }}" data-url="{{ url }}" data-topic="{{ topic }}" data-kind="{{ kind }}"
-   title="Pin to my board" aria-label="Pin “{{ title }}” to my board">📌</a>
-{%- endmacro %}

@@ -3,14 +3,11 @@ on:
   schedule:
     - cron: "17 3 * * 6"       # Saturdays 03:17 UTC = Friday 10:17 pm EST / 11:17 pm EDT
   workflow_dispatch:
-  issues:                      # pin board: pinning / editing / closing a `pin` issue rebuilds the site
-    types: [opened, edited, closed, reopened, labeled, unlabeled]
   push:
     branches: [main]
     paths: ["templates/**", "static/**", "scripts/**", "config.py", "content/**", "data/resources/**", "requirements.txt"]
 permissions:
   contents: write
-  issues: read
   pages: write
   id-token: write
 concurrency:
@@ -18,8 +15,6 @@ concurrency:
   cancel-in-progress: false
 jobs:
   build:
-    # Issue events only matter for pins; skip unrelated issues so they don't redeploy the site.
-    if: github.event_name != 'issues' || contains(github.event.issue.labels.*.name, 'pin') || github.event.label.name == 'pin'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,21 +22,16 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install -r requirements.txt
       - name: Collect data
-        # Only the weekly schedule / manual runs take a star snapshot (pins mid-week mustn't skew "stars gained this week").
-        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        if: github.event_name != 'push'
         env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }
         run: python scripts/collect.py
-      - name: Collect pins
-        env: { GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}" }
-        run: python scripts/pins.py
       - name: Commit data
+        if: github.event_name != 'push'
         run: |
           git config user.name "maker-hub-bot"
           git config user.email "bot@users.noreply.github.com"
           git add data/
-          git diff --cached --quiet && exit 0
-          git commit -m "chore: refresh data $(date -u +%F)"
-          git pull --rebase origin main   # two pins in quick succession: don't fail on a stale checkout
+          git diff --cached --quiet || git commit -m "chore: refresh data $(date -u +%F)"
           git push
       - run: python scripts/build.py
       - uses: actions/upload-pages-artifact@v3
