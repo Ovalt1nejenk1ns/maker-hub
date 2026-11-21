@@ -87,8 +87,3 @@ LOOKBACK_DAYS = 30       # "recent" window for GitHub searches
 ITEMS_PER_TOPIC = 8
 SITE_TITLE = "Maker Hub"
 SITE_TAGLINE = "My hub for Python, 3D printing, woodworking, robotics, data and board games — news, cheat sheets and resources."
-
-# Pin board: anything you pin becomes a GitHub issue with this label (close it to unpin).
-GITHUB_REPO = "Ovalt1nejenk1ns/maker-hub"
-PIN_LABEL = "pin"
-SITE_URL = "https://ovalt1nejenk1ns.github.io/maker-hub/"   # used by the "pin any page" bookmarklet

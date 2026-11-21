@@ -12,14 +12,13 @@
 {# Each topic's accent color becomes a CSS class (.t-python etc.), so templates just add the class. #}
 <style>{% for k, c in topics.items() %}.t-{{ k }}{--tc:{{ c.color }}}{% endfor %}</style>
 </head>
-<body data-root="{{ root }}" data-repo="{{ cfg.GITHUB_REPO }}" data-label="{{ cfg.PIN_LABEL }}" class="{% block bodyclass %}{% endblock %}">
+<body data-root="{{ root }}" class="{% block bodyclass %}{% endblock %}">
 <div class="bg" aria-hidden="true"></div>
 <header class="top">
   <a class="brand" href="{{ root }}index.html"><span class="pulse"></span>MAKER<b>//</b>HUB</a>
   <nav class="chips" aria-label="Topics">
     {% for k, c in topics.items() %}<a class="chip t-{{ k }}{% if key == k %} on{% endif %}" href="{{ root }}{{ k }}/index.html" title="{{ c.label }}">{{ c.icon }} {{ c.short }}</a>{% endfor %}
     <a class="chip{% if active == 'dash' %} on{% endif %}" href="{{ root }}dashboards/index.html">📊 Dashboards</a>
-    <a class="chip board-chip{% if active == 'board' %} on{% endif %}" href="{{ root }}board/index.html">📌 Board{% if n_pins %} <b>{{ n_pins }}</b>{% endif %}</a>
   </nav>
   <div class="search">
     <input id="q" type="search" placeholder="Search news, tools, cheat sheets…" aria-label="Search the site" autocomplete="off">
@@ -38,27 +37,6 @@
 {% endif %}
 </main>
 <footer><span class="pulse"></span> Synced <time data-ago datetime="{{ updated }}">{{ updated }}</time> · GitHub, Hacker News &amp; RSS · rebuilt weekly by a Python GitHub Action</footer>
-<dialog id="connect" class="connect">
-  <form method="dialog">
-    <p class="label">One-click pinning · one-time setup on this device</p>
-    <h3>Connect your GitHub</h3>
-    <ol>
-      <li><a href="https://github.com/settings/personal-access-tokens/new?name=Maker+Hub+pins&description=One-click+pinning+from+my+Maker+Hub+site&target_name={{ cfg.GITHUB_REPO.split('/')[0] }}&expires_in=366&issues=write" target="_blank" rel="noopener">Open GitHub's token page ↗</a> (already filled in for you).</li>
-      <li>Under <b>Repository access</b>, choose <b>Only select repositories → maker-hub</b>. Then press <b>Generate token</b>.</li>
-      <li>Paste the token here:</li>
-    </ol>
-    <input id="tok" type="password" placeholder="github_pat_…" autocomplete="off" spellcheck="false">
-    <p class="connect-msg meta" aria-live="polite"></p>
-    <div class="connect-actions">
-      <button type="button" class="btn" data-act="save">Save &amp; pin</button>
-      <button value="cancel" class="btn ghost">Cancel</button>
-      <a class="meta fallback" target="_blank" rel="noopener" href="#">or use GitHub's form just this once</a>
-    </div>
-    <p class="meta">The token can only create and close issues on maker-hub. It stays in this browser and is never sent anywhere except api.github.com.</p>
-  </form>
-</dialog>
-<div id="toast" role="status" aria-live="polite" hidden></div>
-<script id="pinned-urls" type="application/json">{{ pinned_urls|default([])|tojson }}</script>
 <script src="{{ root }}site.js" defer></script>
 </body>
 </html>
