@@ -1,0 +1,25 @@
+[
+  {
+    "group": "Rules",
+    "items": [
+      {"title": "Pagat", "url": "https://www.pagat.com/", "note": "Rules for hundreds of traditional card games from around the world."},
+      {"title": "Bicycle Cards: Game rules", "url": "https://bicyclecards.com/rules", "note": "Clear rules for the classics: rummy, hearts, euchre, cribbage and more."},
+      {"title": "Denexa Games blog", "url": "https://www.denexa.com/blog/", "note": "Card game rules, variants and hosting tips."}
+    ]
+  },
+  {
+    "group": "Find new games",
+    "items": [
+      {"title": "BoardGameGeek: card games", "url": "https://boardgamegeek.com/boardgamecategory/1002/card-game", "note": "Rankings, reviews and rulebooks for card games."},
+      {"title": "The Board Game Family: card games", "url": "https://www.theboardgamefamily.com/category/card-games/", "note": "Reviews of family-friendly card games."}
+    ]
+  },
+  {
+    "group": "My code",
+    "items": [
+      {"title": "Phase 10 League", "url": "https://github.com/Ovalt1nejenk1ns/phase10-league", "note": "localStorage scorekeeper + Jinja2 results builder."},
+      {"title": "Skip-Bo League", "url": "https://github.com/Ovalt1nejenk1ns/skipbo-league", "note": "Same pattern as Phase 10, different scoring."},
+      {"title": "Five Crowns Deluxe Scorekeeper", "url": "https://github.com/Ovalt1nejenk1ns/5CrownsScorekeeper", "note": "Single-file web port of the Tkinter app."}
+    ]
+  }
+]

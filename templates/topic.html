@@ -8,7 +8,23 @@
   <p class="lede">{{ tcfg.blurb }}</p>
 </section>
 
+{% if apps %}
+<section id="apps" class="block">
+  <header class="sec"><span class="idx">★</span><h2>My apps</h2><p>My own builds. They run in the browser, work offline and save games on the device.</p></header>
+  <div class="cards">
+  {% for a in apps %}
+    <article class="card app">
+      <h3><span class="ico">{{ a.icon }}</span> {{ a.title }}</h3>
+      <p>{{ a.desc }}</p>
+      <p class="app-links">{% if a.play %}<a class="btn small" href="{{ a.play }}">▶ Play</a>{% endif %}<a class="btn ghost small" href="{{ a.repo }}">Code on GitHub</a></p>
+    </article>
+  {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 <nav class="subnav" aria-label="On this page">
+  {% if apps %}<a href="#apps">★ Apps</a>{% endif %}
   <a href="#signal">01 Signal</a>
   <a href="#tools">02 Tools</a>
   {% if has_sheet or quickref or resources %}<a href="#reference">03 Reference</a>{% endif %}

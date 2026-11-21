@@ -112,7 +112,7 @@
       <span class="name">{{ c.label }}</span>
       <span class="blurb">{{ c.blurb }}</span>
       {% if t.news %}<span class="latest"><em>Latest</em> {{ t.news[0].title|truncate(70) }}</span>{% endif %}
-      <span class="counts">{{ t.news|length }} news · {{ t.repos|length }} tools · {{ t.hn|length }} HN</span>
+      <span class="counts">{% if app_counts[k] %}★ {{ app_counts[k] }} of my apps · {% endif %}{{ t.news|length }} news · {{ t.repos|length }} tools · {{ t.hn|length }} HN</span>
     </a>
   {% endfor %}
   </div>

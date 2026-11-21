@@ -127,6 +127,8 @@ def build_digest(feed, hist):
 
 def main():
     feed = json.loads((ROOT / "data/feed.json").read_text(encoding="utf-8"))
+    for key in config.TOPICS:               # a topic added since the last refresh: empty until collect.py runs
+        feed["topics"].setdefault(key, {"repos": [], "hn": [], "news": []})
     hist = defaultdict(lambda: defaultdict(list))  # topic -> repo -> [(date, stars)]
     hp = ROOT / "data/history.csv"
     if hp.exists():
@@ -144,6 +146,7 @@ def main():
     common = dict(updated=feed["updated"], page_tips=site_tips)
     search = []      # site-wide search index: t=title, u=url, k=kind, s=topic
     home_ideas, home_holes = [], []
+    app_counts = {}
     reference, fresh_tools, seen_tools = [], [], set()
 
     def add(title, url, kind, key):
@@ -154,6 +157,8 @@ def main():
         t = feed["topics"][key]
         resources = load_json(f"data/resources/{key}.json", [])
         ideas_pool = load_json(f"content/ideas/{key}.json", [])
+        apps = load_json(f"content/apps/{key}.json", [])            # my own apps for this topic
+        app_counts[key] = len(apps)
         holes_pool = load_json(f"content/adjacent/{key}.json", [])
         ideas = sorted(this_week(ideas_pool), key=lambda i: LEVELS.get(i["level"], 1))
         adjacent = this_week(holes_pool)
@@ -168,7 +173,7 @@ def main():
                 seen_tools.add(r["name"]); fresh_tools.append(dict(r, topic=key))
         tips = [{"t": x, "s": label[key]} for x in all_tips.get(key, [])]
         render("topic.html", f"{key}/index.html", "../", key=key, t=t, tcfg=cfg,
-               resources=resources, has_sheet=has_sheet, quickref=quickref,
+               resources=resources, has_sheet=has_sheet, quickref=quickref, apps=apps,
                quickref_toc=quickref_toc, sheet_toc=sheet_toc, radar=radar, radar_since=radar_since,
                ideas=ideas, adjacent=adjacent, ideas_total=len(ideas_pool),
                holes_total=len(holes_pool), **{**common, "page_tips": tips or site_tips})
@@ -179,6 +184,8 @@ def main():
             add(f'{cfg["label"]} cheat sheet', f"{key}/cheatsheet/index.html", "Cheat sheet", key)
 
         add(cfg["label"], f"{key}/index.html", "Topic", key)
+        for ap in apps:
+            add(f'{ap["title"]}: {ap["desc"]}', ap["play"] or ap["repo"], "My app", key)
         for n in t.get("news", []):
             add(n["title"], n["url"], "News", key)
         for r in t.get("repos", []):
@@ -200,7 +207,7 @@ def main():
 
     fresh_tools.sort(key=lambda r: (r["gain"] or 0, r["stars"]), reverse=True)
     render("index.html", "index.html", "", feed=feed, digest=build_digest(feed, hist),
-           reference=reference, fresh_tools=fresh_tools[:6],
+           reference=reference, fresh_tools=fresh_tools[:6], app_counts=app_counts,
            home_ideas=home_ideas, home_holes=home_holes, **common)
 
     dash = {}
