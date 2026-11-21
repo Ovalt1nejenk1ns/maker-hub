@@ -64,7 +64,8 @@
     box.addEventListener("focus", function () { load().catch(function () {}); if (box.value) run(); });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape") { out.hidden = true; box.blur(); }
-      if (e.key === "/" && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) { e.preventDefault(); box.focus(); }
+      var typing = /INPUT|TEXTAREA/.test(document.activeElement.tagName);
+      if ((e.key === "/" && !typing) || (e.key === "k" && (e.metaKey || e.ctrlKey))) { e.preventDefault(); box.focus(); box.select(); }
     });
     document.addEventListener("click", function (e) {
       if (!e.target.closest(".search")) out.hidden = true;
@@ -84,6 +85,32 @@
       c.classList.add("pick");
       c.scrollIntoView({ behavior: "smooth", block: "center" });
     });
+  }
+
+  /* "2026-11-20" -> "yesterday" / "3d ago", computed in the browser so it stays true between weekly builds */
+  [].forEach.call(document.querySelectorAll("time[data-ago]"), function (t) {
+    var d = new Date(t.getAttribute("datetime") + "T12:00:00");
+    if (isNaN(d)) return;
+    var days = Math.round((Date.now() - d) / 864e5);
+    t.title = t.getAttribute("datetime");
+    t.textContent = days <= 0 ? "today" : days === 1 ? "yesterday" : days < 14 ? days + "d ago"
+      : days < 60 ? Math.round(days / 7) + "w ago" : t.getAttribute("datetime");
+  });
+
+  /* Sticky section nav: highlight the section currently on screen */
+  var navLinks = [].slice.call(document.querySelectorAll(".subnav a[href^='#']"));
+  if (navLinks.length && "IntersectionObserver" in window) {
+    var byId = {};
+    navLinks.forEach(function (a) { byId[a.getAttribute("href").slice(1)] = a; });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        navLinks.forEach(function (a) { a.classList.remove("on"); });
+        var a = byId[en.target.id];
+        if (a) { a.classList.add("on"); a.scrollIntoView({ block: "nearest", inline: "nearest" }); }
+      });
+    }, { rootMargin: "-25% 0px -65% 0px" });   // a section counts as "current" when it crosses the upper third
+    Object.keys(byId).forEach(function (id) { var s = document.getElementById(id); if (s) spy.observe(s); });
   }
 
   /* Home page: random pickers (rabbit holes, project ideas) */

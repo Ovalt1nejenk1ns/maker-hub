@@ -1,80 +1,111 @@
 {% extends "base.html" %}
 {% block title %}{{ tcfg.label }} · {{ cfg.SITE_TITLE }}{% endblock %}
+{% block bodyclass %}t-{{ key }}{% endblock %}
 {% block body %}
-<h1>{{ tcfg.icon }} {{ tcfg.label }}</h1>
-<p class="muted">{{ tcfg.blurb }}</p>
-<p class="jump"><a href="#news">News</a> · {% if has_sheet %}<a href="cheatsheet/index.html">Cheat sheet</a> · {% endif %}{% if quickref %}<a href="#quickref">Quick reference</a> · {% endif %}{% if resources %}<a href="#resources">Resources</a> · {% endif %}{% if ideas %}<a href="#ideas">Project ideas</a> · {% endif %}{% if adjacent %}<a href="#explore">Rabbit holes</a> · {% endif %}<a href="#trending">Trending</a></p>
+<section class="hero topic">
+  <p class="eyebrow"><a href="../index.html">Hub</a> / {{ tcfg.short }}</p>
+  <h1><span class="ico">{{ tcfg.icon }}</span> {{ tcfg.label }}</h1>
+  <p class="lede">{{ tcfg.blurb }}</p>
+</section>
 
-<h2 id="news">Latest news</h2>
-{% if t.news %}
-<ul class="news">
-{% for n in t.news %}<li><a href="{{ n.url }}">{{ n.title }}</a> <span class="muted">{{ n.source }}{% if n.date %} · {{ n.date }}{% endif %}</span></li>{% endfor %}
-</ul>
-{% else %}<p class="muted">No news yet. It appears after the first scheduled refresh.</p>{% endif %}
+<nav class="subnav" aria-label="On this page">
+  <a href="#signal">01 Signal</a>
+  <a href="#tools">02 Tools</a>
+  {% if has_sheet or quickref or resources %}<a href="#reference">03 Reference</a>{% endif %}
+  {% if ideas or adjacent %}<a href="#ideas">04 Explore</a>{% endif %}
+</nav>
 
-{% if has_sheet %}
-<h2>Cheat sheet</h2>
-<p><a class="btn" href="cheatsheet/index.html">Open the {{ tcfg.label }} cheat sheet →</a></p>
+<section id="signal" class="block">
+  <header class="sec"><span class="idx">01</span><h2>Signal</h2></header>
+  <div class="split">
+    <div class="panel">
+      <h3 class="label">Latest news</h3>
+      {% if t.news %}
+      <ul class="stream">
+      {% for n in t.news %}<li><span class="dot"></span><a href="{{ n.url }}">{{ n.title }}</a> <span class="meta">{{ n.source }}{% if n.date %} · <time data-ago datetime="{{ n.date }}">{{ n.date }}</time>{% endif %}</span></li>{% endfor %}
+      </ul>
+      {% else %}<p class="muted">No news yet. It appears after the first scheduled refresh.</p>{% endif %}
+    </div>
+    <div class="panel">
+      <h3 class="label">Hacker News</h3>
+      {% if t.hn %}
+      <ul class="stream compact">
+      {% for s in t.hn %}<li><span class="pts">{{ s.points }}</span><a href="{{ s.url }}">{{ s.title }}</a> <span class="meta"><a href="{{ s.hn_url }}">discuss</a></span></li>{% endfor %}
+      </ul>
+      {% else %}<p class="muted">No Hacker News stories in the last two weeks.</p>{% endif %}
+    </div>
+  </div>
+</section>
+
+<section id="tools" class="block">
+  <header class="sec"><span class="idx">02</span><h2>Tool radar</h2><p>Repos active in the last {{ cfg.LOOKBACK_DAYS }} days, ranked by stars gained{% if radar_since %} since {{ radar_since }}{% endif %}. <span class="tag fresh">new</span> means created in the last year.</p></header>
+  <div class="cards">
+  {% for r in radar %}
+    <article class="card tool">
+      <h3><a href="{{ r.url }}">{{ r.name }}</a>{% if r.fresh %} <span class="tag fresh">new</span>{% endif %}</h3>
+      <p>{{ r.desc or 'No description.' }}</p>
+      <p class="meta mono">{% if r.gain %}<span class="up">+{{ '{:,}'.format(r.gain) }} ★/wk</span> · {% endif %}★ {{ '{:,}'.format(r.stars) }} · {{ r.language }}</p>
+    </article>
+  {% else %}<p class="muted">No repos collected yet.</p>{% endfor %}
+  </div>
+</section>
+
+{% if has_sheet or quickref or resources %}
+<section id="reference" class="block">
+  <header class="sec"><span class="idx">03</span><h2>Reference</h2></header>
+  {% if has_sheet %}
+  <div class="panel glow">
+    <h3 class="label">Cheat sheet</h3>
+    <div class="jumps">{% for id, name in sheet_toc %}<a href="cheatsheet/index.html#{{ id }}">{{ name }}</a>{% endfor %}</div>
+    <p><a class="btn" href="cheatsheet/index.html">Open the {{ tcfg.short }} cheat sheet →</a></p>
+  </div>
+  {% endif %}
+  {% if quickref %}
+  <div class="panel">
+    <h3 class="label">Quick reference</h3>
+    {% if quickref_toc %}<div class="jumps">{% for id, name in quickref_toc %}<a href="#{{ id }}">{{ name }}</a>{% endfor %}</div>{% endif %}
+    <div class="sheet">{{ quickref|safe }}</div>
+  </div>
+  {% endif %}
+  {% if resources %}
+  <div id="resources" class="res-grid">
+  {% for g in resources %}
+    <div class="panel">
+      <h3 class="label">{{ g.group }}</h3>
+      <ul class="res">{% for r in g["items"] %}<li><a href="{{ r.url }}">{{ r.title }}</a><span class="meta">{{ r.note }}</span></li>{% endfor %}</ul>
+    </div>
+  {% endfor %}
+  </div>
+  {% endif %}
+</section>
 {% endif %}
 
-{% if quickref %}
-<h2 id="quickref">Quick reference</h2>
-<div class="sheet">{{ quickref|safe }}</div>
+{% if ideas or adjacent %}
+<section id="ideas" class="block">
+  <header class="sec"><span class="idx">04</span><h2>Explore</h2><p>Project ideas, roughly easiest first{% if ideas_total > ideas|length %} ({{ ideas|length }} of {{ ideas_total }}, a new set every Saturday){% endif %}. <button type="button" id="surprise" class="btn ghost small" hidden>↻ Surprise me</button></p></header>
+  {% if ideas %}
+  <div class="cards">
+  {% for i in ideas %}
+    <article class="card idea" id="idea-{{ loop.index }}">
+      <h3>{{ i.title }}</h3>
+      <p>{{ i.desc }}</p>
+      <p class="meta"><span class="tag lvl-{{ i.level|lower }}">{{ i.level }}</span> {{ i.time }} · needs: {{ i.needs }}</p>
+    </article>
+  {% endfor %}
+  </div>
+  {% endif %}
+  {% if adjacent %}
+  <h3 id="explore" class="label spaced">🐇 Rabbit holes: next door to {{ tcfg.short }}</h3>
+  <div class="cards">
+  {% for a in adjacent %}
+    <article class="card hole">
+      <h3><a href="{{ a.url }}">{{ a.title }}</a></h3>
+      <p>{{ a.why }}</p>
+      {% if a.how %}<p class="meta">{{ a.how }}</p>{% endif %}
+    </article>
+  {% endfor %}
+  </div>
+  {% endif %}
+</section>
 {% endif %}
-
-{% if resources %}
-<h2 id="resources">Resources</h2>
-{% for g in resources %}
-<h3>{{ g.group }}</h3>
-<ul class="res">
-{% for r in g["items"] %}<li><a href="{{ r.url }}">{{ r.title }}</a> — <span class="muted">{{ r.note }}</span></li>{% endfor %}
-</ul>
-{% endfor %}
-{% endif %}
-
-{% if ideas %}
-<h2 id="ideas">Project ideas <button type="button" id="surprise" class="btn small" hidden>🎲 Surprise me</button></h2>
-<p class="muted">Things to build next, roughly easiest first.{% if ideas_total > ideas|length %} {{ ideas|length }} of {{ ideas_total }}; a new set every Saturday.{% endif %}</p>
-<div class="cards">
-{% for i in ideas %}
-  <article class="card idea" id="idea-{{ loop.index }}">
-    <h3>{{ i.title }}</h3>
-    <p>{{ i.desc }}</p>
-    <p class="meta"><span class="tag lvl-{{ i.level|lower }}">{{ i.level }}</span> · {{ i.time }} · needs: {{ i.needs }}</p>
-  </article>
-{% endfor %}
-</div>
-{% endif %}
-
-{% if adjacent %}
-<h2 id="explore">🐇 Rabbit holes</h2>
-<p class="muted">Next door to {{ tcfg.label }}, but probably not on your radar. Good with a coffee.{% if holes_total > adjacent|length %} {{ adjacent|length }} of {{ holes_total }}; a new set every Saturday.{% endif %}</p>
-<div class="cards">
-{% for a in adjacent %}
-  <article class="card hole">
-    <h3><a href="{{ a.url }}">{{ a.title }}</a></h3>
-    <p>{{ a.why }}</p>
-    {% if a.how %}<p class="meta">{{ a.how }}</p>{% endif %}
-  </article>
-{% endfor %}
-</div>
-{% endif %}
-
-<h2 id="trending">Trending on GitHub</h2>
-<p class="muted">Repos active in the last {{ cfg.LOOKBACK_DAYS }} days, ranked by stars.</p>
-<div class="cards">
-{% for r in t.repos %}
-  <article class="card">
-    <h3><a href="{{ r.url }}">{{ r.name }}</a></h3>
-    <p>{{ r.desc or 'No description.' }}</p>
-    <p class="meta"><span class="stars">★ {{ '{:,}'.format(r.stars) }}</span> · {{ r.language }} · created {{ r.created }}{% if r.created >= (updated[:8] ~ '01') %} <span class="tag">new</span>{% endif %}</p>
-  </article>
-{% else %}<p class="muted">No repos collected yet.</p>{% endfor %}
-</div>
-<h2>Hacker News</h2>
-{% if t.hn %}
-<ul class="hn">
-{% for s in t.hn %}<li><a href="{{ s.url }}">{{ s.title }}</a> <span class="muted">{{ s.points }} pts · <a href="{{ s.hn_url }}">discussion</a></span></li>{% endfor %}
-</ul>
-{% else %}<p class="muted">No Hacker News stories in the last two weeks (or the fetch failed; the next run will retry).</p>{% endif %}
 {% endblock %}
