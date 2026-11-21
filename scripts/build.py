@@ -31,9 +31,45 @@ def load_json(rel, default):
 
 
 def md(rel):
+    return md_toc(rel)[0]
+
+
+def md_toc(rel, level=2):
+    """Markdown -> (html, [(anchor_id, heading_text), ...]) for headings at `level`.
+
+    The 'toc' extension adds id="..." to every heading, so the list can drive
+    jump links on the cheat-sheet sidebar and the home page's reference tiles.
+    """
     p = ROOT / rel
-    return (markdown.markdown(p.read_text(encoding="utf-8"), extensions=["tables", "fenced_code"])
-            if p.exists() else "")
+    if not p.exists():
+        return "", []
+    conv = markdown.Markdown(extensions=["tables", "fenced_code", "toc"])
+    html = conv.convert(p.read_text(encoding="utf-8"))
+
+    def walk(tokens):
+        for t in tokens:
+            if t["level"] == level:
+                yield t["id"], t["name"]
+            yield from walk(t["children"])
+    return html, list(walk(conv.toc_tokens))
+
+
+def momentum(repos, hist_topic, updated):
+    """Rank repos by stars gained between the two most recent snapshots (newest tools float up).
+
+    Adds 'gain' (int or None if not enough history) and 'fresh' (created in the last year).
+    Total stars only break ties, so a 10-year-old giant no longer outranks a hot new tool.
+    """
+    dates = sorted({d for pts in hist_topic.values() for d, _ in pts})
+    prev, last = (dates[-2], dates[-1]) if len(dates) >= 2 else (None, None)
+    year_ago = f"{int(updated[:4]) - 1}{updated[4:]}"
+    out = []
+    for r in repos:
+        by_date = dict(hist_topic.get(r["name"], []))
+        gain = by_date[last] - by_date[prev] if prev and prev in by_date and last in by_date else None
+        out.append(dict(r, gain=gain, fresh=r.get("created", "") >= year_ago))
+    out.sort(key=lambda r: (r["gain"] if r["gain"] is not None else -1, r["stars"]), reverse=True)
+    return out, prev
 
 
 PER_WEEK = 5                                   # ideas / rabbit holes shown per topic page
@@ -75,7 +111,7 @@ def build_digest(feed, hist):
     news, seen, per_topic = [], set(), Counter()
     all_news = [dict(n, topic=k) for k in config.TOPICS for n in feed["topics"][k].get("news", [])]
     for n in sorted(all_news, key=lambda n: n.get("date", ""), reverse=True):
-        if n["url"] in seen or per_topic[n["topic"]] >= 2:   # at most 2 per topic
+        if n["url"] in seen or per_topic[n["topic"]] >= 3:   # at most 3 per topic
             continue
         seen.add(n["url"]); per_topic[n["topic"]] += 1
         news.append(n)
@@ -86,7 +122,7 @@ def build_digest(feed, hist):
         if s["hn_url"] not in seen:
             seen.add(s["hn_url"]); hn.append(s)
 
-    return {"gainers": gainers[:6], "since": since, "news": news[:6], "hn": hn[:4]}
+    return {"gainers": gainers[:6], "since": since, "news": news[:10], "hn": hn[:5]}
 
 
 def main():
@@ -108,6 +144,7 @@ def main():
     common = dict(updated=feed["updated"], page_tips=site_tips)
     search = []      # site-wide search index: t=title, u=url, k=kind, s=topic
     home_ideas, home_holes = [], []
+    reference, fresh_tools, seen_tools = [], [], set()
 
     def add(title, url, kind, key):
         if title and url:
@@ -120,16 +157,24 @@ def main():
         holes_pool = load_json(f"content/adjacent/{key}.json", [])
         ideas = sorted(this_week(ideas_pool), key=lambda i: LEVELS.get(i["level"], 1))
         adjacent = this_week(holes_pool)
-        has_sheet = (ROOT / f"content/cheatsheets/{key}.md").exists()
-        quickref = md(f"content/quickref/{key}.md")
+        sheet_html, sheet_toc = md_toc(f"content/cheatsheets/{key}.md")
+        has_sheet = bool(sheet_html)
+        quickref, quickref_toc = md_toc(f"content/quickref/{key}.md", level=3)
+        radar, radar_since = momentum(t["repos"], hist[key], feed["updated"])
+        reference.append({"key": key, "toc": sheet_toc, "has_sheet": has_sheet,
+                          "quickref": bool(quickref), "resources": sum(len(g["items"]) for g in resources)})
+        for r in radar:
+            if r["fresh"] and r["name"] not in seen_tools:
+                seen_tools.add(r["name"]); fresh_tools.append(dict(r, topic=key))
         tips = [{"t": x, "s": label[key]} for x in all_tips.get(key, [])]
         render("topic.html", f"{key}/index.html", "../", key=key, t=t, tcfg=cfg,
                resources=resources, has_sheet=has_sheet, quickref=quickref,
+               quickref_toc=quickref_toc, sheet_toc=sheet_toc, radar=radar, radar_since=radar_since,
                ideas=ideas, adjacent=adjacent, ideas_total=len(ideas_pool),
                holes_total=len(holes_pool), **{**common, "page_tips": tips or site_tips})
         if has_sheet:
             render("cheatsheet.html", f"{key}/cheatsheet/index.html", "../../",
-                   key=key, tcfg=cfg, body=md(f"content/cheatsheets/{key}.md"),
+                   key=key, tcfg=cfg, body=sheet_html, toc=sheet_toc,
                    **{**common, "page_tips": tips or site_tips})
             add(f'{cfg["label"]} cheat sheet', f"{key}/cheatsheet/index.html", "Cheat sheet", key)
 
@@ -153,7 +198,9 @@ def main():
             home_holes.append({"t": a["title"], "d": a["why"], "u": a["url"],
                                "s": f"Next door to {label[key]}", "m": a.get("how", "")})
 
+    fresh_tools.sort(key=lambda r: (r["gain"] or 0, r["stars"]), reverse=True)
     render("index.html", "index.html", "", feed=feed, digest=build_digest(feed, hist),
+           reference=reference, fresh_tools=fresh_tools[:6],
            home_ideas=home_ideas, home_holes=home_holes, **common)
 
     dash = {}

@@ -1,17 +1,28 @@
 {% extends "base.html" %}
+{% set active = 'dash' %}
 {% block title %}Dashboards · {{ cfg.SITE_TITLE }}{% endblock %}
 {% block body %}
-<h1>📊 Dashboards</h1>
-<p class="muted">Charts are drawn by Python at build time (plain SVG, no JavaScript). The trend lines appear once a repo has two or more weekly snapshots in <code>data/history.csv</code>.</p>
+<section class="hero topic">
+  <p class="eyebrow"><a href="../index.html">Hub</a> / Dashboards</p>
+  <h1>📊 Dashboards</h1>
+  <p class="lede">Python draws these charts as plain SVG when the site is built. Trend lines appear once a repo has two or more weekly snapshots.</p>
+</section>
+<nav class="subnav" aria-label="Topics">
+  {% for k, c in topics.items() %}<a href="#d-{{ k }}">{{ c.icon }} {{ c.short }}</a>{% endfor %}
+</nav>
 {% for k, c in topics.items() %}
-<section class="panel wide">
-  <h2>{{ c.icon }} {{ c.label }}</h2>
-  <h3>Stars — top repos this window</h3>{{ dash[k].bars|safe }}
-  {% if dash[k].langs %}<h3>Languages among top repos</h3>{{ dash[k].langs|safe }}{% endif %}
-  <h3>Star growth over time</h3>
-  {% if dash[k].trend %}{{ dash[k].trend|safe }}
-    <p class="legend">{% for n in dash[k].legend %}<span class="key s{{ loop.index0 % 6 }}">{{ n }}</span>{% endfor %}</p>
-  {% else %}<p class="muted">Collecting data — {{ dash[k].snapshots }} snapshot{{ '' if dash[k].snapshots == 1 else 's' }} so far, need 2+ (one per weekly run).</p>{% endif %}
+<section id="d-{{ k }}" class="block t-{{ k }}">
+  <header class="sec"><span class="idx">{{ '%02d' % loop.index }}</span><h2>{{ c.label }}</h2></header>
+  <div class="split even">
+    <div class="panel"><h3 class="label">Stars · top repos</h3>{{ dash[k].bars|safe }}</div>
+    {% if dash[k].langs %}<div class="panel"><h3 class="label">Languages</h3>{{ dash[k].langs|safe }}</div>{% endif %}
+  </div>
+  <div class="panel">
+    <h3 class="label">Star growth over time</h3>
+    {% if dash[k].trend %}{{ dash[k].trend|safe }}
+      <p class="legend">{% for n in dash[k].legend %}<span class="key s{{ loop.index0 % 6 }}">{{ n }}</span>{% endfor %}</p>
+    {% else %}<p class="muted">Collecting data: {{ dash[k].snapshots }} snapshot{{ '' if dash[k].snapshots == 1 else 's' }} so far, need 2+.</p>{% endif %}
+  </div>
 </section>
 {% endfor %}
 {% endblock %}

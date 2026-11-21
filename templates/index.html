@@ -1,70 +1,137 @@
 {% extends "base.html" %}
 {% block body %}
+{% set n_news = feed.topics.values()|map(attribute='news')|map('length')|sum %}
+{% set n_tools = feed.topics.values()|map(attribute='repos')|map('length')|sum %}
 <section class="hero">
-  <h1>{{ cfg.SITE_TITLE }}</h1>
-  <p>{{ cfg.SITE_TAGLINE }}</p>
+  <p class="eyebrow"><span class="pulse"></span> Live feed · synced <time data-ago datetime="{{ feed.updated }}">{{ feed.updated }}</time></p>
+  <h1>Maker <span class="grad">Hub</span></h1>
+  <p class="lede">{{ cfg.SITE_TAGLINE }}</p>
+  <div class="stats">
+    <a href="#signal"><b>{{ n_news }}</b><span>headlines</span></a>
+    <a href="#tools"><b>{{ n_tools }}</b><span>tools tracked</span></a>
+    <a href="#reference"><b>{{ reference|selectattr('has_sheet')|list|length }}</b><span>cheat sheets</span></a>
+    <a href="#sectors"><b>{{ topics|length }}</b><span>topics</span></a>
+  </div>
 </section>
 
-<section class="week">
-  <h2>🗞 This week</h2>
-  <div class="grid">
+<section id="signal" class="block">
+  <header class="sec"><span class="idx">01</span><h2>Signal</h2><p>The newest news across every topic, plus what Hacker News is talking about.</p></header>
+  <div class="split">
     <div class="panel">
-      <h3>🚀 Rising fastest</h3>
-      {% if digest.gainers %}
-      <ol class="mini">
-      {% for g in digest.gainers %}<li><a href="{{ g.url }}">{{ g.name }}</a> <span class="gain">+{{ '{:,}'.format(g.gain) }} ★</span> <span class="muted">{{ topics[g.topic].icon }}</span></li>{% endfor %}
-      </ol>
-      <p class="muted small">Stars gained since {{ digest.since }}.</p>
-      {% else %}<p class="muted">Needs two data snapshots. Check back after the next refresh.</p>{% endif %}
-    </div>
-    <div class="panel">
-      <h3>📰 Fresh news</h3>
+      <h3 class="label">Latest headlines</h3>
       {% if digest.news %}
-      <ul class="mini plain">
-      {% for n in digest.news %}<li>{{ topics[n.topic].icon }} <a href="{{ n.url }}">{{ n.title }}</a> <span class="muted">{{ n.source }}</span></li>{% endfor %}
+      <ul class="stream">
+      {% for n in digest.news %}
+        <li class="t-{{ n.topic }}">
+          <span class="dot"></span>
+          <a href="{{ n.url }}">{{ n.title }}</a>
+          <span class="meta">{{ topics[n.topic].short }} · {{ n.source }}{% if n.date %} · <time data-ago datetime="{{ n.date }}">{{ n.date }}</time>{% endif %}</span>
+        </li>
+      {% endfor %}
       </ul>
       {% else %}<p class="muted">No news yet. It appears after the first scheduled refresh.</p>{% endif %}
     </div>
     <div class="panel">
-      <h3>🔥 Top on Hacker News</h3>
+      <h3 class="label">Hacker News</h3>
       {% if digest.hn %}
-      <ul class="mini plain">
-      {% for s in digest.hn %}<li>{{ topics[s.topic].icon }} <a href="{{ s.url }}">{{ s.title }}</a> <span class="muted">{{ s.points }} pts · <a href="{{ s.hn_url }}">discussion</a></span></li>{% endfor %}
+      <ul class="stream compact">
+      {% for s in digest.hn %}
+        <li class="t-{{ s.topic }}">
+          <span class="pts">{{ s.points }}</span>
+          <a href="{{ s.url }}">{{ s.title }}</a>
+          <span class="meta">{{ topics[s.topic].short }} · <a href="{{ s.hn_url }}">discuss</a></span>
+        </li>
+      {% endfor %}
       </ul>
       {% else %}<p class="muted">No stories in the last two weeks.</p>{% endif %}
     </div>
   </div>
 </section>
 
-<div class="grid pickers">
-{% for title, items, label in [("🐇 Go down a rabbit hole", home_holes, "🎲 Take me somewhere else"), ("🛠 Build this next", home_ideas, "🎲 Surprise me")] %}
-{% if items %}
-<section class="panel build roller" data-items='{{ items|tojson }}'>
-  <h2>{{ title }}</h2>
-  <p><a class="idea-title" href="{{ items[0].u }}">{{ items[0].t }}</a></p>
-  <p class="idea-desc">{{ items[0].d }}</p>
-  <p class="idea-meta muted small">{{ items[0].s }} · {{ items[0].m }}</p>
-  <button type="button" class="btn" hidden>{{ label }}</button>
+<section id="tools" class="block">
+  <header class="sec"><span class="idx">02</span><h2>Tool radar</h2><p>Ranked by stars gained this week, not lifetime stars, so new tools aren't buried under the giants.</p></header>
+  <div class="split">
+    <div class="panel">
+      <h3 class="label">Rising fastest{% if digest.since %} · since {{ digest.since }}{% endif %}</h3>
+      {% if digest.gainers %}
+      {% set top = digest.gainers[0].gain %}
+      <ol class="meters">
+      {% for g in digest.gainers %}
+        <li class="t-{{ g.topic }}">
+          <a href="{{ g.url }}">{{ g.name }}</a>
+          <span class="gain">+{{ '{:,}'.format(g.gain) }} ★</span>
+          <span class="bar"><i style="width:{{ (100 * g.gain / top)|round(1) }}%"></i></span>
+        </li>
+      {% endfor %}
+      </ol>
+      {% else %}<p class="muted">Needs two data snapshots. Check back after the next refresh.</p>{% endif %}
+    </div>
+    <div class="panel">
+      <h3 class="label">New this year</h3>
+      {% if fresh_tools %}
+      <ul class="stream compact">
+      {% for r in fresh_tools %}
+        <li class="t-{{ r.topic }}">
+          <span class="dot"></span>
+          <a href="{{ r.url }}">{{ r.name }}</a>
+          <span class="meta">{{ r.desc|truncate(90) if r.desc else 'No description.' }}</span>
+          <span class="meta mono">★ {{ '{:,}'.format(r.stars) }}{% if r.gain %} · <span class="up">+{{ '{:,}'.format(r.gain) }}</span>{% endif %} · since {{ r.created[:7] }}</span>
+        </li>
+      {% endfor %}
+      </ul>
+      {% else %}<p class="muted">No repos younger than a year in this week's data.</p>{% endif %}
+    </div>
+  </div>
 </section>
-{% endif %}
-{% endfor %}
-</div>
 
-<h2>Topics</h2>
-<div class="grid">
-{% for k, c in topics.items() %}
-  {% set t = feed.topics[k] %}
-  <section class="panel">
-    <h2>{{ c.icon }} <a href="{{ k }}/index.html">{{ c.label }}</a></h2>
-    <p class="muted">{{ c.blurb }}</p>
-    {% if t.news %}<p class="latest"><span class="muted">Latest:</span> <a href="{{ t.news[0].url }}">{{ t.news[0].title }}</a></p>{% endif %}
-    <ol class="mini">
-    {% for r in t.repos[:4] %}
-      <li><a href="{{ r.url }}">{{ r.name }}</a> <span class="stars">★ {{ '{:,}'.format(r.stars) }}</span></li>
-    {% else %}<li class="muted">No data yet.</li>{% endfor %}
-    </ol>
-    <a class="more" href="{{ k }}/index.html">See all →</a> · <a class="more" href="{{ k }}/cheatsheet/index.html">Cheat sheet</a> · <a class="more" href="{{ k }}/index.html#ideas">Project ideas</a> · <a class="more" href="{{ k }}/index.html#explore">Rabbit holes</a>
+<section id="reference" class="block">
+  <header class="sec"><span class="idx">03</span><h2>Quick reference</h2><p>Jump straight to a section of a cheat sheet.</p></header>
+  <div class="tiles">
+  {% for r in reference %}{% set c = topics[r.key] %}
+    <article class="tile t-{{ r.key }}">
+      <h3><span class="ico">{{ c.icon }}</span> {{ c.label }}</h3>
+      {% if r.toc %}
+      <div class="jumps">{% for id, name in r.toc %}<a href="{{ r.key }}/cheatsheet/index.html#{{ id }}">{{ name }}</a>{% endfor %}</div>
+      {% endif %}
+      <p class="tile-foot">
+        {% if r.has_sheet %}<a href="{{ r.key }}/cheatsheet/index.html">Open cheat sheet →</a>{% endif %}
+        {% if r.quickref %}<a href="{{ r.key }}/index.html#reference">Quick ref</a>{% endif %}
+        {% if r.resources %}<a href="{{ r.key }}/index.html#resources">{{ r.resources }} resources</a>{% endif %}
+      </p>
+    </article>
+  {% endfor %}
+  </div>
+</section>
+
+<section id="sectors" class="block">
+  <header class="sec"><span class="idx">04</span><h2>Topics</h2><p>Each topic page has its own news, tool radar, reference and project ideas.</p></header>
+  <div class="tiles">
+  {% for k, c in topics.items() %}{% set t = feed.topics[k] %}
+    <a class="sector t-{{ k }}" href="{{ k }}/index.html">
+      <span class="ico">{{ c.icon }}</span>
+      <span class="name">{{ c.label }}</span>
+      <span class="blurb">{{ c.blurb }}</span>
+      {% if t.news %}<span class="latest"><em>Latest</em> {{ t.news[0].title|truncate(70) }}</span>{% endif %}
+      <span class="counts">{{ t.news|length }} news · {{ t.repos|length }} tools · {{ t.hn|length }} HN</span>
+    </a>
+  {% endfor %}
+  </div>
+</section>
+
+<section id="offline" class="block">
+  <header class="sec"><span class="idx">05</span><h2>Off the clock</h2><p>Random picks for when you've got a free hour.</p></header>
+  <div class="split even">
+  {% for title, items, label in [("🐇 Rabbit hole", home_holes, "↻ Somewhere else"), ("🛠 Build this next", home_ideas, "↻ Surprise me")] %}
+  {% if items %}
+  <section class="panel roller" data-items='{{ items|tojson }}'>
+    <h3 class="label">{{ title }}</h3>
+    <p><a class="idea-title" href="{{ items[0].u }}">{{ items[0].t }}</a></p>
+    <p class="idea-desc">{{ items[0].d }}</p>
+    <p class="idea-meta meta">{{ items[0].s }} · {{ items[0].m }}</p>
+    <button type="button" class="btn ghost" hidden>{{ label }}</button>
   </section>
-{% endfor %}
-</div>
+  {% endif %}
+  {% endfor %}
+  </div>
+</section>
 {% endblock %}

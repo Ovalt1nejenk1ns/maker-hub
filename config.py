@@ -2,6 +2,8 @@
 
 TOPICS = {
     "python": {
+        "short": "Python",          # compact label for nav chips
+        "color": "#3ef0ff",       # accent used for this topic across the site
         "label": "Python",
         "icon": "🐍",
         "blurb": "Libraries, learning repos and data-analysis tooling.",
@@ -13,6 +15,8 @@ TOPICS = {
         "news_feeds": [("Planet Python", "https://planetpython.org/rss20.xml"), ("Real Python", "https://realpython.com/atom.xml")],
     },
     "3d-printing": {
+        "short": "3D Print",          # compact label for nav chips
+        "color": "#ff8a3d",       # accent used for this topic across the site
         "label": "3D Printing",
         "icon": "🧊",
         "blurb": "Slicers, firmware, models and printer tinkering.",
@@ -24,6 +28,8 @@ TOPICS = {
         "news_feeds": [("Prusa Blog", "https://blog.prusa3d.com/feed/")],
     },
     "woodworking": {
+        "short": "Wood",          # compact label for nav chips
+        "color": "#e0b36a",       # accent used for this topic across the site
         "label": "Woodworking",
         "icon": "🪵",
         "blurb": "CAD/CAM, CNC, joinery tools and shop projects.",
@@ -35,6 +41,8 @@ TOPICS = {
         "news_feeds": [("Lost Art Press", "https://blog.lostartpress.com/feed/"), ("Wood and Shop", "https://woodandshop.com/feed/")],
     },
     "robotics": {
+        "short": "Robotics",          # compact label for nav chips
+        "color": "#7cff9b",       # accent used for this topic across the site
         "label": "Arduino · ESP32 · Robotics",
         "icon": "🤖",
         "blurb": "Microcontrollers, sensors, motors and hobby robots.",
@@ -47,6 +55,8 @@ TOPICS = {
         "news_feeds": [("Hackaday", "https://hackaday.com/feed/"), ("Arduino Blog", "https://blog.arduino.cc/feed/")],
     },
     "data": {
+        "short": "Data",          # compact label for nav chips
+        "color": "#a78bfa",       # accent used for this topic across the site
         "label": "Data Analytics",
         "icon": "📈",
         "blurb": "pandas, SQL, visualization and the analytics toolchain.",
@@ -59,6 +69,8 @@ TOPICS = {
         "news_feeds": [("KDnuggets", "https://www.kdnuggets.com/feed")],
     },
     "board-games": {
+        "short": "Games",          # compact label for nav chips
+        "color": "#ff5fd2",       # accent used for this topic across the site
         "label": "Board Games",
         "icon": "🎲",
         "blurb": "New releases, reviews and tools for the table.",
