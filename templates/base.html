@@ -19,6 +19,7 @@
   <nav class="chips" aria-label="Topics">
     {% for k, c in topics.items() %}<a class="chip t-{{ k }}{% if key == k %} on{% endif %}" href="{{ root }}{{ k }}/index.html" title="{{ c.label }}">{{ c.icon }} {{ c.short }}</a>{% endfor %}
     <a class="chip{% if active == 'dash' %} on{% endif %}" href="{{ root }}dashboards/index.html">📊 Dashboards</a>
+    <a class="chip board-chip{% if active == 'board' %} on{% endif %}" href="{{ root }}board/index.html">📌 Board{% if n_pins %} <b>{{ n_pins }}</b>{% endif %}</a>
   </nav>
   <div class="search">
     <input id="q" type="search" placeholder="Search news, tools, cheat sheets…" aria-label="Search the site" autocomplete="off">

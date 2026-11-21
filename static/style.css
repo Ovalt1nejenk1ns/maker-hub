@@ -252,3 +252,39 @@ footer{display:flex;justify-content:center;align-items:center;gap:10px;color:var
 .tool{display:flex;flex-direction:column}.tool .meta{margin-top:auto}
 .search input:not(:placeholder-shown) + kbd{display:none}
 @media(max-width:720px){.subnav,.toc{top:100px}.block,.res-grid{scroll-margin-top:160px}}
+
+/* Pin buttons (scattered across the site) */
+.pinbtn{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;margin-left:4px;border-radius:6px;font-size:.72rem;vertical-align:middle;
+  border:1px solid var(--line);background:rgba(255,255,255,.02);opacity:.55;filter:grayscale(.6);transition:all .15s;text-decoration:none}
+.pinbtn:hover,.pinbtn:focus-visible{opacity:1;filter:none;border-color:var(--hot);box-shadow:0 0 12px -2px var(--hot);transform:rotate(-12deg)}
+.pinbtn.static{opacity:1;filter:none}
+li:hover .pinbtn,.card:hover .pinbtn{opacity:.85;filter:none}
+.card h3 .pinbtn{float:right;margin:0 0 4px 8px}
+.board-chip{border-color:rgba(255,79,216,.35)}.board-chip b{font:600 .72rem var(--mono);color:var(--hot);margin-left:2px}
+.board-chip:hover,.board-chip.on{--tc:var(--hot)}
+
+/* Board page */
+.board-page{--tc:var(--hot)}
+.board-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:22px}
+.board-actions .meta{display:inline}
+.bookmarklet{cursor:grab}
+.filters button{flex:0 0 auto;font:.8rem var(--mono);padding:6px 12px;border-radius:8px;color:var(--muted);border:1px solid transparent;background:none;cursor:pointer}
+.filters button:hover{color:var(--text)}
+.filters button.on{color:var(--text);border-color:color-mix(in srgb,var(--tc) 50%,transparent);background:color-mix(in srgb,var(--tc) 12%,transparent)}
+.filters b{color:var(--hot);font-weight:600}
+.filters .sep{flex:0 0 1px;background:var(--line);margin:4px 6px}
+.masonry{columns:4 250px;column-gap:14px;margin-top:14px}
+.pin{break-inside:avoid;margin:0 0 14px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:border-color .2s,box-shadow .2s,transform .2s;animation:rise .5s both}
+.pin:hover{border-color:color-mix(in srgb,var(--tc) 55%,transparent);box-shadow:0 0 34px -14px var(--tc);transform:translateY(-3px)}
+.pin-img{display:block;background:#0a0f1c}
+.pin-img img{display:block;width:100%;height:auto;max-height:340px;object-fit:cover}
+.pin-body{padding:14px 16px}
+.pin:not(:has(.pin-img)) .pin-body{border-top:3px solid var(--tc)}
+.pin-tags{margin:0 0 8px}.tag.topic{color:var(--tc);background:color-mix(in srgb,var(--tc) 12%,transparent)}
+.pin h3{margin:0 0 6px;font-size:1rem;line-height:1.3;word-break:break-word}
+.pin-desc{margin:0 0 8px;color:var(--soft);font-size:.86rem;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.pin-note{margin:8px 0;padding:8px 10px;border-left:2px solid var(--hot);background:rgba(255,79,216,.06);border-radius:0 8px 8px 0;font-size:.86rem;white-space:pre-line}
+.pin-foot{margin:8px 0 0}.pin-foot a{float:right;color:var(--soft)}.pin-foot a:hover{color:var(--hot)}
+.pin[hidden]{display:none}
+.empty-board ol{margin:0;padding-left:20px;color:var(--soft)}.empty-board li{margin:8px 0}
+@media(hover:none){.pinbtn{opacity:.85;filter:none}}

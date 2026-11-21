@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_pin.html" import pin %}
 {% block title %}{{ tcfg.label }} · {{ cfg.SITE_TITLE }}{% endblock %}
 {% block bodyclass %}t-{{ key }}{% endblock %}
 {% block body %}
@@ -22,7 +23,7 @@
       <h3 class="label">Latest news</h3>
       {% if t.news %}
       <ul class="stream">
-      {% for n in t.news %}<li><span class="dot"></span><a href="{{ n.url }}">{{ n.title }}</a> <span class="meta">{{ n.source }}{% if n.date %} · <time data-ago datetime="{{ n.date }}">{{ n.date }}</time>{% endif %}</span></li>{% endfor %}
+      {% for n in t.news %}<li><span class="dot"></span><a href="{{ n.url }}">{{ n.title }}</a> <span class="meta">{{ n.source }}{% if n.date %} · <time data-ago datetime="{{ n.date }}">{{ n.date }}</time>{% endif %} {{ pin(n.title, n.url, key, "Article") }}</span></li>{% endfor %}
       </ul>
       {% else %}<p class="muted">No news yet. It appears after the first scheduled refresh.</p>{% endif %}
     </div>
@@ -30,7 +31,7 @@
       <h3 class="label">Hacker News</h3>
       {% if t.hn %}
       <ul class="stream compact">
-      {% for s in t.hn %}<li><span class="pts">{{ s.points }}</span><a href="{{ s.url }}">{{ s.title }}</a> <span class="meta"><a href="{{ s.hn_url }}">discuss</a></span></li>{% endfor %}
+      {% for s in t.hn %}<li><span class="pts">{{ s.points }}</span><a href="{{ s.url }}">{{ s.title }}</a> <span class="meta"><a href="{{ s.hn_url }}">discuss</a> {{ pin(s.title, s.url, key, "Article") }}</span></li>{% endfor %}
       </ul>
       {% else %}<p class="muted">No Hacker News stories in the last two weeks.</p>{% endif %}
     </div>
@@ -42,7 +43,7 @@
   <div class="cards">
   {% for r in radar %}
     <article class="card tool">
-      <h3><a href="{{ r.url }}">{{ r.name }}</a>{% if r.fresh %} <span class="tag fresh">new</span>{% endif %}</h3>
+      <h3><a href="{{ r.url }}">{{ r.name }}</a>{% if r.fresh %} <span class="tag fresh">new</span>{% endif %} {{ pin(r.name, r.url, key, "Tool") }}</h3>
       <p>{{ r.desc or 'No description.' }}</p>
       <p class="meta mono">{% if r.gain %}<span class="up">+{{ '{:,}'.format(r.gain) }} ★/wk</span> · {% endif %}★ {{ '{:,}'.format(r.stars) }} · {{ r.language }}</p>
     </article>
@@ -72,7 +73,7 @@
   {% for g in resources %}
     <div class="panel">
       <h3 class="label">{{ g.group }}</h3>
-      <ul class="res">{% for r in g["items"] %}<li><a href="{{ r.url }}">{{ r.title }}</a><span class="meta">{{ r.note }}</span></li>{% endfor %}</ul>
+      <ul class="res">{% for r in g["items"] %}<li><a href="{{ r.url }}">{{ r.title }}</a><span class="meta">{{ r.note }} {{ pin(r.title, r.url, key, "Resource") }}</span></li>{% endfor %}</ul>
     </div>
   {% endfor %}
   </div>
@@ -99,7 +100,7 @@
   <div class="cards">
   {% for a in adjacent %}
     <article class="card hole">
-      <h3><a href="{{ a.url }}">{{ a.title }}</a></h3>
+      <h3><a href="{{ a.url }}">{{ a.title }}</a> {{ pin(a.title, a.url, key, "Rabbit hole") }}</h3>
       <p>{{ a.why }}</p>
       {% if a.how %}<p class="meta">{{ a.how }}</p>{% endif %}
     </article>

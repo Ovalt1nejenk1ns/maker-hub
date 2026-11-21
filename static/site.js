@@ -113,6 +113,26 @@
     Object.keys(byId).forEach(function (id) { var s = document.getElementById(id); if (s) spy.observe(s); });
   }
 
+  /* Board: filter pins by topic or kind; hide preview images that fail to load */
+  var filters = document.querySelector(".filters");
+  if (filters) {
+    var pins = [].slice.call(document.querySelectorAll(".pin")), empty = document.querySelector(".empty-filter");
+    filters.addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      [].forEach.call(filters.querySelectorAll("button"), function (x) { x.classList.toggle("on", x === b); });
+      var f = b.getAttribute("data-f"), shown = 0;
+      pins.forEach(function (p) {
+        var ok = f === "*" || (f.slice(0, 2) === "t:" ? p.getAttribute("data-t") === f.slice(2) : p.getAttribute("data-k") === f.slice(2));
+        p.hidden = !ok; if (ok) shown++;
+      });
+      if (empty) empty.hidden = shown > 0;
+    });
+  }
+  [].forEach.call(document.querySelectorAll(".pin-img img"), function (img) {
+    var drop = function () { img.parentNode.remove(); };
+    if (img.complete && !img.naturalWidth) drop(); else img.addEventListener("error", drop);
+  });
+
   /* Home page: random pickers (rabbit holes, project ideas) */
   [].forEach.call(document.querySelectorAll(".roller"), function (box) {
     var items = JSON.parse(box.getAttribute("data-items") || "[]"), shown = null;

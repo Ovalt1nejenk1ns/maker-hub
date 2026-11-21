@@ -1,5 +1,6 @@
 """data/*.json|csv + content/ + templates/ -> site/ (plain static HTML). Run: python scripts/build.py"""
 import csv, json, shutil, sys
+from urllib.parse import quote, urlencode
 import markdown
 from collections import Counter, defaultdict
 from datetime import date
@@ -16,6 +17,25 @@ from charts import bar_chart, line_chart
 SITE = ROOT / "site"
 env = Environment(loader=FileSystemLoader(ROOT / "templates"),
                   autoescape=select_autoescape(["html"]))
+
+
+def pin_url(title="", url="", topic="", kind="Link"):
+    """Link that opens a pre-filled 'new issue' form; submitting it pins the item to the board."""
+    body = (f"url: {url}\ntopic: {topic}\nkind: {kind}\n\n"
+            "<!-- Optional: write a note below about why you saved this. Close this issue to unpin. -->\n")
+    q = urlencode({"labels": config.PIN_LABEL, "title": title, "body": body}, quote_via=quote)
+    return f"https://github.com/{config.GITHUB_REPO}/issues/new?{q}"
+
+
+# Bookmarklet: pin whatever page you're on (any site) with one click from the bookmarks bar.
+def bookmarklet():
+    base = f"https://github.com/{config.GITHUB_REPO}/issues/new?labels={config.PIN_LABEL}"
+    return ("javascript:(()=>{const b='url: '+location.href+'\\ntopic: \\nkind: Article\\n\\n';"
+            f"window.open('{base}&title='+encodeURIComponent(document.title)"
+            "+'&body='+encodeURIComponent(b))})()")
+
+
+env.globals["pin_url"] = pin_url
 
 
 def render(name, out, root, **ctx):
@@ -141,7 +161,8 @@ def main():
     all_tips = load_json("content/tips.json", {})
     label = {k: f'{c["icon"]} {c["label"]}' for k, c in config.TOPICS.items()}
     site_tips = [{"t": t, "s": label[k]} for k in config.TOPICS for t in all_tips.get(k, [])]
-    common = dict(updated=feed["updated"], page_tips=site_tips)
+    pins = load_json("data/pins.json", [])
+    common = dict(updated=feed["updated"], page_tips=site_tips, n_pins=len(pins))
     search = []      # site-wide search index: t=title, u=url, k=kind, s=topic
     home_ideas, home_holes = [], []
     reference, fresh_tools, seen_tools = [], [], set()
@@ -218,6 +239,11 @@ def main():
             "legend": top,
         }
     render("dashboards.html", "dashboards/index.html", "../", dash=dash, **common)
+    render("board.html", "board/index.html", "../", pins=pins, active="board",
+           bookmarklet=bookmarklet(), **common)
+    for pin in pins:
+        add(pin["title"], pin["url"], "Pinned", pin["topic"]) if pin["topic"] else \
+            search.append({"t": pin["title"], "u": pin["url"], "k": "Pinned", "s": "📌 Board"})
     add_dash = {"t": "Dashboards: star charts and trends", "u": "dashboards/index.html", "k": "Page", "s": "📊 Dashboards"}
     (SITE / "search.json").write_text(json.dumps(search + [add_dash], ensure_ascii=False), encoding="utf-8")
     print(f"built {sum(1 for _ in SITE.rglob('*.html'))} pages, {len(search) + 1} search entries -> {SITE}")

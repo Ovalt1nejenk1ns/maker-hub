@@ -1,0 +1,4 @@
+{# 📌 button: opens a pre-filled GitHub issue; submitting it saves the item to the board. #}
+{% macro pin(title, url, topic="", kind="Link") -%}
+<a class="pinbtn" href="{{ pin_url(title, url, topic, kind) }}" target="_blank" rel="noopener" title="Pin to my board" aria-label="Pin “{{ title }}” to my board">📌</a>
+{%- endmacro %}
