@@ -40,5 +40,12 @@
     "Sleeve cards for games you play often. It is cheaper than replacing a worn deck.",
     "The best player count for a game is often not its maximum. Check before game night.",
     "Play the first game with open hands so everyone learns the rules together."
+  ],
+  "card-games": [
+    "In Five Crowns the wild rank changes every round: 3s in round 1, up to kings in round 11.",
+    "Getting caught holding a Wild in Phase 10 costs 25 points, the most of any card.",
+    "In Skip-Bo you can only play the top card of your stock pile, so emptying it is the whole game.",
+    "A 52-card deck has 52! orderings, so a well-shuffled deck is almost certainly in an order never seen before.",
+    "Seven riffle shuffles mix a 52-card deck well. Three or four leave patterns you can measure."
   ]
 }

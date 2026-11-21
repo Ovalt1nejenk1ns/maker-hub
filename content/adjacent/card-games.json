@@ -1,0 +1,7 @@
+[
+  {"title": "Seven shuffles", "why": "Mathematicians proved a 52-card deck needs about seven riffle shuffles to be properly mixed.", "url": "https://en.wikipedia.org/wiki/Shuffling", "how": "Short read"},
+  {"title": "Tarot card games", "why": "Tarot decks were invented for trick-taking games, and they're still played that way across Europe.", "url": "https://en.wikipedia.org/wiki/Tarot_card_games", "how": "Short read"},
+  {"title": "Hanafuda", "why": "Japanese flower cards with no numbers at all: twelve months, four cards each. Nintendo started out printing them.", "url": "https://en.wikipedia.org/wiki/Hanafuda", "how": "Short read"},
+  {"title": "Libratus", "why": "The poker AI that beat top professionals at no-limit hold'em by working out its strategy instead of copying humans.", "url": "https://en.wikipedia.org/wiki/Libratus", "how": "Medium read"},
+  {"title": "Playing card suits", "why": "Hearts and spades are just one family. Italian, Spanish, German and Swiss decks use cups, coins, acorns and bells.", "url": "https://en.wikipedia.org/wiki/Suit_(cards)", "how": "Short read"}
+]

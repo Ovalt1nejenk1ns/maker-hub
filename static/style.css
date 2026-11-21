@@ -252,3 +252,6 @@ footer{display:flex;justify-content:center;align-items:center;gap:10px;color:var
 .tool{display:flex;flex-direction:column}.tool .meta{margin-top:auto}
 .search input:not(:placeholder-shown) + kbd{display:none}
 @media(max-width:720px){.subnav,.toc{top:100px}.block,.res-grid{scroll-margin-top:160px}}
+.app{display:flex;flex-direction:column;border-color:color-mix(in srgb,var(--tc) 35%,transparent)}
+.app h3 .ico{filter:drop-shadow(0 0 10px var(--tc))}
+.app-links{margin-top:auto!important;padding-top:6px;display:flex;gap:8px}.app-links .btn.small{margin-left:0}

@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Five Crowns Deluxe Scorekeeper",
+    "icon": "👑",
+    "desc": "Scores all 11 rounds with players, stats and history. Converted from my Python/Tkinter desktop app.",
+    "play": "https://ovalt1nejenk1ns.github.io/5CrownsScorekeeper/",
+    "repo": "https://github.com/Ovalt1nejenk1ns/5CrownsScorekeeper"
+  },
+  {
+    "title": "Phase 10 League",
+    "icon": "🔟",
+    "desc": "Phone-friendly scorekeeper that tracks phases and points, plus a Python builder that turns finished games into results pages.",
+    "play": "https://ovalt1nejenk1ns.github.io/phase10-league/",
+    "repo": "https://github.com/Ovalt1nejenk1ns/phase10-league"
+  },
+  {
+    "title": "Skip-Bo League",
+    "icon": "🏁",
+    "desc": "Scorekeeper for 25 points plus 5 per card left in opponents' stock piles, with standings and a race chart. Sister site to the Phase 10 League.",
+    "play": "https://ovalt1nejenk1ns.github.io/skipbo-league/",
+    "repo": "https://github.com/Ovalt1nejenk1ns/skipbo-league"
+  }
+]

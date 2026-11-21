@@ -1,0 +1,14 @@
+[
+  {"title": "Score-night stats in pandas", "level": "Beginner", "time": "1 evening", "needs": "Your league CSVs, pandas",
+   "desc": "Load every Phase 10 and Skip-Bo CSV into one DataFrame and find who wins most, average hands per game and the hardest phase."},
+  {"title": "Shuffle test", "level": "Beginner", "time": "1 evening", "needs": "A deck of cards, Python",
+   "desc": "Record the card order after 1, 3 and 7 riffles and measure how many cards stay next to their old neighbors."},
+  {"title": "Card holder for small hands", "level": "Beginner", "time": "1 weekend", "needs": "3D printer",
+   "desc": "Print a slotted card holder so younger players can see a 13-card Five Crowns hand without dropping it."},
+  {"title": "Five Crowns league", "level": "Intermediate", "time": "1 weekend", "needs": "The Phase 10 League repo as a template",
+   "desc": "Give Five Crowns the same treatment as Phase 10 and Skip-Bo: CSV export plus a Python builder for results pages."},
+  {"title": "Phase 10 odds simulator", "level": "Intermediate", "time": "1 weekend", "needs": "Python, random, collections.Counter",
+   "desc": "Deal a million 10-card hands and estimate how often each phase is complete on the deal, before any draws."},
+  {"title": "Scorekeeper hub page", "level": "Intermediate", "time": "1 evening", "needs": "HTML, your three apps",
+   "desc": "One home screen icon that opens a launcher for all three scorekeepers, with each game's current leader pulled from localStorage."}
+]

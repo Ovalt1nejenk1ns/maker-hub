@@ -81,9 +81,23 @@ TOPICS = {
         "hn_query": "board game",
         "news_feeds": [("Board Game Quest", "https://boardgamequest.com/feed/")],
     },
+    "card-games": {
+        "short": "Cards",          # compact label for nav chips
+        "color": "#ff6b6b",       # accent used for this topic across the site
+        "label": "Card Games",
+        "icon": "🃏",
+        "blurb": "Family card games, scoring rules and my ScoreKeepers apps.",
+        "github_queries": [
+            "topic:card-game pushed:>{since} stars:>50",
+            "topic:cardgame pushed:>{since} stars:>20",
+        ],
+        "hn_query": "card game",
+        "news_feeds": [("The Board Game Family", "https://www.theboardgamefamily.com/category/card-games/feed/"),
+                       ("Denexa Games", "https://www.denexa.com/feed/")],
+    },
 }
 
 LOOKBACK_DAYS = 30       # "recent" window for GitHub searches
 ITEMS_PER_TOPIC = 8
 SITE_TITLE = "Maker Hub"
-SITE_TAGLINE = "My hub for Python, 3D printing, woodworking, robotics, data and board games — news, cheat sheets and resources."
+SITE_TAGLINE = "My hub for Python, 3D printing, woodworking, robotics, data, board games and card games — news, cheat sheets and resources."
