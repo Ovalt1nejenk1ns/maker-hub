@@ -29,10 +29,9 @@ def pin_url(title="", url="", topic="", kind="Link"):
 
 # Bookmarklet: pin whatever page you're on (any site) with one click from the bookmarks bar.
 def bookmarklet():
-    base = f"https://github.com/{config.GITHUB_REPO}/issues/new?labels={config.PIN_LABEL}"
-    return ("javascript:(()=>{const b='url: '+location.href+'\\ntopic: \\nkind: Article\\n\\n';"
-            f"window.open('{base}&title='+encodeURIComponent(document.title)"
-            "+'&body='+encodeURIComponent(b))})()")
+    """Opens the board with ?url=&title=; the board pins it in one click (via the saved token)."""
+    return ("javascript:void(window.open('" + config.SITE_URL + "board/index.html?url='"
+            "+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)))")
 
 
 env.globals["pin_url"] = pin_url
@@ -162,7 +161,8 @@ def main():
     label = {k: f'{c["icon"]} {c["label"]}' for k, c in config.TOPICS.items()}
     site_tips = [{"t": t, "s": label[k]} for k in config.TOPICS for t in all_tips.get(k, [])]
     pins = load_json("data/pins.json", [])
-    common = dict(updated=feed["updated"], page_tips=site_tips, n_pins=len(pins))
+    common = dict(updated=feed["updated"], page_tips=site_tips, n_pins=len(pins),
+                  pinned_urls=[p["url"] for p in pins])
     search = []      # site-wide search index: t=title, u=url, k=kind, s=topic
     home_ideas, home_holes = [], []
     reference, fresh_tools, seen_tools = [], [], set()
@@ -239,7 +239,8 @@ def main():
             "legend": top,
         }
     render("dashboards.html", "dashboards/index.html", "../", dash=dash, **common)
-    render("board.html", "board/index.html", "../", pins=pins, active="board",
+    topic_meta = {k: {"icon": c["icon"], "short": c["short"]} for k, c in config.TOPICS.items()}
+    render("board.html", "board/index.html", "../", pins=pins, active="board", topic_meta=topic_meta,
            bookmarklet=bookmarklet(), **common)
     for pin in pins:
         add(pin["title"], pin["url"], "Pinned", pin["topic"]) if pin["topic"] else \
