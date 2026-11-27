@@ -1,0 +1,32 @@
+name: Back up scorekeeper games
+on:
+  schedule:
+    - cron: "23 8 * * *"        # 08:23 UTC = 3:23 am Eastern, after any game night
+  workflow_dispatch:            # "Run workflow" button on the Actions tab
+permissions:
+  contents: write
+concurrency:
+  group: scores-backup
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    # Does nothing until the cloud is set up (see scorekeepers-cloud/README.md).
+    if: vars.SCORES_API_URL != ''
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Copy the cloud database into data/
+        env:
+          SCORES_API_URL: ${{ vars.SCORES_API_URL }}
+          SCORES_FAMILY_KEY: ${{ secrets.SCORES_FAMILY_KEY }}
+        run: python scorekeepers-cloud/backup.py
+      - name: Commit if anything changed
+        run: |
+          git config user.name "maker-hub-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/scorekeepers.json data/scorekeepers.db
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: back up scorekeeper games $(date -u +%F)"
+          git pull --rebase origin main
+          git push
