@@ -2,159 +2,137 @@
 // This is the ONLY file the scheduled refresh task rewrites.
 // Keep it valid JS: window.TRENDS = { ... };  (JSON-style object, double quotes)
 window.TRENDS = {
-  "updated": "2026-11-15",
-  "updatedLabel": "November 15, 2026",
+  "updated": "2026-11-27",
+  "updatedLabel": "November 27, 2026",
   "tiles": [
     {
-      "icon": "🕸️",
-      "label": "Stringman Cable Robot",
-      "text": "844-point HN thread — open-source room-scale gripper on four strings",
+      "icon": "🔌",
+      "label": "Web Dev → Embedded",
+      "text": "153-point Ask HN thread full of advice on moving into firmware",
       "color": "cyan"
     },
     {
-      "icon": "🧩",
-      "label": "Arduino Nano XL Link",
-      "text": "Announced at electronica: Nano-size board with CAN FD, RS-485, Ethernet",
+      "icon": "🐍",
+      "label": "MicroPython v1.30",
+      "text": "84% done and targeting a December 7 release",
       "color": "purple"
     },
     {
-      "icon": "🦾",
-      "label": "$1.5 Robot Joint",
-      "text": "FOC driver board inside a gimbal motor + 3D-printed gearbox",
+      "icon": "🛼",
+      "label": "Roller-Skating Robot",
+      "text": "New desktop robot repo with LLM chat + RL, 209 stars in 2 days",
       "color": "green"
     },
     {
-      "icon": "🐍",
-      "label": "Tim Peters Remembered",
-      "text": "Zen of Python and Timsort author — 1,438 points on HN",
+      "icon": "🧪",
+      "label": "de:volt Simulator",
+      "text": "Browser breadboard that warns you before an LED burns out",
       "color": "amber"
     }
   ],
   "sections": [
     {
-      "title": "🔥 GitHub Trending — November 15, 2026",
+      "title": "🔥 GitHub Trending — November 27, 2026",
       "color": "green",
       "tag": "hot repos python & ml",
       "type": "cards",
       "items": [
         {
           "kind": "github",
-          "icon": "🕸️",
-          "title": "nhnifong/cranebot3-firmware",
-          "sub": "Python · Robotics",
-          "desc": "Control code for Stringman, the cable-driven household robot that topped Hacker News this fortnight (844 points). Four ceiling-corner motors reel lines to move a gripper around a whole room; Raspberry Pi Zero 2W in the gripper, Python API on a PC. Worth reading to see a real robot stack written in Python.",
+          "icon": "🛼",
+          "title": "AI-FanGe/A-MicroRobot-that-can-Rollerskate",
+          "sub": "Python · Desktop robot",
+          "desc": "A small desktop robot that roller-skates, chats through an LLM and can be trained with reinforcement learning to act the way you want, with a memory of past interactions. Created Nov 25 and already over 200 stars — the newest hobby robot on GitHub this week.",
           "stats": [
             {
-              "text": "⭐ 196"
+              "text": "⭐ 209"
             },
             {
-              "text": "HN 844 pts",
+              "text": "Created Nov 25",
               "hot": true
             }
           ],
           "links": [
             {
               "text": "View →",
-              "url": "https://github.com/nhnifong/cranebot3-firmware"
+              "url": "https://github.com/AI-FanGe/A-MicroRobot-that-can-Rollerskate"
             }
           ]
         },
         {
           "kind": "github",
-          "icon": "🦾",
-          "title": "yzytz17/1.5-joint-module",
-          "sub": "C++ · Robot actuator",
-          "desc": "An ultra-low-cost robot joint: a roughly $1.5 FOC (brushless motor control) driver board that fits inside a 1503 gimbal motor, plus a fully 3D-printed high-ratio gearbox. Gerbers, firmware, CAD and STLs are all open. Created Nov 2 and still marked work in progress.",
+          "icon": "🖥️",
+          "title": "zacharyinserra/deskhub",
+          "sub": "Python · ESP32-S3 display",
+          "desc": "A desk display for the Waveshare ESP32-S3-Touch-LCD-4.3B showing PC stats, calendar, media, Steam and 3D printer status, fed by a Python companion app on Windows. A good template for the PC-to-microcontroller data pattern.",
           "stats": [
             {
-              "text": "⭐ 207"
+              "text": "⭐ 166"
             },
             {
-              "text": "New in Nov",
+              "text": "Created Nov 17",
               "hot": true
             }
           ],
           "links": [
             {
               "text": "View →",
-              "url": "https://github.com/yzytz17/1.5-joint-module"
+              "url": "https://github.com/zacharyinserra/deskhub"
             }
           ]
         },
         {
           "kind": "github",
-          "icon": "🚙",
-          "title": "MZULALI/xj-scanner",
-          "sub": "Python · Arduino Nano",
-          "desc": "Reads the engine computer of a 1991-95 Jeep with a $3 Arduino Nano and three wires, with Python on the laptop side. A nice small example of Arduino as a serial bridge. Heed the README warning: one cavity in the diagnostic plug carries 12 V and must never be connected to the Nano.",
+          "icon": "📟",
+          "title": "melihkoray/phosphor",
+          "sub": "C++ · ESP32-S3",
+          "desc": "Retro VFD-style desk gadget for the Waveshare ESP32-S3-Touch-LCD-3.49: clock, weather, internet radio, focus timer and pixel scenes, flashed from a browser installer. Covered by CNX Software on Nov 27.",
           "stats": [
             {
-              "text": "⭐ 249"
+              "text": "⭐ 96"
             },
             {
-              "text": "Created Nov 10",
+              "text": "New firmware",
               "hot": true
             }
           ],
           "links": [
             {
               "text": "View →",
-              "url": "https://github.com/MZULALI/xj-scanner"
+              "url": "https://github.com/melihkoray/phosphor"
             }
           ]
         },
         {
           "kind": "github",
-          "icon": "🖨️",
-          "title": "ngxson/esp32-usb-to-airprint",
-          "sub": "C · ESP32-S3",
-          "desc": "Adds AirPrint and AirScan to an old USB printer using a cheap ESP32-S3 as a USB host plus Wi-Fi bridge. A practical project that shows off the S3 built-in USB.",
+          "icon": "🪟",
+          "title": "andrisgauracs/bevel-os",
+          "sub": "C · ESP32-S3 + VGA",
+          "desc": "A tiny Windows 95-style desktop OS running on a single ESP32-S3 driving a VGA monitor. The author says it was written with an AI model — a fun read on how far one microcontroller can be pushed.",
           "stats": [
             {
-              "text": "⭐ 317"
+              "text": "⭐ 141"
             },
             {
-              "text": "Rising"
+              "text": "Created Nov 14"
             }
           ],
           "links": [
             {
               "text": "View →",
-              "url": "https://github.com/ngxson/esp32-usb-to-airprint"
+              "url": "https://github.com/andrisgauracs/bevel-os"
             }
           ]
         },
         {
           "kind": "github",
-          "icon": "📱",
-          "title": "onehumanbeing/esp32-iphone-agent",
-          "sub": "Swift · ESP32 + AI",
-          "desc": "Lets an AI vision model operate a real iPhone using a $7 ESP32: AirPlay for eyes, USB HID for hands, no Mac or jailbreak. Still climbing — from 4.2k to about 5k stars since the last refresh.",
+          "icon": "🦿",
+          "title": "Yeq6X/stackchan-strider",
+          "sub": "Python · 3D-printed walker",
+          "desc": "A screwless, bearing-free 3D-printed four-legged walking base for the M5Stack StackChan robot, driven by just the head-yaw servo. A clever lesson in getting a lot of motion out of one actuator.",
           "stats": [
             {
-              "text": "⭐ 5.0k"
-            },
-            {
-              "text": "Still climbing",
-              "hot": true
-            }
-          ],
-          "links": [
-            {
-              "text": "View →",
-              "url": "https://github.com/onehumanbeing/esp32-iphone-agent"
-            }
-          ]
-        },
-        {
-          "kind": "github",
-          "icon": "🦆",
-          "title": "LuwuDynamics/xgoduck_hardware",
-          "sub": "Hardware · Arduino UNO Q",
-          "desc": "3D-printable biped robot duck (adapted from Pollen Robotics Microduck) powered by an Arduino UNO Q and 15 servos, with mechanical models, PCB designs, a BOM and an assembly guide. Up from 1.7k stars two weeks ago.",
-          "stats": [
-            {
-              "text": "⭐ 1.9k"
+              "text": "⭐ 35"
             },
             {
               "text": "Hobby Robotics",
@@ -164,7 +142,71 @@ window.TRENDS = {
           "links": [
             {
               "text": "View →",
-              "url": "https://github.com/LuwuDynamics/xgoduck_hardware"
+              "url": "https://github.com/Yeq6X/stackchan-strider"
+            }
+          ]
+        },
+        {
+          "kind": "github",
+          "icon": "🎯",
+          "title": "arturomeneses100/servo-vision-control",
+          "sub": "Python · OpenCV + serial",
+          "desc": "Python and OpenCV GUI that tracks a target and drives a servo over serial using On-Off, P, PI and PID control, so you can compare the controllers side by side. Spanish README; the matching microcontroller firmware is in a sibling repo. Great for learning PID before building a robot.",
+          "stats": [
+            {
+              "text": "⭐ 26"
+            },
+            {
+              "text": "Learn PID"
+            }
+          ],
+          "links": [
+            {
+              "text": "View →",
+              "url": "https://github.com/arturomeneses100/servo-vision-control"
+            }
+          ]
+        },
+        {
+          "kind": "github",
+          "icon": "🧱",
+          "title": "lelouvincx/zero-dollar-data-stack",
+          "sub": "HTML · dlt + DuckDB + dbt",
+          "desc": "A free modern data stack end to end: dlt for ingestion, DuckDB as the warehouse, dbt for transforms and GitHub Actions for scheduling. A realistic portfolio project shape for a data analytics student.",
+          "stats": [
+            {
+              "text": "⭐ 20"
+            },
+            {
+              "text": "Data portfolio",
+              "hot": true
+            }
+          ],
+          "links": [
+            {
+              "text": "View →",
+              "url": "https://github.com/lelouvincx/zero-dollar-data-stack"
+            }
+          ]
+        },
+        {
+          "kind": "github",
+          "icon": "🎬",
+          "title": "di37/animated-machine-learning-algorithm",
+          "sub": "Python · scikit-learn",
+          "desc": "Watch scikit-learn models train and predict as live animations, with narrated lessons and Manim videos on the California Housing dataset. Helpful for seeing what regression and classification are actually doing.",
+          "stats": [
+            {
+              "text": "⭐ 29"
+            },
+            {
+              "text": "Created Nov 17"
+            }
+          ],
+          "links": [
+            {
+              "text": "View →",
+              "url": "https://github.com/di37/animated-machine-learning-algorithm"
             }
           ]
         },
@@ -173,10 +215,10 @@ window.TRENDS = {
           "icon": "🧪",
           "title": "agharsallah/esp-labs-web",
           "sub": "TypeScript · ESP32-S3 learning",
-          "desc": "The ESP32-S3 bench guide as a web app: live pinout, lessons with interactive simulators, and a firmware code reader. Grew from 622 to 868 stars in two weeks and is still being updated daily.",
+          "desc": "The ESP32-S3 bench guide as a web app: live pinout, lessons with interactive simulators and a firmware code reader. Passed 1,000 stars (from 868 at the last refresh) and is still updated.",
           "stats": [
             {
-              "text": "⭐ 868"
+              "text": "⭐ 1.0k"
             },
             {
               "text": "Beginner-friendly",
@@ -192,84 +234,64 @@ window.TRENDS = {
         },
         {
           "kind": "github",
-          "icon": "✈️",
-          "title": "KirinDenis/OWLOS-FLIGHT-RADAR",
-          "sub": "C · ESP32 + display",
-          "desc": "Live flight radar for ESP32 boards with a screen (the Cheap Yellow Display and others): shows the planes around your home on a radar scope or map using free ADS-B networks. A fun first Wi-Fi + display project.",
-          "stats": [
-            {
-              "text": "⭐ 61"
-            },
-            {
-              "text": "New in Nov"
-            }
-          ],
-          "links": [
-            {
-              "text": "View →",
-              "url": "https://github.com/KirinDenis/OWLOS-FLIGHT-RADAR"
-            }
-          ]
-        },
-        {
-          "kind": "github",
-          "icon": "🐍",
-          "title": "thesayfulla/pylings",
-          "sub": "Python · Learning",
-          "desc": "Rustlings-style Python practice: fix broken exercises from warm-ups (strings, collections, decorators, iterators) up to senior-level tasks, with tests re-running on every save. No dependencies; runs with uv or plain Python 3.14. Also on HN (52 points).",
-          "stats": [
-            {
-              "text": "⭐ 101"
-            },
-            {
-              "text": "Learn by fixing",
-              "hot": true
-            }
-          ],
-          "links": [
-            {
-              "text": "View →",
-              "url": "https://github.com/thesayfulla/pylings"
-            }
-          ]
-        },
-        {
-          "kind": "github",
           "icon": "🦆",
-          "title": "hugues31/duckpad",
-          "sub": "Python · DuckDB pipelines",
-          "desc": "Free, open-source visual tool for building data pipelines: connect steps on a canvas, write SQL or Python where needed, and see the data at every step. Powered by DuckDB and installable from PyPI — good practice ground for SQL and ETL coursework.",
+          "title": "LuwuDynamics/xgoduck_hardware",
+          "sub": "Hardware · Arduino UNO Q",
+          "desc": "3D-printable biped robot duck powered by an Arduino UNO Q and 15 servos, with CAD, PCBs, BOM and assembly guide. Now past 2,000 stars.",
           "stats": [
             {
-              "text": "⭐ 319"
+              "text": "⭐ 2.0k"
             },
             {
-              "text": "Active this week",
-              "hot": true
+              "text": "Hobby Robotics"
             }
           ],
           "links": [
             {
               "text": "View →",
-              "url": "https://github.com/hugues31/duckpad"
+              "url": "https://github.com/LuwuDynamics/xgoduck_hardware"
             }
           ]
         },
         {
           "kind": "github",
-          "icon": "📊",
-          "title": "atlanai/analytics-playbook",
-          "sub": "HTML · Analytics",
-          "desc": "A playbook on building an analytics agent that gets business numbers right: metrics defined from analysts SQL, a golden set of real questions, and improvement loops. Useful reading on how metric definitions get governed in practice.",
+          "icon": "📱",
+          "title": "onehumanbeing/esp32-iphone-agent",
+          "sub": "Swift · ESP32 + AI",
+          "desc": "Lets an AI vision model operate a real iPhone using a $7 ESP32: AirPlay for eyes, USB HID for hands. Still climbing, from about 5.0k to 5.4k stars since the last refresh.",
           "stats": [
             {
-              "text": "⭐ 162"
+              "text": "⭐ 5.4k"
+            },
+            {
+              "text": "Still climbing"
             }
           ],
           "links": [
             {
               "text": "View →",
-              "url": "https://github.com/atlanai/analytics-playbook"
+              "url": "https://github.com/onehumanbeing/esp32-iphone-agent"
+            }
+          ]
+        },
+        {
+          "kind": "github",
+          "icon": "🕸️",
+          "title": "nhnifong/cranebot3-firmware",
+          "sub": "Python · Robotics",
+          "desc": "Control code for Stringman, the cable-driven room-scale gripper robot that topped Hacker News earlier this month. Still pushed to almost daily — a real robot stack written in Python.",
+          "stats": [
+            {
+              "text": "⭐ 208"
+            },
+            {
+              "text": "Active"
+            }
+          ],
+          "links": [
+            {
+              "text": "View →",
+              "url": "https://github.com/nhnifong/cranebot3-firmware"
             }
           ]
         }
@@ -282,112 +304,100 @@ window.TRENDS = {
       "items": [
         {
           "kind": "tool",
-          "icon": "🧩",
-          "title": "Arduino Nano XL Link",
-          "sub": "electronica · Nov 10",
-          "desc": "Arduino expanded the Nano family at electronica in Munich. The Nano XL Link keeps the Nano footprint but adds CAN FD, RS-485 and 10/100 Ethernet on a 120 MHz Cortex-M33 (Microchip PIC32CK), running the Arduino Zephyr core. Note it is 3.3 V logic and takes 7-24 V on Vin. Price and availability are not announced yet.",
-          "stats": [
-            {
-              "text": "Nov 2026"
-            },
-            {
-              "text": "New board",
-              "hot": true
-            }
-          ],
-          "links": [
-            {
-              "text": "Arduino Blog →",
-              "url": "https://blog.arduino.cc/2026/11/10/just-announced-at-electronica-the-arduino-nano-family-is-now-xl/"
-            },
-            {
-              "text": "CNX specs →",
-              "url": "https://www.cnx-software.com/2026/11/11/arduino-nano-xl-board-features-microchip-pic32ck-cortex-m33-mcu-for-industrial-home-and-building-automation/"
-            }
-          ]
-        },
-        {
-          "kind": "tool",
-          "icon": "🤖",
-          "title": "Arduino I/O for ROS 2",
-          "sub": "Unveiled at ROSCon · Nov 6",
-          "desc": "Arduino announced a new way to bring Arduino I/O into ROS 2 robots: a Linux computer handles the high-level work while a microcontroller handles real-time I/O. That split is the standard pattern for hobby robots, so this is one to bookmark for later.",
-          "stats": [
-            {
-              "text": "Robotics",
-              "hot": true
-            }
-          ],
-          "links": [
-            {
-              "text": "Arduino Blog →",
-              "url": "https://blog.arduino.cc/2026/11/06/unveiled-at-roscon-the-easiest-way-to-bring-arduino-i-o-into-ros-2/"
-            }
-          ]
-        },
-        {
-          "kind": "tool",
-          "icon": "🟥",
-          "title": "SparkFun IoT RedBoard ESP32-P4",
-          "sub": "UNO-shaped ESP32-P4",
-          "desc": "Two UNO R3-shaped ESP32-P4 boards: a Wi-Fi 6 version using an ESP32-C5 module ($49.95) and a PoE Ethernet version ($55.95). Both ship with MicroPython and have MIPI display/camera connectors and a Qwiic port. Per CNX Software, the stock Arduino ESP32 core does not support the C5 radio yet, so the Wi-Fi model needs a SparkFun patch.",
-          "stats": [
-            {
-              "text": "$49.95 / $55.95"
-            },
-            {
-              "text": "Ships with MicroPython",
-              "hot": true
-            }
-          ],
-          "links": [
-            {
-              "text": "CNX Software →",
-              "url": "https://www.cnx-software.com/2026/11/09/sparkfun-iot-redboard-esp32-p4-arduino-uno-like-esp32-p4-v3-x-development-boards-with-wifi-6-or-poe-options/"
-            }
-          ]
-        },
-        {
-          "kind": "tool",
-          "icon": "🐉",
-          "title": "Adafruit Metro ESP32-P4 Hydra",
-          "sub": "UNO-shaped · $34.95",
-          "desc": "ESP32-P4 with 16 MB PSRAM plus an ESP32-C6 for Wi-Fi 6, Bluetooth LE, Thread and Zigbee, with Raspberry Pi-compatible MIPI display and camera connectors, USB host and microSD. Supported by the CircuitPython 11 alpha builds.",
-          "stats": [
-            {
-              "text": "$34.95"
-            },
-            {
-              "text": "CircuitPython 11 alpha"
-            }
-          ],
-          "links": [
-            {
-              "text": "Adafruit →",
-              "url": "https://www.adafruit.com/product/6536"
-            },
-            {
-              "text": "CNX Software →",
-              "url": "https://www.cnx-software.com/2026/10/26/adafruit-metro-esp32-p4-hydra-an-arduino-uno-shaped-esp32-p4-esp32-c6-board-with-wifi-6-mipi-interfaces/"
-            }
-          ]
-        },
-        {
-          "kind": "tool",
           "icon": "🐍",
-          "title": "CircuitPython: 600 Libraries",
-          "sub": "Python on hardware",
-          "desc": "The CircuitPython library bundles passed 600 libraries. Work toward CircuitPython 11 (87 pull requests merged since alpha.2) adds an async_spi module for non-blocking SPI, hardware JPEG decoding on the ESP32-P4, and PWM audio on the ESP32-S2/S3. Stable is still 10.3.1; MicroPython is at v1.29.0.",
+          "title": "MicroPython v1.30 Nears",
+          "sub": "Targeting Dec 7",
+          "desc": "The v1.30 milestone is 84% done (133 items closed, 25 open). Preview builds add positional-only parameters, asyncio.Queue, hardware floating point on RP2350 boards and a browser build of the WebAssembly port, and mpremote now resumes a board's session by default. Current stable is still v1.29.0.",
           "stats": [
             {
-              "text": "600 libraries",
+              "text": "84% done",
               "hot": true
             }
           ],
           "links": [
             {
               "text": "Newsletter →",
-              "url": "https://www.adafruitdaily.com/2026/11/09/the-python-on-microcontrollers-newsletter-600-circuitpython-libraries-upcoming-features-and-much-more"
+              "url": "https://www.adafruitdaily.com/2026/11/23/python-on-microcontrollers-newsletter-circuitpython-displayio-on-lvgl-micropython-v1-30-nears-breadboard-simulator-and-more"
+            }
+          ]
+        },
+        {
+          "kind": "tool",
+          "icon": "🧪",
+          "title": "de:volt Breadboard Simulator",
+          "sub": "Runs in the browser",
+          "desc": "A web breadboard simulator with 105 parts, a built-in four-channel oscilloscope and warnings for mistakes like an LED with no resistor — exactly the kind of error that burns out parts on a real bench. Arduino, micro:bit and RP2040 boards; the code panel runs MicroPython. Free tier, paid Premium.",
+          "stats": [
+            {
+              "text": "Free tier"
+            },
+            {
+              "text": "Beginner-safe",
+              "hot": true
+            }
+          ],
+          "links": [
+            {
+              "text": "CNX Software →",
+              "url": "https://www.cnx-software.com/2026/11/18/web-based-breadboard-simulator-lets-you-build-circuits-fix-errors-and-monitor-designs-with-a-built-in-oscilloscope/"
+            }
+          ]
+        },
+        {
+          "kind": "tool",
+          "icon": "🖼️",
+          "title": "CircuitPython displayio on LVGL",
+          "sub": "11.0.0-alpha.3",
+          "desc": "CircuitPython's displayio now runs on the LVGL graphics library on ESP32-P4 and ESP32-S31 boards in the newest builds. Existing code keeps working but redraws much faster; the trade-off is more RAM, so a new safe mode flags out-of-memory. Stable is 10.3.2; the library count passed 604.",
+          "stats": [
+            {
+              "text": "Alpha builds"
+            }
+          ],
+          "links": [
+            {
+              "text": "Newsletter →",
+              "url": "https://www.adafruitdaily.com/2026/11/23/python-on-microcontrollers-newsletter-circuitpython-displayio-on-lvgl-micropython-v1-30-nears-breadboard-simulator-and-more"
+            }
+          ]
+        },
+        {
+          "kind": "tool",
+          "icon": "📺",
+          "title": "GUITION ESP32-S31 7-inch Kit",
+          "sub": "About $29",
+          "desc": "An ESP32-S31 RISC-V module (16 MB flash, 16 MB PSRAM) with a 7-inch 1024x600 capacitive touch screen, Ethernet, audio, microSD and RS485, with Arduino and ESP-IDF demos. CircuitPython supports the S31 in its newest builds. A cheap way into big touch dashboards.",
+          "stats": [
+            {
+              "text": "~$29"
+            },
+            {
+              "text": "New chip",
+              "hot": true
+            }
+          ],
+          "links": [
+            {
+              "text": "CNX Software →",
+              "url": "https://www.cnx-software.com/2026/11/20/guition-esp32-s31-development-kit-features-7-inch-capacitive-touch-display-ethernet-port/"
+            }
+          ]
+        },
+        {
+          "kind": "tool",
+          "icon": "🎨",
+          "title": "Pimoroni Art Matrix",
+          "sub": "RP2350B · $178",
+          "desc": "A framed 128x128 RGB LED wall display (16,384 pixels) driven by an RP2350B with Wi-Fi and Bluetooth. Ships with 45 MicroPython plugins — algorithmic art, screensavers, a weather dashboard — and is fully programmable in MicroPython.",
+          "stats": [
+            {
+              "text": "$178"
+            }
+          ],
+          "links": [
+            {
+              "text": "Pimoroni →",
+              "url": "https://shop.pimoroni.com/en-us/products/artmatrix"
             }
           ]
         }
@@ -400,85 +410,77 @@ window.TRENDS = {
       "items": [
         {
           "kind": "data",
+          "icon": "🔌",
+          "title": "Ask HN — Web Dev to Embedded/Firmware",
+          "sub": "Career & learning",
+          "desc": "An Ask HN thread on moving from web development into embedded and firmware work reached 153 points with 96 comments — a goldmine of advice for anyone who can code but is new to the hardware side.",
+          "stats": [],
+          "links": [
+            {
+              "text": "HN Thread →",
+              "url": "https://news.ycombinator.com/item?id=50555002"
+            }
+          ]
+        },
+        {
+          "kind": "data",
+          "icon": "🗿",
+          "title": "Hacker News — Robots & Maker Front Page",
+          "sub": "Robotics",
+          "desc": "Teaching robots to carve marble sculptures hit 129 points (91 comments). Also up: a Show HN for open-source real-time object tracking on live video (123 pts) and an interactive teardown of Voyager 1 down to a single memory chip (241 pts).",
+          "stats": [],
+          "links": [
+            {
+              "text": "Marble Robots →",
+              "url": "https://news.ycombinator.com/item?id=50548808"
+            },
+            {
+              "text": "Object Tracking →",
+              "url": "https://news.ycombinator.com/item?id=50523377"
+            },
+            {
+              "text": "Voyager 1 →",
+              "url": "https://news.ycombinator.com/item?id=50548161"
+            }
+          ]
+        },
+        {
+          "kind": "data",
           "icon": "🐍",
-          "title": "Hacker News — Tim Peters (1952–2026)",
+          "title": "Hacker News — Python Tools",
           "sub": "Python community",
-          "desc": "The in-memoriam thread for Tim Peters, author of the Zen of Python and creator of Timsort (the algorithm behind sorted and list.sort), reached 1,438 points — the biggest Python story of the fortnight. Also on the front page: Formalizing CPython (136 pts).",
+          "desc": "Show HN posts worth a look: Gawain, which requires type hints on all Python variables (67 pts, 64 comments of debate), Unref, a dead-code finder built on Ruff's parser (63 pts), and Reaktiv Workbook, a spreadsheet where every cell is Python (47 pts).",
           "stats": [],
           "links": [
             {
-              "text": "HN Thread →",
-              "url": "https://news.ycombinator.com/item?id=50450488"
+              "text": "Gawain →",
+              "url": "https://news.ycombinator.com/item?id=50504072"
             },
             {
-              "text": "In Memoriam →",
-              "url": "https://discuss.python.org/t/in-memoriam-tim-peters-1952-2026/110028"
+              "text": "Unref →",
+              "url": "https://news.ycombinator.com/item?id=50517410"
             },
             {
-              "text": "Formalizing CPython →",
-              "url": "https://news.ycombinator.com/item?id=50435105"
-            }
-          ]
-        },
-        {
-          "kind": "data",
-          "icon": "🕸️",
-          "title": "Hacker News — Maker Front Page",
-          "sub": "Robotics & Arduino",
-          "desc": "Stringman, an open-source room-scale cable-driven gripper robot, hit 844 points with 251 comments (the site lists the robot at $965). Smaller maker hits: Tiny Basic for Arduino (74 pts) and BBRouter, which simulates Ben Eater 8-bit computer builds on 3D breadboards (58 pts).",
-          "stats": [],
-          "links": [
-            {
-              "text": "Stringman →",
-              "url": "https://news.ycombinator.com/item?id=50354358"
-            },
-            {
-              "text": "Tiny Basic →",
-              "url": "https://news.ycombinator.com/item?id=50353073"
-            },
-            {
-              "text": "BBRouter →",
-              "url": "https://news.ycombinator.com/item?id=50321522"
-            }
-          ]
-        },
-        {
-          "kind": "data",
-          "icon": "💸",
-          "title": "Raspberry Pi 5 16GB Hits $385",
-          "sub": "Hardware prices",
-          "desc": "A CNX Software post on the 16GB Raspberry Pi 5 rising $80 to $385 on memory costs drew 329 points and 303 comments. Takeaway for hobby builds: microcontrollers like the Pico 2 and ESP32 are unaffected and remain the cheap way to start.",
-          "stats": [],
-          "links": [
-            {
-              "text": "HN Thread →",
-              "url": "https://news.ycombinator.com/item?id=50428801"
-            },
-            {
-              "text": "CNX Software →",
-              "url": "https://www.cnx-software.com/2026/11/03/when-will-this-stop-the-raspberry-pi-5-16gb-sbc-now-sells-for-385/"
+              "text": "Reaktiv Workbook →",
+              "url": "https://news.ycombinator.com/item?id=50544428"
             }
           ]
         },
         {
           "kind": "data",
           "icon": "📊",
-          "title": "Hacker News — Data & Analytics",
+          "title": "Hacker News — Data & Databases",
           "sub": "Data community",
-          "desc": "PostHog explained moving its warehouse off DuckDB (188 pts): a single-node engine was hard to size at roughly 2 PB, so they are rebuilding on Trino. MotherDuck posted The Dawn of the Data Intelligence Engineer (157 pts), and the classic How to Lie With Statistics resurfaced (68 pts). Reddit could not be read by the research tool again this run, so use the live links below for r/dataanalysis, r/arduino and r/esp32.",
+          "desc": "Zerodha's write-up on distributed, high-performance blob storage built on SQLite drew 286 points, and Mason, a lightweight Postgres read replica on columnar storage, got 109. Reddit could not be read by the research tool again this run — use the live links below for r/dataanalysis, r/arduino and r/esp32.",
           "stats": [],
           "links": [
             {
-              "text": "Off DuckDB →",
-              "url": "https://news.ycombinator.com/item?id=50338747"
+              "text": "SQLite Blobs →",
+              "url": "https://news.ycombinator.com/item?id=50557537"
             },
             {
-              "text": "Data Intelligence Engineer →",
-              "url": "https://news.ycombinator.com/item?id=50480480"
-            },
-            {
-              "text": "How to Lie With Statistics →",
-              "url": "https://news.ycombinator.com/item?id=50382594"
+              "text": "Mason →",
+              "url": "https://news.ycombinator.com/item?id=50630294"
             }
           ]
         }
@@ -491,9 +493,27 @@ window.TRENDS = {
       "items": [
         {
           "kind": "yt",
-          "icon": "🛩️",
-          "title": "ESP32-S3 Flight Controller Build",
-          "desc": "The Engineer builds a modular ESP32-S3 flight controller for RC models with a React 3D airplane display. A good look at sensor fusion and control loops on a board you may already own.",
+          "icon": "🦾",
+          "title": "7-DOF 3D-Printed Robot Arm for $2,000",
+          "desc": "Kevin Wood builds a seven-axis 3D-printed robotic arm and walks through design, code and costs — a realistic look at what a serious hobby arm takes.",
+          "stats": [
+            {
+              "text": "Robot arm",
+              "hot": true
+            }
+          ],
+          "links": [
+            {
+              "text": "Watch →",
+              "url": "https://www.youtube.com/watch?v=70KUASCjjFY"
+            }
+          ]
+        },
+        {
+          "kind": "yt",
+          "icon": "🚁",
+          "title": "ESP32 Drone From Scratch: The Brain",
+          "desc": "Spencer Baum's build series reaches the flight-controller stage: Arduino code on an ESP32 driving the motors with PWM. Safety tip if you follow along: test motor code with the propellers off.",
           "stats": [
             {
               "text": "ESP32 project",
@@ -503,59 +523,41 @@ window.TRENDS = {
           "links": [
             {
               "text": "Watch →",
-              "url": "https://www.youtube.com/watch?v=3f73y9wrcfI"
+              "url": "https://www.youtube.com/watch?v=h7dAJwZ6r5Q"
             }
           ]
         },
         {
           "kind": "yt",
-          "icon": "🖥️",
-          "title": "MicroPython + LVGL on Pico 2 W",
-          "desc": "Video 113 in a MicroPython and LVGL series: LVGL 9.6.0 on a Pico 2 W with an ST7796 display, tested across several screens. Useful if you want real GUIs from Python on a microcontroller.",
+          "icon": "📈",
+          "title": "Testing a DIY Pico Oscilloscope",
+          "desc": "Geerling Engineering tries out a Raspberry Pi Pico-based DIY oscilloscope. An oscilloscope lets you actually see PWM and sensor signals, so this is a useful watch before buying test gear.",
           "stats": [
             {
-              "text": "Python on hardware"
+              "text": "Test gear"
             }
           ],
           "links": [
             {
               "text": "Watch →",
-              "url": "https://www.youtube.com/watch?v=9kJjYoT178o"
+              "url": "https://www.youtube.com/watch?v=YwL7KXExocg"
             }
           ]
         },
         {
           "kind": "yt",
-          "icon": "📟",
-          "title": "Pi Zero 2 W Sensor Dashboard",
-          "desc": "Robo Elite wires a GPS, a TF-Luna LiDAR and an MPU6050 IMU to a Pi Zero 2 W and shows them on a live dashboard — the same sensor trio a small rover needs, with Python doing the reading.",
+          "icon": "🖨️",
+          "title": "Can a 3D-Printed Robot Arm Work?",
+          "desc": "Printabot designs and builds a DIY 3D-printed robotic arm and tests whether it is actually functional — a budget counterpoint to the 7-DOF build above.",
           "stats": [
             {
-              "text": "Robotics sensors",
-              "hot": true
+              "text": "Hobby Robotics"
             }
           ],
           "links": [
             {
               "text": "Watch →",
-              "url": "https://www.youtube.com/watch?v=mOe92hMQXgY"
-            }
-          ]
-        },
-        {
-          "kind": "yt",
-          "icon": "🔬",
-          "title": "Adafruit Deep Dives",
-          "desc": "Recent Adafruit Deep Dive streams cover LVGL with displayio, the Fruit Jam web workflow with display mirroring, and SDR firmware on the Metro P4. Long-form, but a rare chance to watch CircuitPython internals being built live.",
-          "stats": [
-            {
-              "text": "Live streams"
-            }
-          ],
-          "links": [
-            {
-              "text": "Playlist →",
-              "url": "https://www.youtube.com/playlist?list=PLjF7R1fz_OOXBHlu9msoXq2jQN4JpCk8A"
+              "url": "https://www.youtube.com/watch?v=88xKgjdRLUw"
             }
           ]
         }
